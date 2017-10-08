@@ -69,7 +69,7 @@ Simultaneously: {$command, !action}
 Execution
 ```
 
-Execution
+`Execution`
 - Command: `$command`
 
 ### Objective Execution
@@ -78,16 +78,16 @@ Execution
 @charactor<<type>?> <Execution?> <Message?>
 ```
 
-@charactor<<type>?>
+`@`charactor<<type>?>`
 - `type`: 角色的型態。像是可以`@someone<laugh>`來表示某位角色笑的樣子。
 
-Execution (Optional)
+`Execution` (Optional)
 - Command: `$command`
 - Action: `!action`
 - Sequentially Executing List: `[$command, !action]`
 - Simultaneously Executing List: `{$command, !action}`
 
-Message (Optional)
+`Message` (Optional)
 - String
 
 ### Multi-objective Execution
