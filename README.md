@@ -78,7 +78,7 @@ Execution
 @charactor<<type>?> <Execution?> <Message?>
 ```
 
-`@`charactor<<type>?>`
+`@charactor<<type>?>`
 - `type`: 角色的型態。像是可以`@someone<laugh>`來表示某位角色笑的樣子。
 
 `Execution` (Optional)
