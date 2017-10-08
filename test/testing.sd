@@ -1,0 +1,47 @@
+$command(argumnts)
+$import('asd')
+$set('name', 'value')
+$if(condition)
+$elif(condition)
+$endif
+$goto(# Header 1 ~ ###### Header 6) %???
+
+$texture()
+$set('name', 'value') %comment
+$bgm()
+$sound()
+$soundEffect()
+$visualEffect()
+$define()
+
+
+//Comment
+$set('name', 'value') %comment
+/*
+Block Comments
+*/
+
+{{ someVariable }}
+{{ orFunction('argument') }}
+
+# Header 1 {options=value, ...}
+## Header 2
+...
+###### Header 6
+
+
+@Object1[face-type] !Action(arguments) {options=value, ...}
+
+
+
+@Object1 Conversation here!!
+Following conversation will be considered as the same.
+
+@Object2 Make a new line above will make a new conversation
+
+{@Object1, @Object2} A lot of character say together.
+
+@Object2 {options=value, ...} A msg with options.
+
+
+
