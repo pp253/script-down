@@ -4,7 +4,7 @@
 
 ## 基本型別
 
-- String (any charactor that is not a keyword wuld be trated as string)
+- String (any charactor that is not a keyword will be trated as string)
 - Number (including integer and float)
 - Boolean (true or false)
 - Array or Sequential Executing List `[]`
