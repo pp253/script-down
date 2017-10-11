@@ -1,7 +1,7 @@
 # 介紹
 
 [範例](https://pp253.github.io/script-down/test/test.html)
-[範例編輯器](https://pp253.github.io/script-down/test/test.html)
+[範例編輯器](https://pp253.github.io/script-down/test/editor.html)
 
 ## 基本型別
 
