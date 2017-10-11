@@ -3,6 +3,7 @@
  * See more: https://github.com/pixijs/pixi.js/issues/3204
  */
 import * as PIXI from 'pixi.js'
+import _ from 'lodash'
 
 export default class {
   constructor (el = 'app', options) {
@@ -10,6 +11,11 @@ export default class {
      * {String} this.el is the element Id that this.app.view appended on
      */
     this.el = el
+
+    this.options = _.merge({
+      width: 800,
+      height: 600
+    }, options)
 
     /**
      * {Array<Plugin>} this.plugins is the instnaces of the plugins added by this.use()
@@ -19,8 +25,8 @@ export default class {
     /**
      * {Object} this.app is the instance of the PIXP.Application
      */
-    this.app = new PIXI.Application(800, 600, {backgroundColor: 0x0})
-    document.getElementById(el).appendChild(this.app.view)
+    this.app = new PIXI.Application(this.options.width, this.options.height, {backgroundColor: 0x0})
+    document.getElementById(this.el).appendChild(this.app.view)
   }
 
   /**
@@ -32,5 +38,10 @@ export default class {
     let newPlugin = new Plugin(this, options)
     this.plugins.push(newPlugin)
     return newPlugin
+  }
+
+  destroy () {
+    console.log('destroy!!')
+    this.app.destroy(true)
   }
 }

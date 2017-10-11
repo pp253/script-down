@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+
+<head>
+  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no,minimal-ui">
+  <title>Script-Down Editor</title>
+  <style>
+* {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  border-radius: 0px;
+  box-shadow: none;
+  user-select: none;
+}
+
+h1 {
+  padding: 10px;
+  margin-top: 10px;
+  font-size: 16px;
+}
+
+.flex {
+  padding: 5px;
+  display: flex;
+  height: 600px;
+  flex-wrap: wrap;
+}
+
+.flex-app {
+  padding: 5px;
+  max-width: 100%;
+}
+.flex-edit {
+  min-width: 300px;
+  padding: 5px;
+  flex: 1;
+}
+.flex-edit .flex-edit-footer {
+  height: 38px;
+}
+.flex-edit .flex-edit-footer button,
+.flex-edit .flex-edit-footer a {
+  height: 30px;
+  line-height: 30px;
+  font-size: 14px;
+  background-color: #009688;
+  color: #fff;
+  border: none;
+  padding-left: 10px;
+  padding-right: 10px;
+  text-decoration: none;
+}
+.flex-edit .flex-edit-footer button:hover,
+.flex-edit .flex-edit-footer a:hover {
+  background-color: #80CBC4;
+  color: #000;
+}
+.flex-edit .flex-edit-footer button:active,
+.flex-edit .flex-edit-footer a:active {
+  background-color: #00796B;
+  color: #fff;
+}
+.flex-edit .flex-edit-editor textarea {
+  width: calc(100% - 12px);
+  height: 550px;
+  padding: 5px;
+}
+  </style>
+</head>
+
+<body>
+  <h1>ScriptDown Editor</h1>
+  <div class="flex">
+    <div class="flex-app">
+      <div id="app"></div>
+    </div>
+    <div class="flex-edit">
+      <div class="flex-edit-footer">
+        <button onclick="javascript:update()">UPDATE</button>
+        <button onclick="javascript:reload()">RELOAD</button>
+        <a href="https://github.com/pp253/script-down" target="_blank" style="float: right;">GITHUB &amp; HELP</a>
+      </div>
+      <div class="flex-edit-editor">
+        <textarea id="text"></textarea>
+      </div>
+    </div>
+  </div>
+
+  <script src="../dist/gamebase.js"></script>
+  <script src="../dist/scriptdown.js"></script>
+  <script src="./editor.js"></script>
+</body>
