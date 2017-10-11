@@ -1,6 +1,6 @@
 # 介紹
 
-[範例](./test/測試.sd)
+[範例](pp253.github.io/script-down/test/test.html)
 
 ## 基本型別
 
