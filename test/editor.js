@@ -1,8 +1,6 @@
-/* global GameBase, Router, ScriptDown */
+/* global GameBase, Router, ScriptDown, parser */
 
 let gamebase = null
-
-initGameBase()
 
 function initGameBase () {
   // refresh
@@ -23,7 +21,7 @@ function initGameBase () {
 
   let myScriptDown = (gamebase) => {
     let script = 'asdasdasd'
-    return new ScriptDown(gamebase, script)
+    return new ScriptDown(script, gamebase)
   }
 
   gamebase.use(Router, {
@@ -37,6 +35,52 @@ function initGameBase () {
   })
 }
 
+let originalConsoleLog = console.log
+let originalConsoleError = console.error
+
+function log (...msg) {
+  originalConsoleLog(...msg)
+  document.getElementById('console').innerHTML += msg + '\n'
+  document.getElementById('console').scrollTop = 10000000000
+}
+
+function error (...msg) {
+  originalConsoleError(...msg)
+  document.getElementById('console').value += msg + '\n'
+  document.getElementById('console').scrollTop = 10000000000
+}
+
+// console.log = log
+// console.error = error
+
+document.getElementById('text').value = `// 456456
+
+/* 45646 */
+
+$com1
+
+$com2(123, 456)
+
+@cha1 msg1
+@cha2 !action2
+@cha3 !action3(123, 567)
+@cha4 !action4 msg4
+
+`
+
+function update () {
+  let text = document.getElementById('text').value
+  log(parser(text))
+}
+
 function reload () {
   initGameBase()
+  log('Reload!')
+}
+
+window.onload = () => {
+  initGameBase()
+  log('')
+  log('Welcome to ScriptDown Editor!')
+  log('Get more information on GitHub')
 }

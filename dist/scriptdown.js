@@ -58531,10 +58531,13 @@ module.exports = __webpack_require__(196);
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__script_down__ = __webpack_require__(197);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__parser__ = __webpack_require__(201);
+
 
 
 window.ScriptDown = __WEBPACK_IMPORTED_MODULE_0__script_down__["a" /* default */];
-'filehash QFEe9xEgqH7YnhdxxeJr2HWo5Nw=';
+window.parser = __WEBPACK_IMPORTED_MODULE_1__parser__["a" /* default */];
+'filehash WyF9idTZbz+ZgBuzeFwpfr5p7xE=';
 
 /***/ }),
 /* 197 */
@@ -58559,7 +58562,6 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 /**
  * TODO
  * [ ] Add Space Listener
- * [ ] Add Character on stage
  */
 
 
@@ -58580,12 +58582,31 @@ var Character = function (_PIXI$Sprite) {
     _this.app = _this.gamebase.app;
 
     _this.options = __WEBPACK_IMPORTED_MODULE_2_lodash___default.a.merge({
-      height: 600,
-      width: 800,
-      backgroundColor: 0x90caf9
+      height: 400,
+      width: 200,
+      textures: {
+        default: './img/bunny.png'
+      }
     }, options);
+
+    // center the sprite's anchor point
+    _this.anchor.set(0.5);
+
+    _this.dressing('default');
     return _this;
   }
+
+  _createClass(Character, [{
+    key: 'dressing',
+    value: function dressing(name) {
+      if (this.options.textures[name]) {
+        this.texture = __WEBPACK_IMPORTED_MODULE_0_pixi_js__["Texture"].fromImage(this.options.textures[name]);
+      }
+    }
+  }, {
+    key: 'effect',
+    value: function effect(name, value) {}
+  }]);
 
   return Character;
 }(__WEBPACK_IMPORTED_MODULE_0_pixi_js__["Sprite"]);
@@ -58598,10 +58619,10 @@ var Character = function (_PIXI$Sprite) {
 var BangBangBang = function (_Character) {
   _inherits(BangBangBang, _Character);
 
-  function BangBangBang() {
+  function BangBangBang(options, gamebase) {
     _classCallCheck(this, BangBangBang);
 
-    return _possibleConstructorReturn(this, (BangBangBang.__proto__ || Object.getPrototypeOf(BangBangBang)).call(this));
+    return _possibleConstructorReturn(this, (BangBangBang.__proto__ || Object.getPrototypeOf(BangBangBang)).call(this, {}, gamebase));
   }
 
   return BangBangBang;
@@ -58621,7 +58642,8 @@ var StageContainer = function (_PIXI$Container) {
     _this3.options = __WEBPACK_IMPORTED_MODULE_2_lodash___default.a.merge({
       height: 600,
       width: 800,
-      backgroundColor: 0x90caf9
+      backgroundColor: 0x90caf9,
+      characters: {}
     }, options);
 
     // Make container being interactive
@@ -58645,7 +58667,22 @@ var StageContainer = function (_PIXI$Container) {
 
   _createClass(StageContainer, [{
     key: 'addCharacter',
-    value: function addCharacter(name, character) {}
+    value: function addCharacter(name, character) {
+      this.addChild(character);
+      if (this.options.characters[name]) {
+        console.log('The name of character', name, 'has already exist.');
+      }
+      this.options.characters[name] = character;
+    }
+  }, {
+    key: 'selectCharacter',
+    value: function selectCharacter(name) {
+      if (!this.options.characters[name]) {
+        console.log('The name of character', name, 'is not exist.');
+      } else {
+        return this.options.characters[name];
+      }
+    }
   }, {
     key: 'addProp',
     value: function addProp(name, prop) {}
@@ -58727,7 +58764,7 @@ var SubtitleContainer = function (_PIXI$Container2) {
   return SubtitleContainer;
 }(__WEBPACK_IMPORTED_MODULE_0_pixi_js__["Container"]);
 
-var _class = function _class(gamebase, options) {
+var _class = function _class(options, gamebase) {
   _classCallCheck(this, _class);
 
   this.gamebase = gamebase;
@@ -58741,6 +58778,16 @@ var _class = function _class(gamebase, options) {
     width: this.app.renderer.width
   }, this.gamebase);
   this.container.addChild(this.stageContainer);
+
+  this.stageContainer.addCharacter('bang', new BangBangBang({}, this.gamebase));
+  this.stageContainer.addCharacter('bang1', new BangBangBang({}, this.gamebase));
+  this.stageContainer.addCharacter('bang2', new BangBangBang({}, this.gamebase));
+  this.stageContainer.selectCharacter('bang').x = 100;
+  this.stageContainer.selectCharacter('bang').y = 100;
+  this.stageContainer.selectCharacter('bang1').x = 200;
+  this.stageContainer.selectCharacter('bang1').y = 200;
+  this.stageContainer.selectCharacter('bang2').x = 300;
+  this.stageContainer.selectCharacter('bang2').y = 300;
 
   this.subtitleContainer = new SubtitleContainer({
     content: {
@@ -58759,7 +58806,7 @@ var _class = function _class(gamebase, options) {
 };
 
 /* harmony default export */ __webpack_exports__["a"] = (_class);
-'filehash ejTh0c7Om9WfbuEV1N+SYhcY2Iw=';
+'filehash 2EH0i2U4TYWp6kI4oz1qZ451UXE=';
 
 /***/ }),
 /* 198 */
@@ -59325,6 +59372,10 @@ var __extends = (this && this.__extends) || (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_pixi_js__ = __webpack_require__(88);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_pixi_js___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_pixi_js__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_pixi_filters__ = __webpack_require__(200);
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _get = function get(object, property, receiver) { if (object === null) object = Function.prototype; var desc = Object.getOwnPropertyDescriptor(object, property); if (desc === undefined) { var parent = Object.getPrototypeOf(object); if (parent === null) { return undefined; } else { return get(parent, property, receiver); } } else if ("value" in desc) { return desc.value; } else { var getter = desc.get; if (getter === undefined) { return undefined; } return getter.call(receiver); } };
+
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
@@ -59364,9 +59415,17 @@ var ColorChangeableGraphic = function (_PIXI$Graphics) {
     return _this;
   }
 
+  _createClass(ColorChangeableGraphic, [{
+    key: 'destroy',
+    value: function destroy() {
+      this.filters = null;
+      _get(ColorChangeableGraphic.prototype.__proto__ || Object.getPrototypeOf(ColorChangeableGraphic.prototype), 'destroy', this).call(this);
+    }
+  }]);
+
   return ColorChangeableGraphic;
 }(__WEBPACK_IMPORTED_MODULE_0_pixi_js__["Graphics"]);
-'filehash tvuoFu9OkC68l3xrHcTFpj1yzfM=';
+'filehash D9G/kSrnafe4u3wpduSUGfXZUhs=';
 
 /***/ }),
 /* 200 */
@@ -59595,6 +59654,428 @@ var TwistFilter=function(o){function n(n,r,t){void 0===n&&(n=200),void 0===r&&(r
 
 //# sourceMappingURL=pixi-filters.es.js.map
 
+
+/***/ }),
+/* 201 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (immutable) */ __webpack_exports__["a"] = parse;
+/**
+ * FILE = REDUNDENT + STATEMENT*
+ */
+function FILE(text, i, list) {
+  console.log('FILE', i, text.slice(i, i + 5).replace(/\n/g, '\\n'));
+  var c = i;
+  c = REDUNDENT(text, c);
+  var tmp = c;
+  while (c < text.length) {
+    c = STATEMENT(text, c, list);
+    if (c === tmp) {
+      // No more statements
+      break;
+    }
+    tmp = c;
+  }
+  if (c < text.length) {
+    throw new SyntaxError('FILE: Not ending properly.');
+  }
+}
+
+/**
+ * STATEMENT = COMMAND | HEADER | ACT
+ */
+function STATEMENT(text, i, list) {
+  console.log('STATEMENT', i, text.slice(i, i + 5).replace(/\n/g, '\\n'));
+  var c = i;
+  var tmp = c;
+
+  // COMMAND
+  c = COMMAND(text, c, list);
+  if (c !== tmp) {
+    return c;
+  }
+
+  // HEADER
+  c = HEADER(text, c, list);
+  if (c !== tmp) {
+    return c;
+  }
+
+  // ACT
+  c = ACT(text, c, list);
+  if (c !== tmp) {
+    return c;
+  }
+
+  throw new SyntaxError('STATEMENT: No such statement.');
+}
+
+/**
+ * COMMAND = '$' + NAME + REDUNDENT + ARGUMENTS? + OPTIONS? + REDUNDENT
+ */
+function COMMAND(text, i, list) {
+  console.log('COMMAND', i, text.slice(i, i + 5).replace(/\n/g, '\\n'));
+  var c = i;
+
+  if (text[c] === '$') {
+    // '$'
+    c++;
+
+    // NAME
+    var name = {};
+    c = NAME(text, c, name);
+
+    // REDUNDENT
+    c = REDUNDENT(text, c);
+
+    // ARGUMENTS?
+    var argus = [];
+    c = ARGUMENTS(text, c, argus);
+
+    // OPTIONS?
+    var opt = {};
+    c = OPTIONS(text, c, opt);
+
+    // REDUNDENT
+    c = REDUNDENT(text, c);
+
+    list.push({
+      type: 'command',
+      name: name.$string,
+      argus: argus,
+      options: opt
+    });
+  }
+
+  return c;
+}
+
+/**
+ * HEADER = '#'* + REDUNDENT + TITLE + REDUNDENT + OPTIONS
+ */
+function HEADER(text, i, list) {
+  console.log('HEADER', i, text.slice(i, i + 5).replace(/\n/g, '\\n'));
+  var c = i;
+
+  if (text[c] === '#') {
+    // '#'*
+    c++;
+    var level = 1;
+    for (; c < text.length && text[c] === '#'; c++) {
+      level++;
+    }
+
+    // REDUNDENT
+    c = REDUNDENT(text, c);
+
+    // TITLE
+    var title = {};
+    c = TITLE(text, c, title);
+
+    // REDUNDENT
+    c = REDUNDENT(text, c);
+
+    // OPTIONS
+    var opt = {};
+    c = OPTIONS(text, c, opt);
+
+    list.push({
+      type: 'header',
+      level: level,
+      name: title.$string,
+      options: opt
+    });
+  }
+
+  return c;
+}
+
+function ACT(text, i, list) {}
+
+/**
+ * ARGUMENTS = '(' + PARAMETERS + ')' + REDUNDENT
+ */
+function ARGUMENTS(text, i, argus) {
+  console.log('ARGUMENTS', i, text.slice(i, i + 5).replace(/\n/g, '\\n'));
+  var c = i;
+  if (text[c] === '(') {
+    c++;
+    c = PARAMETERS(text, c, argus);
+    if (text[c] === ')') {
+      c++;
+      return c;
+    } else {
+      throw new SyntaxError('ARGUMENTS: Not ending with ).');
+    }
+  }
+  c = REDUNDENT(text, c);
+  return c;
+}
+
+/**
+ * PARAMETERS = RUNDUNDENT + VALUE + RUNDUNDENT + (',' + PARAMETERS)?
+ */
+function PARAMETERS(text, i, argus) {
+  console.log('PARAMETERS', i, text.slice(i, i + 5).replace(/\n/g, '\\n'));
+  var c = i;
+
+  // RUNDUNDENT
+  c = REDUNDENT(text, c);
+
+  // VALUE
+  var value = {};
+  c = VALUE(text, c, value);
+  argus.push(value);
+
+  // (',' + PARAMETERS)?
+  if (text[c] === ',') {
+    // PARAMETERS
+    c++;
+    c = PARAMETERS(text, c, argus);
+  }
+  return c;
+}
+
+/**
+ * VALUE = STRING | NUMBER | BOOLEAN | ARRAY | OBJECT
+ */
+function VALUE(text, i, value) {
+  console.log('VALUE', i, text.slice(i, i + 5).replace(/\n/g, '\\n'));
+  var c = i;
+  var tmp = c;
+
+  // STRING
+  c = STRING(text, c, value);
+  if (c !== tmp) {
+    return c;
+  }
+
+  // NUMBER
+  c = NUMBER(text, c, value);
+  if (c !== tmp) {
+    return c;
+  }
+
+  throw new SyntaxError('VALUE: Not a value');
+}
+
+/**
+ * STRING = ("'" + ... + "'" | '"' + ... + '"') + REDUNDENT
+ */
+function STRING(text, i, value) {
+  console.log('STRING', i, text.slice(i, i + 5).replace(/\n/g, '\\n'));
+  var c = i;
+  if (text[c] === "'" || text[c] === '"') {
+    var str = '';
+    var target = text[c];
+    // ("'" + ... + "'" | '"' + ... + '"')
+    c++;
+    for (; c < text.length && text[c] !== target; c++) {
+      str += text[c];
+    }
+    c++;
+    value.$string = str;
+
+    // RUNDUNDENT
+    c = REDUNDENT(text, c);
+  }
+  return c;
+}
+
+/**
+ * NUMBER = \d* + ('.' + \d*)? + REDUNDENT
+ */
+function NUMBER(text, i, value) {
+  console.log('NUMBER', i, text.slice(i, i + 5).replace(/\n/g, '\\n'));
+  var c = i;
+  var number = 0;
+
+  if (text[c] === '0') {
+    // 0 | 0.x
+    number = 0;
+    c++;
+  } else if (/[1-9]/.test(text[c])) {
+    // 1-9
+    for (; c < text.length && /[\d]/.test(text[c]); c++) {
+      number = number * 10 + parseInt(text[c]);
+    }
+  } else {
+    throw new SyntaxError('NUMBER: Not a number.');
+  }
+
+  // Floating
+  if (text[c] === '.') {
+    c++;
+    var float = 0;
+    var expo = 0;
+    for (; c < text.length && /[\d]/.test(text[c]); c++) {
+      float = float * 10 + parseInt(text[c]);
+      expo++;
+    }
+    number += float / Math.pow(10, expo);
+  }
+
+  value.$number = number;
+
+  // RUNDUNDENT
+  c = REDUNDENT(text, c);
+  return c;
+}
+
+/**
+ * OPTIONS = '{' + PAIRS + '}'
+ */
+function OPTIONS(text, i, opt) {
+  console.log('OPTIONS', i, text.slice(i, i + 5).replace(/\n/g, '\\n'));
+  var c = i;
+
+  if (text[c] === '{') {
+    // '{'
+    c++;
+
+    // PAIRS
+    c = PAIRS(text, i, opt);
+
+    // '}'
+    if (text[c] === '}') {
+      c++;
+      return c;
+    }
+
+    throw new SyntaxError('OPTIONS: Not end with "}"');
+  }
+
+  return c;
+}
+
+/**
+ * PAIRS = REDUNDENT + NAME + REDUNDENT + ':' + REDUNDENT + VALUE + REDUNDENT + (',' + PAIRS)?
+ */
+function PAIRS(text, i, opt) {
+  console.log('PAIR', i, text.slice(i, i + 5).replace(/\n/g, '\\n'));
+  var c = i;
+
+  // REDUNDENT
+  c = REDUNDENT(text, c);
+
+  // NAME
+  var name = {};
+  c = NAME(text, c, name);
+
+  // REDUNDENT
+  c = REDUNDENT(text, c);
+
+  if (text[c] === ':') {
+    // ':'
+    c++;
+  } else {
+    throw new SyntaxError('PAIRS: ":" should behind the name');
+  }
+
+  // REDUNDENT
+  c = REDUNDENT(text, c);
+
+  // VALUE
+  var value = {};
+  c = VALUE(text, c, value);
+
+  // REDUNDENT
+  c = REDUNDENT(text, c);
+
+  opt[name.$string] = value;
+
+  // (',' + PAIRS)?
+  if (text[c] === ',') {
+    c++;
+    c = PAIRS(text, c, opt);
+  }
+
+  return c;
+}
+
+/**
+ * NAME = /[a-zA-Z0-9]/*
+ */
+function NAME(text, i, name) {
+  console.log('NAME', i, text.slice(i, i + 5).replace(/\n/g, '\\n'));
+  var c = i;
+  var str = '';
+
+  // /[a-zA-Z0-9]/*
+  for (; c < text.length && /[a-zA-Z\d]/.test(text[c]); c++) {
+    str += text[c];
+  }
+
+  name.$string = str;
+  return c;
+}
+
+/**
+ * TITLE = /[^\n{]/*
+ */
+function TITLE(text, i, title) {
+  console.log('TITLE', i, text.slice(i, i + 5).replace(/\n/g, '\\n'));
+  var c = i;
+  var str = '';
+
+  // /[^\n{]/*
+  for (; c < text.length && /[^\n{]/.test(text[c]); c++) {
+    str += text[c];
+  }
+
+  title.$string = str;
+  return c;
+}
+
+/**
+ * REDUNDENT = SPACES_OR_NEWLINE (+ COMMENT + REDUNDENT)?
+ * COMMENT = INLINE_COMMENT | BLOCK_COMMENTS
+ */
+function REDUNDENT(text, i) {
+  console.log('REDUNDENT', i, text.slice(i, i + 5).replace(/\n/g, '\\n'));
+  var c = i;
+  // SPACES_OR_NEWLINE
+  while (c < text.length && (text[c] === ' ' || text[c] === '\n')) {
+    c++;
+  }
+
+  // (+ COMMENT + REDUNDENT)?
+  if (text[c] === '/') {
+    c++;
+    // COMMENT
+    if (text[c] === '/') {
+      // INLINE_COMMENT
+      while (c < text.length && text[c] !== '\n') {
+        c++;
+      }
+    } else if (text[c] === '*') {
+      // BLOCK_COMMENTS
+      c++;
+      while (c < text.length && text[c] !== '*' && text[c + 1] !== '/') {
+        c++;
+      }
+      c += 2;
+    } else {
+      // wrong
+      c--;
+      return c;
+    }
+
+    // REDUNDENT
+    return REDUNDENT(text, c);
+  } else {
+    return c;
+  }
+}
+
+function parse(text) {
+  console.log('parse', 'text length:', text.length);
+  var list = [];
+  FILE(text, 0, list);
+  console.log(list);
+}
+'filehash kbs1S9jaUXns7gqjLAzr0z+9Lm4=';
 
 /***/ })
 /******/ ]);

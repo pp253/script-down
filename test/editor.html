@@ -38,6 +38,9 @@ h1 {
 .flex-edit .flex-edit-footer {
   height: 38px;
 }
+.flex-edit .flex-edit-console {
+  height: 100px;
+}
 .flex-edit .flex-edit-footer button,
 .flex-edit .flex-edit-footer a {
   height: 30px;
@@ -62,7 +65,13 @@ h1 {
 }
 .flex-edit .flex-edit-editor textarea {
   width: calc(100% - 12px);
-  height: 550px;
+  height: 434px;
+  padding: 5px;
+  border: 1px solid #999;
+}
+.flex-edit .flex-edit-console textarea {
+  width: calc(100% - 12px);
+  height: 100px;
   padding: 5px;
   border: 1px solid #999;
 }
@@ -82,7 +91,10 @@ h1 {
         <a href="https://github.com/pp253/script-down" target="_blank" style="float: right;">GITHUB &amp; HELP</a>
       </div>
       <div class="flex-edit-editor">
-        <textarea id="text"></textarea>
+        <textarea id="text" spellcheck="false"></textarea>
+      </div>
+      <div class="flex-edit-console">
+        <textarea id="console" spellcheck="false"></textarea>
       </div>
     </div>
   </div>

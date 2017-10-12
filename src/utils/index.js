@@ -21,4 +21,9 @@ export class ColorChangeableGraphic extends PIXI.Graphics {
       get: function (val) { return this.filters[0].newColor }
     })
   }
+
+  destroy () {
+    this.filters = null
+    super.destroy()
+  }
 }

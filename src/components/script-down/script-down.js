@@ -1,7 +1,6 @@
 /**
  * TODO
  * [ ] Add Space Listener
- * [ ] Add Character on stage
  */
 
 import * as PIXI from 'pixi.js'
@@ -17,10 +16,27 @@ class Character extends PIXI.Sprite {
     this.app = this.gamebase.app
 
     this.options = _.merge({
-      height: 600,
-      width: 800,
-      backgroundColor: 0x90caf9
+      height: 400,
+      width: 200,
+      textures: {
+        default: './img/bunny.png'
+      }
     }, options)
+
+    // center the sprite's anchor point
+    this.anchor.set(0.5)
+
+    this.dressing('default')
+  }
+
+  dressing (name) {
+    if (this.options.textures[name]) {
+      this.texture = PIXI.Texture.fromImage(this.options.textures[name])
+    }
+  }
+
+  effect (name, value) {
+
   }
 }
 
@@ -28,8 +44,8 @@ class Character extends PIXI.Sprite {
  * An implement of a real character
  */
 class BangBangBang extends Character {
-  constructor () {
-    super()
+  constructor (options, gamebase) {
+    super({}, gamebase)
   }
 }
 
@@ -42,7 +58,8 @@ class StageContainer extends PIXI.Container {
     this.options = _.merge({
       height: 600,
       width: 800,
-      backgroundColor: 0x90caf9
+      backgroundColor: 0x90caf9,
+      characters: {}
     }, options)
 
     // Make container being interactive
@@ -62,7 +79,19 @@ class StageContainer extends PIXI.Container {
    * @param {Character} character
    */
   addCharacter (name, character) {
+    this.addChild(character)
+    if (this.options.characters[name]) {
+      console.log('The name of character', name, 'has already exist.')
+    }
+    this.options.characters[name] = character
+  }
 
+  selectCharacter (name) {
+    if (!this.options.characters[name]) {
+      console.log('The name of character', name, 'is not exist.')
+    } else {
+      return this.options.characters[name]
+    }
   }
 
   addProp (name, prop) {
@@ -133,7 +162,7 @@ class SubtitleContainer extends PIXI.Container {
 }
 
 export default class {
-  constructor (gamebase, options) {
+  constructor (options, gamebase) {
     this.gamebase = gamebase
     this.app = this.gamebase.app
 
@@ -145,6 +174,16 @@ export default class {
       width: this.app.renderer.width
     }, this.gamebase)
     this.container.addChild(this.stageContainer)
+
+    this.stageContainer.addCharacter('bang', new BangBangBang({}, this.gamebase))
+    this.stageContainer.addCharacter('bang1', new BangBangBang({}, this.gamebase))
+    this.stageContainer.addCharacter('bang2', new BangBangBang({}, this.gamebase))
+    this.stageContainer.selectCharacter('bang').x = 100
+    this.stageContainer.selectCharacter('bang').y = 100
+    this.stageContainer.selectCharacter('bang1').x = 200
+    this.stageContainer.selectCharacter('bang1').y = 200
+    this.stageContainer.selectCharacter('bang2').x = 300
+    this.stageContainer.selectCharacter('bang2').y = 300
 
     this.subtitleContainer = new SubtitleContainer({
       content: {
