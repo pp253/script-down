@@ -58764,49 +58764,137 @@ var SubtitleContainer = function (_PIXI$Container2) {
   return SubtitleContainer;
 }(__WEBPACK_IMPORTED_MODULE_0_pixi_js__["Container"]);
 
-var _class = function _class(options, gamebase) {
-  _classCallCheck(this, _class);
+var ViewManager = function () {
+  function ViewManager(script, provider) {
+    _classCallCheck(this, ViewManager);
 
-  this.gamebase = gamebase;
-  this.app = this.gamebase.app;
+    this.script = script;
+    this.provider = provider;
 
-  this.container = new __WEBPACK_IMPORTED_MODULE_0_pixi_js__["Container"]();
-  this.app.stage.addChild(this.container);
+    // Just shortcuts
+    this.stage = this.provider.stage;
+    this.subtitle = this.provider.subtitle;
 
-  this.stageContainer = new StageContainer({
-    height: this.app.renderer.height,
-    width: this.app.renderer.width
-  }, this.gamebase);
-  this.container.addChild(this.stageContainer);
+    // The cursor point to the script which is ready to load
+    this.cursor = 0;
 
-  this.stageContainer.addCharacter('bang', new BangBangBang({}, this.gamebase));
-  this.stageContainer.addCharacter('bang1', new BangBangBang({}, this.gamebase));
-  this.stageContainer.addCharacter('bang2', new BangBangBang({}, this.gamebase));
-  this.stageContainer.selectCharacter('bang').x = 100;
-  this.stageContainer.selectCharacter('bang').y = 100;
-  this.stageContainer.selectCharacter('bang1').x = 200;
-  this.stageContainer.selectCharacter('bang1').y = 200;
-  this.stageContainer.selectCharacter('bang2').x = 300;
-  this.stageContainer.selectCharacter('bang2').y = 300;
+    // init
+    this.next();
+  }
 
-  this.subtitleContainer = new SubtitleContainer({
-    content: {
-      height: 180,
-      width: this.app.renderer.width
+  _createClass(ViewManager, [{
+    key: 'next',
+    value: function next(event) {
+      for (var pause = false; this.cursor < this.script.length && !pause; this.cursor++) {
+        var statement = this.script[this.cursor];
+
+        switch (statement.$type) {
+          case 'command':
+            // TODO...zzz
+            break;
+
+          case 'act':
+            var characters = [];
+            var message = statement.message;
+            var _iteratorNormalCompletion = true;
+            var _didIteratorError = false;
+            var _iteratorError = undefined;
+
+            try {
+              for (var _iterator = statement.subjectMovementList.$array[Symbol.iterator](), _step; !(_iteratorNormalCompletion = (_step = _iterator.next()).done); _iteratorNormalCompletion = true) {
+                var subjectMovement = _step.value;
+
+                characters.push(subjectMovement.subject.name);
+              }
+            } catch (err) {
+              _didIteratorError = true;
+              _iteratorError = err;
+            } finally {
+              try {
+                if (!_iteratorNormalCompletion && _iterator.return) {
+                  _iterator.return();
+                }
+              } finally {
+                if (_didIteratorError) {
+                  throw _iteratorError;
+                }
+              }
+            }
+
+            this.subtitle.push('<b>' + characters.join('、') + '：</b>\n' + message);
+            pause = true;
+            break;
+
+          case 'header':
+            // pause = true
+            break;
+
+          default:
+            throw new Error('ViewManager: Unknown statement type.');
+        }
+      }
     }
-  }, this.gamebase);
-  this.container.addChild(this.subtitleContainer);
-  this.subtitleContainer.x = 0;
-  this.subtitleContainer.y = this.app.renderer.height - 180;
+  }]);
 
-  this.i = 1;
-  this.subtitleContainer.on('pointerdown', function (event) {
-    this.subtitleContainer.push('\u4F60\u9EDE\u6211<b>' + this.i++ + '</b>\u4E0B\u4E86');
-  }.bind(this));
-};
+  return ViewManager;
+}();
 
-/* harmony default export */ __webpack_exports__["a"] = (_class);
-'filehash 2EH0i2U4TYWp6kI4oz1qZ451UXE=';
+var ScriptDown = function (_PIXI$Container3) {
+  _inherits(ScriptDown, _PIXI$Container3);
+
+  function ScriptDown(script, gamebase) {
+    _classCallCheck(this, ScriptDown);
+
+    var _this5 = _possibleConstructorReturn(this, (ScriptDown.__proto__ || Object.getPrototypeOf(ScriptDown)).call(this));
+
+    _this5.script = script;
+    _this5.gamebase = gamebase;
+    _this5.app = _this5.gamebase.app;
+
+    _this5.app.stage.addChild(_this5);
+
+    _this5.stage = new StageContainer({
+      height: _this5.app.renderer.height,
+      width: _this5.app.renderer.width
+    }, _this5.gamebase);
+    _this5.addChild(_this5.stage);
+
+    _this5.stage.addCharacter('bang', new BangBangBang({}, _this5.gamebase));
+    _this5.stage.addCharacter('bang1', new BangBangBang({}, _this5.gamebase));
+    _this5.stage.addCharacter('bang2', new BangBangBang({}, _this5.gamebase));
+    _this5.stage.selectCharacter('bang').x = 100;
+    _this5.stage.selectCharacter('bang').y = 100;
+    _this5.stage.selectCharacter('bang1').x = 200;
+    _this5.stage.selectCharacter('bang1').y = 200;
+    _this5.stage.selectCharacter('bang2').x = 300;
+    _this5.stage.selectCharacter('bang2').y = 300;
+
+    _this5.subtitle = new SubtitleContainer({
+      content: {
+        height: 180,
+        width: _this5.app.renderer.width
+      }
+    }, _this5.gamebase);
+    _this5.addChild(_this5.subtitle);
+    _this5.subtitle.x = 0;
+    _this5.subtitle.y = _this5.app.renderer.height - 180;
+
+    /**
+     * Add this after the declaration of this.stage and this.subtitle
+     */
+    _this5.ViewManager = new ViewManager(script, _this5);
+
+    _this5.subtitle.on('pointerdown', function (event) {
+      this.ViewManager.next(event);
+    }.bind(_this5));
+    return _this5;
+  }
+
+  return ScriptDown;
+}(__WEBPACK_IMPORTED_MODULE_0_pixi_js__["Container"]);
+
+/* harmony default export */ __webpack_exports__["a"] = (ScriptDown);
+'filehash NkFyrbxJTbClqLufQ2DAQxa0c5M=';
 
 /***/ }),
 /* 198 */
@@ -59669,7 +59757,7 @@ var REGEXP_SPACE = /[ ]/;
 var REGEXP_NEWLINE = /\n/;
 var REGEXP_NEWLINE_G = /\n/g;
 var REGEXP_NAME = /[^\\\s\n\t()[\]{}`'+\-*/~!@#$%^&?,.:<>]/;
-var REGEXP_TITLE = /[^\n{}[\]!@#$%]/;
+var REGEXP_TITLE = /[^\n{}[\]]/;
 var REGEXP_DIGIT = /[\d]/;
 var REGEXP_ZERO = /[0]/;
 var REGEXP_COLON = /[:]/;
@@ -59695,7 +59783,7 @@ var REGEXP_DOUBLE_QUOTES = /["]/;
  * FILE = REDUNDENT + STATEMENT*
  */
 function FILE(text, i, list) {
-  console.log('FILE', i, text.slice(i, i + 5).replace(REGEXP_NEWLINE_G, '\\n'));
+  console.log('FILE', i, text.slice(i, i + 15).replace(REGEXP_NEWLINE_G, '\\n'));
   var c = i;
   c = REDUNDENT(text, c);
   var tmp = c;
@@ -59715,10 +59803,10 @@ function FILE(text, i, list) {
 }
 
 /**
- * STATEMENT = COMMAND | HEADER | ACT + (OPTIONS? | REDUNDENT)
+ * STATEMENT = COMMAND | HEADER | ACT + OPTIONS? + REDUNDENT
  */
 function STATEMENT(text, i, statement) {
-  console.log('STATEMENT', i, text.slice(i, i + 5).replace(REGEXP_NEWLINE_G, '\\n'));
+  console.log('STATEMENT', i, text.slice(i, i + 15).replace(REGEXP_NEWLINE_G, '\\n'));
   var c = i;
   var tmp = c;
 
@@ -59729,6 +59817,9 @@ function STATEMENT(text, i, statement) {
     var opt = {};
     c = OPTIONS(text, c, opt);
     statement.options = opt;
+
+    // REDUNDENT
+    c = REDUNDENT(text, c);
     return c;
   }
 
@@ -59739,6 +59830,9 @@ function STATEMENT(text, i, statement) {
     var _opt = {};
     c = OPTIONS(text, c, _opt);
     statement.options = _opt;
+
+    // REDUNDENT
+    c = REDUNDENT(text, c);
     return c;
   }
 
@@ -59757,7 +59851,7 @@ function STATEMENT(text, i, statement) {
  * COMMAND = ('$' + NAME + INLINE_REDUNDENT + ARGUMENTS?)?
  */
 function COMMAND(text, i, command) {
-  console.log('COMMAND', i, text.slice(i, i + 5).replace(REGEXP_NEWLINE_G, '\\n'));
+  console.log('COMMAND', i, text.slice(i, i + 15).replace(REGEXP_NEWLINE_G, '\\n'));
   var c = i;
 
   if (REGEXP_DOLLAR.test(text[c])) {
@@ -59791,7 +59885,7 @@ function COMMAND(text, i, command) {
  * @param {Object} header
  */
 function HEADER(text, i, header) {
-  console.log('HEADER', i, text.slice(i, i + 5).replace(REGEXP_NEWLINE_G, '\\n'));
+  console.log('HEADER', i, text.slice(i, i + 15).replace(REGEXP_NEWLINE_G, '\\n'));
   var c = i;
 
   if (REGEXP_HASH.test(text[c])) {
@@ -59825,7 +59919,7 @@ function HEADER(text, i, header) {
  * @param {Object} act
  */
 function ACT(text, i, act) {
-  console.log('ACT', i, text.slice(i, i + 5).replace(REGEXP_NEWLINE_G, '\\n'));
+  console.log('ACT', i, text.slice(i, i + 15).replace(REGEXP_NEWLINE_G, '\\n'));
   var c = i;
   var tmp = c;
 
@@ -59866,7 +59960,7 @@ function ACT(text, i, act) {
  * @param {Object} subjectMovement
  */
 function SUBJECT_MOVEMENT(text, i, subjectMovement) {
-  console.log('SUBJECT_MOVEMENT', i, text.slice(i, i + 5).replace(REGEXP_NEWLINE_G, '\\n'));
+  console.log('SUBJECT_MOVEMENT', i, text.slice(i, i + 15).replace(REGEXP_NEWLINE_G, '\\n'));
   var c = i;
   var tmp = c;
 
@@ -59892,7 +59986,7 @@ function SUBJECT_MOVEMENT(text, i, subjectMovement) {
  * @param {Object} subject
  */
 function SUBJECT(text, i, subject) {
-  console.log('SUBJECT', i, text.slice(i, i + 5).replace(REGEXP_NEWLINE_G, '\\n'));
+  console.log('SUBJECT', i, text.slice(i, i + 15).replace(REGEXP_NEWLINE_G, '\\n'));
   var c = i;
 
   if (REGEXP_AT.test(text[c])) {
@@ -59926,7 +60020,7 @@ function SUBJECT(text, i, subject) {
  * @param {Object} variety
  */
 function VARIETY(text, i, variety) {
-  console.log('VARIETY', i, text.slice(i, i + 5).replace(REGEXP_NEWLINE_G, '\\n'));
+  console.log('VARIETY', i, text.slice(i, i + 15).replace(REGEXP_NEWLINE_G, '\\n'));
   var c = i;
 
   if (REGEXP_LESSTHAN.test(text[c])) {
@@ -59965,7 +60059,7 @@ function VARIETY(text, i, variety) {
  * @param {Array} movement
  */
 function MOVEMENT(text, i, movement) {
-  console.log('MOVEMENT', i, text.slice(i, i + 5).replace(REGEXP_NEWLINE_G, '\\n'));
+  console.log('MOVEMENT', i, text.slice(i, i + 15).replace(REGEXP_NEWLINE_G, '\\n'));
   var c = i;
   var tmp = c;
 
@@ -59997,7 +60091,7 @@ function MOVEMENT(text, i, movement) {
  * METHOD = ACTION | COMMAND
  */
 function METHOD(text, i, method) {
-  console.log('METHOD', i, text.slice(i, i + 5).replace(REGEXP_NEWLINE_G, '\\n'));
+  console.log('METHOD', i, text.slice(i, i + 15).replace(REGEXP_NEWLINE_G, '\\n'));
   var c = i;
   var tmp = c;
 
@@ -60021,7 +60115,7 @@ function METHOD(text, i, method) {
  * @param {Object} action
  */
 function ACTION(text, i, action) {
-  console.log('ACTION', i, text.slice(i, i + 5).replace(REGEXP_NEWLINE_G, '\\n'));
+  console.log('ACTION', i, text.slice(i, i + 15).replace(REGEXP_NEWLINE_G, '\\n'));
   var c = i;
 
   if (REGEXP_EXCLAMATION.test(text[c])) {
@@ -60054,7 +60148,7 @@ function ACTION(text, i, action) {
  * ARGUMENTS = ('(' + PARAMETERS<VALUE> + ')' + INLINE_REDUNDENT)?
  */
 function ARGUMENTS(text, i, arr) {
-  console.log('ARGUMENTS', i, text.slice(i, i + 5).replace(REGEXP_NEWLINE_G, '\\n'));
+  console.log('ARGUMENTS', i, text.slice(i, i + 15).replace(REGEXP_NEWLINE_G, '\\n'));
   var c = i;
   if (REGEXP_LEFT_ROUND.test(text[c])) {
     // '('
@@ -60083,7 +60177,7 @@ function ARGUMENTS(text, i, arr) {
  * @param {Object | Array} obj
  */
 function PARAMETERS(text, i, type, arr) {
-  console.log('PARAMETERS<' + type.name + '>', i, text.slice(i, i + 5).replace(REGEXP_NEWLINE_G, '\\n'));
+  console.log('PARAMETERS<' + type.name + '>', i, text.slice(i, i + 15).replace(REGEXP_NEWLINE_G, '\\n'));
   var c = i;
 
   // RUNDUNDENT
@@ -60093,6 +60187,9 @@ function PARAMETERS(text, i, type, arr) {
   var value = {};
   c = type(text, c, value);
   arr.push(value);
+
+  // RUNDUNDENT
+  c = REDUNDENT(text, c);
 
   // (',' + PARAMETERS)?
   if (REGEXP_COMMA.test(text[c])) {
@@ -60108,7 +60205,7 @@ function PARAMETERS(text, i, type, arr) {
  * @param {Object} value
  */
 function VALUE(text, i, value) {
-  console.log('VALUE', i, text.slice(i, i + 5).replace(REGEXP_NEWLINE_G, '\\n'));
+  console.log('VALUE', i, text.slice(i, i + 15).replace(REGEXP_NEWLINE_G, '\\n'));
   var c = i;
   var tmp = c;
 
@@ -60130,14 +60227,14 @@ function VALUE(text, i, value) {
     return c;
   }
 
-  throw new SyntaxError('VALUE: Not a value');
+  return c;
 }
 
 /**
  * STRING = ("'" + ... + "'" | '"' + ... + '"')
  */
 function STRING(text, i, value) {
-  console.log('STRING', i, text.slice(i, i + 5).replace(REGEXP_NEWLINE_G, '\\n'));
+  console.log('STRING', i, text.slice(i, i + 15).replace(REGEXP_NEWLINE_G, '\\n'));
   var c = i;
   if (REGEXP_SINGLE_QUOTES.test(text[c]) || REGEXP_DOUBLE_QUOTES.test(text[c])) {
     var str = '';
@@ -60157,7 +60254,7 @@ function STRING(text, i, value) {
  * NUMBER = \d* + ('.' + \d*)?
  */
 function NUMBER(text, i, value) {
-  console.log('NUMBER', i, text.slice(i, i + 5).replace(REGEXP_NEWLINE_G, '\\n'));
+  console.log('NUMBER', i, text.slice(i, i + 15).replace(REGEXP_NEWLINE_G, '\\n'));
   var c = i;
   var number = 0;
 
@@ -60193,17 +60290,14 @@ function NUMBER(text, i, value) {
 }
 
 /**
- * OPTIONS = SIMULTANEOUS_GROUP<PAIR> + REDUNDENT
+ * OPTIONS = SIMULTANEOUS_GROUP<PAIR>
  */
 function OPTIONS(text, i, opt) {
-  console.log('OPTIONS', i, text.slice(i, i + 5).replace(REGEXP_NEWLINE_G, '\\n'));
+  console.log('OPTIONS', i, text.slice(i, i + 15).replace(REGEXP_NEWLINE_G, '\\n'));
   var c = i;
 
   // SIMULTANEOUS_GROUP<PAIR>
   c = SIMULTANEOUS_GROUP(text, c, PAIR, opt);
-
-  // REDUNDENT
-  c = REDUNDENT(text, c);
 
   return c;
 }
@@ -60212,7 +60306,7 @@ function OPTIONS(text, i, opt) {
  * PAIR = NAME + REDUNDENT + ':' + REDUNDENT + VALUE
  */
 function PAIR(text, i, pair) {
-  console.log('PAIR', i, text.slice(i, i + 5).replace(REGEXP_NEWLINE_G, '\\n'));
+  console.log('PAIR', i, text.slice(i, i + 15).replace(REGEXP_NEWLINE_G, '\\n'));
   var c = i;
 
   // NAME
@@ -60250,7 +60344,7 @@ function PAIR(text, i, pair) {
  * @param {Object} name, add on name.$string
  */
 function NAME(text, i, name) {
-  console.log('NAME', i, text.slice(i, i + 5).replace(REGEXP_NEWLINE_G, '\\n'));
+  console.log('NAME', i, text.slice(i, i + 15).replace(REGEXP_NEWLINE_G, '\\n'));
   var c = i;
   var str = '';
 
@@ -60267,7 +60361,7 @@ function NAME(text, i, name) {
  * TITLE = /[^\n{]/* + INLINE_REDUNDENT
  */
 function TITLE(text, i, title) {
-  console.log('TITLE', i, text.slice(i, i + 5).replace(REGEXP_NEWLINE_G, '\\n'));
+  console.log('TITLE', i, text.slice(i, i + 15).replace(REGEXP_NEWLINE_G, '\\n'));
   var c = i;
   var str = '';
 
@@ -60287,7 +60381,7 @@ function TITLE(text, i, title) {
  * GROUP<T> = SEQUENTIAL_GROUP<T> | SIMULTANEOUS_GROUP<T>
  */
 function GROUP(text, i, type, group) {
-  console.log('GROUP<' + type.name + '>', i, text.slice(i, i + 5).replace(REGEXP_NEWLINE_G, '\\n'));
+  console.log('GROUP<' + type.name + '>', i, text.slice(i, i + 15).replace(REGEXP_NEWLINE_G, '\\n'));
   var c = i;
   var tmp = c;
 
@@ -60310,7 +60404,7 @@ function GROUP(text, i, type, group) {
  * SEQUENTIAL_GROUP<T> = ('[' + PARAMETERS<T> + ']' + INLINE_REDUNDENT)?
  */
 function SEQUENTIAL_GROUP(text, i, type, obj) {
-  console.log('SEQUENTIAL_GROUP<' + type.name + '>', i, text.slice(i, i + 5).replace(REGEXP_NEWLINE_G, '\\n'));
+  console.log('SEQUENTIAL_GROUP<' + type.name + '>', i, text.slice(i, i + 15).replace(REGEXP_NEWLINE_G, '\\n'));
   var c = i;
 
   if (REGEXP_LEFT_SQUARE.test(text[c])) {
@@ -60342,7 +60436,7 @@ function SEQUENTIAL_GROUP(text, i, type, obj) {
  * SIMULTANEOUS_GROUP<T> = ('{' + PARAMETERS<T> + '}' + INLINE_REDUNDENT)?
  */
 function SIMULTANEOUS_GROUP(text, i, type, obj) {
-  console.log('SIMULTANEOUS_GROUP<' + type.name + '>', i, text.slice(i, i + 5).replace(REGEXP_NEWLINE_G, '\\n'));
+  console.log('SIMULTANEOUS_GROUP<' + type.name + '>', i, text.slice(i, i + 15).replace(REGEXP_NEWLINE_G, '\\n'));
   var c = i;
 
   if (REGEXP_LEFT_CURLY.test(text[c])) {
@@ -60375,7 +60469,7 @@ function SIMULTANEOUS_GROUP(text, i, type, obj) {
  * @param {Object} breaking breaking.$boolean = true 代表有換行
  */
 function INLINE_REDUNDENT(text, i, breaking) {
-  console.log('INLINE_REDUNDENT', i, text.slice(i, i + 5).replace(REGEXP_NEWLINE_G, '\\n'));
+  console.log('INLINE_REDUNDENT', i, text.slice(i, i + 15).replace(REGEXP_NEWLINE_G, '\\n'));
   var c = i;
   if (!breaking) {
     breaking = {};
@@ -60428,7 +60522,7 @@ function INLINE_REDUNDENT(text, i, breaking) {
  * COMMENT = INLINE_COMMENT | BLOCK_COMMENTS
  */
 function REDUNDENT(text, i) {
-  console.log('REDUNDENT', i, text.slice(i, i + 5).replace(REGEXP_NEWLINE_G, '\\n'));
+  console.log('REDUNDENT', i, text.slice(i, i + 15).replace(REGEXP_NEWLINE_G, '\\n'));
   var c = i;
   // SPACES_OR_NEWLINE
   while (c < text.length && (REGEXP_SPACE.test(text[c]) || REGEXP_NEWLINE.test(text[c]))) {
@@ -60467,10 +60561,15 @@ function REDUNDENT(text, i) {
 function parse(text) {
   console.log('parse', 'text length:', text.length);
   var list = [];
+
+  // literal parsing
   FILE(text, 0, list);
+
   console.log(list);
+
+  return list;
 }
-'filehash PVOSKoZweVrq5pclYP6rBu/LNGg=';
+'filehash RvGSoH2QgE+TjOb2b/Ihljzo1Nc=';
 
 /***/ })
 /******/ ]);

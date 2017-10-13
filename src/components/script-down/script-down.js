@@ -161,43 +161,95 @@ class SubtitleContainer extends PIXI.Container {
   }
 }
 
-export default class {
-  constructor (options, gamebase) {
+class ViewManager {
+  constructor (script, provider) {
+    this.script = script
+    this.provider = provider
+
+    // Just shortcuts
+    this.stage = this.provider.stage
+    this.subtitle = this.provider.subtitle
+
+    // The cursor point to the script which is ready to load
+    this.cursor = 0
+
+    // init
+    this.next()
+  }
+
+  next (event) {
+    for (let pause = false; this.cursor < this.script.length && !pause; this.cursor++) {
+      let statement = this.script[this.cursor]
+
+      switch (statement.$type) {
+        case 'command':
+          // TODO...zzz
+          break
+
+        case 'act':
+          let characters = []
+          let message = statement.message
+          for (let subjectMovement of statement.subjectMovementList.$array) {
+            characters.push(subjectMovement.subject.name)
+          }
+          
+          this.subtitle.push('<b>' + characters.join('、') + '：</b>\n' + message)
+          pause = true
+          break
+
+        case 'header':
+          // pause = true
+          break
+
+        default:
+          throw new Error('ViewManager: Unknown statement type.')
+      }
+    }
+  }
+}
+
+export default class ScriptDown extends PIXI.Container {
+  constructor (script, gamebase) {
+    super()
+    this.script = script
     this.gamebase = gamebase
     this.app = this.gamebase.app
 
-    this.container = new PIXI.Container()
-    this.app.stage.addChild(this.container)
+    this.app.stage.addChild(this)
 
-    this.stageContainer = new StageContainer({
+    this.stage = new StageContainer({
       height: this.app.renderer.height,
       width: this.app.renderer.width
     }, this.gamebase)
-    this.container.addChild(this.stageContainer)
+    this.addChild(this.stage)
 
-    this.stageContainer.addCharacter('bang', new BangBangBang({}, this.gamebase))
-    this.stageContainer.addCharacter('bang1', new BangBangBang({}, this.gamebase))
-    this.stageContainer.addCharacter('bang2', new BangBangBang({}, this.gamebase))
-    this.stageContainer.selectCharacter('bang').x = 100
-    this.stageContainer.selectCharacter('bang').y = 100
-    this.stageContainer.selectCharacter('bang1').x = 200
-    this.stageContainer.selectCharacter('bang1').y = 200
-    this.stageContainer.selectCharacter('bang2').x = 300
-    this.stageContainer.selectCharacter('bang2').y = 300
+    this.stage.addCharacter('bang', new BangBangBang({}, this.gamebase))
+    this.stage.addCharacter('bang1', new BangBangBang({}, this.gamebase))
+    this.stage.addCharacter('bang2', new BangBangBang({}, this.gamebase))
+    this.stage.selectCharacter('bang').x = 100
+    this.stage.selectCharacter('bang').y = 100
+    this.stage.selectCharacter('bang1').x = 200
+    this.stage.selectCharacter('bang1').y = 200
+    this.stage.selectCharacter('bang2').x = 300
+    this.stage.selectCharacter('bang2').y = 300
 
-    this.subtitleContainer = new SubtitleContainer({
+    this.subtitle = new SubtitleContainer({
       content: {
         height: 180,
         width: this.app.renderer.width
       }
     }, this.gamebase)
-    this.container.addChild(this.subtitleContainer)
-    this.subtitleContainer.x = 0
-    this.subtitleContainer.y = this.app.renderer.height - 180
+    this.addChild(this.subtitle)
+    this.subtitle.x = 0
+    this.subtitle.y = this.app.renderer.height - 180
 
-    this.i = 1
-    this.subtitleContainer.on('pointerdown', function (event) {
-      this.subtitleContainer.push(`你點我<b>${this.i++}</b>下了`)
+    /**
+     * Add this after the declaration of this.stage and this.subtitle
+     */
+    this.ViewManager = new ViewManager(script, this)
+
+    this.subtitle.on('pointerdown', function (event) {
+      this.ViewManager.next(event)
     }.bind(this))
   }
 }

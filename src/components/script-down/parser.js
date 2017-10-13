@@ -6,7 +6,8 @@ const REGEXP_SPACE = /[ ]/
 const REGEXP_NEWLINE = /\n/
 const REGEXP_NEWLINE_G = /\n/g
 const REGEXP_NAME = /[^\\\s\n\t()[\]{}`'+\-*/~!@#$%^&?,.:<>]/
-const REGEXP_TITLE = /[^\n{}[\]!@#$%]/
+const REGEXP_TITLE = /[^\n{}[\]]/
+const REGEXP_MESSAGE = /[^{}[\]]/
 const REGEXP_DIGIT = /[\d]/
 const REGEXP_ZERO = /[0]/
 const REGEXP_COLON = /[:]/
@@ -32,7 +33,7 @@ const REGEXP_DOUBLE_QUOTES = /["]/
  * FILE = REDUNDENT + STATEMENT*
  */
 function FILE (text, i, list) {
-  console.log('FILE', i, text.slice(i, i + 5).replace(REGEXP_NEWLINE_G, '\\n'))
+  console.log('FILE', i, text.slice(i, i + 15).replace(REGEXP_NEWLINE_G, '\\n'))
   let c = i
   c = REDUNDENT(text, c)
   let tmp = c
@@ -52,10 +53,10 @@ function FILE (text, i, list) {
 }
 
 /**
- * STATEMENT = COMMAND | HEADER | ACT + (OPTIONS? | REDUNDENT)
+ * STATEMENT = COMMAND | HEADER | ACT + OPTIONS? + REDUNDENT
  */
 function STATEMENT (text, i, statement) {
-  console.log('STATEMENT', i, text.slice(i, i + 5).replace(REGEXP_NEWLINE_G, '\\n'))
+  console.log('STATEMENT', i, text.slice(i, i + 15).replace(REGEXP_NEWLINE_G, '\\n'))
   let c = i
   let tmp = c
 
@@ -66,6 +67,9 @@ function STATEMENT (text, i, statement) {
     let opt = {}
     c = OPTIONS(text, c, opt)
     statement.options = opt
+
+    // REDUNDENT
+    c = REDUNDENT(text, c)
     return c
   }
 
@@ -76,6 +80,9 @@ function STATEMENT (text, i, statement) {
     let opt = {}
     c = OPTIONS(text, c, opt)
     statement.options = opt
+
+    // REDUNDENT
+    c = REDUNDENT(text, c)
     return c
   }
 
@@ -94,7 +101,7 @@ function STATEMENT (text, i, statement) {
  * COMMAND = ('$' + NAME + INLINE_REDUNDENT + ARGUMENTS?)?
  */
 function COMMAND (text, i, command) {
-  console.log('COMMAND', i, text.slice(i, i + 5).replace(REGEXP_NEWLINE_G, '\\n'))
+  console.log('COMMAND', i, text.slice(i, i + 15).replace(REGEXP_NEWLINE_G, '\\n'))
   let c = i
 
   if (REGEXP_DOLLAR.test(text[c])) {
@@ -128,7 +135,7 @@ function COMMAND (text, i, command) {
  * @param {Object} header
  */
 function HEADER (text, i, header) {
-  console.log('HEADER', i, text.slice(i, i + 5).replace(REGEXP_NEWLINE_G, '\\n'))
+  console.log('HEADER', i, text.slice(i, i + 15).replace(REGEXP_NEWLINE_G, '\\n'))
   let c = i
 
   if (REGEXP_HASH.test(text[c])) {
@@ -162,7 +169,7 @@ function HEADER (text, i, header) {
  * @param {Object} act
  */
 function ACT (text, i, act) {
-  console.log('ACT', i, text.slice(i, i + 5).replace(REGEXP_NEWLINE_G, '\\n'))
+  console.log('ACT', i, text.slice(i, i + 15).replace(REGEXP_NEWLINE_G, '\\n'))
   let c = i
   let tmp = c
 
@@ -203,7 +210,7 @@ function ACT (text, i, act) {
  * @param {Object} subjectMovement
  */
 function SUBJECT_MOVEMENT (text, i, subjectMovement) {
-  console.log('SUBJECT_MOVEMENT', i, text.slice(i, i + 5).replace(REGEXP_NEWLINE_G, '\\n'))
+  console.log('SUBJECT_MOVEMENT', i, text.slice(i, i + 15).replace(REGEXP_NEWLINE_G, '\\n'))
   let c = i
   let tmp = c
 
@@ -229,7 +236,7 @@ function SUBJECT_MOVEMENT (text, i, subjectMovement) {
  * @param {Object} subject
  */
 function SUBJECT (text, i, subject) {
-  console.log('SUBJECT', i, text.slice(i, i + 5).replace(REGEXP_NEWLINE_G, '\\n'))
+  console.log('SUBJECT', i, text.slice(i, i + 15).replace(REGEXP_NEWLINE_G, '\\n'))
   let c = i
 
   if (REGEXP_AT.test(text[c])) {
@@ -263,7 +270,7 @@ function SUBJECT (text, i, subject) {
  * @param {Object} variety
  */
 function VARIETY (text, i, variety) {
-  console.log('VARIETY', i, text.slice(i, i + 5).replace(REGEXP_NEWLINE_G, '\\n'))
+  console.log('VARIETY', i, text.slice(i, i + 15).replace(REGEXP_NEWLINE_G, '\\n'))
   let c = i
 
   if (REGEXP_LESSTHAN.test(text[c])) {
@@ -302,7 +309,7 @@ function VARIETY (text, i, variety) {
  * @param {Array} movement
  */
 function MOVEMENT (text, i, movement) {
-  console.log('MOVEMENT', i, text.slice(i, i + 5).replace(REGEXP_NEWLINE_G, '\\n'))
+  console.log('MOVEMENT', i, text.slice(i, i + 15).replace(REGEXP_NEWLINE_G, '\\n'))
   let c = i
   let tmp = c
 
@@ -334,7 +341,7 @@ function MOVEMENT (text, i, movement) {
  * METHOD = ACTION | COMMAND
  */
 function METHOD (text, i, method) {
-  console.log('METHOD', i, text.slice(i, i + 5).replace(REGEXP_NEWLINE_G, '\\n'))
+  console.log('METHOD', i, text.slice(i, i + 15).replace(REGEXP_NEWLINE_G, '\\n'))
   let c = i
   let tmp = c
 
@@ -358,7 +365,7 @@ function METHOD (text, i, method) {
  * @param {Object} action
  */
 function ACTION (text, i, action) {
-  console.log('ACTION', i, text.slice(i, i + 5).replace(REGEXP_NEWLINE_G, '\\n'))
+  console.log('ACTION', i, text.slice(i, i + 15).replace(REGEXP_NEWLINE_G, '\\n'))
   let c = i
 
   if (REGEXP_EXCLAMATION.test(text[c])) {
@@ -372,10 +379,10 @@ function ACTION (text, i, action) {
     // INLINE_REDUNDENT
     let breaking = {}
     c = INLINE_REDUNDENT(text, c, breaking)
-    
+
     action.$type = 'action'
     action.name = name.$string
-    
+
     if (!breaking.$boolean) {
       // ARGUMENTS?
       let argus = []
@@ -391,7 +398,7 @@ function ACTION (text, i, action) {
  * ARGUMENTS = ('(' + PARAMETERS<VALUE> + ')' + INLINE_REDUNDENT)?
  */
 function ARGUMENTS (text, i, arr) {
-  console.log('ARGUMENTS', i, text.slice(i, i + 5).replace(REGEXP_NEWLINE_G, '\\n'))
+  console.log('ARGUMENTS', i, text.slice(i, i + 15).replace(REGEXP_NEWLINE_G, '\\n'))
   let c = i
   if (REGEXP_LEFT_ROUND.test(text[c])) {
     // '('
@@ -420,7 +427,7 @@ function ARGUMENTS (text, i, arr) {
  * @param {Object | Array} obj
  */
 function PARAMETERS (text, i, type, arr) {
-  console.log(`PARAMETERS<${type.name}>`, i, text.slice(i, i + 5).replace(REGEXP_NEWLINE_G, '\\n'))
+  console.log(`PARAMETERS<${type.name}>`, i, text.slice(i, i + 15).replace(REGEXP_NEWLINE_G, '\\n'))
   let c = i
 
   // RUNDUNDENT
@@ -430,6 +437,9 @@ function PARAMETERS (text, i, type, arr) {
   let value = {}
   c = type(text, c, value)
   arr.push(value)
+
+  // RUNDUNDENT
+  c = REDUNDENT(text, c)
 
   // (',' + PARAMETERS)?
   if (REGEXP_COMMA.test(text[c])) {
@@ -445,7 +455,7 @@ function PARAMETERS (text, i, type, arr) {
  * @param {Object} value
  */
 function VALUE (text, i, value) {
-  console.log('VALUE', i, text.slice(i, i + 5).replace(REGEXP_NEWLINE_G, '\\n'))
+  console.log('VALUE', i, text.slice(i, i + 15).replace(REGEXP_NEWLINE_G, '\\n'))
   let c = i
   let tmp = c
 
@@ -467,14 +477,14 @@ function VALUE (text, i, value) {
     return c
   }
 
-  throw new SyntaxError('VALUE: Not a value')
+  return c
 }
 
 /**
  * STRING = ("'" + ... + "'" | '"' + ... + '"')
  */
 function STRING (text, i, value) {
-  console.log('STRING', i, text.slice(i, i + 5).replace(REGEXP_NEWLINE_G, '\\n'))
+  console.log('STRING', i, text.slice(i, i + 15).replace(REGEXP_NEWLINE_G, '\\n'))
   let c = i
   if (REGEXP_SINGLE_QUOTES.test(text[c]) || REGEXP_DOUBLE_QUOTES.test(text[c])) {
     let str = ''
@@ -494,7 +504,7 @@ function STRING (text, i, value) {
  * NUMBER = \d* + ('.' + \d*)?
  */
 function NUMBER (text, i, value) {
-  console.log('NUMBER', i, text.slice(i, i + 5).replace(REGEXP_NEWLINE_G, '\\n'))
+  console.log('NUMBER', i, text.slice(i, i + 15).replace(REGEXP_NEWLINE_G, '\\n'))
   let c = i
   let number = 0
 
@@ -530,17 +540,14 @@ function NUMBER (text, i, value) {
 }
 
 /**
- * OPTIONS = SIMULTANEOUS_GROUP<PAIR> + REDUNDENT
+ * OPTIONS = SIMULTANEOUS_GROUP<PAIR>
  */
 function OPTIONS (text, i, opt) {
-  console.log('OPTIONS', i, text.slice(i, i + 5).replace(REGEXP_NEWLINE_G, '\\n'))
+  console.log('OPTIONS', i, text.slice(i, i + 15).replace(REGEXP_NEWLINE_G, '\\n'))
   let c = i
 
   // SIMULTANEOUS_GROUP<PAIR>
   c = SIMULTANEOUS_GROUP(text, c, PAIR, opt)
-
-  // REDUNDENT
-  c = REDUNDENT(text, c)
 
   return c
 }
@@ -549,7 +556,7 @@ function OPTIONS (text, i, opt) {
  * PAIR = NAME + REDUNDENT + ':' + REDUNDENT + VALUE
  */
 function PAIR (text, i, pair) {
-  console.log('PAIR', i, text.slice(i, i + 5).replace(REGEXP_NEWLINE_G, '\\n'))
+  console.log('PAIR', i, text.slice(i, i + 15).replace(REGEXP_NEWLINE_G, '\\n'))
   let c = i
 
   // NAME
@@ -587,7 +594,7 @@ function PAIR (text, i, pair) {
  * @param {Object} name, add on name.$string
  */
 function NAME (text, i, name) {
-  console.log('NAME', i, text.slice(i, i + 5).replace(REGEXP_NEWLINE_G, '\\n'))
+  console.log('NAME', i, text.slice(i, i + 15).replace(REGEXP_NEWLINE_G, '\\n'))
   let c = i
   let str = ''
 
@@ -604,7 +611,7 @@ function NAME (text, i, name) {
  * TITLE = /[^\n{]/* + INLINE_REDUNDENT
  */
 function TITLE (text, i, title) {
-  console.log('TITLE', i, text.slice(i, i + 5).replace(REGEXP_NEWLINE_G, '\\n'))
+  console.log('TITLE', i, text.slice(i, i + 15).replace(REGEXP_NEWLINE_G, '\\n'))
   let c = i
   let str = ''
 
@@ -624,7 +631,7 @@ function TITLE (text, i, title) {
  * GROUP<T> = SEQUENTIAL_GROUP<T> | SIMULTANEOUS_GROUP<T>
  */
 function GROUP (text, i, type, group) {
-  console.log(`GROUP<${type.name}>`, i, text.slice(i, i + 5).replace(REGEXP_NEWLINE_G, '\\n'))
+  console.log(`GROUP<${type.name}>`, i, text.slice(i, i + 15).replace(REGEXP_NEWLINE_G, '\\n'))
   let c = i
   let tmp = c
 
@@ -647,7 +654,7 @@ function GROUP (text, i, type, group) {
  * SEQUENTIAL_GROUP<T> = ('[' + PARAMETERS<T> + ']' + INLINE_REDUNDENT)?
  */
 function SEQUENTIAL_GROUP (text, i, type, obj) {
-  console.log(`SEQUENTIAL_GROUP<${type.name}>`, i, text.slice(i, i + 5).replace(REGEXP_NEWLINE_G, '\\n'))
+  console.log(`SEQUENTIAL_GROUP<${type.name}>`, i, text.slice(i, i + 15).replace(REGEXP_NEWLINE_G, '\\n'))
   let c = i
 
   if (REGEXP_LEFT_SQUARE.test(text[c])) {
@@ -679,7 +686,7 @@ function SEQUENTIAL_GROUP (text, i, type, obj) {
  * SIMULTANEOUS_GROUP<T> = ('{' + PARAMETERS<T> + '}' + INLINE_REDUNDENT)?
  */
 function SIMULTANEOUS_GROUP (text, i, type, obj) {
-  console.log(`SIMULTANEOUS_GROUP<${type.name}>`, i, text.slice(i, i + 5).replace(REGEXP_NEWLINE_G, '\\n'))
+  console.log(`SIMULTANEOUS_GROUP<${type.name}>`, i, text.slice(i, i + 15).replace(REGEXP_NEWLINE_G, '\\n'))
   let c = i
 
   if (REGEXP_LEFT_CURLY.test(text[c])) {
@@ -712,7 +719,7 @@ function SIMULTANEOUS_GROUP (text, i, type, obj) {
  * @param {Object} breaking breaking.$boolean = true 代表有換行
  */
 function INLINE_REDUNDENT (text, i, breaking) {
-  console.log('INLINE_REDUNDENT', i, text.slice(i, i + 5).replace(REGEXP_NEWLINE_G, '\\n'))
+  console.log('INLINE_REDUNDENT', i, text.slice(i, i + 15).replace(REGEXP_NEWLINE_G, '\\n'))
   let c = i
   if (!breaking) {
     breaking = {}
@@ -761,7 +768,7 @@ function INLINE_REDUNDENT (text, i, breaking) {
  * COMMENT = INLINE_COMMENT | BLOCK_COMMENTS
  */
 function REDUNDENT (text, i) {
-  console.log('REDUNDENT', i, text.slice(i, i + 5).replace(REGEXP_NEWLINE_G, '\\n'))
+  console.log('REDUNDENT', i, text.slice(i, i + 15).replace(REGEXP_NEWLINE_G, '\\n'))
   let c = i
   // SPACES_OR_NEWLINE
   while (c < text.length && (REGEXP_SPACE.test(text[c]) || REGEXP_NEWLINE.test(text[c]))) { c++ }
@@ -794,6 +801,11 @@ function REDUNDENT (text, i) {
 export default function parse (text) {
   console.log('parse', 'text length:', text.length)
   let list = []
+
+  // literal parsing
   FILE(text, 0, list)
+
   console.log(list)
+
+  return list
 }

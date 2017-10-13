@@ -1,33 +1,43 @@
 
-$scene(陽明山, {
-  texture: {
-    登山口: {
-      bg: 'asd',
-      bgm: '登山口之歌'
-    }
-  }
-})
+// INLINE_COMMENT
 
-$charactor(白乒乓, {
-  texture: {
-    素材6: '1234.png',
-    素材11: {
-      main: '1234.png',
-      sub: '1234.png',
-      effect-in: !顫抖(1),
-      effect-out: {
-        !顫抖(1),
-        $sound(快速移動聲)
-      }
-    }
-  }
-})
+/* BLOCK_COMMENT */
+
+/*
+  BLOCK_COMMENT
+*/
+
+$c1
+$c2()
+$c3(argu)
+$c4(1234)
+$c5("str")
+$c6('str')
+$c7(1,2,3)
+$c8( /* comment */ 1 /* comment */ , 2)
+$c9() {opt:1}
+$c10() {opt1:1, opt2: 2}
+$c11() { /* comment */ opt1 /* comment */ : /* comment */ 1 /* comment */ , opt2: 2}
+$c12() // comment
+$c13() /* comment */
+/* comment */ $cmd14()
+
+@obj
+@obj msg asdf!!! asdf asdf asdf asdfasdfq34tq34t ()
+@obj<texture>
+@obj< /* com */ texture /* com */ >
+@obj<texture> msg
+@obj<texture> !action
+@obj<texture> !action msg
+@obj<texture> !action {opt:1} msg
+@obj<texture> {opt:1} msg
+
 
 #序章
 
 ##第一幕
 
-$scene(陽明山)<登山口>
+$scene(陽明山)
 $bgm(叢林鳥叫之歌)
 //$slot(殘破, Boolean, true)
 @白乒乓<素材11> !登場(200, 300)
@@ -37,18 +47,18 @@ $bgm(叢林鳥叫之歌)
 @白乒乓<素材9> 漂向北方 別問我家鄉
 @小婷 漂向北方 別問我家鄉
 
-$scene(陽明山)<路上>
+$scene(陽明山)
 @小婷 高聳古老的城牆 擋不住憂傷
 @小婷 我飄向北方 家人是否無恙
 @小婷 肩上沉重的行囊 盛滿了惆悵
 
 ##轉折
 
-{@白乒乓, @小婷} {!哭, !卸妝}
+{@白乒乓, @小婷} !哭 !卸妝
 @小婷 !大笑 $sound(哇哈哈之聲) 有人說他在老家欠了一堆錢 需要避避風頭
 @小婷 有人說他練就了一身武藝卻沒機會嶄露
 @小婷 有人失去了自我 手足無措四處漂流
-{@白乒乓<素材9>, @小婷<!素材9>} 有人為了夢想為了三餐為養家餬口
+{@白乒乓<素材9>, @小婷<素材9>} 有人為了夢想為了三餐為養家餬口
 
 $if(殘破)
   @小婷 他住在燕郊區 殘破的求職公寓

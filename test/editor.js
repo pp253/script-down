@@ -20,7 +20,10 @@ function initGameBase () {
   })
 
   let myScriptDown = (gamebase) => {
-    let script = 'asdasdasd'
+    let text = document.getElementById('text').value
+    let startTime = performance.now()
+    let script = parser(text)
+    log(`Parsing is done (spending ${(performance.now() - startTime).toPrecision(4)} ms)`)
     return new ScriptDown(script, gamebase)
   }
 
@@ -69,11 +72,8 @@ $com2(123, 456)
 `
 
 function update () {
-  let text = document.getElementById('text').value
-  let startTime = performance.now()
-  parser(text)
   try {
-    log(`Parsing is done (spending ${(performance.now() - startTime).toPrecision(4)} ms)`)
+    initGameBase()
   } catch (e) {
     log(`Parsing failed!`)
     log(e)
@@ -86,8 +86,9 @@ function reload () {
 }
 
 window.onload = () => {
-  initGameBase()
   log('Welcome to ScriptDown Editor!')
   log('Get more information by clicking "GITHUB & HELP".')
   log('')
+  
+  initGameBase()
 }
