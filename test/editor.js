@@ -40,13 +40,13 @@ let originalConsoleError = console.error
 
 function log (...msg) {
   originalConsoleLog(...msg)
-  document.getElementById('console').innerHTML += msg + '\n'
+  document.getElementById('console').innerHTML += '\n' + msg
   document.getElementById('console').scrollTop = 10000000000
 }
 
 function error (...msg) {
   originalConsoleError(...msg)
-  document.getElementById('console').value += msg + '\n'
+  document.getElementById('console').value += '\n' + msg
   document.getElementById('console').scrollTop = 10000000000
 }
 
@@ -87,7 +87,7 @@ function reload () {
 
 window.onload = () => {
   initGameBase()
-  log('')
   log('Welcome to ScriptDown Editor!')
-  log('Get more information on GitHub')
+  log('Get more information by clicking "GITHUB & HELP".')
+  log('')
 }
