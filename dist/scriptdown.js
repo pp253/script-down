@@ -59662,19 +59662,51 @@ var TwistFilter=function(o){function n(n,r,t){void 0===n&&(n=200),void 0===r&&(r
 "use strict";
 /* harmony export (immutable) */ __webpack_exports__["a"] = parse;
 /**
+ * KEYWORD: !, @, #, {}, (), []
+ * Prepare for Chinese
+ */
+var REGEXP_SPACE = /[\s]/;
+var REGEXP_NAWLINE = /\n/;
+var REGEXP_NAWLINE_G = /\n/g;
+var REGEXP_NAME = /[^\\\s\n\t()[\]{}`'+\-*/~!@#$%^&?,.:]/;
+var REGEXP_TITLE = /[^\n{}[\]!@#$%]/;
+var REGEXP_DIGIT = /[\d]/;
+var REGEXP_ZERO = /[0]/;
+var REGEXP_COLON = /[:]/;
+var REGEXP_LEFT_ROUND = /[(]/;
+var REGEXP_RIGHT_ROUND = /[)]/;
+var REGEXP_LEFT_SQUARE = /[[]/;
+var REGEXP_RIGHT_SQUARE = /[\]]/;
+var REGEXP_LEFT_CURLY = /[{]/;
+var REGEXP_RIGHT_CURLY = /[}]/;
+var REGEXP_SLASH = /[/]/;
+var REGEXP_STAR = /[*]/;
+var REGEXP_DOLLAR = /[$]/;
+var REGEXP_HASH = /[#]/;
+var REGEXP_AT = /[@]/;
+var REGEXP_EXCLAMATION = /[!]/;
+var REGEXP_LESSTHAN = /[<]/;
+var REGEXP_GREATERTHAN = /[>]/;
+var REGEXP_COMMA = /[,]/;
+var REGEXP_SINGLE_QUOTES = /[']/;
+var REGEXP_DOUBLE_QUOTES = /["]/;
+
+/**
  * FILE = REDUNDENT + STATEMENT*
  */
 function FILE(text, i, list) {
-  console.log('FILE', i, text.slice(i, i + 5).replace(/\n/g, '\\n'));
+  console.log('FILE', i, text.slice(i, i + 5).replace(REGEXP_NAWLINE_G, '\\n'));
   var c = i;
   c = REDUNDENT(text, c);
   var tmp = c;
   while (c < text.length) {
-    c = STATEMENT(text, c, list);
+    var statement = {};
+    c = STATEMENT(text, c, statement);
     if (c === tmp) {
       // No more statements
       break;
     }
+    list.push(statement);
     tmp = c;
   }
   if (c < text.length) {
@@ -59683,27 +59715,35 @@ function FILE(text, i, list) {
 }
 
 /**
- * STATEMENT = COMMAND | HEADER | ACT
+ * STATEMENT = COMMAND | HEADER | ACT + OPTIONS?
  */
-function STATEMENT(text, i, list) {
-  console.log('STATEMENT', i, text.slice(i, i + 5).replace(/\n/g, '\\n'));
+function STATEMENT(text, i, statement) {
+  console.log('STATEMENT', i, text.slice(i, i + 5).replace(REGEXP_NAWLINE_G, '\\n'));
   var c = i;
   var tmp = c;
 
   // COMMAND
-  c = COMMAND(text, c, list);
+  c = COMMAND(text, c, statement);
   if (c !== tmp) {
+    // OPTIONS?
+    var opt = {};
+    c = OPTIONS(text, c, opt);
+    statement.options = opt;
     return c;
   }
 
   // HEADER
-  c = HEADER(text, c, list);
+  c = HEADER(text, c, statement);
   if (c !== tmp) {
+    // OPTIONS?
+    var _opt = {};
+    c = OPTIONS(text, c, _opt);
+    statement.options = _opt;
     return c;
   }
 
   // ACT
-  c = ACT(text, c, list);
+  c = ACT(text, c, statement);
   if (c !== tmp) {
     return c;
   }
@@ -59712,13 +59752,13 @@ function STATEMENT(text, i, list) {
 }
 
 /**
- * COMMAND = '$' + NAME + REDUNDENT + ARGUMENTS? + OPTIONS? + REDUNDENT
+ * COMMAND = ('$' + NAME + REDUNDENT + ARGUMENTS?)?
  */
-function COMMAND(text, i, list) {
-  console.log('COMMAND', i, text.slice(i, i + 5).replace(/\n/g, '\\n'));
+function COMMAND(text, i, command) {
+  console.log('COMMAND', i, text.slice(i, i + 5).replace(REGEXP_NAWLINE_G, '\\n'));
   var c = i;
 
-  if (text[c] === '$') {
+  if (REGEXP_DOLLAR.test(text[c])) {
     // '$'
     c++;
 
@@ -59733,36 +59773,27 @@ function COMMAND(text, i, list) {
     var argus = [];
     c = ARGUMENTS(text, c, argus);
 
-    // OPTIONS?
-    var opt = {};
-    c = OPTIONS(text, c, opt);
-
-    // REDUNDENT
-    c = REDUNDENT(text, c);
-
-    list.push({
-      type: 'command',
-      name: name.$string,
-      argus: argus,
-      options: opt
-    });
+    command.$type = 'command';
+    command.name = name.$string;
+    command.argus = argus;
   }
 
   return c;
 }
 
 /**
- * HEADER = '#'* + REDUNDENT + TITLE + REDUNDENT + OPTIONS
+ * HEADER = ('#'+ + REDUNDENT + TITLE?)?
+ * @param {Object} header
  */
-function HEADER(text, i, list) {
-  console.log('HEADER', i, text.slice(i, i + 5).replace(/\n/g, '\\n'));
+function HEADER(text, i, header) {
+  console.log('HEADER', i, text.slice(i, i + 5).replace(REGEXP_NAWLINE_G, '\\n'));
   var c = i;
 
-  if (text[c] === '#') {
+  if (REGEXP_HASH.test(text[c])) {
     // '#'*
     c++;
     var level = 1;
-    for (; c < text.length && text[c] === '#'; c++) {
+    for (; c < text.length && REGEXP_HASH.test(text[c]); c++) {
       level++;
     }
 
@@ -59776,48 +59807,264 @@ function HEADER(text, i, list) {
     // REDUNDENT
     c = REDUNDENT(text, c);
 
-    // OPTIONS
-    var opt = {};
-    c = OPTIONS(text, c, opt);
-
-    list.push({
-      type: 'header',
-      level: level,
-      name: title.$string,
-      options: opt
-    });
+    header.$type = 'header';
+    header.level = level;
+    header.title = title.$string;
   }
 
   return c;
 }
 
-function ACT(text, i, list) {}
-
 /**
- * ARGUMENTS = '(' + PARAMETERS + ')' + REDUNDENT
+ * ACT = (((SIMULTANEOUS_GROUP<SUBJECT_MOVEMENT> + MOVEMENT?) | SUBJECT_MOVEMENT) + MESSAGE:TITLE?)?
+ * @param {Object} act
  */
-function ARGUMENTS(text, i, argus) {
-  console.log('ARGUMENTS', i, text.slice(i, i + 5).replace(/\n/g, '\\n'));
+function ACT(text, i, act) {
+  console.log('ACT', i, text.slice(i, i + 5).replace(REGEXP_NAWLINE_G, '\\n'));
   var c = i;
-  if (text[c] === '(') {
-    c++;
-    c = PARAMETERS(text, c, argus);
-    if (text[c] === ')') {
-      c++;
+  var tmp = c;
+
+  // (SIMULTANEOUS_GROUP<SUBJECT_MOVEMENT> + MOVEMENT?)
+  var subjectMovementList = [];
+  c = SIMULTANEOUS_GROUP(text, c, SUBJECT_MOVEMENT, subjectMovementList);
+  if (c !== tmp) {
+    // MOVEMENT?
+    var movement = [];
+    c = MOVEMENT(text, c, movement);
+    act.movement = movement;
+  } else {
+    // SUBJECT_MOVEMENT
+    c = SUBJECT_MOVEMENT(text, c, subjectMovementList);
+
+    if (c === tmp) {
+      // Not a SUBJECT_MOVEMENT; therefore, not an ACT
       return c;
-    } else {
-      throw new SyntaxError('ARGUMENTS: Not ending with ).');
     }
   }
-  c = REDUNDENT(text, c);
+
+  // MESSAGE:TITLE?
+  var message = {};
+  c = TITLE(text, c, message);
+
+  act.$type = 'act';
+  act.subjectMovementList = subjectMovementList;
+  act.message = message.$string;
+
   return c;
 }
 
 /**
- * PARAMETERS = RUNDUNDENT + VALUE + RUNDUNDENT + (',' + PARAMETERS)?
+ * SUBJECT_MOVEMENT = SUBJECT + MOVEMENT?
+ * @param {Object} subjectMovement
  */
-function PARAMETERS(text, i, argus) {
-  console.log('PARAMETERS', i, text.slice(i, i + 5).replace(/\n/g, '\\n'));
+function SUBJECT_MOVEMENT(text, i, subjectMovementList) {
+  console.log('SUBJECT_MOVEMENT', i, text.slice(i, i + 5).replace(REGEXP_NAWLINE_G, '\\n'));
+  var c = i;
+
+  var subjectMovement = {};
+
+  // SUBJECT
+  var subject = {};
+  c = SUBJECT(text, c, subject);
+
+  // MOVEMENT?
+  var movement = [];
+  c = MOVEMENT(text, c, movement);
+
+  subjectMovement.$type = 'subjectMovement';
+  subjectMovement.subject = subject;
+  subjectMovement.movement = movement;
+  subjectMovementList.push(subjectMovement);
+
+  return c;
+}
+
+/**
+ * SUBJECT = ('@' + OBJECT_NAME:NAME + REDUNDENT + VARIETY?)?
+ * @param {Object} subject
+ */
+function SUBJECT(text, i, subject) {
+  console.log('SUBJECT', i, text.slice(i, i + 5).replace(REGEXP_NAWLINE_G, '\\n'));
+  var c = i;
+
+  if (REGEXP_AT.test(text[c])) {
+    // '@'
+    c++;
+
+    // NAME
+    var name = {};
+    c = NAME(text, c, name);
+
+    // REDUNDENT
+    c = REDUNDENT(text, c);
+
+    // VARIETY?
+    var variety = {};
+    c = VARIETY(text, c, variety);
+
+    subject.$type = 'subject';
+    subject.name = name.$string;
+    subject.variety = variety.$string;
+  }
+
+  return c;
+}
+
+/**
+ * VARIETY = ('<' + REDUNDENT + NAME + REDUNDENT + '>' + REDUNDENT)?
+ * @param {Object} variety
+ */
+function VARIETY(text, i, variety) {
+  console.log('VARIETY', i, text.slice(i, i + 5).replace(REGEXP_NAWLINE_G, '\\n'));
+  var c = i;
+
+  if (REGEXP_LESSTHAN.test(text[c])) {
+    // '<'
+    c++;
+
+    // REDUNDENT
+    c = REDUNDENT(text, c);
+
+    // NAME
+    c = NAME(text, c, variety);
+
+    // REDUNDENT
+    c = REDUNDENT(text, c);
+
+    // '>'
+    if (REGEXP_GREATERTHAN.test(text[c])) {
+      throw new SyntaxError('VARIETY: Missing ">"');
+    }
+    c++;
+
+    // REDUNDENT
+    c = REDUNDENT(text, c);
+  }
+
+  return c;
+}
+
+/**
+ * MOVEMENT = (METHOD* + OPTIONS?)?
+ * @param {Array} movement
+ */
+function MOVEMENT(text, i, movement) {
+  console.log('MOVEMENT', i, text.slice(i, i + 5).replace(REGEXP_NAWLINE_G, '\\n'));
+  var c = i;
+  var tmp = c;
+
+  // METHOD*
+  var methods = [];
+  while (c < text.length) {
+    var method = {};
+    c = METHOD(text, c, method);
+    if (c === tmp) {
+      // No more METHODs
+      break;
+    }
+    methods.push(method);
+    tmp = c;
+  }
+
+  // OPTION?
+  var opt = {};
+  c = OPTIONS(text, c, opt);
+
+  movement.$type = 'movement';
+  movement.methods = methods;
+  movement.options = opt;
+
+  return c;
+}
+
+/**
+ * METHOD = ACTION | COMMAND
+ */
+function METHOD(text, i, method) {
+  console.log('METHOD', i, text.slice(i, i + 5).replace(REGEXP_NAWLINE_G, '\\n'));
+  var c = i;
+  var tmp = c;
+
+  // ACTION
+  c = ACTION(text, c, method);
+  if (c !== tmp) {
+    return c;
+  }
+
+  // COMMAND
+  c = COMMAND(text, c, method);
+  if (c !== tmp) {
+    return c;
+  }
+
+  return c;
+}
+
+/**
+ * ACTION = '!' + NAME + REDUNDENT + ARGUMENTS?
+ * @param {Object} action
+ */
+function ACTION(text, i, action) {
+  console.log('ACTION', i, text.slice(i, i + 5).replace(REGEXP_NAWLINE_G, '\\n'));
+  var c = i;
+
+  if (REGEXP_EXCLAMATION.test(text[c])) {
+    // '!'
+    c++;
+
+    // NAME
+    var name = {};
+    c = NAME(text, c, name);
+
+    // REDUNDENT
+    c = REDUNDENT(text, c);
+
+    // ARGUMENTS?
+    var argus = [];
+    c = ARGUMENTS(text, c, argus);
+
+    action.$type = 'action';
+    action.name = name.$string;
+    action.argus = argus;
+  }
+
+  return c;
+}
+
+/**
+ * ARGUMENTS = ('(' + PARAMETERS<VALUE> + ')' + REDUNDENT)?
+ */
+function ARGUMENTS(text, i, arr) {
+  console.log('ARGUMENTS', i, text.slice(i, i + 5).replace(REGEXP_NAWLINE_G, '\\n'));
+  var c = i;
+  if (REGEXP_LEFT_ROUND.test(text[c])) {
+    // '('
+    c++;
+
+    // PARAMETERS<VALUE>
+    c = PARAMETERS(text, c, VALUE, arr);
+
+    // ')'
+    if (!REGEXP_RIGHT_ROUND.test(text[c])) {
+      throw new SyntaxError('ARGUMENTS: Missing ")"');
+    }
+    c++;
+
+    // REDUNDENT
+    c = REDUNDENT(text, c);
+
+    return c;
+  }
+
+  return c;
+}
+
+/**
+ * PARAMETERS<T> = RUNDUNDENT + T + RUNDUNDENT + (',' + PARAMETERS<T>)?
+ * @param {Object | Array} obj
+ */
+function PARAMETERS(text, i, type, arr) {
+  console.log('PARAMETERS<' + type.name + '>', i, text.slice(i, i + 5).replace(REGEXP_NAWLINE_G, '\\n'));
   var c = i;
 
   // RUNDUNDENT
@@ -59825,25 +60072,32 @@ function PARAMETERS(text, i, argus) {
 
   // VALUE
   var value = {};
-  c = VALUE(text, c, value);
-  argus.push(value);
+  c = type(text, c, value);
+  arr.push(value);
 
   // (',' + PARAMETERS)?
-  if (text[c] === ',') {
+  if (REGEXP_COMMA.test(text[c])) {
     // PARAMETERS
     c++;
-    c = PARAMETERS(text, c, argus);
+    c = PARAMETERS(text, c, type, arr);
   }
   return c;
 }
 
 /**
- * VALUE = STRING | NUMBER | BOOLEAN | ARRAY | OBJECT
+ * VALUE = NUMBER | STRING | NAME | BOOLEAN | ARRAY | OBJECT
+ * @param {Object} value
  */
 function VALUE(text, i, value) {
-  console.log('VALUE', i, text.slice(i, i + 5).replace(/\n/g, '\\n'));
+  console.log('VALUE', i, text.slice(i, i + 5).replace(REGEXP_NAWLINE_G, '\\n'));
   var c = i;
   var tmp = c;
+
+  // NUMBER
+  c = NUMBER(text, c, value);
+  if (c !== tmp) {
+    return c;
+  }
 
   // STRING
   c = STRING(text, c, value);
@@ -59851,8 +60105,8 @@ function VALUE(text, i, value) {
     return c;
   }
 
-  // NUMBER
-  c = NUMBER(text, c, value);
+  // NAME
+  c = NAME(text, c, value);
   if (c !== tmp) {
     return c;
   }
@@ -59861,12 +60115,12 @@ function VALUE(text, i, value) {
 }
 
 /**
- * STRING = ("'" + ... + "'" | '"' + ... + '"') + REDUNDENT
+ * STRING = ("'" + ... + "'" | '"' + ... + '"')
  */
 function STRING(text, i, value) {
-  console.log('STRING', i, text.slice(i, i + 5).replace(/\n/g, '\\n'));
+  console.log('STRING', i, text.slice(i, i + 5).replace(REGEXP_NAWLINE_G, '\\n'));
   var c = i;
-  if (text[c] === "'" || text[c] === '"') {
+  if (REGEXP_SINGLE_QUOTES.test(text[c]) || REGEXP_DOUBLE_QUOTES.test(text[c])) {
     var str = '';
     var target = text[c];
     // ("'" + ... + "'" | '"' + ... + '"')
@@ -59876,32 +60130,30 @@ function STRING(text, i, value) {
     }
     c++;
     value.$string = str;
-
-    // RUNDUNDENT
-    c = REDUNDENT(text, c);
   }
   return c;
 }
 
 /**
- * NUMBER = \d* + ('.' + \d*)? + REDUNDENT
+ * NUMBER = \d* + ('.' + \d*)?
  */
 function NUMBER(text, i, value) {
-  console.log('NUMBER', i, text.slice(i, i + 5).replace(/\n/g, '\\n'));
+  console.log('NUMBER', i, text.slice(i, i + 5).replace(REGEXP_NAWLINE_G, '\\n'));
   var c = i;
   var number = 0;
 
-  if (text[c] === '0') {
+  if (REGEXP_ZERO.test(text[c])) {
     // 0 | 0.x
     number = 0;
     c++;
-  } else if (/[1-9]/.test(text[c])) {
+  } else if (REGEXP_DIGIT.test(text[c])) {
     // 1-9
-    for (; c < text.length && /[\d]/.test(text[c]); c++) {
+    for (; c < text.length && REGEXP_DIGIT.test(text[c]); c++) {
       number = number * 10 + parseInt(text[c]);
     }
   } else {
-    throw new SyntaxError('NUMBER: Not a number.');
+    // Not a number
+    return c;
   }
 
   // Floating
@@ -59909,7 +60161,7 @@ function NUMBER(text, i, value) {
     c++;
     var float = 0;
     var expo = 0;
-    for (; c < text.length && /[\d]/.test(text[c]); c++) {
+    for (; c < text.length && REGEXP_DIGIT.test(text[c]); c++) {
       float = float * 10 + parseInt(text[c]);
       expo++;
     }
@@ -59918,46 +60170,31 @@ function NUMBER(text, i, value) {
 
   value.$number = number;
 
-  // RUNDUNDENT
-  c = REDUNDENT(text, c);
   return c;
 }
 
 /**
- * OPTIONS = '{' + PAIRS + '}'
+ * OPTIONS = SIMULTANEOUS_GROUP<PAIR> + REDUNDENT
  */
 function OPTIONS(text, i, opt) {
-  console.log('OPTIONS', i, text.slice(i, i + 5).replace(/\n/g, '\\n'));
+  console.log('OPTIONS', i, text.slice(i, i + 5).replace(REGEXP_NAWLINE_G, '\\n'));
   var c = i;
 
-  if (text[c] === '{') {
-    // '{'
-    c++;
-
-    // PAIRS
-    c = PAIRS(text, i, opt);
-
-    // '}'
-    if (text[c] === '}') {
-      c++;
-      return c;
-    }
-
-    throw new SyntaxError('OPTIONS: Not end with "}"');
-  }
-
-  return c;
-}
-
-/**
- * PAIRS = REDUNDENT + NAME + REDUNDENT + ':' + REDUNDENT + VALUE + REDUNDENT + (',' + PAIRS)?
- */
-function PAIRS(text, i, opt) {
-  console.log('PAIR', i, text.slice(i, i + 5).replace(/\n/g, '\\n'));
-  var c = i;
+  // SIMULTANEOUS_GROUP<PAIR>
+  c = SIMULTANEOUS_GROUP(text, c, PAIR, opt);
 
   // REDUNDENT
   c = REDUNDENT(text, c);
+
+  return c;
+}
+
+/**
+ * PAIR = NAME + REDUNDENT + ':' + REDUNDENT + VALUE
+ */
+function PAIR(text, i, pair) {
+  console.log('PAIR', i, text.slice(i, i + 5).replace(REGEXP_NAWLINE_G, '\\n'));
+  var c = i;
 
   // NAME
   var name = {};
@@ -59966,11 +60203,11 @@ function PAIRS(text, i, opt) {
   // REDUNDENT
   c = REDUNDENT(text, c);
 
-  if (text[c] === ':') {
+  if (REGEXP_COLON.test(text[c])) {
     // ':'
     c++;
   } else {
-    throw new SyntaxError('PAIRS: ":" should behind the name');
+    throw new SyntaxError('PAIR: Missing ":" should behind the name');
   }
 
   // REDUNDENT
@@ -59983,27 +60220,23 @@ function PAIRS(text, i, opt) {
   // REDUNDENT
   c = REDUNDENT(text, c);
 
-  opt[name.$string] = value;
-
-  // (',' + PAIRS)?
-  if (text[c] === ',') {
-    c++;
-    c = PAIRS(text, c, opt);
-  }
+  pair.name = name.$string;
+  pair.value = value;
 
   return c;
 }
 
 /**
- * NAME = /[a-zA-Z0-9]/*
+ * NAME = /[^\s\n\t{}[\]!@#$%?]/*
+ * @param {Object} name, add on name.$string
  */
 function NAME(text, i, name) {
-  console.log('NAME', i, text.slice(i, i + 5).replace(/\n/g, '\\n'));
+  console.log('NAME', i, text.slice(i, i + 5).replace(REGEXP_NAWLINE_G, '\\n'));
   var c = i;
   var str = '';
 
   // /[a-zA-Z0-9]/*
-  for (; c < text.length && /[a-zA-Z\d]/.test(text[c]); c++) {
+  for (; c < text.length && REGEXP_NAME.test(text[c]); c++) {
     str += text[c];
   }
 
@@ -60012,19 +60245,130 @@ function NAME(text, i, name) {
 }
 
 /**
- * TITLE = /[^\n{]/*
+ * TITLE = /[^\n{]/* + REDUNDENT
  */
 function TITLE(text, i, title) {
-  console.log('TITLE', i, text.slice(i, i + 5).replace(/\n/g, '\\n'));
+  console.log('TITLE', i, text.slice(i, i + 5).replace(REGEXP_NAWLINE_G, '\\n'));
   var c = i;
   var str = '';
 
   // /[^\n{]/*
-  for (; c < text.length && /[^\n{]/.test(text[c]); c++) {
+  for (; c < text.length && REGEXP_TITLE.test(text[c]); c++) {
     str += text[c];
   }
-
   title.$string = str;
+
+  // REDUNDENT
+  c = REDUNDENT(text, c);
+
+  return c;
+}
+
+/**
+ * GROUP<T> = SEQUENTIAL_GROUP<T> | SIMULTANEOUS_GROUP<T>
+ */
+function GROUP(text, i, type, group) {
+  console.log('GROUP<' + type.name + '>', i, text.slice(i, i + 5).replace(REGEXP_NAWLINE_G, '\\n'));
+  var c = i;
+  var tmp = c;
+
+  // SEQUENTIAL_GROUP
+  c = SEQUENTIAL_GROUP(text, c, type, group);
+  if (c !== tmp) {
+    return c;
+  }
+
+  // SIMULTANEOUS_GROUP
+  c = SIMULTANEOUS_GROUP(text, c, type, group);
+  if (c !== tmp) {
+    return c;
+  }
+
+  throw new SyntaxError('GROUP: Not a valid group');
+}
+
+/**
+ * SEQUENTIAL_GROUP<T> = ('[' + PARAMETERS<T> + ']' + REDUNDENT)?
+ */
+function SEQUENTIAL_GROUP(text, i, type, obj) {
+  console.log('SEQUENTIAL_GROUP<' + type.name + '>', i, text.slice(i, i + 5).replace(REGEXP_NAWLINE_G, '\\n'));
+  var c = i;
+
+  if (REGEXP_LEFT_SQUARE.test(text[c])) {
+    // '['
+    c++;
+    obj.$type = 'SEQUENTIAL_GROUP';
+
+    // PARAMETERS<T>
+    obj.array = [];
+    c = PARAMETERS(text, c, type, obj.array);
+
+    // '}'
+    if (REGEXP_RIGHT_SQUARE.test(text[c])) {
+      c++;
+
+      // REDUNDENT
+      c = REDUNDENT(text, c);
+
+      return c;
+    }
+
+    throw new SyntaxError('SEQUENTIAL_GROUP: Missing "]"');
+  }
+
+  return c;
+}
+
+/**
+ * SIMULTANEOUS_GROUP<T> = ('{' + PARAMETERS<T> + '}' + REDUNDENT)?
+ */
+function SIMULTANEOUS_GROUP(text, i, type, obj) {
+  console.log('SIMULTANEOUS_GROUP<' + type.name + '>', i, text.slice(i, i + 5).replace(REGEXP_NAWLINE_G, '\\n'));
+  var c = i;
+
+  if (REGEXP_LEFT_CURLY.test(text[c])) {
+    // '{'
+    c++;
+    obj.$type = 'SIMULTANEOUS_GROUP';
+
+    // PARAMETERS<T>
+    obj.array = [];
+    c = PARAMETERS(text, c, type, obj.array);
+
+    // '}'
+    if (REGEXP_RIGHT_CURLY.test(text[c])) {
+      c++;
+
+      // REDUNDENT
+      c = REDUNDENT(text, c);
+
+      return c;
+    }
+
+    throw new SyntaxError('SIMULTANEOUS_GROUP: Missing "}"');
+  }
+
+  return c;
+}
+
+/**
+ * INLINE_REDUNDENT = SPACES + COMMENT_WITHOUT_NEWLINE + INLINE_REDUNDENT?
+ */
+function INLINE_REDUNDENT(text, i) {
+  console.log('INLINE_REDUNDENT', i, text.slice(i, i + 5).replace(REGEXP_NAWLINE_G, '\\n'));
+  var c = i;
+
+  // SPACES
+  while (c < text.length && REGEXP_SPACE.test(text[c])) {
+    c++;
+  }
+
+  // COMMENT_WITHOUT_NEWLINE
+  if (REGEXP_SLASH.test(text[c])) {
+    // '/'
+    if (REGEXP_SLASH.test(text[c])) {}
+  }
+
   return c;
 }
 
@@ -60033,26 +60377,26 @@ function TITLE(text, i, title) {
  * COMMENT = INLINE_COMMENT | BLOCK_COMMENTS
  */
 function REDUNDENT(text, i) {
-  console.log('REDUNDENT', i, text.slice(i, i + 5).replace(/\n/g, '\\n'));
+  console.log('REDUNDENT', i, text.slice(i, i + 5).replace(REGEXP_NAWLINE_G, '\\n'));
   var c = i;
   // SPACES_OR_NEWLINE
-  while (c < text.length && (text[c] === ' ' || text[c] === '\n')) {
+  while (c < text.length && (REGEXP_SPACE.test(text[c]) || REGEXP_NAWLINE.test(text[c]))) {
     c++;
   }
 
   // (+ COMMENT + REDUNDENT)?
-  if (text[c] === '/') {
+  if (REGEXP_SLASH.test(text[c])) {
     c++;
     // COMMENT
-    if (text[c] === '/') {
+    if (REGEXP_SLASH.test(text[c])) {
       // INLINE_COMMENT
-      while (c < text.length && text[c] !== '\n') {
+      while (c < text.length && !REGEXP_NAWLINE.test(text[c])) {
         c++;
       }
-    } else if (text[c] === '*') {
+    } else if (REGEXP_STAR.test(text[c])) {
       // BLOCK_COMMENTS
       c++;
-      while (c < text.length && text[c] !== '*' && text[c + 1] !== '/') {
+      while (c < text.length && !REGEXP_STAR.test(text[c]) && !REGEXP_SLASH.test(text[c + 1])) {
         c++;
       }
       c += 2;
@@ -60069,13 +60413,15 @@ function REDUNDENT(text, i) {
   }
 }
 
+function SPACES(text, i) {}
+
 function parse(text) {
   console.log('parse', 'text length:', text.length);
   var list = [];
   FILE(text, 0, list);
   console.log(list);
 }
-'filehash kbs1S9jaUXns7gqjLAzr0z+9Lm4=';
+'filehash NxHDlhKen3oEnrYR/scmmkXrfZk=';
 
 /***/ })
 /******/ ]);
