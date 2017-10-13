@@ -24,14 +24,13 @@ $c13() /* comment */
 
 @obj
 @obj msg asdf!!! asdf asdf asdf asdfasdfq34tq34t ()
-@obj<texture>
-@obj< /* com */ texture /* com */ >
-@obj<texture> msg
-@obj<texture> !action
-@obj<texture> !action msg
-@obj<texture> !action {opt:1} msg
-@obj<texture> {opt:1} msg
-
+@obj[texture]
+@obj[ /* com */ texture /* com */ ]
+@obj[texture] msg
+@obj[texture] !action
+@obj[texture] !action msg
+@obj[texture] !action {opt:1} msg
+@obj[texture] {opt:1} msg
 
 #序章
 
@@ -40,11 +39,11 @@ $c13() /* comment */
 $scene(陽明山)
 $bgm(叢林鳥叫之歌)
 //$slot(殘破, Boolean, true)
-@白乒乓<素材11> !登場(200, 300)
-@小婷<素材9> !登場(200, 600) !大笑 {delay:1}
+@白乒乓[素材11] !登場(200, 300)
+@小婷[素材9] !登場(200, 600) !大笑 {delay:1}
 
 @白乒乓 !大笑 {delay:0.5}
-@白乒乓<素材9> 漂向北方 別問我家鄉
+@白乒乓[素材9] 漂向北方 別問我家鄉
 @小婷 漂向北方 別問我家鄉
 
 $scene(陽明山)
@@ -58,7 +57,7 @@ $scene(陽明山)
 @小婷 !大笑 $sound(哇哈哈之聲) 有人說他在老家欠了一堆錢 需要避避風頭
 @小婷 有人說他練就了一身武藝卻沒機會嶄露
 @小婷 有人失去了自我 手足無措四處漂流
-{@白乒乓<素材9>, @小婷<素材9>} 有人為了夢想為了三餐為養家餬口
+{@白乒乓[素材9], @小婷[素材9]} 有人為了夢想為了三餐為養家餬口
 
 $if(殘破)
   @小婷 他住在燕郊區 殘破的求職公寓

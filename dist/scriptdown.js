@@ -59758,6 +59758,7 @@ var REGEXP_NEWLINE = /\n/;
 var REGEXP_NEWLINE_G = /\n/g;
 var REGEXP_NAME = /[^\\\s\n\t()[\]{}`'+\-*/~!@#$%^&?,.:<>]/;
 var REGEXP_TITLE = /[^\n{}[\]]/;
+var REGEXP_MESSAGE = /[^{}[\]]/;
 var REGEXP_DIGIT = /[\d]/;
 var REGEXP_ZERO = /[0]/;
 var REGEXP_COLON = /[:]/;
@@ -60016,15 +60017,15 @@ function SUBJECT(text, i, subject) {
 }
 
 /**
- * VARIETY = ('<' + INLINE_REDUNDENT + NAME + INLINE_REDUNDENT + '>' + INLINE_REDUNDENT)?
+ * VARIETY = ('[' + INLINE_REDUNDENT + NAME + INLINE_REDUNDENT + ']' + INLINE_REDUNDENT)?
  * @param {Object} variety
  */
 function VARIETY(text, i, variety) {
   console.log('VARIETY', i, text.slice(i, i + 15).replace(REGEXP_NEWLINE_G, '\\n'));
   var c = i;
 
-  if (REGEXP_LESSTHAN.test(text[c])) {
-    // '<'
+  if (REGEXP_LEFT_SQUARE.test(text[c])) {
+    // '['
     c++;
 
     // INLINE_REDUNDENT
@@ -60039,8 +60040,8 @@ function VARIETY(text, i, variety) {
       c = INLINE_REDUNDENT(text, c, breaking);
 
       if (!breaking.$boolean) {
-        // '>'
-        if (!REGEXP_GREATERTHAN.test(text[c])) {
+        // ']'
+        if (!REGEXP_RIGHT_SQUARE.test(text[c])) {
           throw new SyntaxError('VARIETY: Missing ">"');
         }
         c++;
@@ -60569,7 +60570,7 @@ function parse(text) {
 
   return list;
 }
-'filehash RvGSoH2QgE+TjOb2b/Ihljzo1Nc=';
+'filehash VJSjerg/Q6iuVDV+nni7/QRCgaI=';
 
 /***/ })
 /******/ ]);

@@ -266,15 +266,15 @@ function SUBJECT (text, i, subject) {
 }
 
 /**
- * VARIETY = ('<' + INLINE_REDUNDENT + NAME + INLINE_REDUNDENT + '>' + INLINE_REDUNDENT)?
+ * VARIETY = ('[' + INLINE_REDUNDENT + NAME + INLINE_REDUNDENT + ']' + INLINE_REDUNDENT)?
  * @param {Object} variety
  */
 function VARIETY (text, i, variety) {
   console.log('VARIETY', i, text.slice(i, i + 15).replace(REGEXP_NEWLINE_G, '\\n'))
   let c = i
 
-  if (REGEXP_LESSTHAN.test(text[c])) {
-    // '<'
+  if (REGEXP_LEFT_SQUARE.test(text[c])) {
+    // '['
     c++
 
     // INLINE_REDUNDENT
@@ -289,8 +289,8 @@ function VARIETY (text, i, variety) {
       c = INLINE_REDUNDENT(text, c, breaking)
 
       if (!breaking.$boolean) {
-        // '>'
-        if (!REGEXP_GREATERTHAN.test(text[c])) {
+        // ']'
+        if (!REGEXP_RIGHT_SQUARE.test(text[c])) {
           throw new SyntaxError('VARIETY: Missing ">"')
         }
         c++
