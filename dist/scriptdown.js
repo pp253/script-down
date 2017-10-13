@@ -59662,13 +59662,13 @@ var TwistFilter=function(o){function n(n,r,t){void 0===n&&(n=200),void 0===r&&(r
 "use strict";
 /* harmony export (immutable) */ __webpack_exports__["a"] = parse;
 /**
- * KEYWORD: !, @, #, {}, (), []
+ * KEYWORD: !, @, #, {}, (), [], <>
  * Prepare for Chinese
  */
-var REGEXP_SPACE = /[\s]/;
-var REGEXP_NAWLINE = /\n/;
-var REGEXP_NAWLINE_G = /\n/g;
-var REGEXP_NAME = /[^\\\s\n\t()[\]{}`'+\-*/~!@#$%^&?,.:]/;
+var REGEXP_SPACE = /[ ]/;
+var REGEXP_NEWLINE = /\n/;
+var REGEXP_NEWLINE_G = /\n/g;
+var REGEXP_NAME = /[^\\\s\n\t()[\]{}`'+\-*/~!@#$%^&?,.:<>]/;
 var REGEXP_TITLE = /[^\n{}[\]!@#$%]/;
 var REGEXP_DIGIT = /[\d]/;
 var REGEXP_ZERO = /[0]/;
@@ -59695,7 +59695,7 @@ var REGEXP_DOUBLE_QUOTES = /["]/;
  * FILE = REDUNDENT + STATEMENT*
  */
 function FILE(text, i, list) {
-  console.log('FILE', i, text.slice(i, i + 5).replace(REGEXP_NAWLINE_G, '\\n'));
+  console.log('FILE', i, text.slice(i, i + 5).replace(REGEXP_NEWLINE_G, '\\n'));
   var c = i;
   c = REDUNDENT(text, c);
   var tmp = c;
@@ -59715,10 +59715,10 @@ function FILE(text, i, list) {
 }
 
 /**
- * STATEMENT = COMMAND | HEADER | ACT + OPTIONS?
+ * STATEMENT = COMMAND | HEADER | ACT + (OPTIONS? | REDUNDENT)
  */
 function STATEMENT(text, i, statement) {
-  console.log('STATEMENT', i, text.slice(i, i + 5).replace(REGEXP_NAWLINE_G, '\\n'));
+  console.log('STATEMENT', i, text.slice(i, i + 5).replace(REGEXP_NEWLINE_G, '\\n'));
   var c = i;
   var tmp = c;
 
@@ -59745,6 +59745,8 @@ function STATEMENT(text, i, statement) {
   // ACT
   c = ACT(text, c, statement);
   if (c !== tmp) {
+    // REDUNDENT
+    c = REDUNDENT(text, c);
     return c;
   }
 
@@ -59752,10 +59754,10 @@ function STATEMENT(text, i, statement) {
 }
 
 /**
- * COMMAND = ('$' + NAME + REDUNDENT + ARGUMENTS?)?
+ * COMMAND = ('$' + NAME + INLINE_REDUNDENT + ARGUMENTS?)?
  */
 function COMMAND(text, i, command) {
-  console.log('COMMAND', i, text.slice(i, i + 5).replace(REGEXP_NAWLINE_G, '\\n'));
+  console.log('COMMAND', i, text.slice(i, i + 5).replace(REGEXP_NEWLINE_G, '\\n'));
   var c = i;
 
   if (REGEXP_DOLLAR.test(text[c])) {
@@ -59766,27 +59768,30 @@ function COMMAND(text, i, command) {
     var name = {};
     c = NAME(text, c, name);
 
-    // REDUNDENT
-    c = REDUNDENT(text, c);
-
-    // ARGUMENTS?
-    var argus = [];
-    c = ARGUMENTS(text, c, argus);
+    // INLINE_REDUNDENT
+    var breaking = {};
+    c = INLINE_REDUNDENT(text, c, breaking);
 
     command.$type = 'command';
     command.name = name.$string;
-    command.argus = argus;
+
+    if (!breaking.$boolean) {
+      // ARGUMENTS?
+      var argus = [];
+      c = ARGUMENTS(text, c, argus);
+      command.argus = argus;
+    }
   }
 
   return c;
 }
 
 /**
- * HEADER = ('#'+ + REDUNDENT + TITLE?)?
+ * HEADER = ('#'+ + INLINE_REDUNDENT + TITLE?)?
  * @param {Object} header
  */
 function HEADER(text, i, header) {
-  console.log('HEADER', i, text.slice(i, i + 5).replace(REGEXP_NAWLINE_G, '\\n'));
+  console.log('HEADER', i, text.slice(i, i + 5).replace(REGEXP_NEWLINE_G, '\\n'));
   var c = i;
 
   if (REGEXP_HASH.test(text[c])) {
@@ -59797,19 +59802,19 @@ function HEADER(text, i, header) {
       level++;
     }
 
-    // REDUNDENT
-    c = REDUNDENT(text, c);
-
-    // TITLE
-    var title = {};
-    c = TITLE(text, c, title);
-
-    // REDUNDENT
-    c = REDUNDENT(text, c);
+    // INLINE_REDUNDENT
+    var breaking = {};
+    c = INLINE_REDUNDENT(text, c, breaking);
 
     header.$type = 'header';
     header.level = level;
-    header.title = title.$string;
+
+    if (!breaking.$boolean) {
+      // TITLE
+      var title = {};
+      c = TITLE(text, c, title);
+      header.title = title.$string;
+    }
   }
 
   return c;
@@ -59820,12 +59825,13 @@ function HEADER(text, i, header) {
  * @param {Object} act
  */
 function ACT(text, i, act) {
-  console.log('ACT', i, text.slice(i, i + 5).replace(REGEXP_NAWLINE_G, '\\n'));
+  console.log('ACT', i, text.slice(i, i + 5).replace(REGEXP_NEWLINE_G, '\\n'));
   var c = i;
   var tmp = c;
 
   // (SIMULTANEOUS_GROUP<SUBJECT_MOVEMENT> + MOVEMENT?)
-  var subjectMovementList = [];
+  var subjectMovementList = {};
+  subjectMovementList.$array = [];
   c = SIMULTANEOUS_GROUP(text, c, SUBJECT_MOVEMENT, subjectMovementList);
   if (c !== tmp) {
     // MOVEMENT?
@@ -59834,7 +59840,9 @@ function ACT(text, i, act) {
     act.movement = movement;
   } else {
     // SUBJECT_MOVEMENT
-    c = SUBJECT_MOVEMENT(text, c, subjectMovementList);
+    var subjectMovement = {};
+    c = SUBJECT_MOVEMENT(text, c, subjectMovement);
+    subjectMovementList.$array.push(subjectMovement);
 
     if (c === tmp) {
       // Not a SUBJECT_MOVEMENT; therefore, not an ACT
@@ -59854,37 +59862,37 @@ function ACT(text, i, act) {
 }
 
 /**
- * SUBJECT_MOVEMENT = SUBJECT + MOVEMENT?
+ * SUBJECT_MOVEMENT = (SUBJECT + MOVEMENT?)?
  * @param {Object} subjectMovement
  */
-function SUBJECT_MOVEMENT(text, i, subjectMovementList) {
-  console.log('SUBJECT_MOVEMENT', i, text.slice(i, i + 5).replace(REGEXP_NAWLINE_G, '\\n'));
+function SUBJECT_MOVEMENT(text, i, subjectMovement) {
+  console.log('SUBJECT_MOVEMENT', i, text.slice(i, i + 5).replace(REGEXP_NEWLINE_G, '\\n'));
   var c = i;
-
-  var subjectMovement = {};
+  var tmp = c;
 
   // SUBJECT
   var subject = {};
   c = SUBJECT(text, c, subject);
 
-  // MOVEMENT?
-  var movement = [];
-  c = MOVEMENT(text, c, movement);
+  if (tmp !== c) {
+    // MOVEMENT?
+    var movement = [];
+    c = MOVEMENT(text, c, movement);
 
-  subjectMovement.$type = 'subjectMovement';
-  subjectMovement.subject = subject;
-  subjectMovement.movement = movement;
-  subjectMovementList.push(subjectMovement);
+    subjectMovement.$type = 'subjectMovement';
+    subjectMovement.subject = subject;
+    subjectMovement.movement = movement;
+  }
 
   return c;
 }
 
 /**
- * SUBJECT = ('@' + OBJECT_NAME:NAME + REDUNDENT + VARIETY?)?
+ * SUBJECT = ('@' + OBJECT_NAME:NAME + INLINE_REDUNDENT + VARIETY?)?
  * @param {Object} subject
  */
 function SUBJECT(text, i, subject) {
-  console.log('SUBJECT', i, text.slice(i, i + 5).replace(REGEXP_NAWLINE_G, '\\n'));
+  console.log('SUBJECT', i, text.slice(i, i + 5).replace(REGEXP_NEWLINE_G, '\\n'));
   var c = i;
 
   if (REGEXP_AT.test(text[c])) {
@@ -59895,50 +59903,58 @@ function SUBJECT(text, i, subject) {
     var name = {};
     c = NAME(text, c, name);
 
-    // REDUNDENT
-    c = REDUNDENT(text, c);
-
-    // VARIETY?
-    var variety = {};
-    c = VARIETY(text, c, variety);
+    // INLINE_REDUNDENT
+    var breaking = {};
+    c = INLINE_REDUNDENT(text, c, breaking);
 
     subject.$type = 'subject';
     subject.name = name.$string;
-    subject.variety = variety.$string;
+
+    if (!breaking.$boolean) {
+      // VARIETY?
+      var variety = {};
+      c = VARIETY(text, c, variety);
+      subject.variety = variety.$string;
+    }
   }
 
   return c;
 }
 
 /**
- * VARIETY = ('<' + REDUNDENT + NAME + REDUNDENT + '>' + REDUNDENT)?
+ * VARIETY = ('<' + INLINE_REDUNDENT + NAME + INLINE_REDUNDENT + '>' + INLINE_REDUNDENT)?
  * @param {Object} variety
  */
 function VARIETY(text, i, variety) {
-  console.log('VARIETY', i, text.slice(i, i + 5).replace(REGEXP_NAWLINE_G, '\\n'));
+  console.log('VARIETY', i, text.slice(i, i + 5).replace(REGEXP_NEWLINE_G, '\\n'));
   var c = i;
 
   if (REGEXP_LESSTHAN.test(text[c])) {
     // '<'
     c++;
 
-    // REDUNDENT
-    c = REDUNDENT(text, c);
+    // INLINE_REDUNDENT
+    var breaking = {};
+    c = INLINE_REDUNDENT(text, c, breaking);
 
-    // NAME
-    c = NAME(text, c, variety);
+    if (!breaking.$boolean) {
+      // NAME
+      c = NAME(text, c, variety);
 
-    // REDUNDENT
-    c = REDUNDENT(text, c);
+      // INLINE_REDUNDENT
+      c = INLINE_REDUNDENT(text, c, breaking);
 
-    // '>'
-    if (REGEXP_GREATERTHAN.test(text[c])) {
-      throw new SyntaxError('VARIETY: Missing ">"');
+      if (!breaking.$boolean) {
+        // '>'
+        if (!REGEXP_GREATERTHAN.test(text[c])) {
+          throw new SyntaxError('VARIETY: Missing ">"');
+        }
+        c++;
+
+        // INLINE_REDUNDENT
+        c = INLINE_REDUNDENT(text, c, breaking);
+      }
     }
-    c++;
-
-    // REDUNDENT
-    c = REDUNDENT(text, c);
   }
 
   return c;
@@ -59949,7 +59965,7 @@ function VARIETY(text, i, variety) {
  * @param {Array} movement
  */
 function MOVEMENT(text, i, movement) {
-  console.log('MOVEMENT', i, text.slice(i, i + 5).replace(REGEXP_NAWLINE_G, '\\n'));
+  console.log('MOVEMENT', i, text.slice(i, i + 5).replace(REGEXP_NEWLINE_G, '\\n'));
   var c = i;
   var tmp = c;
 
@@ -59981,7 +59997,7 @@ function MOVEMENT(text, i, movement) {
  * METHOD = ACTION | COMMAND
  */
 function METHOD(text, i, method) {
-  console.log('METHOD', i, text.slice(i, i + 5).replace(REGEXP_NAWLINE_G, '\\n'));
+  console.log('METHOD', i, text.slice(i, i + 5).replace(REGEXP_NEWLINE_G, '\\n'));
   var c = i;
   var tmp = c;
 
@@ -60001,11 +60017,11 @@ function METHOD(text, i, method) {
 }
 
 /**
- * ACTION = '!' + NAME + REDUNDENT + ARGUMENTS?
+ * ACTION = '!' + NAME + INLINE_REDUNDENT + ARGUMENTS?
  * @param {Object} action
  */
 function ACTION(text, i, action) {
-  console.log('ACTION', i, text.slice(i, i + 5).replace(REGEXP_NAWLINE_G, '\\n'));
+  console.log('ACTION', i, text.slice(i, i + 5).replace(REGEXP_NEWLINE_G, '\\n'));
   var c = i;
 
   if (REGEXP_EXCLAMATION.test(text[c])) {
@@ -60016,26 +60032,29 @@ function ACTION(text, i, action) {
     var name = {};
     c = NAME(text, c, name);
 
-    // REDUNDENT
-    c = REDUNDENT(text, c);
-
-    // ARGUMENTS?
-    var argus = [];
-    c = ARGUMENTS(text, c, argus);
+    // INLINE_REDUNDENT
+    var breaking = {};
+    c = INLINE_REDUNDENT(text, c, breaking);
 
     action.$type = 'action';
     action.name = name.$string;
-    action.argus = argus;
+
+    if (!breaking.$boolean) {
+      // ARGUMENTS?
+      var argus = [];
+      c = ARGUMENTS(text, c, argus);
+      action.argus = argus;
+    }
   }
 
   return c;
 }
 
 /**
- * ARGUMENTS = ('(' + PARAMETERS<VALUE> + ')' + REDUNDENT)?
+ * ARGUMENTS = ('(' + PARAMETERS<VALUE> + ')' + INLINE_REDUNDENT)?
  */
 function ARGUMENTS(text, i, arr) {
-  console.log('ARGUMENTS', i, text.slice(i, i + 5).replace(REGEXP_NAWLINE_G, '\\n'));
+  console.log('ARGUMENTS', i, text.slice(i, i + 5).replace(REGEXP_NEWLINE_G, '\\n'));
   var c = i;
   if (REGEXP_LEFT_ROUND.test(text[c])) {
     // '('
@@ -60050,8 +60069,8 @@ function ARGUMENTS(text, i, arr) {
     }
     c++;
 
-    // REDUNDENT
-    c = REDUNDENT(text, c);
+    // INLINE_REDUNDENT
+    c = INLINE_REDUNDENT(text, c);
 
     return c;
   }
@@ -60064,7 +60083,7 @@ function ARGUMENTS(text, i, arr) {
  * @param {Object | Array} obj
  */
 function PARAMETERS(text, i, type, arr) {
-  console.log('PARAMETERS<' + type.name + '>', i, text.slice(i, i + 5).replace(REGEXP_NAWLINE_G, '\\n'));
+  console.log('PARAMETERS<' + type.name + '>', i, text.slice(i, i + 5).replace(REGEXP_NEWLINE_G, '\\n'));
   var c = i;
 
   // RUNDUNDENT
@@ -60089,7 +60108,7 @@ function PARAMETERS(text, i, type, arr) {
  * @param {Object} value
  */
 function VALUE(text, i, value) {
-  console.log('VALUE', i, text.slice(i, i + 5).replace(REGEXP_NAWLINE_G, '\\n'));
+  console.log('VALUE', i, text.slice(i, i + 5).replace(REGEXP_NEWLINE_G, '\\n'));
   var c = i;
   var tmp = c;
 
@@ -60118,7 +60137,7 @@ function VALUE(text, i, value) {
  * STRING = ("'" + ... + "'" | '"' + ... + '"')
  */
 function STRING(text, i, value) {
-  console.log('STRING', i, text.slice(i, i + 5).replace(REGEXP_NAWLINE_G, '\\n'));
+  console.log('STRING', i, text.slice(i, i + 5).replace(REGEXP_NEWLINE_G, '\\n'));
   var c = i;
   if (REGEXP_SINGLE_QUOTES.test(text[c]) || REGEXP_DOUBLE_QUOTES.test(text[c])) {
     var str = '';
@@ -60138,7 +60157,7 @@ function STRING(text, i, value) {
  * NUMBER = \d* + ('.' + \d*)?
  */
 function NUMBER(text, i, value) {
-  console.log('NUMBER', i, text.slice(i, i + 5).replace(REGEXP_NAWLINE_G, '\\n'));
+  console.log('NUMBER', i, text.slice(i, i + 5).replace(REGEXP_NEWLINE_G, '\\n'));
   var c = i;
   var number = 0;
 
@@ -60177,7 +60196,7 @@ function NUMBER(text, i, value) {
  * OPTIONS = SIMULTANEOUS_GROUP<PAIR> + REDUNDENT
  */
 function OPTIONS(text, i, opt) {
-  console.log('OPTIONS', i, text.slice(i, i + 5).replace(REGEXP_NAWLINE_G, '\\n'));
+  console.log('OPTIONS', i, text.slice(i, i + 5).replace(REGEXP_NEWLINE_G, '\\n'));
   var c = i;
 
   // SIMULTANEOUS_GROUP<PAIR>
@@ -60193,7 +60212,7 @@ function OPTIONS(text, i, opt) {
  * PAIR = NAME + REDUNDENT + ':' + REDUNDENT + VALUE
  */
 function PAIR(text, i, pair) {
-  console.log('PAIR', i, text.slice(i, i + 5).replace(REGEXP_NAWLINE_G, '\\n'));
+  console.log('PAIR', i, text.slice(i, i + 5).replace(REGEXP_NEWLINE_G, '\\n'));
   var c = i;
 
   // NAME
@@ -60231,7 +60250,7 @@ function PAIR(text, i, pair) {
  * @param {Object} name, add on name.$string
  */
 function NAME(text, i, name) {
-  console.log('NAME', i, text.slice(i, i + 5).replace(REGEXP_NAWLINE_G, '\\n'));
+  console.log('NAME', i, text.slice(i, i + 5).replace(REGEXP_NEWLINE_G, '\\n'));
   var c = i;
   var str = '';
 
@@ -60245,10 +60264,10 @@ function NAME(text, i, name) {
 }
 
 /**
- * TITLE = /[^\n{]/* + REDUNDENT
+ * TITLE = /[^\n{]/* + INLINE_REDUNDENT
  */
 function TITLE(text, i, title) {
-  console.log('TITLE', i, text.slice(i, i + 5).replace(REGEXP_NAWLINE_G, '\\n'));
+  console.log('TITLE', i, text.slice(i, i + 5).replace(REGEXP_NEWLINE_G, '\\n'));
   var c = i;
   var str = '';
 
@@ -60258,8 +60277,8 @@ function TITLE(text, i, title) {
   }
   title.$string = str;
 
-  // REDUNDENT
-  c = REDUNDENT(text, c);
+  // INLINE_REDUNDENT
+  c = INLINE_REDUNDENT(text, c);
 
   return c;
 }
@@ -60268,7 +60287,7 @@ function TITLE(text, i, title) {
  * GROUP<T> = SEQUENTIAL_GROUP<T> | SIMULTANEOUS_GROUP<T>
  */
 function GROUP(text, i, type, group) {
-  console.log('GROUP<' + type.name + '>', i, text.slice(i, i + 5).replace(REGEXP_NAWLINE_G, '\\n'));
+  console.log('GROUP<' + type.name + '>', i, text.slice(i, i + 5).replace(REGEXP_NEWLINE_G, '\\n'));
   var c = i;
   var tmp = c;
 
@@ -60288,10 +60307,10 @@ function GROUP(text, i, type, group) {
 }
 
 /**
- * SEQUENTIAL_GROUP<T> = ('[' + PARAMETERS<T> + ']' + REDUNDENT)?
+ * SEQUENTIAL_GROUP<T> = ('[' + PARAMETERS<T> + ']' + INLINE_REDUNDENT)?
  */
 function SEQUENTIAL_GROUP(text, i, type, obj) {
-  console.log('SEQUENTIAL_GROUP<' + type.name + '>', i, text.slice(i, i + 5).replace(REGEXP_NAWLINE_G, '\\n'));
+  console.log('SEQUENTIAL_GROUP<' + type.name + '>', i, text.slice(i, i + 5).replace(REGEXP_NEWLINE_G, '\\n'));
   var c = i;
 
   if (REGEXP_LEFT_SQUARE.test(text[c])) {
@@ -60307,8 +60326,8 @@ function SEQUENTIAL_GROUP(text, i, type, obj) {
     if (REGEXP_RIGHT_SQUARE.test(text[c])) {
       c++;
 
-      // REDUNDENT
-      c = REDUNDENT(text, c);
+      // INLINE_REDUNDENT
+      c = INLINE_REDUNDENT(text, c);
 
       return c;
     }
@@ -60320,10 +60339,10 @@ function SEQUENTIAL_GROUP(text, i, type, obj) {
 }
 
 /**
- * SIMULTANEOUS_GROUP<T> = ('{' + PARAMETERS<T> + '}' + REDUNDENT)?
+ * SIMULTANEOUS_GROUP<T> = ('{' + PARAMETERS<T> + '}' + INLINE_REDUNDENT)?
  */
 function SIMULTANEOUS_GROUP(text, i, type, obj) {
-  console.log('SIMULTANEOUS_GROUP<' + type.name + '>', i, text.slice(i, i + 5).replace(REGEXP_NAWLINE_G, '\\n'));
+  console.log('SIMULTANEOUS_GROUP<' + type.name + '>', i, text.slice(i, i + 5).replace(REGEXP_NEWLINE_G, '\\n'));
   var c = i;
 
   if (REGEXP_LEFT_CURLY.test(text[c])) {
@@ -60332,15 +60351,15 @@ function SIMULTANEOUS_GROUP(text, i, type, obj) {
     obj.$type = 'SIMULTANEOUS_GROUP';
 
     // PARAMETERS<T>
-    obj.array = [];
-    c = PARAMETERS(text, c, type, obj.array);
+    obj.$array = [];
+    c = PARAMETERS(text, c, type, obj.$array);
 
     // '}'
     if (REGEXP_RIGHT_CURLY.test(text[c])) {
       c++;
 
-      // REDUNDENT
-      c = REDUNDENT(text, c);
+      // INLINE_REDUNDENT
+      c = INLINE_REDUNDENT(text, c);
 
       return c;
     }
@@ -60353,10 +60372,15 @@ function SIMULTANEOUS_GROUP(text, i, type, obj) {
 
 /**
  * INLINE_REDUNDENT = SPACES + COMMENT_WITHOUT_NEWLINE + INLINE_REDUNDENT?
+ * @param {Object} breaking breaking.$boolean = true 代表有換行
  */
-function INLINE_REDUNDENT(text, i) {
-  console.log('INLINE_REDUNDENT', i, text.slice(i, i + 5).replace(REGEXP_NAWLINE_G, '\\n'));
+function INLINE_REDUNDENT(text, i, breaking) {
+  console.log('INLINE_REDUNDENT', i, text.slice(i, i + 5).replace(REGEXP_NEWLINE_G, '\\n'));
   var c = i;
+  if (!breaking) {
+    breaking = {};
+  }
+  breaking.$boolean = false;
 
   // SPACES
   while (c < text.length && REGEXP_SPACE.test(text[c])) {
@@ -60366,7 +60390,34 @@ function INLINE_REDUNDENT(text, i) {
   // COMMENT_WITHOUT_NEWLINE
   if (REGEXP_SLASH.test(text[c])) {
     // '/'
-    if (REGEXP_SLASH.test(text[c])) {}
+    c++;
+    if (REGEXP_SLASH.test(text[c])) {
+      // '/', double '/', INLINE_COMMENT
+      c++;
+      while (c < text.length && !REGEXP_NEWLINE.test(text[c])) {
+        c++;
+      }
+
+      breaking.$boolean = true;
+    } else if (REGEXP_STAR.test(text[c])) {
+      // '*', '/*', BLOCK_COMMENTS
+      c++;
+
+      for (; c < text.length && !REGEXP_STAR.test(text[c]) && !REGEXP_SLASH.test(text[c + 1]); c++) {
+        if (REGEXP_NEWLINE.test(text[c])) {
+          breaking.$boolean = true;
+        }
+      }
+
+      c += 2;
+
+      if (breaking.$boolean === false) {
+        c = INLINE_REDUNDENT(text, c, breaking);
+      }
+    } else {
+      // wrong
+      throw new SyntaxError('INLINE_REDUNDENT: Expected "*" or "/"');
+    }
   }
 
   return c;
@@ -60377,10 +60428,10 @@ function INLINE_REDUNDENT(text, i) {
  * COMMENT = INLINE_COMMENT | BLOCK_COMMENTS
  */
 function REDUNDENT(text, i) {
-  console.log('REDUNDENT', i, text.slice(i, i + 5).replace(REGEXP_NAWLINE_G, '\\n'));
+  console.log('REDUNDENT', i, text.slice(i, i + 5).replace(REGEXP_NEWLINE_G, '\\n'));
   var c = i;
   // SPACES_OR_NEWLINE
-  while (c < text.length && (REGEXP_SPACE.test(text[c]) || REGEXP_NAWLINE.test(text[c]))) {
+  while (c < text.length && (REGEXP_SPACE.test(text[c]) || REGEXP_NEWLINE.test(text[c]))) {
     c++;
   }
 
@@ -60390,7 +60441,7 @@ function REDUNDENT(text, i) {
     // COMMENT
     if (REGEXP_SLASH.test(text[c])) {
       // INLINE_COMMENT
-      while (c < text.length && !REGEXP_NAWLINE.test(text[c])) {
+      while (c < text.length && !REGEXP_NEWLINE.test(text[c])) {
         c++;
       }
     } else if (REGEXP_STAR.test(text[c])) {
@@ -60413,15 +60464,13 @@ function REDUNDENT(text, i) {
   }
 }
 
-function SPACES(text, i) {}
-
 function parse(text) {
   console.log('parse', 'text length:', text.length);
   var list = [];
   FILE(text, 0, list);
   console.log(list);
 }
-'filehash NxHDlhKen3oEnrYR/scmmkXrfZk=';
+'filehash PVOSKoZweVrq5pclYP6rBu/LNGg=';
 
 /***/ })
 /******/ ]);

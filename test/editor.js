@@ -71,8 +71,8 @@ $com2(123, 456)
 function update () {
   let text = document.getElementById('text').value
   let startTime = performance.now()
+  parser(text)
   try {
-    parser(text)
     log(`Parsing is done (spending ${(performance.now() - startTime).toPrecision(4)} ms)`)
   } catch (e) {
     log(`Parsing failed!`)
