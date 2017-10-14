@@ -57,16 +57,18 @@ function error (...msg) {
 // console.error = error
 
 document.getElementById('text').value = `
+$character(Aimer)
+$character(Bimer)
 // Lyrics of 茜さす
 @Aimer <b>茜さす Akane Sasu</b>
-@Aimer 枯れ葉舞う町角を　駆け抜けてく乾いた風
-@Aimer 伸びた影とイチョウ並木　季節を見てたかった
+{@Aimer, @Bimer} 枯れ葉舞う町角を　駆け抜けてく乾いた風
+@Aimer !appear !move(456, 123) 伸びた影とイチョウ並木　季節を見てたかった
 @Aimer 
-@Aimer 返事のない呼ぶ声は　あっという間　かき消されてしまう
-@Aimer 目抜き通り　人波抜けて　どこか遠く　誰もいない場所へ
+@Aimer !shake 返事のない呼ぶ声は　あっという間　かき消されてしまう
+@Aimer !moveTo(456, 123) 目抜き通り　人波抜けて　どこか遠く　誰もいない場所へ
 @Aimer 
-@Aimer 気付いていたのに　何も知らないふり
-@Aimer 一人きりでは　何もできなかった
+@Bimer !appear !moveTo(100, 100) 気付いていたのに　何も知らないふり
+@Aimer !shake 一人きりでは　何もできなかった
 @Aimer 
 @Aimer 出会えた幻にさよならを　茜さす　この空に
 @Aimer 零れた弱さに手のひらを　一輪の徒花　そんなふうに
@@ -90,7 +92,7 @@ document.getElementById('text').value = `
 @Aimer 痛み重ね　出会いを知る
 @Aimer 
 @Aimer 出会い重ね　願いを知る
-@Aimer ~ Ending ~
+@Aimer <i>~ Ending ~</i>
 `
 
 function update () {
