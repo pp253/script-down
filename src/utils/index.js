@@ -27,3 +27,7 @@ export class ColorChangeableGraphic extends PIXI.Graphics {
     super.destroy()
   }
 }
+
+export function parseFlowControlOptions (options) {
+
+}

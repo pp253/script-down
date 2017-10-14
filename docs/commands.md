@@ -20,11 +20,16 @@ Work in progress.
 
 ### $setStage(name: String, value: Any)
 
+You can set the stage's member variables by `$setStage(name, value)`.
+
 - `name`: *String* Following are available options.
   - `backgroundColor`: *RGB* Set the background color of the stage.
 
 
 ### $setSubtitle(name: String, value: Any)
+
+You can set the subtitle's member variables by `$setStage(name, value)`.
+
 
 Work in progress.
 
