@@ -22,16 +22,9 @@ Work in progress.
 
 You can set the stage's member variables by `$setStage(name, value)`.
 
-- `name`: *String* Following are available options.
-  - `backgroundColor`: *RGB* Set the background color of the stage.
-
-
 ### $setSubtitle(name: String, value: Any)
 
 You can set the subtitle's member variables by `$setStage(name, value)`.
-
-
-Work in progress.
 
 ## Character
 
@@ -43,7 +36,7 @@ Work in progress.
   - `pivot`: *Coordinate* See [PIXI.Spirite.pivot](http://pixijs.download/dev/docs/PIXI.Sprite.html#pivot)
   - `x`: *Number*
   - `y`: *Number*
-  - `texture`: *Object* Each key for the texture's name, and value for the texture's image url. `texture` should have a `default` texture.
+  - `texture`: *Object* Key for the texture's name, and value for the texture's image url. `texture` should have a `default` texture.
 
 ## Game Experience
 

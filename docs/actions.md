@@ -4,7 +4,7 @@
 
 ## Characters
 
-Basically, you can use any methods that belongs to [PIXI: Sprite](http://pixijs.download/dev/docs/PIXI.Sprite.html), and set the member variables by `$set(name, value)`.
+Basically, you can directly use any methods that belongs to [PIXI: Sprite](http://pixijs.download/dev/docs/PIXI.Sprite.html), and set the member variables by `$set(name, value)`.
 
 ### !set(name: String, value: any)
 done
