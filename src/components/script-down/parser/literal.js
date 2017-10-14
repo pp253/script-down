@@ -30,13 +30,28 @@ const REGEXP_SINGLE_QUOTES = /[']/
 const REGEXP_DOUBLE_QUOTES = /["]/
 
 /**
+ * @param {String} text
+ * @param {Number} start
+ * @returns {Array}
+ */
+export default function literal (text, start = 0) {
+  return FILE(text, start)
+}
+
+/**
  * FILE = REDUNDENT + STATEMENT*
  */
-function FILE (text, i, list) {
+function FILE (text, i) {
   console.log('FILE', i, text.slice(i, i + 15).replace(REGEXP_NEWLINE_G, '\\n'))
   let c = i
-  c = REDUNDENT(text, c)
   let tmp = c
+
+  let literal = []
+
+  // REDUNDENT
+  c = REDUNDENT(text, c)
+
+  // STATEMENT*
   while (c < text.length) {
     let statement = {}
     c = STATEMENT(text, c, statement)
@@ -44,21 +59,32 @@ function FILE (text, i, list) {
       // No more statements
       break
     }
-    list.push(statement)
+    literal.push(statement)
     tmp = c
   }
+
   if (c < text.length) {
     throw new SyntaxError('FILE: Not ending properly.')
   }
+
+  return literal
 }
 
 /**
- * STATEMENT = COMMAND | HEADER | ACT + OPTIONS? + REDUNDENT
+ * STATEMENT = ACT | COMMAND | HEADER + OPTIONS? + REDUNDENT
  */
 function STATEMENT (text, i, statement) {
   console.log('STATEMENT', i, text.slice(i, i + 15).replace(REGEXP_NEWLINE_G, '\\n'))
   let c = i
   let tmp = c
+
+  // ACT
+  c = ACT(text, c, statement)
+  if (c !== tmp) {
+    // REDUNDENT
+    c = REDUNDENT(text, c)
+    return c
+  }
 
   // COMMAND
   c = COMMAND(text, c, statement)
@@ -86,14 +112,6 @@ function STATEMENT (text, i, statement) {
     return c
   }
 
-  // ACT
-  c = ACT(text, c, statement)
-  if (c !== tmp) {
-    // REDUNDENT
-    c = REDUNDENT(text, c)
-    return c
-  }
-
   throw new SyntaxError('STATEMENT: No such statement.')
 }
 
@@ -116,7 +134,7 @@ function COMMAND (text, i, command) {
     let breaking = {}
     c = INLINE_REDUNDENT(text, c, breaking)
 
-    command.$type = 'command'
+    command.$type = 'COMMAND'
     command.name = name.$string
 
     if (!breaking.$boolean) {
@@ -150,7 +168,7 @@ function HEADER (text, i, header) {
     let breaking = {}
     c = INLINE_REDUNDENT(text, c, breaking)
 
-    header.$type = 'header'
+    header.$type = 'HEADER'
     header.level = level
 
     if (!breaking.$boolean) {
@@ -165,7 +183,7 @@ function HEADER (text, i, header) {
 }
 
 /**
- * ACT = (((SIMULTANEOUS_GROUP<SUBJECT_MOVEMENT> + MOVEMENT?) | SUBJECT_MOVEMENT) + MESSAGE:TITLE?)?
+ * ACT = (((CURLY_GROUP<SUBJECT_MOVEMENT> + MOVEMENT?) | SUBJECT_MOVEMENT) + MESSAGE:TITLE?)?
  * @param {Object} act
  */
 function ACT (text, i, act) {
@@ -173,13 +191,15 @@ function ACT (text, i, act) {
   let c = i
   let tmp = c
 
-  // (SIMULTANEOUS_GROUP<SUBJECT_MOVEMENT> + MOVEMENT?)
   let subjectMovementList = {}
+  subjectMovementList.$type = 'CURLY_GROUP'
   subjectMovementList.$array = []
-  c = SIMULTANEOUS_GROUP(text, c, SUBJECT_MOVEMENT, subjectMovementList)
+
+  // (CURLY_GROUP<SUBJECT_MOVEMENT> + MOVEMENT?)
+  c = CURLY_GROUP(text, c, SUBJECT_MOVEMENT, subjectMovementList)
   if (c !== tmp) {
     // MOVEMENT?
-    let movement = []
+    let movement = {}
     c = MOVEMENT(text, c, movement)
     act.movement = movement
   } else {
@@ -198,7 +218,7 @@ function ACT (text, i, act) {
   let message = {}
   c = TITLE(text, c, message)
 
-  act.$type = 'act'
+  act.$type = 'ACT'
   act.subjectMovementList = subjectMovementList
   act.message = message.$string
 
@@ -223,7 +243,7 @@ function SUBJECT_MOVEMENT (text, i, subjectMovement) {
     let movement = []
     c = MOVEMENT(text, c, movement)
 
-    subjectMovement.$type = 'subjectMovement'
+    subjectMovement.$type = 'SUBJECT_MOVEMENT'
     subjectMovement.subject = subject
     subjectMovement.movement = movement
   }
@@ -232,7 +252,7 @@ function SUBJECT_MOVEMENT (text, i, subjectMovement) {
 }
 
 /**
- * SUBJECT = ('@' + OBJECT_NAME:NAME + INLINE_REDUNDENT + VARIETY?)?
+ * SUBJECT = ('@' + NAME + INLINE_REDUNDENT + VARIETY?)?
  * @param {Object} subject
  */
 function SUBJECT (text, i, subject) {
@@ -251,7 +271,7 @@ function SUBJECT (text, i, subject) {
     let breaking = {}
     c = INLINE_REDUNDENT(text, c, breaking)
 
-    subject.$type = 'subject'
+    subject.$type = 'SUBJECT'
     subject.name = name.$string
 
     if (!breaking.$boolean) {
@@ -306,7 +326,7 @@ function VARIETY (text, i, variety) {
 
 /**
  * MOVEMENT = (METHOD* + OPTIONS?)?
- * @param {Array} movement
+ * @param {Object} movement
  */
 function MOVEMENT (text, i, movement) {
   console.log('MOVEMENT', i, text.slice(i, i + 15).replace(REGEXP_NEWLINE_G, '\\n'))
@@ -330,7 +350,7 @@ function MOVEMENT (text, i, movement) {
   let opt = {}
   c = OPTIONS(text, c, opt)
 
-  movement.$type = 'movement'
+  movement.$type = 'MOVEMENT'
   movement.methods = methods
   movement.options = opt
 
@@ -338,7 +358,7 @@ function MOVEMENT (text, i, movement) {
 }
 
 /**
- * METHOD = ACTION | COMMAND
+ * METHOD = (ACTION | COMMAND)?
  */
 function METHOD (text, i, method) {
   console.log('METHOD', i, text.slice(i, i + 15).replace(REGEXP_NEWLINE_G, '\\n'))
@@ -361,7 +381,7 @@ function METHOD (text, i, method) {
 }
 
 /**
- * ACTION = '!' + NAME + INLINE_REDUNDENT + ARGUMENTS?
+ * ACTION = ('!' + NAME + INLINE_REDUNDENT + ARGUMENTS?)?
  * @param {Object} action
  */
 function ACTION (text, i, action) {
@@ -380,7 +400,7 @@ function ACTION (text, i, action) {
     let breaking = {}
     c = INLINE_REDUNDENT(text, c, breaking)
 
-    action.$type = 'action'
+    action.$type = 'ACTION'
     action.name = name.$string
 
     if (!breaking.$boolean) {
@@ -451,7 +471,7 @@ function PARAMETERS (text, i, type, arr) {
 }
 
 /**
- * VALUE = NUMBER | STRING | NAME | BOOLEAN | ARRAY | OBJECT
+ * VALUE = NUMBER | BOOLEAN  | STRING | NAME| ARRAY:SQUARE_GROUP<VALUE> | OBJECT:CURLY_GROUP<VALUE>
  * @param {Object} value
  */
 function VALUE (text, i, value) {
@@ -462,18 +482,42 @@ function VALUE (text, i, value) {
   // NUMBER
   c = NUMBER(text, c, value)
   if (c !== tmp) {
+    value.$type = 'number'
+    return c
+  }
+
+  // BOOLEAN
+  c = BOOLEAN(text, c, value)
+  if (c !== tmp) {
+    value.$type = 'boolean'
     return c
   }
 
   // STRING
   c = STRING(text, c, value)
   if (c !== tmp) {
+    value.$type = 'string'
     return c
   }
 
   // NAME
   c = NAME(text, c, value)
   if (c !== tmp) {
+    value.$type = 'string'
+    return c
+  }
+
+  // ARRAY:SQUARE_GROUP<VALUE>
+  c = SQUARE_GROUP(text, c, VALUE, value)
+  if (c !== tmp) {
+    value.$type = 'array'
+    return c
+  }
+
+  // OBJECT:CURLY_GROUP<VALUE>
+  c = CURLY_GROUP(text, c, VALUE, value)
+  if (c !== tmp) {
+    value.$type = 'object'
     return c
   }
 
@@ -487,9 +531,9 @@ function STRING (text, i, value) {
   console.log('STRING', i, text.slice(i, i + 15).replace(REGEXP_NEWLINE_G, '\\n'))
   let c = i
   if (REGEXP_SINGLE_QUOTES.test(text[c]) || REGEXP_DOUBLE_QUOTES.test(text[c])) {
+    // ("'" + ... + "'" | '"' + ... + '"')
     let str = ''
     let target = text[c]
-    // ("'" + ... + "'" | '"' + ... + '"')
     c++
     for (; c < text.length && text[c] !== target; c++) {
       str += text[c]
@@ -533,21 +577,38 @@ function NUMBER (text, i, value) {
     }
     number += float / Math.pow(10, expo)
   }
-
   value.$number = number
 
   return c
 }
 
 /**
- * OPTIONS = SIMULTANEOUS_GROUP<PAIR>
+ * BOOLEAN = ('true' | 'false')?
+ */
+function BOOLEAN (text, i, value) {
+  console.log('BOOLEAN', i, text.slice(i, i + 15).replace(REGEXP_NEWLINE_G, '\\n'))
+  let c = i
+
+  if (text.slice(c, c + 4) === 'true') {
+    value.$boolean = true
+    c += 4
+  } else if (text.slice(c, c + 5) === 'false') {
+    value.$boolean = false
+    c += 5
+  }
+
+  return c
+}
+
+/**
+ * OPTIONS = CURLY_GROUP<PAIR>
  */
 function OPTIONS (text, i, opt) {
   console.log('OPTIONS', i, text.slice(i, i + 15).replace(REGEXP_NEWLINE_G, '\\n'))
   let c = i
 
-  // SIMULTANEOUS_GROUP<PAIR>
-  c = SIMULTANEOUS_GROUP(text, c, PAIR, opt)
+  // CURLY_GROUP<PAIR>
+  c = CURLY_GROUP(text, c, PAIR, opt)
 
   return c
 }
@@ -580,9 +641,7 @@ function PAIR (text, i, pair) {
   let value = {}
   c = VALUE(text, c, value)
 
-  // REDUNDENT
-  c = REDUNDENT(text, c)
-
+  pair.$type = 'PAIR'
   pair.name = name.$string
   pair.value = value
 
@@ -590,7 +649,7 @@ function PAIR (text, i, pair) {
 }
 
 /**
- * NAME = /[^\s\n\t{}[\]!@#$%?]/*
+ * NAME = REGEXP_NAME*
  * @param {Object} name, add on name.$string
  */
 function NAME (text, i, name) {
@@ -598,24 +657,24 @@ function NAME (text, i, name) {
   let c = i
   let str = ''
 
-  // /[a-zA-Z0-9]/*
+  // REGEXP_NAME*
   for (; c < text.length && REGEXP_NAME.test(text[c]); c++) {
     str += text[c]
   }
-
   name.$string = str
+
   return c
 }
 
 /**
- * TITLE = /[^\n{]/* + INLINE_REDUNDENT
+ * TITLE = REGEXP_TITLE* + INLINE_REDUNDENT
  */
 function TITLE (text, i, title) {
   console.log('TITLE', i, text.slice(i, i + 15).replace(REGEXP_NEWLINE_G, '\\n'))
   let c = i
   let str = ''
 
-  // /[^\n{]/*
+  // REGEXP_TITLE*
   for (; c < text.length && REGEXP_TITLE.test(text[c]); c++) {
     str += text[c]
   }
@@ -628,21 +687,21 @@ function TITLE (text, i, title) {
 }
 
 /**
- * GROUP<T> = SEQUENTIAL_GROUP<T> | SIMULTANEOUS_GROUP<T>
+ * GROUP<T> = SQUARE_GROUP<T> | CURLY_GROUP<T>
  */
 function GROUP (text, i, type, group) {
   console.log(`GROUP<${type.name}>`, i, text.slice(i, i + 15).replace(REGEXP_NEWLINE_G, '\\n'))
   let c = i
   let tmp = c
 
-  // SEQUENTIAL_GROUP
-  c = SEQUENTIAL_GROUP(text, c, type, group)
+  // SQUARE_GROUP
+  c = SQUARE_GROUP(text, c, type, group)
   if (c !== tmp) {
     return c
   }
 
-  // SIMULTANEOUS_GROUP
-  c = SIMULTANEOUS_GROUP(text, c, type, group)
+  // CURLY_GROUP
+  c = CURLY_GROUP(text, c, type, group)
   if (c !== tmp) {
     return c
   }
@@ -651,16 +710,16 @@ function GROUP (text, i, type, group) {
 }
 
 /**
- * SEQUENTIAL_GROUP<T> = ('[' + PARAMETERS<T> + ']' + INLINE_REDUNDENT)?
+ * SQUARE_GROUP<T> = ('[' + PARAMETERS<T> + ']' + INLINE_REDUNDENT)?
  */
-function SEQUENTIAL_GROUP (text, i, type, obj) {
-  console.log(`SEQUENTIAL_GROUP<${type.name}>`, i, text.slice(i, i + 15).replace(REGEXP_NEWLINE_G, '\\n'))
+function SQUARE_GROUP (text, i, type, obj) {
+  console.log(`SQUARE_GROUP<${type.name}>`, i, text.slice(i, i + 15).replace(REGEXP_NEWLINE_G, '\\n'))
   let c = i
 
   if (REGEXP_LEFT_SQUARE.test(text[c])) {
     // '['
     c++
-    obj.$type = 'SEQUENTIAL_GROUP'
+    obj.$type = 'SQUARE_GROUP'
 
     // PARAMETERS<T>
     obj.array = []
@@ -676,23 +735,23 @@ function SEQUENTIAL_GROUP (text, i, type, obj) {
       return c
     }
 
-    throw new SyntaxError('SEQUENTIAL_GROUP: Missing "]"')
+    throw new SyntaxError('SQUARE_GROUP: Missing "]"')
   }
 
   return c
 }
 
 /**
- * SIMULTANEOUS_GROUP<T> = ('{' + PARAMETERS<T> + '}' + INLINE_REDUNDENT)?
+ * CURLY_GROUP<T> = ('{' + PARAMETERS<T> + '}' + INLINE_REDUNDENT)?
  */
-function SIMULTANEOUS_GROUP (text, i, type, obj) {
-  console.log(`SIMULTANEOUS_GROUP<${type.name}>`, i, text.slice(i, i + 15).replace(REGEXP_NEWLINE_G, '\\n'))
+function CURLY_GROUP (text, i, type, obj) {
+  console.log(`CURLY_GROUP<${type.name}>`, i, text.slice(i, i + 15).replace(REGEXP_NEWLINE_G, '\\n'))
   let c = i
 
   if (REGEXP_LEFT_CURLY.test(text[c])) {
     // '{'
     c++
-    obj.$type = 'SIMULTANEOUS_GROUP'
+    obj.$type = 'CURLY_GROUP'
 
     // PARAMETERS<T>
     obj.$array = []
@@ -708,7 +767,7 @@ function SIMULTANEOUS_GROUP (text, i, type, obj) {
       return c
     }
 
-    throw new SyntaxError('SIMULTANEOUS_GROUP: Missing "}"')
+    throw new SyntaxError('CURLY_GROUP: Missing "}"')
   }
 
   return c
@@ -796,16 +855,4 @@ function REDUNDENT (text, i) {
   } else {
     return c
   }
-}
-
-export default function parse (text) {
-  console.log('parse', 'text length:', text.length)
-  let list = []
-
-  // literal parsing
-  FILE(text, 0, list)
-
-  console.log(list)
-
-  return list
 }
