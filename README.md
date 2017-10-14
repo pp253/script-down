@@ -1,68 +1,104 @@
-# 介紹
+# ScriptDown
 
-[範例](https://pp253.github.io/script-down/test/test.html)
-[範例編輯器](https://pp253.github.io/script-down/test/editor.html)
+ScriptDown 能夠直接把你的劇本，無痛轉為網頁冒險遊戲([AVG](https://zh.wikipedia.org/zh-tw/%E5%86%92%E9%99%A9%E6%B8%B8%E6%88%8F))。
 
-## 基本型別
-
-- String (any charactor that is not a keyword will be trated as string)
-- Number (including integer and float)
-- Boolean (true or false)
-- Array or Sequential Executing List `[]`
-- Object or Simultaneously Executing List `{}`
+[ScriptDown編輯器](https://pp253.github.io/script-down/test/editor.html)
 
 ## 基本語法
 
-### Comment
+### Message
+
+如何讓你的人物說話？在你的劇本中寫入以下文字。
 
 ```
-// for single line comment
-/*
-for block comments
-*/
+@學生 二餐三樓讚！
 ```
 
-### Header
+就可以看到，
+
+![@學生 二餐三樓讚！](./docs/demo1.png)
+
+想要多個人一起說話嗎？
 
 ```
-# Header 1
-## Header 2
-###### Header 6
-```
-The space between the first word and '#' is optional.
-
-### Command
-
-```
-$command
-$command()
-$command(argument1, argument2)
+{@男主角, @女主角} 我討厭你！
 ```
 
-無參數時可以省略括號。
+![{@男主角, @女主角} 我討厭你！](./docs/demo2.png)
 
 ### Action
 
-對 `charactor` 對象執行 `action` 方法，可以把這個想成是C-style的`charactor->action()`
-```
-@charactor !action
-@charactor !action()
-@charactor !action(argument1, argument2)
-```
+你也可以添加Action，讓你的角色出場、移動位置或是做效果。但在添加Action前，必須先定義學生是什麼，
 
-無參數時可以省略括號。
-
-### Sequential and Simultaneously Executing List
-
-循序的，或是同時的執行序列內的指令。
 ```
-Sequential:     [$command, !action]
-Simultaneously: {$command, !action}
+$character(學生)
 ```
 
-注意：!action只可包含於
+然後就可以在後面加入你的Action，
 
-## 基本結構
+```
+@學生 !appear // 出現
+@學生 !shake // 搖身體
+@學生 !disappear 我消失了 // 邊退場邊說話
+@學生 !appear !move(20, 30) // 多個動作也是可以的
+```
+
+悄悄話：可以把這個想成是C-style的`charactor->action()`，無參數時可以省略括號。
+
+[了解更多Action](./docs/actions.md)
+
+### Command
+
+剛剛定義學生的方法 `$character(學生)` 其實是一種Command，你還可以用Command做到更多的事情，不論是定義舞台背景顏色，還是撥放音樂都可以用Command完成。
+
+```
+$command
+$character(學生)
+$setStage(backgroundColor, "0x0")
+```
+
+悄悄話：command是對全域的函數，無參數時可以省略括號。
+
+[了解更多Command](./docs/commands.md)
+
+### Header
+
+你還可以為你的劇本添加各種層級的標題。
+
+```
+# 標題一
+## 標題二
+###其實井字號和標題中間的空格可以不用打
+```
+
+### Comment
+
+如果你的劇本越寫越大，你可能會需要一些註解來幫助你，ScriptDown也有提供你進行註解的方法。
+
+```
+// 單行註解
+/*
+  區塊註解　據透：男主角是兇手
+*/
+```
+
+放心，這些註解都不會出現在你的遊戲中。
+
+### Options
+
+Options 可以讓你的劇本變得更多樣，像是能夠延遲對話的出現，或是增加轉場效果。
+
+```
+# Header 1 {delay: 3000}
+@character !action {delay: 3000} my text...
+$command() {delay: 3000}
+```
+
+悄悄話：Options 的結構和 JavaScript 中的 `Object` 大致相同，唯一不同處為做為鍵值的字串，在不包含不允許的字符(`/[^\\\s\n\t()[\]{}'+\-*/~!@#$%^&?,.:<>]`)下，可以不用以`"`或`'`括住。
+
+[了解更多Options](./docs/options.md)
+
+## 深入了解
 
 ### Execution
 
@@ -76,17 +112,15 @@ Execution
 ### Objective Execution
 某個人自己說話。
 ```
-@charactor<<type>?> <Execution?> <Message?>
+@charactor<[texture]?> <Execution?> <Options?> <Message?>
 ```
 
-`@charactor<<type>?>`
-- `type`: 角色的型態。像是可以`@someone<laugh>`來表示某位角色笑的樣子。
+`@charactor<[texture]?>`
+- `texture`: 角色的型態。像是可以`@someone<laugh>`來表示某位角色笑的樣子。
 
 `Execution` (Optional)
 - Command: `$command`
 - Action: `!action`
-- Sequentially Executing List: `[$command, !action]`
-- Simultaneously Executing List: `{$command, !action}`
 
 `Message` (Optional)
 - String
@@ -94,8 +128,22 @@ Execution
 ### Multi-objective Execution
 多個人一起說話。
 ```
-{@charactor<<type>?> <Single-Execution?>, @charactor<<type>?> <Single-Execution?>} <All-Execution?> <Message?>
+{@charactor<[texture]?> <Execution?> <Options?>, ...} <Execution?> <Options?> <Message?>
 ```
 
 在`{}`內的Execution是該角色單獨的，在`{}`外的是所有角色共同執行的，先內而外，且是循序的。
 
+# Dependency
+
+- [PixiJS](http://www.pixijs.com/)
+- [PixiJS Filters](https://github.com/pixijs/pixi-filters)
+- [pixi-multistyle-text](https://github.com/tleunen/pixi-multistyle-text)
+- [Lodash](https://lodash.com/)
+
+# Special Thanks
+
+Inspired by [BASS遊戲製作平台](http://bassavg.com/games.php)
+
+# License
+
+ScriptDown is published under [Apache-2.0](./LICENSE).
