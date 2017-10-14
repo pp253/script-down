@@ -98,41 +98,6 @@ $command() {delay: 3000}
 
 [了解更多Options](./docs/options.md)
 
-## 深入了解
-
-### Execution
-
-```
-Execution
-```
-
-`Execution`
-- Command: `$command`
-
-### Objective Execution
-某個人自己說話。
-```
-@charactor<[texture]?> <Execution?> <Options?> <Message?>
-```
-
-`@charactor<[texture]?>`
-- `texture`: 角色的型態。像是可以`@someone<laugh>`來表示某位角色笑的樣子。
-
-`Execution` (Optional)
-- Command: `$command`
-- Action: `!action`
-
-`Message` (Optional)
-- String
-
-### Multi-objective Execution
-多個人一起說話。
-```
-{@charactor<[texture]?> <Execution?> <Options?>, ...} <Execution?> <Options?> <Message?>
-```
-
-在`{}`內的Execution是該角色單獨的，在`{}`外的是所有角色共同執行的，先內而外，且是循序的。
-
 # Dependency
 
 - [PixiJS](http://www.pixijs.com/)
