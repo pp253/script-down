@@ -1,7 +1,11 @@
 import literal from './literal'
 import structure from './structure'
 
-export default function parse (text) {
+export default {
+  parse: parse
+}
+
+export function parse (text) {
   console.log('parse', 'text length:', text.length)
 
   // literal parsing

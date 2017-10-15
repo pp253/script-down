@@ -36,8 +36,8 @@ You can set the subtitle's member variables by `$setStage(name, value)`.
   - `pivot`: *Coordinate* See [PIXI.Spirite.pivot](http://pixijs.download/dev/docs/PIXI.Sprite.html#pivot)
   - `x`: *Number*
   - `y`: *Number*
-  - `texture`: *Object* Key for the texture's name, and value for the texture's image url. `texture` should have a `default` texture.
-
+  - `textures`: *Object* Key for the texture's name, and value for the texture's image url. `texture` should have a `default` texture.
+  
 ## Game Experience
 
 ### $give(name: String, number: Number, limit?: Number)

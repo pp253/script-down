@@ -2,7 +2,7 @@
 
 ScriptDown 讓你的劇本＝你的網頁冒險遊戲([AVG](https://zh.wikipedia.org/zh-tw/%E5%86%92%E9%99%A9%E6%B8%B8%E6%88%8F))。
 
-[ScriptDown編輯器](https://pp253.github.io/script-down/test/editor.html)
+[ScriptDown範例編輯器](https://pp253.github.io/script-down/test/editor.html)
 
 ## 基本語法
 
@@ -40,7 +40,9 @@ $character(學生)
 @學生 !appear // 出現
 @學生 !shake // 搖身體
 @學生 !disappear 我消失了 // 邊退場邊說話
-@學生 !appear !move(20, 30) // 多個動作也是可以的
+@學生 !appear !move(20, 30) // 多個動作
+{@男主角, @女主角} !appear 我們一起說話 // 多人同動作同對話
+{@男主角 !appear, @女主角} 我們一起說話 // 同時說話，但個別執行動作
 ```
 
 悄悄話：可以把這個想成是C-style的`charactor->action()`，無參數時可以省略括號。

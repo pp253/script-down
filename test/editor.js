@@ -1,3 +1,4 @@
+/* eslint-disable */
 /* global GameBase, Router, ScriptDown, parser */
 
 let gamebase = null
@@ -22,7 +23,7 @@ function initGameBase () {
   let myScriptDown = (gamebase) => {
     let text = document.getElementById('text').value
     let startTime = performance.now()
-    let script = parser(text)
+    let script = parser.parse(text)
     log(`Parsing is done (spending ${(performance.now() - startTime).toPrecision(4)} ms)`)
     return new ScriptDown(script, gamebase)
   }
@@ -57,14 +58,24 @@ function error (...msg) {
 // console.error = error
 
 document.getElementById('text').value = `
-$character(Aimer)
-$character(Bimer)
+$character(Aimer, {
+  textures: {
+    default: './img/bunny.png'
+  }
+})
+$character(Bimer, {
+  textures: {
+    default: './img/surval.png',
+    bunny: './img/bunny.png'
+  },
+  scale: 0.5
+})
 // Lyrics of 茜さす
 @Aimer <b>茜さす Akane Sasu</b>
-{@Aimer, @Bimer} 枯れ葉舞う町角を　駆け抜けてく乾いた風
-@Aimer !appear !move(456, 123) 伸びた影とイチョウ並木　季節を見てたかった
+{@Aimer, @Bimer} !appear 枯れ葉舞う町角を　駆け抜けてく乾いた風
+@Bimer !move(456, 123) {transitionDuration: 1000, transitionTimingFunction: 'ease-in-out-circ'} 伸びた影とイチョウ並木　季節を見てたかった
 @Aimer 
-@Aimer !shake 返事のない呼ぶ声は　あっという間　かき消されてしまう
+@Aimer !shake {delay:1000} 返事のない呼ぶ声は　あっという間　かき消されてしまう
 @Aimer !moveTo(456, 123) 目抜き通り　人波抜けて　どこか遠く　誰もいない場所へ
 @Aimer 
 @Bimer !appear !moveTo(100, 100) 気付いていたのに　何も知らないふり

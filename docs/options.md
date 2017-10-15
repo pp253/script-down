@@ -14,3 +14,17 @@
 - `transition`: *Transition* Transition will pass to all of the tasks. Note that Transition will pause the game.
 - `postpone`: *Number* Postpone the reaction to the `next()` in millisecond. Default value is `0`.
 - `autostep`: *Boolean* Automatically trigger `next()` after `postpone`. Default value is `false`.
+
+
+# Action
+
+## Transition
+
+- `transitionDuration`: *Number* Set the duration of the transition in millisecond. Default value is `0`.
+- `transitionTimingFunction`: *String* Set the bezier function for the transition. Avaliable timing function: [easings](http://easings.net/zh-tw#). Default value is `linear`.
+
+Avaliable for transition:
+- `!move`
+- `!moveTo`
+- `!rotate`
+- `!rotateByDegree`
