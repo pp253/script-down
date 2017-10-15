@@ -106,6 +106,7 @@ $command() {delay: 3000}
 - [PixiJS Filters](https://github.com/pixijs/pixi-filters)
 - [pixi-multistyle-text](https://github.com/tleunen/pixi-multistyle-text)
 - [Lodash](https://lodash.com/)
+- [Cubic Bézier solver](https://www.npmjs.com/package/cubic-bezier)
 
 # Special Thanks
 
