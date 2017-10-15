@@ -42,7 +42,7 @@ export default function literal (text, start = 0) {
  * FILE = REDUNDENT + STATEMENT*
  */
 function FILE (text, i) {
-  console.log('FILE', i, text.slice(i, i + 15).replace(REGEXP_NEWLINE_G, '\\n'))
+  console.log('FILE', i, text.slice(i, i + 15).replace(REGEXP_NEWLINE_G, '↵'))
   let c = i
   let tmp = c
 
@@ -74,7 +74,7 @@ function FILE (text, i) {
  * STATEMENT = ACT | COMMAND | HEADER + OPTIONS? + REDUNDENT
  */
 function STATEMENT (text, i, statement) {
-  console.log('STATEMENT', i, text.slice(i, i + 15).replace(REGEXP_NEWLINE_G, '\\n'))
+  console.log('STATEMENT', i, text.slice(i, i + 15).replace(REGEXP_NEWLINE_G, '↵'))
   let c = i
   let tmp = c
 
@@ -119,7 +119,7 @@ function STATEMENT (text, i, statement) {
  * COMMAND = ('$' + NAME + INLINE_REDUNDENT + ARGUMENTS?)?
  */
 function COMMAND (text, i, command) {
-  console.log('COMMAND', i, text.slice(i, i + 15).replace(REGEXP_NEWLINE_G, '\\n'))
+  console.log('COMMAND', i, text.slice(i, i + 15).replace(REGEXP_NEWLINE_G, '↵'))
   let c = i
 
   if (REGEXP_DOLLAR.test(text[c])) {
@@ -153,7 +153,7 @@ function COMMAND (text, i, command) {
  * @param {Object} header
  */
 function HEADER (text, i, header) {
-  console.log('HEADER', i, text.slice(i, i + 15).replace(REGEXP_NEWLINE_G, '\\n'))
+  console.log('HEADER', i, text.slice(i, i + 15).replace(REGEXP_NEWLINE_G, '↵'))
   let c = i
 
   if (REGEXP_HASH.test(text[c])) {
@@ -187,7 +187,7 @@ function HEADER (text, i, header) {
  * @param {Object} act
  */
 function ACT (text, i, act) {
-  console.log('ACT', i, text.slice(i, i + 15).replace(REGEXP_NEWLINE_G, '\\n'))
+  console.log('ACT', i, text.slice(i, i + 15).replace(REGEXP_NEWLINE_G, '↵'))
   let c = i
   let tmp = c
 
@@ -230,7 +230,7 @@ function ACT (text, i, act) {
  * @param {Object} subjectMovement
  */
 function SUBJECT_MOVEMENT (text, i, subjectMovement) {
-  console.log('SUBJECT_MOVEMENT', i, text.slice(i, i + 15).replace(REGEXP_NEWLINE_G, '\\n'))
+  console.log('SUBJECT_MOVEMENT', i, text.slice(i, i + 15).replace(REGEXP_NEWLINE_G, '↵'))
   let c = i
   let tmp = c
 
@@ -256,7 +256,7 @@ function SUBJECT_MOVEMENT (text, i, subjectMovement) {
  * @param {Object} subject
  */
 function SUBJECT (text, i, subject) {
-  console.log('SUBJECT', i, text.slice(i, i + 15).replace(REGEXP_NEWLINE_G, '\\n'))
+  console.log('SUBJECT', i, text.slice(i, i + 15).replace(REGEXP_NEWLINE_G, '↵'))
   let c = i
 
   if (REGEXP_AT.test(text[c])) {
@@ -290,7 +290,7 @@ function SUBJECT (text, i, subject) {
  * @param {Object} variety
  */
 function VARIETY (text, i, variety) {
-  console.log('VARIETY', i, text.slice(i, i + 15).replace(REGEXP_NEWLINE_G, '\\n'))
+  console.log('VARIETY', i, text.slice(i, i + 15).replace(REGEXP_NEWLINE_G, '↵'))
   let c = i
 
   if (REGEXP_LEFT_SQUARE.test(text[c])) {
@@ -329,7 +329,7 @@ function VARIETY (text, i, variety) {
  * @param {Object} movement
  */
 function MOVEMENT (text, i, movement) {
-  console.log('MOVEMENT', i, text.slice(i, i + 15).replace(REGEXP_NEWLINE_G, '\\n'))
+  console.log('MOVEMENT', i, text.slice(i, i + 15).replace(REGEXP_NEWLINE_G, '↵'))
   let c = i
   let tmp = c
 
@@ -361,7 +361,7 @@ function MOVEMENT (text, i, movement) {
  * METHOD = (ACTION | COMMAND)?
  */
 function METHOD (text, i, method) {
-  console.log('METHOD', i, text.slice(i, i + 15).replace(REGEXP_NEWLINE_G, '\\n'))
+  console.log('METHOD', i, text.slice(i, i + 15).replace(REGEXP_NEWLINE_G, '↵'))
   let c = i
   let tmp = c
 
@@ -385,7 +385,7 @@ function METHOD (text, i, method) {
  * @param {Object} action
  */
 function ACTION (text, i, action) {
-  console.log('ACTION', i, text.slice(i, i + 15).replace(REGEXP_NEWLINE_G, '\\n'))
+  console.log('ACTION', i, text.slice(i, i + 15).replace(REGEXP_NEWLINE_G, '↵'))
   let c = i
 
   if (REGEXP_EXCLAMATION.test(text[c])) {
@@ -418,7 +418,7 @@ function ACTION (text, i, action) {
  * ARGUMENTS = ('(' + PARAMETERS<VALUE> + ')' + INLINE_REDUNDENT)?
  */
 function ARGUMENTS (text, i, arr) {
-  console.log('ARGUMENTS', i, text.slice(i, i + 15).replace(REGEXP_NEWLINE_G, '\\n'))
+  console.log('ARGUMENTS', i, text.slice(i, i + 15).replace(REGEXP_NEWLINE_G, '↵'))
   let c = i
   if (REGEXP_LEFT_ROUND.test(text[c])) {
     // '('
@@ -447,7 +447,7 @@ function ARGUMENTS (text, i, arr) {
  * @param {Object | Array} obj
  */
 function PARAMETERS (text, i, type, arr) {
-  console.log(`PARAMETERS<${type.name}>`, i, text.slice(i, i + 15).replace(REGEXP_NEWLINE_G, '\\n'))
+  console.log(`PARAMETERS<${type.name}>`, i, text.slice(i, i + 15).replace(REGEXP_NEWLINE_G, '↵'))
   let c = i
 
   // RUNDUNDENT
@@ -471,11 +471,11 @@ function PARAMETERS (text, i, type, arr) {
 }
 
 /**
- * VALUE = NUMBER | BOOLEAN  | STRING | NAME| ARRAY:SQUARE_GROUP<VALUE> | OBJECT:CURLY_GROUP<VALUE>
+ * VALUE = NUMBER | BOOLEAN  | STRING | NAME| ARRAY:SQUARE_GROUP<VALUE> | OBJECT:CURLY_GROUP<PAIR>
  * @param {Object} value
  */
 function VALUE (text, i, value) {
-  console.log('VALUE', i, text.slice(i, i + 15).replace(REGEXP_NEWLINE_G, '\\n'))
+  console.log('VALUE', i, text.slice(i, i + 15).replace(REGEXP_NEWLINE_G, '↵'))
   let c = i
   let tmp = c
 
@@ -500,13 +500,6 @@ function VALUE (text, i, value) {
     return c
   }
 
-  // NAME
-  c = NAME(text, c, value)
-  if (c !== tmp) {
-    value.$type = 'string'
-    return c
-  }
-
   // ARRAY:SQUARE_GROUP<VALUE>
   c = SQUARE_GROUP(text, c, VALUE, value)
   if (c !== tmp) {
@@ -514,10 +507,17 @@ function VALUE (text, i, value) {
     return c
   }
 
-  // OBJECT:CURLY_GROUP<VALUE>
-  c = CURLY_GROUP(text, c, VALUE, value)
+  // OBJECT:CURLY_GROUP<PAIR>
+  c = CURLY_GROUP(text, c, PAIR, value)
   if (c !== tmp) {
     value.$type = 'object'
+    return c
+  }
+
+  // NAME
+  c = NAME(text, c, value)
+  if (c !== tmp) {
+    value.$type = 'string'
     return c
   }
 
@@ -528,7 +528,7 @@ function VALUE (text, i, value) {
  * STRING = ("'" + ... + "'" | '"' + ... + '"')
  */
 function STRING (text, i, value) {
-  console.log('STRING', i, text.slice(i, i + 15).replace(REGEXP_NEWLINE_G, '\\n'))
+  console.log('STRING', i, text.slice(i, i + 15).replace(REGEXP_NEWLINE_G, '↵'))
   let c = i
   if (REGEXP_SINGLE_QUOTES.test(text[c]) || REGEXP_DOUBLE_QUOTES.test(text[c])) {
     // ("'" + ... + "'" | '"' + ... + '"')
@@ -548,7 +548,7 @@ function STRING (text, i, value) {
  * NUMBER = \d* + ('.' + \d*)?
  */
 function NUMBER (text, i, value) {
-  console.log('NUMBER', i, text.slice(i, i + 15).replace(REGEXP_NEWLINE_G, '\\n'))
+  console.log('NUMBER', i, text.slice(i, i + 15).replace(REGEXP_NEWLINE_G, '↵'))
   let c = i
   let number = 0
 
@@ -586,7 +586,7 @@ function NUMBER (text, i, value) {
  * BOOLEAN = ('true' | 'false')?
  */
 function BOOLEAN (text, i, value) {
-  console.log('BOOLEAN', i, text.slice(i, i + 15).replace(REGEXP_NEWLINE_G, '\\n'))
+  console.log('BOOLEAN', i, text.slice(i, i + 15).replace(REGEXP_NEWLINE_G, '↵'))
   let c = i
 
   if (text.slice(c, c + 4) === 'true') {
@@ -604,7 +604,7 @@ function BOOLEAN (text, i, value) {
  * OPTIONS = CURLY_GROUP<PAIR>
  */
 function OPTIONS (text, i, opt) {
-  console.log('OPTIONS', i, text.slice(i, i + 15).replace(REGEXP_NEWLINE_G, '\\n'))
+  console.log('OPTIONS', i, text.slice(i, i + 15).replace(REGEXP_NEWLINE_G, '↵'))
   let c = i
 
   // CURLY_GROUP<PAIR>
@@ -617,7 +617,7 @@ function OPTIONS (text, i, opt) {
  * PAIR = NAME + REDUNDENT + ':' + REDUNDENT + VALUE
  */
 function PAIR (text, i, pair) {
-  console.log('PAIR', i, text.slice(i, i + 15).replace(REGEXP_NEWLINE_G, '\\n'))
+  console.log('PAIR', i, text.slice(i, i + 15).replace(REGEXP_NEWLINE_G, '↵'))
   let c = i
 
   // NAME
@@ -653,7 +653,7 @@ function PAIR (text, i, pair) {
  * @param {Object} name, add on name.$string
  */
 function NAME (text, i, name) {
-  console.log('NAME', i, text.slice(i, i + 15).replace(REGEXP_NEWLINE_G, '\\n'))
+  console.log('NAME', i, text.slice(i, i + 15).replace(REGEXP_NEWLINE_G, '↵'))
   let c = i
   let str = ''
 
@@ -670,7 +670,7 @@ function NAME (text, i, name) {
  * TITLE = REGEXP_TITLE* + INLINE_REDUNDENT
  */
 function TITLE (text, i, title) {
-  console.log('TITLE', i, text.slice(i, i + 15).replace(REGEXP_NEWLINE_G, '\\n'))
+  console.log('TITLE', i, text.slice(i, i + 15).replace(REGEXP_NEWLINE_G, '↵'))
   let c = i
   let str = ''
 
@@ -690,7 +690,7 @@ function TITLE (text, i, title) {
  * GROUP<T> = SQUARE_GROUP<T> | CURLY_GROUP<T>
  */
 function GROUP (text, i, type, group) {
-  console.log(`GROUP<${type.name}>`, i, text.slice(i, i + 15).replace(REGEXP_NEWLINE_G, '\\n'))
+  console.log(`GROUP<${type.name}>`, i, text.slice(i, i + 15).replace(REGEXP_NEWLINE_G, '↵'))
   let c = i
   let tmp = c
 
@@ -713,7 +713,7 @@ function GROUP (text, i, type, group) {
  * SQUARE_GROUP<T> = ('[' + PARAMETERS<T> + ']' + INLINE_REDUNDENT)?
  */
 function SQUARE_GROUP (text, i, type, obj) {
-  console.log(`SQUARE_GROUP<${type.name}>`, i, text.slice(i, i + 15).replace(REGEXP_NEWLINE_G, '\\n'))
+  console.log(`SQUARE_GROUP<${type.name}>`, i, text.slice(i, i + 15).replace(REGEXP_NEWLINE_G, '↵'))
   let c = i
 
   if (REGEXP_LEFT_SQUARE.test(text[c])) {
@@ -745,7 +745,7 @@ function SQUARE_GROUP (text, i, type, obj) {
  * CURLY_GROUP<T> = ('{' + PARAMETERS<T> + '}' + INLINE_REDUNDENT)?
  */
 function CURLY_GROUP (text, i, type, obj) {
-  console.log(`CURLY_GROUP<${type.name}>`, i, text.slice(i, i + 15).replace(REGEXP_NEWLINE_G, '\\n'))
+  console.log(`CURLY_GROUP<${type.name}>`, i, text.slice(i, i + 15).replace(REGEXP_NEWLINE_G, '↵'))
   let c = i
 
   if (REGEXP_LEFT_CURLY.test(text[c])) {
@@ -778,7 +778,7 @@ function CURLY_GROUP (text, i, type, obj) {
  * @param {Object} breaking breaking.$boolean = true 代表有換行
  */
 function INLINE_REDUNDENT (text, i, breaking) {
-  console.log('INLINE_REDUNDENT', i, text.slice(i, i + 15).replace(REGEXP_NEWLINE_G, '\\n'))
+  console.log('INLINE_REDUNDENT', i, text.slice(i, i + 15).replace(REGEXP_NEWLINE_G, '↵'))
   let c = i
   if (!breaking) {
     breaking = {}
@@ -827,7 +827,7 @@ function INLINE_REDUNDENT (text, i, breaking) {
  * COMMENT = INLINE_COMMENT | BLOCK_COMMENTS
  */
 function REDUNDENT (text, i) {
-  console.log('REDUNDENT', i, text.slice(i, i + 15).replace(REGEXP_NEWLINE_G, '\\n'))
+  console.log('REDUNDENT', i, text.slice(i, i + 15).replace(REGEXP_NEWLINE_G, '↵'))
   let c = i
   // SPACES_OR_NEWLINE
   while (c < text.length && (REGEXP_SPACE.test(text[c]) || REGEXP_NEWLINE.test(text[c]))) { c++ }
