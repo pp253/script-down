@@ -14,8 +14,8 @@
 
 ## Transition
 
-- `transitionDuration`: *Number* Set the duration of the transition in millisecond. Default value is `0`.
-- `transitionTimingFunction`: *String* Set the bezier function for the transition. Avaliable timing function: [easings](http://easings.net/zh-tw#). Default value is `linear`.
+- `duration`: *Number* Set the duration of the transition in millisecond. Default value is `0`.
+- `transition`: *String* Set the bezier function for the transition. Avaliable timing function: [easings](http://easings.net/zh-tw#). Default value is `linear`.
 
 Avaliable for transition:
 - `!move`

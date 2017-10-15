@@ -39,8 +39,8 @@ export default function transition (app, options, movement, finalMovement) {
     return Promise.resolve()
   }
 
-  let duration = options.transitionDuration || 1000
-  let timingFunction = options.transitionTimingFunction || 'linear'
+  let duration = options.duration || 1000
+  let timingFunction = options.transition || 'linear'
 
   let bezierPara = []
   if (TIMING_FUNCTION[timingFunction]) {

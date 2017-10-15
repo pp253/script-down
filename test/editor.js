@@ -70,10 +70,11 @@ $character(Bimer, {
   },
   scale: 0.5
 })
+
 // Lyrics of 茜さす
 @Aimer <b>茜さす Akane Sasu</b>
 {@Aimer, @Bimer} !appear 枯れ葉舞う町角を　駆け抜けてく乾いた風
-@Bimer !move(456, 123) {transitionDuration: 1000, transitionTimingFunction: 'ease-in-out-circ'} 伸びた影とイチョウ並木　季節を見てたかった
+@Bimer !move(456, 123) {duration: 1000, transition: 'ease-in-out-circ'} 伸びた影とイチョウ並木　季節を見てたかった
 @Aimer 
 @Aimer !shake {delay:1000} 返事のない呼ぶ声は　あっという間　かき消されてしまう
 @Aimer !moveTo(456, 123) 目抜き通り　人波抜けて　どこか遠く　誰もいない場所へ

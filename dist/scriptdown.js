@@ -60502,8 +60502,8 @@ function transition(app, options, movement, finalMovement) {
     return Promise.resolve();
   }
 
-  var duration = options.transitionDuration || 1000;
-  var timingFunction = options.transitionTimingFunction || 'linear';
+  var duration = options.duration || 1000;
+  var timingFunction = options.transition || 'linear';
 
   var bezierPara = [];
   if (TIMING_FUNCTION[timingFunction]) {
@@ -60538,7 +60538,7 @@ function transition(app, options, movement, finalMovement) {
     }, duration);
   });
 }
-'filehash kp8xsHemMoRdk1eeozY28FldDRY=';
+'filehash Oyj40Yha8CgKLXs2rAujRgyyoB4=';
 
 /***/ }),
 /* 205 */
