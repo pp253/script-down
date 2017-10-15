@@ -2,15 +2,15 @@
 
 ScriptDown 讓你的劇本＝你的網頁冒險遊戲([AVG](https://zh.wikipedia.org/zh-tw/%E5%86%92%E9%99%A9%E6%B8%B8%E6%88%8F))。
 
-[ScriptDown範例編輯器](https://pp253.github.io/script-down/test/editor.html)
-[DOCS](./docs/index.md)
+[ScriptDown範例編輯器](https://pp253.github.io/script-down/test/editor.html) | [DOCS](./docs/index.md) | DEMO (Wrok in process)
+
 ## 基本語法
 
 ### Message
 
 如何讓你的人物說話？在你的劇本中寫入以下文字。
 
-```
+```txt
 @學生 二餐三樓讚！
 ```
 
@@ -20,7 +20,7 @@ ScriptDown 讓你的劇本＝你的網頁冒險遊戲([AVG](https://zh.wikipedia
 
 想要多個人一起說話嗎？
 
-```
+```txt
 {@男主角, @女主角} 我討厭你！
 ```
 
