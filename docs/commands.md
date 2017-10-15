@@ -32,7 +32,7 @@ You can set the subtitle's member variables by `$setStage(name, value)`.
 
 - `name`: *String* The name of the character.
 - `options`: *Object* Following are available options.
-  - `anchor`: *Number* | *XYPercentage* See [PIXI.Spirite.anchor](http://pixijs.download/dev/docs/PIXI.Sprite.html#anchor).
+  - `anchor`: *Number*, *XYPercentage* See [PIXI.Spirite.anchor](http://pixijs.download/dev/docs/PIXI.Sprite.html#anchor).
   - `pivot`: *Coordinate* See [PIXI.Spirite.pivot](http://pixijs.download/dev/docs/PIXI.Sprite.html#pivot)
   - `x`: *Number*
   - `y`: *Number*
