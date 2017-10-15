@@ -14,7 +14,7 @@ function initGameBase () {
     gamebase = null
   }
 
-  let fitWidth = window.innerWidth < 800 ? window.innerWidth - 20 : 800
+  let fitWidth = 800 // window.innerWidth < 800 ? window.innerWidth - 20 : 800
   gamebase = new GameBase('app', {
     width: fitWidth,
     height: fitWidth * 3 / 4
