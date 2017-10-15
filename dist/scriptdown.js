@@ -59791,8 +59791,6 @@ var ViewManager = function () {
       var delay = 0;
       var proceed = false;
 
-      var transition = {};
-
       var postpone = 0;
       var autostep = false;
 
@@ -60116,7 +60114,6 @@ var ViewManager = function () {
           pause = options.pause || pause;
           delay = options.delay || delay;
           proceed = options.proceed || proceed;
-          transition = options.transition || transition;
           postpone = options.postpone || postpone;
           autostep = options.autostep || autostep;
         }
@@ -60186,7 +60183,7 @@ var ViewManager = function () {
 }();
 
 /* harmony default export */ __webpack_exports__["a"] = (ViewManager);
-'filehash 9sGhvnFrdOq8BztubRFN/cMqoII=';
+'filehash 8QqU8th2dhBlbOo9wLyehA/EU3M=';
 
 /***/ }),
 /* 203 */
@@ -60497,7 +60494,7 @@ var TIMING_FUNCTION = {
 };
 
 function transition(app, options, movement, finalMovement) {
-  if (!options || !options.transitionDuration) {
+  if (!options || !options.duration) {
     movement(1);
     return Promise.resolve();
   }
@@ -60538,7 +60535,7 @@ function transition(app, options, movement, finalMovement) {
     }, duration);
   });
 }
-'filehash Oyj40Yha8CgKLXs2rAujRgyyoB4=';
+'filehash 3xvFOLBQuXLSjN11HmaOO+y1I2A=';
 
 /***/ }),
 /* 205 */

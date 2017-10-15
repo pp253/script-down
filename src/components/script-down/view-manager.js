@@ -91,8 +91,6 @@ export default class ViewManager {
     let delay = 0
     let proceed = false
 
-    let transition = {}
-
     let postpone = 0
     let autostep = false
 
@@ -253,7 +251,6 @@ export default class ViewManager {
         pause = options.pause || pause
         delay = options.delay || delay
         proceed = options.proceed || proceed
-        transition = options.transition || transition
         postpone = options.postpone || postpone
         autostep = options.autostep || autostep
       }

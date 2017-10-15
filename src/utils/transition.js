@@ -34,7 +34,7 @@ const TIMING_FUNCTION = {
 }
 
 export default function transition (app, options, movement, finalMovement) {
-  if (!options || !options.transitionDuration) {
+  if (!options || !options.duration) {
     movement(1)
     return Promise.resolve()
   }
