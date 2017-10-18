@@ -47,7 +47,7 @@ $character(學生)
 
 悄悄話：可以把這個想成是C-style的`charactor->action()`，無參數時可以省略括號。
 
-[了解更多Action](./docs/actions.md)
+[了解更多Actions](./docs/actions.md)
 
 ### Command
 
@@ -61,7 +61,7 @@ $setStage(backgroundColor, "0x0")
 
 悄悄話：command是對全域的函數，無參數時可以省略括號。
 
-[了解更多Command](./docs/commands.md)
+[了解更多Commands](./docs/commands.md)
 
 ### Header
 
@@ -107,6 +107,15 @@ $command() {delay: 3000}
 - [pixi-multistyle-text](https://github.com/tleunen/pixi-multistyle-text)
 - [Lodash](https://lodash.com/)
 - [Cubic Bézier solver](https://www.npmjs.com/package/cubic-bezier)
+
+# Dev-Dependency
+
+- [Webpack]()
+- [Babel]()
+
+# Linter
+
+- [JavaScript Standard Style](https://standardjs.com/)
 
 # Special Thanks
 

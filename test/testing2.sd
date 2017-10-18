@@ -1,33 +1,56 @@
-@Aimer <i>茜さす</i>
-@Aimer 枯れ葉舞う町角を　駆け抜けてく乾いた風
-@Aimer 伸びた影とイチョウ並木　季節を見てたかった
-@Aimer 
-@Aimer 返事のない呼ぶ声は　あっという間　かき消されてしまう
-@Aimer 目抜き通り　人波抜けて　どこか遠く　誰もいない場所へ
-@Aimer 
-@Aimer 気付いていたのに　何も知らないふり
-@Aimer 一人きりでは　何もできなかった
-@Aimer 
-@Aimer 出会えた幻にさよならを　茜さす　この空に
-@Aimer 零れた弱さに手のひらを　一輪の徒花　そんなふうに
-@Aimer 願い叶え　痛みを知る
-@Aimer 
-@Aimer 渡り鳥の鳴く声も　赤く染まる雲に消えてしまう
-@Aimer 帰り道も遠く離れて　今は一人　誰もいない場所で
-@Aimer 
-@Aimer 気付いた景色の色にふれたとしても
-@Aimer 一人きりでは　声も出せなかった
-@Aimer 
-@Aimer 愛した幻に口づけを　黄昏れた　この空に
-@Aimer まだ夕べの星灯らない　待ち宵も朧げ　月は何処に
-@Aimer 引き裂かれて　痛みを知る
-@Aimer 
-@Aimer くり返す日々の中で探してたのは
-@Aimer 歩き続けるための願い
-@Aimer 
-@Aimer 出会えた幻にさよならを　憧れは　この空に
-@Aimer 流れた月日を手のひらに　一片の花弁　そんなふうに
-@Aimer 痛み重ね　出会いを知る
-@Aimer 
-@Aimer 出会い重ね　願いを知る
-@Aimer ~ Ending ~
+
+// 引入檔案
+$import('./setting.sd')
+
+// 男主角
+$character(奇諾, {
+  textures: {
+    default: './img/xx.png',
+    女裝: './img/xx.png'
+  }
+})
+
+// 男配角
+$character(奇諾, {
+  textures: {
+    default: './img/xx.png',
+    女裝: './img/xx.png'
+  }
+})
+
+// 定義場景
+$scene(房間, {
+  textures: {
+    傍晚: './img/xx.png'
+  }
+})
+
+// 結局:蠢死了
+$ending(蠢死了, {
+  scene: $scene(房間, 傍晚)
+})
+
+// 定義變數
+$let(dead, false)
+
+// 定義玩家狀態
+$user(dead, false)
+
+# 第一日
+$scene(房間, 傍晚)
+
+@奇諾 !appear !position(center)
+@奇諾 今天好悠閒歐，要去哪裡玩呢？
+$selects
+  去seven玩
+    then: $goto(##去7-11玩)
+  去學校
+  繼續在房間睡覺
+    then: $user(dead, true)
+$if($is($user(dead), true))
+  @奇諾 阿 突然一股神秘力量把我壓住
+  $ending(蠢死了)
+$endif
+
+
+## 去7-11玩
