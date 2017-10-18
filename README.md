@@ -2,7 +2,10 @@
 
 ScriptDown 讓你的劇本＝你的網頁冒險遊戲([AVG](https://zh.wikipedia.org/zh-tw/%E5%86%92%E9%99%A9%E6%B8%B8%E6%88%8F))。
 
-[ScriptDown範例編輯器](https://pp253.github.io/script-down/test/editor.html) | [DOCS](./docs/index.md) | DEMO (Wrok in process)
+See more:
+- [ScriptDown範例編輯器](https://pp253.github.io/script-down/test/editor.html)
+- [DOCS](./docs/index.md)
+- DEMO (Wrok in process)
 
 ## 基本語法
 
