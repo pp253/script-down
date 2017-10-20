@@ -6,28 +6,20 @@ console.log(production ? 'production build!!' : 'dev build!!')
 
 const mainOption = {
   entry: {
-    gamebase: ['./src/gamebase'],
-    scriptdown: ['./src/components/script-down']
+    gamebase: ['./src/gamebase/index.ts']/*,
+    scriptdown: ['./src/components/script-down']*/
   },
   output: {
     path: path.resolve(__dirname, './dist'),
     publicPath: '/dist/',
     filename: production ? '[name].min.js' : '[name].js'
   },
-  resolve: {
-    alias: {
-      'vue$': 'vue/dist/vue.esm.js'
-    }
-  },
   module: {
     loaders: [
       {
-        test: /\.vue$/,
-        loader: 'vue-loader',
-        include: [
-          path.resolve(__dirname, 'src'),
-          path.resolve(__dirname, 'node_modules/vuetify')
-        ]
+        test: /\.(ts)$/,
+        loader: 'ts-loader',
+        exclude: /node_modules/
       },
       {
         test: /\.js$/,

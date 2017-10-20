@@ -1,5 +1,8 @@
 # Memo
 
+## WIP
+- 10/19 Using TypeScript, mocha
+
 ## Fix
 
 
@@ -15,3 +18,4 @@
 - 10/15 Costomize
   - with plugin?
 - 10/15 Subtitle character user defined color.
+

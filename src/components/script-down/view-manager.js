@@ -1,4 +1,3 @@
-/* eslint-disable no-extra-bind */
 import Character from './character'
 
 export default class ViewManager {
@@ -32,7 +31,7 @@ export default class ViewManager {
    * @param {Object} options?
    */
   command (commandName, argus, options) {
-    return new Promise(function (resolve, reject) {
+    return new Promise((resolve, reject) => {
       if (commandName === 'character') {
         let characterName = argus[0]
         let characterOptions = argus[1] || {}
@@ -54,7 +53,7 @@ export default class ViewManager {
 
       // resolve???
       resolve()
-    }.bind(this))
+    })
   }
 
   /**
@@ -125,23 +124,23 @@ export default class ViewManager {
 
           // variety
           if (subjectMovement.subject.variety) {
-            singleTasks.push(function () {
+            singleTasks.push(() => {
               return this.action(subjectMovement.subject.name, 'changeTexture', [subjectMovement.subject.variety], singleOptions)
-            }.bind(this))
+            })
           }
 
           for (let method of subjectMovement.movement.methods) {
             switch (method.$type) {
               case 'ACTION':
-                singleTasks.push(function () {
+                singleTasks.push(() => {
                   return this.action(subjectMovement.subject.name, method.name, method.argus, singleOptions)
-                }.bind(this))
+                })
                 break
 
               case 'COMMAND':
-                singleTasks.push(function () {
+                singleTasks.push(() => {
                   return this.command(method.name, method.argus, singleOptions)
-                }.bind(this))
+                })
                 break
 
               default:
@@ -149,10 +148,10 @@ export default class ViewManager {
             }
           }
 
-          singleTasksList.push(function () {
-            return new Promise(function (resolve, reject) {
+          singleTasksList.push(() => {
+            return new Promise((resolve, reject) => {
               // delay
-              setTimeout(function () {
+              setTimeout(() => {
                 let startingTasks = [Promise.resolve]
 
                 for (let task of singleTasks) {
@@ -164,16 +163,16 @@ export default class ViewManager {
                   resolve()
                 } else {
                   Promise.all(startingTasks)
-                  .then(function () {
+                  .then(() => {
                     // postpone
-                    setTimeout(function () {
+                    setTimeout(() => {
                       resolve()
-                    }.bind(this), singleOptions.postpone || 0)
-                  }.bind(this))
+                    }, singleOptions.postpone || 0)
+                  })
                 }
               }, singleOptions.delay || 0)
-            }.bind(this))
-          }.bind(this))
+            })
+          })
         }
 
         // multi tasks
@@ -188,16 +187,16 @@ export default class ViewManager {
             switch (method.$type) {
               case 'ACTION':
                 for (let name of charactersNameList) {
-                  multiTasksList.push(function () {
+                  multiTasksList.push(() => {
                     return this.action(name, method.name, method.argus, options)
-                  }.bind(this))
+                  })
                 }
                 break
 
               case 'COMMAND':
-                multiTasksList.push(function () {
+                multiTasksList.push(() => {
                   return this.command(method.name, method.argus, options)
-                }.bind(this))
+                })
                 break
 
               default:
@@ -206,12 +205,12 @@ export default class ViewManager {
           }
         }
 
-        multiTasksList.push(function () {
+        multiTasksList.push(() => {
           return this.subtitle.push('<b>' + charactersNameList.join('、') + '：</b>\n' + message)
-        }.bind(this))
+        })
 
-        tasks.push(function () {
-          return new Promise(function (resolve, reject) {
+        tasks.push(() => {
+          return new Promise((resolve, reject) => {
             let startingTasks = [Promise.resolve]
 
             for (let task of singleTasksList) {
@@ -219,7 +218,7 @@ export default class ViewManager {
             }
 
             Promise.all(startingTasks)
-              .then(function () {
+              .then(() => {
                 let startingTasks = []
 
                 for (let task of multiTasksList) {
@@ -227,12 +226,12 @@ export default class ViewManager {
                 }
 
                 Promise.all(startingTasks)
-                  .then(function () {
+                  .then(() => {
                     resolve()
                   })
-              }.bind(this))
-          }.bind(this))
-        }.bind(this))
+              })
+          })
+        })
 
         pause = true
       } else if (statement.$type === 'COMMAND') {
@@ -260,7 +259,7 @@ export default class ViewManager {
     this.waiting = proceed
 
     // delay
-    setTimeout(function () {
+    setTimeout(() => {
       let startingTasks = []
 
       for (let task of tasks) {
@@ -275,18 +274,18 @@ export default class ViewManager {
         }
       } else {
         Promise.all(startingTasks)
-          .then(function () {
+          .then(() => {
             // postpone
-            setTimeout(function () {
+            setTimeout(() => {
               this.waiting = true
 
               // autostep
               if (autostep) {
                 this.next()
               }
-            }.bind(this), postpone)
-          }.bind(this))
+            }, postpone)
+          })
       }
-    }.bind(this), delay)
+    }, delay)
   }
 }

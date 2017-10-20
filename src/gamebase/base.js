@@ -6,13 +6,13 @@ import * as PIXI from 'pixi.js'
 import _ from 'lodash'
 
 export default class {
-  constructor (el = 'app', options) {
+  constructor (el: string = 'app', options: object) {
     /**
      * {String} this.el is the element Id that this.app.view appended on
      */
-    this.el = el
+    this.el: string = el
 
-    this.options = _.merge({
+    this.options: object = _.merge({
       width: 800,
       height: 600
     }, options)

@@ -1,10 +1,9 @@
 {
-  "name": "acgn-stock-client",
-  "version": "0.0.1",
-  "description": "",
+  "name": "script-down",
+  "version": "0.1.0",
+  "description": "No Script, Just ScriptDown to create your web-based Adventure Game(AVG).",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "build": "set NODE_ENV=develop&&webpack&&set NODE_ENV=production&&webpack",
     "dev": "set NODE_ENV=develop&&webpack",
     "release": "set NODE_ENV=production&&webpack"
@@ -12,6 +11,8 @@
   "author": "pp253",
   "license": "Apache-2.0",
   "dependencies": {
+    "@types/pixi.js": "^4.5.7",
+    "@types/lodash": "^4.14.78",
     "cubic-bezier": "^0.1.2",
     "lodash": "^4.17.4",
     "pixi-filters": "^2.0.2",
@@ -28,6 +29,8 @@
     "babel-preset-stage-2": "^6.24.1",
     "file-loader": "^0.11.2",
     "standard": "^10.0.3",
+    "ts-loader": "^3.0.3",
+    "typescript": "^2.5.3",
     "webpack": "^3.6.0"
   },
   "standard": {
