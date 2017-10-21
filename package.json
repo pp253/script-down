@@ -11,8 +11,6 @@
   "author": "pp253",
   "license": "Apache-2.0",
   "dependencies": {
-    "@types/pixi.js": "^4.5.7",
-    "@types/lodash": "^4.14.78",
     "cubic-bezier": "^0.1.2",
     "lodash": "^4.17.4",
     "pixi-filters": "^2.0.2",
@@ -20,6 +18,8 @@
     "pixi.js": "^4.5.6"
   },
   "devDependencies": {
+    "@types/pixi.js": "^4.5.7",
+    "@types/lodash": "^4.14.78",
     "babel-core": "^6.26.0",
     "babel-eslint": "^8.0.1",
     "babel-loader": "^7.1.2",

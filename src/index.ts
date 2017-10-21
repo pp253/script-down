@@ -4,20 +4,28 @@ import Subtitle from './subtitle'
 import ViewManager from './view-manager'
 import parser from './parser'
 
-export default class ScriptDown extends PIXI.Container {
-  constructor (script, gamebase) {
+
+interface Options {
+  [propName: string]: any
+}
+
+interface Script {
+  [index: number]: any
+  readonly $type: string
+  readonly author?: string
+  readonly version?: string
+}
+
+
+export default class ScriptDown extends PIXI.Application {
+  private script: Script
+
+  public stage: 
+
+  constructor (script: Script, options: Options) {
     super()
 
-    if (typeof script === 'string') {
-      this.script = parser.parse(script)
-    } else if (typeof script === 'object') {
-      this.script = script
-    } else {
-      throw new Error('ScriptDown: Invalid type of script')
-    }
-
-    this.gamebase = gamebase
-    this.app = this.gamebase.app
+    this.script = script
 
     this.app.stage.addChild(this)
 
