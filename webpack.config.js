@@ -6,7 +6,7 @@ console.log(production ? 'production build!!' : 'dev build!!')
 
 const mainOption = {
   entry: {
-    // scriptdown: ['./src/components/script-down']
+    scriptdown: ['./src/']
   },
   output: {
     path: path.resolve(__dirname, './dist'),

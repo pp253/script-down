@@ -1,40 +1,22 @@
 import * as PIXI from 'pixi.js'
 import MultiStyleText from 'pixi-multistyle-text'
-import _ from 'lodash'
-import { ColorChangeableGraphic } from '../../utils'
+import * as _ from 'lodash'
+import { ColorChangeableGraphic } from './utils'
+import {SubtitleOptions, SubtitleDefaultOptions} from './constant'
 
-export default class Subtitle extends PIXI.Container {
-  constructor (options, gamebase) {
+export default class ImplementedSubtitle extends PIXI.Container {
+  private app: PIXI.Application
+  private options: SubtitleOptions
+
+  public background: ColorChangeableGraphic
+  public content: MultiStyleText
+
+  constructor (app: PIXI.Application, options: SubtitleOptions) {
     super()
-    this.gamebase = gamebase
-    this.app = this.gamebase.app
+    
+    this.app = app
 
-    this.options = _.merge({
-      height: 180,
-      width: 800,
-      backgroundColor: 0x009688,
-      paddingTop: 30,
-      paddingRight: 30,
-      paddingBottom: 30,
-      paddingLeft: 30,
-      content: {
-        'default': {
-          fontFamily: 'Arial',
-          fontSize: '20px',
-          fontWeight: 100,
-          fill: '#cccccc',
-          align: 'left',
-          wordWrap: true,
-          wordWrapWidth: 740
-        },
-        'b': {
-          fontWeight: 'bold'
-        },
-        'i': {
-          fontStyle: 'italic'
-        }
-      }
-    }, options)
+    this.options = _.defaultsDeep(options, SubtitleDefaultOptions)
 
     // Make container being interactive
     this.interactive = true
@@ -58,7 +40,7 @@ export default class Subtitle extends PIXI.Container {
     this.content.y = this.options.paddingTop
   }
 
-  push (msg) {
+  push (msg: string): void {
     if (this.content) {
       this.content.text = msg
     }
@@ -68,7 +50,8 @@ export default class Subtitle extends PIXI.Container {
    * @param {String} name
    * @param {any} value
    */
-  set (name, value) {
+  set (name: string, value: any): Subtitle {
     this[name] = value
+    return this
   }
 }
