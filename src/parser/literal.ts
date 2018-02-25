@@ -1,3 +1,5 @@
+import * as LiteralInterface from './literal-interface'
+
 /**
  * KEYWORD: !, @, #, {}, (), [], <>
  * Prepare for Chinese
@@ -34,26 +36,26 @@ const REGEXP_DOUBLE_QUOTES = /["]/
  * @param {Number} start
  * @returns {Array}
  */
-export default function literal (text, start = 0) {
+export default function literal (text: string, start: number = 0): LiteralInterface.File {
   return FILE(text, start)
 }
 
 /**
  * FILE = REDUNDENT + STATEMENT*
  */
-function FILE (text, i) {
+function FILE (text: string, i: number): LiteralInterface.File {
   console.log('FILE', i, text.slice(i, i + 15).replace(REGEXP_NEWLINE_G, '↵'))
   let c = i
   let tmp = c
 
-  let literal = []
+  let literal = <LiteralInterface.File>[]
 
   // REDUNDENT
   c = REDUNDENT(text, c)
 
   // STATEMENT*
   while (c < text.length) {
-    let statement = {}
+    let statement = <LiteralInterface.Statement>{}
     c = STATEMENT(text, c, statement)
     if (c === tmp) {
       // No more statements
@@ -73,7 +75,7 @@ function FILE (text, i) {
 /**
  * STATEMENT = ACT | COMMAND | HEADER + OPTIONS? + REDUNDENT
  */
-function STATEMENT (text, i, statement) {
+function STATEMENT (text: string, i: number, statement: LiteralInterface.Statement): number {
   console.log('STATEMENT', i, text.slice(i, i + 15).replace(REGEXP_NEWLINE_G, '↵'))
   let c = i
   let tmp = c
@@ -92,7 +94,7 @@ function STATEMENT (text, i, statement) {
     // OPTIONS?
     let opt = {}
     c = OPTIONS(text, c, opt)
-    statement.options = opt
+    ;(<LiteralInterface.Command>statement).options = opt
 
     // REDUNDENT
     c = REDUNDENT(text, c)
@@ -105,7 +107,7 @@ function STATEMENT (text, i, statement) {
     // OPTIONS?
     let opt = {}
     c = OPTIONS(text, c, opt)
-    statement.options = opt
+    ;(<LiteralInterface.Header>statement).options = opt
 
     // REDUNDENT
     c = REDUNDENT(text, c)
@@ -118,7 +120,7 @@ function STATEMENT (text, i, statement) {
 /**
  * COMMAND = ('$' + NAME + INLINE_REDUNDENT + ARGUMENTS?)?
  */
-function COMMAND (text, i, command) {
+function COMMAND (text: string, i: number, command: LiteralInterface.Command): number {
   console.log('COMMAND', i, text.slice(i, i + 15).replace(REGEXP_NEWLINE_G, '↵'))
   let c = i
 
@@ -127,14 +129,14 @@ function COMMAND (text, i, command) {
     c++
 
     // NAME
-    let name = {}
+    let name = <LiteralInterface.Name>{}
     c = NAME(text, c, name)
 
     // INLINE_REDUNDENT
-    let breaking = {}
+    let breaking = <LiteralInterface.Breaking>{}
     c = INLINE_REDUNDENT(text, c, breaking)
 
-    command.$type = 'COMMAND'
+    command.$type = LiteralInterface.STATEMENT_TYPE.COMMAND
     command.name = name.$string
 
     if (!breaking.$boolean) {
@@ -152,7 +154,7 @@ function COMMAND (text, i, command) {
  * HEADER = ('#'+ + INLINE_REDUNDENT + TITLE?)?
  * @param {Object} header
  */
-function HEADER (text, i, header) {
+function HEADER (text: string, i: number, header: LiteralInterface.Header): number {
   console.log('HEADER', i, text.slice(i, i + 15).replace(REGEXP_NEWLINE_G, '↵'))
   let c = i
 
@@ -165,15 +167,15 @@ function HEADER (text, i, header) {
     }
 
     // INLINE_REDUNDENT
-    let breaking = {}
+    let breaking = <LiteralInterface.Breaking>{}
     c = INLINE_REDUNDENT(text, c, breaking)
 
-    header.$type = 'HEADER'
+    header.$type = LiteralInterface.STATEMENT_TYPE.COMMAND
     header.level = level
 
     if (!breaking.$boolean) {
       // TITLE
-      let title = {}
+      let title = <LiteralInterface.Title>{}
       c = TITLE(text, c, title)
       header.title = title.$string
     }
@@ -186,14 +188,13 @@ function HEADER (text, i, header) {
  * ACT = (((CURLY_GROUP<SUBJECT_MOVEMENT> + MOVEMENT?) | SUBJECT_MOVEMENT) + MESSAGE:TITLE?)?
  * @param {Object} act
  */
-function ACT (text, i, act) {
+function ACT (text: string, i: number, act: LiteralInterface.Act): number {
   console.log('ACT', i, text.slice(i, i + 15).replace(REGEXP_NEWLINE_G, '↵'))
   let c = i
   let tmp = c
 
-  let subjectMovementList = {}
-  subjectMovementList.$type = 'CURLY_GROUP'
-  subjectMovementList.$array = []
+  let subjectMovementList = <LiteralInterface.Group<LiteralInterface.SubjectMovement>>{}
+  subjectMovementList.$type = LiteralInterface.GROUP_TYPE.CURLY_GROUP
 
   // (CURLY_GROUP<SUBJECT_MOVEMENT> + MOVEMENT?)
   c = CURLY_GROUP(text, c, SUBJECT_MOVEMENT, subjectMovementList)
@@ -229,7 +230,7 @@ function ACT (text, i, act) {
  * SUBJECT_MOVEMENT = (SUBJECT + MOVEMENT?)?
  * @param {Object} subjectMovement
  */
-function SUBJECT_MOVEMENT (text, i, subjectMovement) {
+function SUBJECT_MOVEMENT (text: string, i: number, subjectMovement) {
   console.log('SUBJECT_MOVEMENT', i, text.slice(i, i + 15).replace(REGEXP_NEWLINE_G, '↵'))
   let c = i
   let tmp = c
@@ -255,7 +256,7 @@ function SUBJECT_MOVEMENT (text, i, subjectMovement) {
  * SUBJECT = ('@' + NAME + INLINE_REDUNDENT + VARIETY?)?
  * @param {Object} subject
  */
-function SUBJECT (text, i, subject) {
+function SUBJECT (text: string, i: number, subject) {
   console.log('SUBJECT', i, text.slice(i, i + 15).replace(REGEXP_NEWLINE_G, '↵'))
   let c = i
 
@@ -289,7 +290,7 @@ function SUBJECT (text, i, subject) {
  * VARIETY = ('[' + INLINE_REDUNDENT + NAME + INLINE_REDUNDENT + ']' + INLINE_REDUNDENT)?
  * @param {Object} variety
  */
-function VARIETY (text, i, variety) {
+function VARIETY (text: string, i: number, variety) {
   console.log('VARIETY', i, text.slice(i, i + 15).replace(REGEXP_NEWLINE_G, '↵'))
   let c = i
 
@@ -328,7 +329,7 @@ function VARIETY (text, i, variety) {
  * MOVEMENT = (METHOD* + OPTIONS?)?
  * @param {Object} movement
  */
-function MOVEMENT (text, i, movement) {
+function MOVEMENT (text: string, i: number, movement) {
   console.log('MOVEMENT', i, text.slice(i, i + 15).replace(REGEXP_NEWLINE_G, '↵'))
   let c = i
   let tmp = c
@@ -360,7 +361,7 @@ function MOVEMENT (text, i, movement) {
 /**
  * METHOD = (ACTION | COMMAND)?
  */
-function METHOD (text, i, method) {
+function METHOD (text: string, i: number, method) {
   console.log('METHOD', i, text.slice(i, i + 15).replace(REGEXP_NEWLINE_G, '↵'))
   let c = i
   let tmp = c
@@ -384,7 +385,7 @@ function METHOD (text, i, method) {
  * ACTION = ('!' + NAME + INLINE_REDUNDENT + ARGUMENTS?)?
  * @param {Object} action
  */
-function ACTION (text, i, action) {
+function ACTION (text: string, i: number, action) {
   console.log('ACTION', i, text.slice(i, i + 15).replace(REGEXP_NEWLINE_G, '↵'))
   let c = i
 
@@ -417,7 +418,7 @@ function ACTION (text, i, action) {
 /**
  * ARGUMENTS = ('(' + PARAMETERS<VALUE> + ')' + INLINE_REDUNDENT)?
  */
-function ARGUMENTS (text, i, arr) {
+function ARGUMENTS (text: string, i: number, arr) {
   console.log('ARGUMENTS', i, text.slice(i, i + 15).replace(REGEXP_NEWLINE_G, '↵'))
   let c = i
   if (REGEXP_LEFT_ROUND.test(text[c])) {
@@ -446,7 +447,7 @@ function ARGUMENTS (text, i, arr) {
  * PARAMETERS<T> = RUNDUNDENT + T + RUNDUNDENT + (',' + PARAMETERS<T>)?
  * @param {Object | Array} obj
  */
-function PARAMETERS (text, i, type, arr) {
+function PARAMETERS (text: string, i: number, type, arr) {
   console.log(`PARAMETERS<${type.name}>`, i, text.slice(i, i + 15).replace(REGEXP_NEWLINE_G, '↵'))
   let c = i
 
@@ -474,7 +475,7 @@ function PARAMETERS (text, i, type, arr) {
  * VALUE = NUMBER | BOOLEAN  | STRING | NAME| ARRAY:SQUARE_GROUP<VALUE> | OBJECT:CURLY_GROUP<PAIR>
  * @param {Object} value
  */
-function VALUE (text, i, value) {
+function VALUE (text: string, i: number, value) {
   console.log('VALUE', i, text.slice(i, i + 15).replace(REGEXP_NEWLINE_G, '↵'))
   let c = i
   let tmp = c
@@ -527,7 +528,7 @@ function VALUE (text, i, value) {
 /**
  * STRING = ("'" + ... + "'" | '"' + ... + '"')
  */
-function STRING (text, i, value) {
+function STRING (text: string, i: number, value) {
   console.log('STRING', i, text.slice(i, i + 15).replace(REGEXP_NEWLINE_G, '↵'))
   let c = i
   if (REGEXP_SINGLE_QUOTES.test(text[c]) || REGEXP_DOUBLE_QUOTES.test(text[c])) {
@@ -547,7 +548,7 @@ function STRING (text, i, value) {
 /**
  * NUMBER = ('-')? + \d* + ('.' + \d*)?
  */
-function NUMBER (text, i, value) {
+function NUMBER (text: string, i: number, value) {
   console.log('NUMBER', i, text.slice(i, i + 15).replace(REGEXP_NEWLINE_G, '↵'))
   let c = i
   let number = 0
@@ -590,7 +591,7 @@ function NUMBER (text, i, value) {
 /**
  * BOOLEAN = ('true' | 'false')?
  */
-function BOOLEAN (text, i, value) {
+function BOOLEAN (text: string, i: number, value) {
   console.log('BOOLEAN', i, text.slice(i, i + 15).replace(REGEXP_NEWLINE_G, '↵'))
   let c = i
 
@@ -608,7 +609,7 @@ function BOOLEAN (text, i, value) {
 /**
  * OPTIONS = CURLY_GROUP<PAIR>
  */
-function OPTIONS (text, i, opt) {
+function OPTIONS (text: string, i: number, opt) {
   console.log('OPTIONS', i, text.slice(i, i + 15).replace(REGEXP_NEWLINE_G, '↵'))
   let c = i
 
@@ -621,7 +622,7 @@ function OPTIONS (text, i, opt) {
 /**
  * PAIR = NAME + REDUNDENT + ':' + REDUNDENT + VALUE
  */
-function PAIR (text, i, pair) {
+function PAIR (text: string, i: number, pair) {
   console.log('PAIR', i, text.slice(i, i + 15).replace(REGEXP_NEWLINE_G, '↵'))
   let c = i
 
@@ -657,7 +658,7 @@ function PAIR (text, i, pair) {
  * NAME = REGEXP_NAME*
  * @param {Object} name, add on name.$string
  */
-function NAME (text, i, name) {
+function NAME (text: string, i: number, name) {
   console.log('NAME', i, text.slice(i, i + 15).replace(REGEXP_NEWLINE_G, '↵'))
   let c = i
   let str = ''
@@ -674,7 +675,7 @@ function NAME (text, i, name) {
 /**
  * TITLE = REGEXP_TITLE* + INLINE_REDUNDENT
  */
-function TITLE (text, i, title) {
+function TITLE (text: string, i: number, title) {
   console.log('TITLE', i, text.slice(i, i + 15).replace(REGEXP_NEWLINE_G, '↵'))
   let c = i
   let str = ''
@@ -694,7 +695,7 @@ function TITLE (text, i, title) {
 /**
  * GROUP<T> = SQUARE_GROUP<T> | CURLY_GROUP<T>
  */
-function GROUP (text, i, type, group) {
+function GROUP (text: string, i: number, type, group) {
   console.log(`GROUP<${type.name}>`, i, text.slice(i, i + 15).replace(REGEXP_NEWLINE_G, '↵'))
   let c = i
   let tmp = c
@@ -717,7 +718,7 @@ function GROUP (text, i, type, group) {
 /**
  * SQUARE_GROUP<T> = ('[' + PARAMETERS<T> + ']' + INLINE_REDUNDENT)?
  */
-function SQUARE_GROUP (text, i, type, obj) {
+function SQUARE_GROUP (text: string, i: number, type, obj) {
   console.log(`SQUARE_GROUP<${type.name}>`, i, text.slice(i, i + 15).replace(REGEXP_NEWLINE_G, '↵'))
   let c = i
 
@@ -749,7 +750,7 @@ function SQUARE_GROUP (text, i, type, obj) {
 /**
  * CURLY_GROUP<T> = ('{' + PARAMETERS<T> + '}' + INLINE_REDUNDENT)?
  */
-function CURLY_GROUP (text, i, type, obj) {
+function CURLY_GROUP (text: string, i: number, type, obj) {
   console.log(`CURLY_GROUP<${type.name}>`, i, text.slice(i, i + 15).replace(REGEXP_NEWLINE_G, '↵'))
   let c = i
 
@@ -782,7 +783,7 @@ function CURLY_GROUP (text, i, type, obj) {
  * INLINE_REDUNDENT = SPACES + COMMENT_WITHOUT_NEWLINE + INLINE_REDUNDENT?
  * @param {Object} breaking breaking.$boolean = true 代表有換行
  */
-function INLINE_REDUNDENT (text, i, breaking) {
+function INLINE_REDUNDENT (text: string, i: number, breaking) {
   console.log('INLINE_REDUNDENT', i, text.slice(i, i + 15).replace(REGEXP_NEWLINE_G, '↵'))
   let c = i
   if (!breaking) {
@@ -831,7 +832,7 @@ function INLINE_REDUNDENT (text, i, breaking) {
  * REDUNDENT = SPACES_OR_NEWLINE (+ COMMENT + REDUNDENT)?
  * COMMENT = INLINE_COMMENT | BLOCK_COMMENTS
  */
-function REDUNDENT (text, i) {
+function REDUNDENT (text: string, i: number) {
   console.log('REDUNDENT', i, text.slice(i, i + 15).replace(REGEXP_NEWLINE_G, '↵'))
   let c = i
   // SPACES_OR_NEWLINE

@@ -1,19 +1,20 @@
 import * as PIXI from 'pixi.js'
-import _ from 'lodash'
-import { ColorChangeableGraphic } from '../../utils'
+import * as _ from 'lodash'
+import {ColorChangeableGraphic} from './utils'
+import {SceneOptions, SceneDefaultOptions, Character} from './constant'
 
-export default class Stage extends PIXI.Container {
-  constructor (options, gamebase) {
+export default class ImplementedScene extends PIXI.Container {
+  private app: PIXI.Application
+  private options: SceneOptions
+  public background: ColorChangeableGraphic
+  public characters: Map<string, Character>
+
+  constructor (app: PIXI.Application, options: SceneOptions) {
     super()
-    this.gamebase = gamebase
-    this.app = this.gamebase.app
 
-    this.options = _.merge({
-      height: 600,
-      width: 800,
-      backgroundColor: 0x90caf9,
-      characters: {}
-    }, options)
+    this.app = app
+
+    this.options = _.defaultsDeep(options, SceneDefaultOptions)
 
     // shortcut
     this.characters = this.options.characters
@@ -34,31 +35,21 @@ export default class Stage extends PIXI.Container {
    * @param {String} name should be unique to others
    * @param {Character} character
    */
-  addCharacter (name, character) {
+  addCharacter (name: string, character: Character): Character {
     this.addChild(character)
     if (this.options.characters[name]) {
       console.log('The name of character', name, 'has already exist.')
     }
     this.options.characters[name] = character
-  }
-
-  selectCharacter (name) {
-    if (!this.options.characters[name]) {
-      console.log('The name of character', name, 'is not exist.')
-    } else {
-      return this.options.characters[name]
-    }
-  }
-
-  addProp (name, prop) {
-
+    return character
   }
 
   /**
    * @param {String} name
    * @param {any} value
    */
-  set (name, value) {
+  set (name: string, value: any): Scene {
     this[name] = value
+    return this
   }
 }

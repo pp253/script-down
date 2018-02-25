@@ -6,13 +6,15 @@ console.log(production ? 'production build!!' : 'dev build!!')
 
 const mainOption = {
   entry: {
-    gamebase: ['./src/gamebase/index.ts']/*,
-    scriptdown: ['./src/components/script-down']*/
+    scriptdown: ['./src/']
   },
   output: {
     path: path.resolve(__dirname, './dist'),
     publicPath: '/dist/',
     filename: production ? '[name].min.js' : '[name].js'
+  },
+  resolve: {
+    extensions: [".ts", ".js"]
   },
   module: {
     loaders: [

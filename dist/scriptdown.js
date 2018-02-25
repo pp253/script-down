@@ -60,7 +60,7 @@
 /******/ 	__webpack_require__.p = "/dist/";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 93);
+/******/ 	return __webpack_require__(__webpack_require__.s = 92);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -115,7 +115,7 @@ Object.defineProperty(exports, 'Bounds', {
   }
 });
 
-var _DisplayObject = __webpack_require__(50);
+var _DisplayObject = __webpack_require__(51);
 
 Object.defineProperty(exports, 'DisplayObject', {
   enumerable: true,
@@ -133,7 +133,7 @@ Object.defineProperty(exports, 'Container', {
   }
 });
 
-var _Transform = __webpack_require__(52);
+var _Transform = __webpack_require__(53);
 
 Object.defineProperty(exports, 'Transform', {
   enumerable: true,
@@ -142,7 +142,7 @@ Object.defineProperty(exports, 'Transform', {
   }
 });
 
-var _TransformStatic = __webpack_require__(51);
+var _TransformStatic = __webpack_require__(52);
 
 Object.defineProperty(exports, 'TransformStatic', {
   enumerable: true,
@@ -169,7 +169,7 @@ Object.defineProperty(exports, 'Sprite', {
   }
 });
 
-var _CanvasSpriteRenderer = __webpack_require__(124);
+var _CanvasSpriteRenderer = __webpack_require__(123);
 
 Object.defineProperty(exports, 'CanvasSpriteRenderer', {
   enumerable: true,
@@ -187,7 +187,7 @@ Object.defineProperty(exports, 'CanvasTinter', {
   }
 });
 
-var _SpriteRenderer = __webpack_require__(127);
+var _SpriteRenderer = __webpack_require__(126);
 
 Object.defineProperty(exports, 'SpriteRenderer', {
   enumerable: true,
@@ -196,7 +196,7 @@ Object.defineProperty(exports, 'SpriteRenderer', {
   }
 });
 
-var _Text = __webpack_require__(143);
+var _Text = __webpack_require__(142);
 
 Object.defineProperty(exports, 'Text', {
   enumerable: true,
@@ -205,7 +205,7 @@ Object.defineProperty(exports, 'Text', {
   }
 });
 
-var _TextStyle = __webpack_require__(64);
+var _TextStyle = __webpack_require__(65);
 
 Object.defineProperty(exports, 'TextStyle', {
   enumerable: true,
@@ -214,7 +214,7 @@ Object.defineProperty(exports, 'TextStyle', {
   }
 });
 
-var _TextMetrics = __webpack_require__(65);
+var _TextMetrics = __webpack_require__(66);
 
 Object.defineProperty(exports, 'TextMetrics', {
   enumerable: true,
@@ -223,7 +223,7 @@ Object.defineProperty(exports, 'TextMetrics', {
   }
 });
 
-var _Graphics = __webpack_require__(145);
+var _Graphics = __webpack_require__(144);
 
 Object.defineProperty(exports, 'Graphics', {
   enumerable: true,
@@ -232,7 +232,7 @@ Object.defineProperty(exports, 'Graphics', {
   }
 });
 
-var _GraphicsData = __webpack_require__(66);
+var _GraphicsData = __webpack_require__(67);
 
 Object.defineProperty(exports, 'GraphicsData', {
   enumerable: true,
@@ -241,7 +241,7 @@ Object.defineProperty(exports, 'GraphicsData', {
   }
 });
 
-var _GraphicsRenderer = __webpack_require__(147);
+var _GraphicsRenderer = __webpack_require__(146);
 
 Object.defineProperty(exports, 'GraphicsRenderer', {
   enumerable: true,
@@ -250,7 +250,7 @@ Object.defineProperty(exports, 'GraphicsRenderer', {
   }
 });
 
-var _CanvasGraphicsRenderer = __webpack_require__(154);
+var _CanvasGraphicsRenderer = __webpack_require__(153);
 
 Object.defineProperty(exports, 'CanvasGraphicsRenderer', {
   enumerable: true,
@@ -259,7 +259,7 @@ Object.defineProperty(exports, 'CanvasGraphicsRenderer', {
   }
 });
 
-var _Spritesheet = __webpack_require__(155);
+var _Spritesheet = __webpack_require__(154);
 
 Object.defineProperty(exports, 'Spritesheet', {
   enumerable: true,
@@ -295,7 +295,7 @@ Object.defineProperty(exports, 'RenderTexture', {
   }
 });
 
-var _BaseRenderTexture = __webpack_require__(58);
+var _BaseRenderTexture = __webpack_require__(59);
 
 Object.defineProperty(exports, 'BaseRenderTexture', {
   enumerable: true,
@@ -304,7 +304,7 @@ Object.defineProperty(exports, 'BaseRenderTexture', {
   }
 });
 
-var _VideoBaseTexture = __webpack_require__(55);
+var _VideoBaseTexture = __webpack_require__(56);
 
 Object.defineProperty(exports, 'VideoBaseTexture', {
   enumerable: true,
@@ -313,7 +313,7 @@ Object.defineProperty(exports, 'VideoBaseTexture', {
   }
 });
 
-var _TextureUvs = __webpack_require__(56);
+var _TextureUvs = __webpack_require__(57);
 
 Object.defineProperty(exports, 'TextureUvs', {
   enumerable: true,
@@ -322,7 +322,7 @@ Object.defineProperty(exports, 'TextureUvs', {
   }
 });
 
-var _CanvasRenderTarget = __webpack_require__(59);
+var _CanvasRenderTarget = __webpack_require__(60);
 
 Object.defineProperty(exports, 'CanvasRenderTarget', {
   enumerable: true,
@@ -349,7 +349,7 @@ Object.defineProperty(exports, 'WebGLManager', {
   }
 });
 
-var _ObjectRenderer = __webpack_require__(19);
+var _ObjectRenderer = __webpack_require__(18);
 
 Object.defineProperty(exports, 'ObjectRenderer', {
   enumerable: true,
@@ -358,7 +358,7 @@ Object.defineProperty(exports, 'ObjectRenderer', {
   }
 });
 
-var _RenderTarget = __webpack_require__(21);
+var _RenderTarget = __webpack_require__(20);
 
 Object.defineProperty(exports, 'RenderTarget', {
   enumerable: true,
@@ -367,7 +367,7 @@ Object.defineProperty(exports, 'RenderTarget', {
   }
 });
 
-var _Quad = __webpack_require__(63);
+var _Quad = __webpack_require__(64);
 
 Object.defineProperty(exports, 'Quad', {
   enumerable: true,
@@ -376,7 +376,7 @@ Object.defineProperty(exports, 'Quad', {
   }
 });
 
-var _SpriteMaskFilter = __webpack_require__(61);
+var _SpriteMaskFilter = __webpack_require__(62);
 
 Object.defineProperty(exports, 'SpriteMaskFilter', {
   enumerable: true,
@@ -385,7 +385,7 @@ Object.defineProperty(exports, 'SpriteMaskFilter', {
   }
 });
 
-var _Filter = __webpack_require__(62);
+var _Filter = __webpack_require__(63);
 
 Object.defineProperty(exports, 'Filter', {
   enumerable: true,
@@ -394,7 +394,7 @@ Object.defineProperty(exports, 'Filter', {
   }
 });
 
-var _Application = __webpack_require__(68);
+var _Application = __webpack_require__(69);
 
 Object.defineProperty(exports, 'Application', {
   enumerable: true,
@@ -403,7 +403,7 @@ Object.defineProperty(exports, 'Application', {
   }
 });
 
-var _autoDetectRenderer = __webpack_require__(69);
+var _autoDetectRenderer = __webpack_require__(70);
 
 Object.defineProperty(exports, 'autoDetectRenderer', {
   enumerable: true,
@@ -428,7 +428,7 @@ var _CanvasRenderer = __webpack_require__(12);
 
 var _CanvasRenderer2 = _interopRequireDefault(_CanvasRenderer);
 
-var _WebGLRenderer = __webpack_require__(20);
+var _WebGLRenderer = __webpack_require__(19);
 
 var _WebGLRenderer2 = _interopRequireDefault(_WebGLRenderer);
 
@@ -831,11 +831,11 @@ var _eventemitter = __webpack_require__(7);
 
 var _eventemitter2 = _interopRequireDefault(_eventemitter);
 
-var _pluginTarget = __webpack_require__(112);
+var _pluginTarget = __webpack_require__(111);
 
 var _pluginTarget2 = _interopRequireDefault(_pluginTarget);
 
-var _mixin = __webpack_require__(113);
+var _mixin = __webpack_require__(112);
 
 var mixins = _interopRequireWildcard(_mixin);
 
@@ -843,11 +843,11 @@ var _ismobilejs = __webpack_require__(28);
 
 var isMobile = _interopRequireWildcard(_ismobilejs);
 
-var _removeArrayItems = __webpack_require__(114);
+var _removeArrayItems = __webpack_require__(113);
 
 var _removeArrayItems2 = _interopRequireDefault(_removeArrayItems);
 
-var _mapPremultipliedBlendModes = __webpack_require__(115);
+var _mapPremultipliedBlendModes = __webpack_require__(114);
 
 var _mapPremultipliedBlendModes2 = _interopRequireDefault(_mapPremultipliedBlendModes);
 
@@ -1281,11 +1281,11 @@ function premultiplyTintToRgba(tint, alpha, out, premultiply) {
 
 exports.__esModule = true;
 
-var _maxRecommendedTextures = __webpack_require__(110);
+var _maxRecommendedTextures = __webpack_require__(109);
 
 var _maxRecommendedTextures2 = _interopRequireDefault(_maxRecommendedTextures);
 
-var _canUploadSameBuffer = __webpack_require__(111);
+var _canUploadSameBuffer = __webpack_require__(110);
 
 var _canUploadSameBuffer2 = _interopRequireDefault(_canUploadSameBuffer);
 
@@ -1530,7 +1530,7 @@ Object.defineProperty(exports, 'Point', {
   }
 });
 
-var _ObservablePoint = __webpack_require__(39);
+var _ObservablePoint = __webpack_require__(40);
 
 Object.defineProperty(exports, 'ObservablePoint', {
   enumerable: true,
@@ -1548,7 +1548,7 @@ Object.defineProperty(exports, 'Matrix', {
   }
 });
 
-var _GroupD = __webpack_require__(40);
+var _GroupD = __webpack_require__(41);
 
 Object.defineProperty(exports, 'GroupD8', {
   enumerable: true,
@@ -1557,7 +1557,7 @@ Object.defineProperty(exports, 'GroupD8', {
   }
 });
 
-var _Circle = __webpack_require__(100);
+var _Circle = __webpack_require__(99);
 
 Object.defineProperty(exports, 'Circle', {
   enumerable: true,
@@ -1566,7 +1566,7 @@ Object.defineProperty(exports, 'Circle', {
   }
 });
 
-var _Ellipse = __webpack_require__(101);
+var _Ellipse = __webpack_require__(100);
 
 Object.defineProperty(exports, 'Ellipse', {
   enumerable: true,
@@ -1575,7 +1575,7 @@ Object.defineProperty(exports, 'Ellipse', {
   }
 });
 
-var _Polygon = __webpack_require__(102);
+var _Polygon = __webpack_require__(101);
 
 Object.defineProperty(exports, 'Polygon', {
   enumerable: true,
@@ -1593,7 +1593,7 @@ Object.defineProperty(exports, 'Rectangle', {
   }
 });
 
-var _RoundedRectangle = __webpack_require__(103);
+var _RoundedRectangle = __webpack_require__(102);
 
 Object.defineProperty(exports, 'RoundedRectangle', {
   enumerable: true,
@@ -1610,14 +1610,14 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 /***/ (function(module, exports, __webpack_require__) {
 
 var gl = {
-    createContext:          __webpack_require__(104),
-    setVertexAttribArrays:  __webpack_require__(41),
-    GLBuffer:               __webpack_require__(105),
-    GLFramebuffer:          __webpack_require__(106),
-    GLShader:               __webpack_require__(107),
-    GLTexture:              __webpack_require__(42),
-    VertexArrayObject:      __webpack_require__(108),
-    shader:                 __webpack_require__(109)
+    createContext:          __webpack_require__(103),
+    setVertexAttribArrays:  __webpack_require__(42),
+    GLBuffer:               __webpack_require__(104),
+    GLFramebuffer:          __webpack_require__(105),
+    GLShader:               __webpack_require__(106),
+    GLTexture:              __webpack_require__(43),
+    VertexArrayObject:      __webpack_require__(107),
+    shader:                 __webpack_require__(108)
 };
 
 // Export for Node-compatible environments
@@ -1865,7 +1865,7 @@ var substr = 'ab'.substr(-1) === 'b'
     }
 ;
 
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(130)))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(129)))
 
 /***/ }),
 /* 7 */
@@ -2200,11 +2200,11 @@ var _BaseTexture = __webpack_require__(9);
 
 var _BaseTexture2 = _interopRequireDefault(_BaseTexture);
 
-var _VideoBaseTexture = __webpack_require__(55);
+var _VideoBaseTexture = __webpack_require__(56);
 
 var _VideoBaseTexture2 = _interopRequireDefault(_VideoBaseTexture);
 
-var _TextureUvs = __webpack_require__(56);
+var _TextureUvs = __webpack_require__(57);
 
 var _TextureUvs2 = _interopRequireDefault(_TextureUvs);
 
@@ -2899,7 +2899,7 @@ var _eventemitter = __webpack_require__(7);
 
 var _eventemitter2 = _interopRequireDefault(_eventemitter);
 
-var _determineCrossOrigin = __webpack_require__(116);
+var _determineCrossOrigin = __webpack_require__(115);
 
 var _determineCrossOrigin2 = _interopRequireDefault(_determineCrossOrigin);
 
@@ -3739,7 +3739,7 @@ exports.default = BaseTexture;
 exports.__esModule = true;
 exports.loader = exports.prepare = exports.particles = exports.mesh = exports.loaders = exports.interaction = exports.filters = exports.extras = exports.extract = exports.accessibility = undefined;
 
-var _polyfill = __webpack_require__(95);
+var _polyfill = __webpack_require__(94);
 
 Object.keys(_polyfill).forEach(function (key) {
     if (key === "default" || key === "__esModule") return;
@@ -3763,43 +3763,43 @@ Object.keys(_core).forEach(function (key) {
     });
 });
 
-var _deprecation = __webpack_require__(156);
+var _deprecation = __webpack_require__(155);
 
 var _deprecation2 = _interopRequireDefault(_deprecation);
 
-var _accessibility = __webpack_require__(157);
+var _accessibility = __webpack_require__(156);
 
 var accessibility = _interopRequireWildcard(_accessibility);
 
-var _extract = __webpack_require__(159);
+var _extract = __webpack_require__(158);
 
 var extract = _interopRequireWildcard(_extract);
 
-var _extras = __webpack_require__(71);
+var _extras = __webpack_require__(72);
 
 var extras = _interopRequireWildcard(_extras);
 
-var _filters = __webpack_require__(169);
+var _filters = __webpack_require__(168);
 
 var filters = _interopRequireWildcard(_filters);
 
-var _interaction = __webpack_require__(176);
+var _interaction = __webpack_require__(175);
 
 var interaction = _interopRequireWildcard(_interaction);
 
-var _loaders = __webpack_require__(178);
+var _loaders = __webpack_require__(177);
 
 var loaders = _interopRequireWildcard(_loaders);
 
-var _mesh = __webpack_require__(182);
+var _mesh = __webpack_require__(181);
 
 var mesh = _interopRequireWildcard(_mesh);
 
-var _particles = __webpack_require__(187);
+var _particles = __webpack_require__(186);
 
 var particles = _interopRequireWildcard(_particles);
 
-var _prepare = __webpack_require__(192);
+var _prepare = __webpack_require__(191);
 
 var prepare = _interopRequireWildcard(_prepare);
 
@@ -3845,7 +3845,7 @@ if (typeof _deprecation2.default === 'function') {
 // Always export PixiJS globally.
 global.PIXI = exports; // eslint-disable-line
 //# sourceMappingURL=index.js.map
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(18)))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(17)))
 
 /***/ }),
 /* 11 */
@@ -3860,7 +3860,7 @@ var _createClass = function () { function defineProperties(target, props) { for 
 
 var _utils = __webpack_require__(2);
 
-var _DisplayObject2 = __webpack_require__(50);
+var _DisplayObject2 = __webpack_require__(51);
 
 var _DisplayObject3 = _interopRequireDefault(_DisplayObject2);
 
@@ -4479,19 +4479,19 @@ Container.prototype.containerUpdateTransform = Container.prototype.updateTransfo
 
 exports.__esModule = true;
 
-var _SystemRenderer2 = __webpack_require__(57);
+var _SystemRenderer2 = __webpack_require__(58);
 
 var _SystemRenderer3 = _interopRequireDefault(_SystemRenderer2);
 
-var _CanvasMaskManager = __webpack_require__(125);
+var _CanvasMaskManager = __webpack_require__(124);
 
 var _CanvasMaskManager2 = _interopRequireDefault(_CanvasMaskManager);
 
-var _CanvasRenderTarget = __webpack_require__(59);
+var _CanvasRenderTarget = __webpack_require__(60);
 
 var _CanvasRenderTarget2 = _interopRequireDefault(_CanvasRenderTarget);
 
-var _mapCanvasBlendModesToPixi = __webpack_require__(126);
+var _mapCanvasBlendModesToPixi = __webpack_require__(125);
 
 var _mapCanvasBlendModesToPixi2 = _interopRequireDefault(_mapCanvasBlendModesToPixi);
 
@@ -4980,10 +4980,10 @@ exports.default = Shader;
 
 /* eslint-disable no-undef */
 
-var Loader = __webpack_require__(179).default;
+var Loader = __webpack_require__(178).default;
 var Resource = __webpack_require__(37).default;
-var async = __webpack_require__(84);
-var b64 = __webpack_require__(85);
+var async = __webpack_require__(85);
+var b64 = __webpack_require__(86);
 
 Loader.Resource = Resource;
 Loader.async = async;
@@ -5370,6 +5370,1540 @@ Mesh.DRAW_MODES = {
 
 /***/ }),
 /* 17 */
+/***/ (function(module, exports) {
+
+var g;
+
+// This works in non-strict mode
+g = (function() {
+	return this;
+})();
+
+try {
+	// This works if eval is allowed (see CSP)
+	g = g || Function("return this")() || (1,eval)("this");
+} catch(e) {
+	// This works if the window reference is available
+	if(typeof window === "object")
+		g = window;
+}
+
+// g can still be undefined, but nothing to do about it...
+// We return undefined, instead of nothing here, so it's
+// easier to handle this case. if(!global) { ...}
+
+module.exports = g;
+
+
+/***/ }),
+/* 18 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+exports.__esModule = true;
+
+var _WebGLManager2 = __webpack_require__(13);
+
+var _WebGLManager3 = _interopRequireDefault(_WebGLManager2);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+/**
+ * Base for a common object renderer that can be used as a system renderer plugin.
+ *
+ * @class
+ * @extends PIXI.WebGLManager
+ * @memberof PIXI
+ */
+var ObjectRenderer = function (_WebGLManager) {
+  _inherits(ObjectRenderer, _WebGLManager);
+
+  function ObjectRenderer() {
+    _classCallCheck(this, ObjectRenderer);
+
+    return _possibleConstructorReturn(this, _WebGLManager.apply(this, arguments));
+  }
+
+  /**
+   * Starts the renderer and sets the shader
+   *
+   */
+  ObjectRenderer.prototype.start = function start() {}
+  // set the shader..
+
+
+  /**
+   * Stops the renderer
+   *
+   */
+  ;
+
+  ObjectRenderer.prototype.stop = function stop() {
+    this.flush();
+  };
+
+  /**
+   * Stub method for rendering content and emptying the current batch.
+   *
+   */
+
+
+  ObjectRenderer.prototype.flush = function flush() {}
+  // flush!
+
+
+  /**
+   * Renders an object
+   *
+   * @param {PIXI.DisplayObject} object - The object to render.
+   */
+  ;
+
+  ObjectRenderer.prototype.render = function render(object) // eslint-disable-line no-unused-vars
+  {
+    // render the object
+  };
+
+  return ObjectRenderer;
+}(_WebGLManager3.default);
+
+exports.default = ObjectRenderer;
+//# sourceMappingURL=ObjectRenderer.js.map
+
+/***/ }),
+/* 19 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+exports.__esModule = true;
+
+var _SystemRenderer2 = __webpack_require__(58);
+
+var _SystemRenderer3 = _interopRequireDefault(_SystemRenderer2);
+
+var _MaskManager = __webpack_require__(127);
+
+var _MaskManager2 = _interopRequireDefault(_MaskManager);
+
+var _StencilManager = __webpack_require__(130);
+
+var _StencilManager2 = _interopRequireDefault(_StencilManager);
+
+var _FilterManager = __webpack_require__(131);
+
+var _FilterManager2 = _interopRequireDefault(_FilterManager);
+
+var _RenderTarget = __webpack_require__(20);
+
+var _RenderTarget2 = _interopRequireDefault(_RenderTarget);
+
+var _ObjectRenderer = __webpack_require__(18);
+
+var _ObjectRenderer2 = _interopRequireDefault(_ObjectRenderer);
+
+var _TextureManager = __webpack_require__(133);
+
+var _TextureManager2 = _interopRequireDefault(_TextureManager);
+
+var _BaseTexture = __webpack_require__(9);
+
+var _BaseTexture2 = _interopRequireDefault(_BaseTexture);
+
+var _TextureGarbageCollector = __webpack_require__(134);
+
+var _TextureGarbageCollector2 = _interopRequireDefault(_TextureGarbageCollector);
+
+var _WebGLState = __webpack_require__(135);
+
+var _WebGLState2 = _interopRequireDefault(_WebGLState);
+
+var _mapWebGLDrawModesToPixi = __webpack_require__(137);
+
+var _mapWebGLDrawModesToPixi2 = _interopRequireDefault(_mapWebGLDrawModesToPixi);
+
+var _validateContext = __webpack_require__(138);
+
+var _validateContext2 = _interopRequireDefault(_validateContext);
+
+var _utils = __webpack_require__(2);
+
+var _pixiGlCore = __webpack_require__(5);
+
+var _pixiGlCore2 = _interopRequireDefault(_pixiGlCore);
+
+var _const = __webpack_require__(1);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var CONTEXT_UID = 0;
+
+/**
+ * The WebGLRenderer draws the scene and all its content onto a webGL enabled canvas. This renderer
+ * should be used for browsers that support webGL. This Render works by automatically managing webGLBatchs.
+ * So no need for Sprite Batches or Sprite Clouds.
+ * Don't forget to add the view to your DOM or you will not see anything :)
+ *
+ * @class
+ * @memberof PIXI
+ * @extends PIXI.SystemRenderer
+ */
+
+var WebGLRenderer = function (_SystemRenderer) {
+    _inherits(WebGLRenderer, _SystemRenderer);
+
+    // eslint-disable-next-line valid-jsdoc
+    /**
+     *
+     * @param {object} [options] - The optional renderer parameters
+     * @param {number} [options.width=800] - the width of the screen
+     * @param {number} [options.height=600] - the height of the screen
+     * @param {HTMLCanvasElement} [options.view] - the canvas to use as a view, optional
+     * @param {boolean} [options.transparent=false] - If the render view is transparent, default false
+     * @param {boolean} [options.autoResize=false] - If the render view is automatically resized, default false
+     * @param {boolean} [options.antialias=false] - sets antialias. If not available natively then FXAA
+     *  antialiasing is used
+     * @param {boolean} [options.forceFXAA=false] - forces FXAA antialiasing to be used over native.
+     *  FXAA is faster, but may not always look as great
+     * @param {number} [options.resolution=1] - The resolution / device pixel ratio of the renderer.
+     *  The resolution of the renderer retina would be 2.
+     * @param {boolean} [options.clearBeforeRender=true] - This sets if the renderer will clear
+     *  the canvas or not before the new render pass. If you wish to set this to false, you *must* set
+     *  preserveDrawingBuffer to `true`.
+     * @param {boolean} [options.preserveDrawingBuffer=false] - enables drawing buffer preservation,
+     *  enable this if you need to call toDataUrl on the webgl context.
+     * @param {boolean} [options.roundPixels=false] - If true PixiJS will Math.floor() x/y values when
+     *  rendering, stopping pixel interpolation.
+     * @param {number} [options.backgroundColor=0x000000] - The background color of the rendered area
+     *  (shown if not transparent).
+     * @param {boolean} [options.legacy=false] - If true PixiJS will aim to ensure compatibility
+     *  with older / less advanced devices. If you experiance unexplained flickering try setting this to true.
+     * @param {string} [options.powerPreference] - Parameter passed to webgl context, set to "high-performance"
+     *  for devices with dual graphics card
+     */
+    function WebGLRenderer(options, arg2, arg3) {
+        _classCallCheck(this, WebGLRenderer);
+
+        var _this = _possibleConstructorReturn(this, _SystemRenderer.call(this, 'WebGL', options, arg2, arg3));
+
+        _this.legacy = _this.options.legacy;
+
+        if (_this.legacy) {
+            _pixiGlCore2.default.VertexArrayObject.FORCE_NATIVE = true;
+        }
+
+        /**
+         * The type of this renderer as a standardised const
+         *
+         * @member {number}
+         * @see PIXI.RENDERER_TYPE
+         */
+        _this.type = _const.RENDERER_TYPE.WEBGL;
+
+        _this.handleContextLost = _this.handleContextLost.bind(_this);
+        _this.handleContextRestored = _this.handleContextRestored.bind(_this);
+
+        _this.view.addEventListener('webglcontextlost', _this.handleContextLost, false);
+        _this.view.addEventListener('webglcontextrestored', _this.handleContextRestored, false);
+
+        /**
+         * The options passed in to create a new webgl context.
+         *
+         * @member {object}
+         * @private
+         */
+        _this._contextOptions = {
+            alpha: _this.transparent,
+            antialias: _this.options.antialias,
+            premultipliedAlpha: _this.transparent && _this.transparent !== 'notMultiplied',
+            stencil: true,
+            preserveDrawingBuffer: _this.options.preserveDrawingBuffer,
+            powerPreference: _this.options.powerPreference
+        };
+
+        _this._backgroundColorRgba[3] = _this.transparent ? 0 : 1;
+
+        /**
+         * Manages the masks using the stencil buffer.
+         *
+         * @member {PIXI.MaskManager}
+         */
+        _this.maskManager = new _MaskManager2.default(_this);
+
+        /**
+         * Manages the stencil buffer.
+         *
+         * @member {PIXI.StencilManager}
+         */
+        _this.stencilManager = new _StencilManager2.default(_this);
+
+        /**
+         * An empty renderer.
+         *
+         * @member {PIXI.ObjectRenderer}
+         */
+        _this.emptyRenderer = new _ObjectRenderer2.default(_this);
+
+        /**
+         * The currently active ObjectRenderer.
+         *
+         * @member {PIXI.ObjectRenderer}
+         */
+        _this.currentRenderer = _this.emptyRenderer;
+
+        /**
+         * Manages textures
+         * @member {PIXI.TextureManager}
+         */
+        _this.textureManager = null;
+
+        /**
+         * Manages the filters.
+         *
+         * @member {PIXI.FilterManager}
+         */
+        _this.filterManager = null;
+
+        _this.initPlugins();
+
+        /**
+         * The current WebGL rendering context, it is created here
+         *
+         * @member {WebGLRenderingContext}
+         */
+        // initialize the context so it is ready for the managers.
+        if (_this.options.context) {
+            // checks to see if a context is valid..
+            (0, _validateContext2.default)(_this.options.context);
+        }
+
+        _this.gl = _this.options.context || _pixiGlCore2.default.createContext(_this.view, _this._contextOptions);
+
+        _this.CONTEXT_UID = CONTEXT_UID++;
+
+        /**
+         * The currently active ObjectRenderer.
+         *
+         * @member {PIXI.WebGLState}
+         */
+        _this.state = new _WebGLState2.default(_this.gl);
+
+        _this.renderingToScreen = true;
+
+        /**
+         * Holds the current state of textures bound to the GPU.
+         * @type {Array}
+         */
+        _this.boundTextures = null;
+
+        /**
+         * Holds the current shader
+         *
+         * @member {PIXI.Shader}
+         */
+        _this._activeShader = null;
+
+        _this._activeVao = null;
+
+        /**
+         * Holds the current render target
+         *
+         * @member {PIXI.RenderTarget}
+         */
+        _this._activeRenderTarget = null;
+
+        _this._initContext();
+
+        // map some webGL blend and drawmodes..
+        _this.drawModes = (0, _mapWebGLDrawModesToPixi2.default)(_this.gl);
+
+        _this._nextTextureLocation = 0;
+
+        _this.setBlendMode(0);
+
+        /**
+         * Fired after rendering finishes.
+         *
+         * @event PIXI.WebGLRenderer#postrender
+         */
+
+        /**
+         * Fired before rendering starts.
+         *
+         * @event PIXI.WebGLRenderer#prerender
+         */
+
+        /**
+         * Fired when the WebGL context is set.
+         *
+         * @event PIXI.WebGLRenderer#context
+         * @param {WebGLRenderingContext} gl - WebGL context.
+         */
+        return _this;
+    }
+
+    /**
+     * Creates the WebGL context
+     *
+     * @private
+     */
+
+
+    WebGLRenderer.prototype._initContext = function _initContext() {
+        var gl = this.gl;
+
+        // restore a context if it was previously lost
+        if (gl.isContextLost() && gl.getExtension('WEBGL_lose_context')) {
+            gl.getExtension('WEBGL_lose_context').restoreContext();
+        }
+
+        var maxTextures = gl.getParameter(gl.MAX_TEXTURE_IMAGE_UNITS);
+
+        this._activeShader = null;
+        this._activeVao = null;
+
+        this.boundTextures = new Array(maxTextures);
+        this.emptyTextures = new Array(maxTextures);
+
+        // create a texture manager...
+        this.textureManager = new _TextureManager2.default(this);
+        this.filterManager = new _FilterManager2.default(this);
+        this.textureGC = new _TextureGarbageCollector2.default(this);
+
+        this.state.resetToDefault();
+
+        this.rootRenderTarget = new _RenderTarget2.default(gl, this.width, this.height, null, this.resolution, true);
+        this.rootRenderTarget.clearColor = this._backgroundColorRgba;
+
+        this.bindRenderTarget(this.rootRenderTarget);
+
+        // now lets fill up the textures with empty ones!
+        var emptyGLTexture = new _pixiGlCore2.default.GLTexture.fromData(gl, null, 1, 1);
+
+        var tempObj = { _glTextures: {} };
+
+        tempObj._glTextures[this.CONTEXT_UID] = {};
+
+        for (var i = 0; i < maxTextures; i++) {
+            var empty = new _BaseTexture2.default();
+
+            empty._glTextures[this.CONTEXT_UID] = emptyGLTexture;
+
+            this.boundTextures[i] = tempObj;
+            this.emptyTextures[i] = empty;
+            this.bindTexture(null, i);
+        }
+
+        this.emit('context', gl);
+
+        // setup the width/height properties and gl viewport
+        this.resize(this.screen.width, this.screen.height);
+    };
+
+    /**
+     * Renders the object to its webGL view
+     *
+     * @param {PIXI.DisplayObject} displayObject - the object to be rendered
+     * @param {PIXI.RenderTexture} renderTexture - The render texture to render to.
+     * @param {boolean} [clear] - Should the canvas be cleared before the new render
+     * @param {PIXI.Transform} [transform] - A transform to apply to the render texture before rendering.
+     * @param {boolean} [skipUpdateTransform] - Should we skip the update transform pass?
+     */
+
+
+    WebGLRenderer.prototype.render = function render(displayObject, renderTexture, clear, transform, skipUpdateTransform) {
+        // can be handy to know!
+        this.renderingToScreen = !renderTexture;
+
+        this.emit('prerender');
+
+        // no point rendering if our context has been blown up!
+        if (!this.gl || this.gl.isContextLost()) {
+            return;
+        }
+
+        this._nextTextureLocation = 0;
+
+        if (!renderTexture) {
+            this._lastObjectRendered = displayObject;
+        }
+
+        if (!skipUpdateTransform) {
+            // update the scene graph
+            var cacheParent = displayObject.parent;
+
+            displayObject.parent = this._tempDisplayObjectParent;
+            displayObject.updateTransform();
+            displayObject.parent = cacheParent;
+            // displayObject.hitArea = //TODO add a temp hit area
+        }
+
+        this.bindRenderTexture(renderTexture, transform);
+
+        this.currentRenderer.start();
+
+        if (clear !== undefined ? clear : this.clearBeforeRender) {
+            this._activeRenderTarget.clear();
+        }
+
+        displayObject.renderWebGL(this);
+
+        // apply transform..
+        this.currentRenderer.flush();
+
+        // this.setObjectRenderer(this.emptyRenderer);
+
+        this.textureGC.update();
+
+        this.emit('postrender');
+    };
+
+    /**
+     * Changes the current renderer to the one given in parameter
+     *
+     * @param {PIXI.ObjectRenderer} objectRenderer - The object renderer to use.
+     */
+
+
+    WebGLRenderer.prototype.setObjectRenderer = function setObjectRenderer(objectRenderer) {
+        if (this.currentRenderer === objectRenderer) {
+            return;
+        }
+
+        this.currentRenderer.stop();
+        this.currentRenderer = objectRenderer;
+        this.currentRenderer.start();
+    };
+
+    /**
+     * This should be called if you wish to do some custom rendering
+     * It will basically render anything that may be batched up such as sprites
+     *
+     */
+
+
+    WebGLRenderer.prototype.flush = function flush() {
+        this.setObjectRenderer(this.emptyRenderer);
+    };
+
+    /**
+     * Resizes the webGL view to the specified width and height.
+     *
+     * @param {number} screenWidth - the new width of the screen
+     * @param {number} screenHeight - the new height of the screen
+     */
+
+
+    WebGLRenderer.prototype.resize = function resize(screenWidth, screenHeight) {
+        //  if(width * this.resolution === this.width && height * this.resolution === this.height)return;
+
+        _SystemRenderer3.default.prototype.resize.call(this, screenWidth, screenHeight);
+
+        this.rootRenderTarget.resize(screenWidth, screenHeight);
+
+        if (this._activeRenderTarget === this.rootRenderTarget) {
+            this.rootRenderTarget.activate();
+
+            if (this._activeShader) {
+                this._activeShader.uniforms.projectionMatrix = this.rootRenderTarget.projectionMatrix.toArray(true);
+            }
+        }
+    };
+
+    /**
+     * Resizes the webGL view to the specified width and height.
+     *
+     * @param {number} blendMode - the desired blend mode
+     */
+
+
+    WebGLRenderer.prototype.setBlendMode = function setBlendMode(blendMode) {
+        this.state.setBlendMode(blendMode);
+    };
+
+    /**
+     * Erases the active render target and fills the drawing area with a colour
+     *
+     * @param {number} [clearColor] - The colour
+     */
+
+
+    WebGLRenderer.prototype.clear = function clear(clearColor) {
+        this._activeRenderTarget.clear(clearColor);
+    };
+
+    /**
+     * Sets the transform of the active render target to the given matrix
+     *
+     * @param {PIXI.Matrix} matrix - The transformation matrix
+     */
+
+
+    WebGLRenderer.prototype.setTransform = function setTransform(matrix) {
+        this._activeRenderTarget.transform = matrix;
+    };
+
+    /**
+     * Erases the render texture and fills the drawing area with a colour
+     *
+     * @param {PIXI.RenderTexture} renderTexture - The render texture to clear
+     * @param {number} [clearColor] - The colour
+     * @return {PIXI.WebGLRenderer} Returns itself.
+     */
+
+
+    WebGLRenderer.prototype.clearRenderTexture = function clearRenderTexture(renderTexture, clearColor) {
+        var baseTexture = renderTexture.baseTexture;
+        var renderTarget = baseTexture._glRenderTargets[this.CONTEXT_UID];
+
+        if (renderTarget) {
+            renderTarget.clear(clearColor);
+        }
+
+        return this;
+    };
+
+    /**
+     * Binds a render texture for rendering
+     *
+     * @param {PIXI.RenderTexture} renderTexture - The render texture to render
+     * @param {PIXI.Transform} transform - The transform to be applied to the render texture
+     * @return {PIXI.WebGLRenderer} Returns itself.
+     */
+
+
+    WebGLRenderer.prototype.bindRenderTexture = function bindRenderTexture(renderTexture, transform) {
+        var renderTarget = void 0;
+
+        if (renderTexture) {
+            var baseTexture = renderTexture.baseTexture;
+
+            if (!baseTexture._glRenderTargets[this.CONTEXT_UID]) {
+                // bind the current texture
+                this.textureManager.updateTexture(baseTexture, 0);
+            }
+
+            this.unbindTexture(baseTexture);
+
+            renderTarget = baseTexture._glRenderTargets[this.CONTEXT_UID];
+            renderTarget.setFrame(renderTexture.frame);
+        } else {
+            renderTarget = this.rootRenderTarget;
+        }
+
+        renderTarget.transform = transform;
+        this.bindRenderTarget(renderTarget);
+
+        return this;
+    };
+
+    /**
+     * Changes the current render target to the one given in parameter
+     *
+     * @param {PIXI.RenderTarget} renderTarget - the new render target
+     * @return {PIXI.WebGLRenderer} Returns itself.
+     */
+
+
+    WebGLRenderer.prototype.bindRenderTarget = function bindRenderTarget(renderTarget) {
+        if (renderTarget !== this._activeRenderTarget) {
+            this._activeRenderTarget = renderTarget;
+            renderTarget.activate();
+
+            if (this._activeShader) {
+                this._activeShader.uniforms.projectionMatrix = renderTarget.projectionMatrix.toArray(true);
+            }
+
+            this.stencilManager.setMaskStack(renderTarget.stencilMaskStack);
+        }
+
+        return this;
+    };
+
+    /**
+     * Changes the current shader to the one given in parameter
+     *
+     * @param {PIXI.Shader} shader - the new shader
+     * @param {boolean} [autoProject=true] - Whether automatically set the projection matrix
+     * @return {PIXI.WebGLRenderer} Returns itself.
+     */
+
+
+    WebGLRenderer.prototype.bindShader = function bindShader(shader, autoProject) {
+        // TODO cache
+        if (this._activeShader !== shader) {
+            this._activeShader = shader;
+            shader.bind();
+
+            // `autoProject` normally would be a default parameter set to true
+            // but because of how Babel transpiles default parameters
+            // it hinders the performance of this method.
+            if (autoProject !== false) {
+                // automatically set the projection matrix
+                shader.uniforms.projectionMatrix = this._activeRenderTarget.projectionMatrix.toArray(true);
+            }
+        }
+
+        return this;
+    };
+
+    /**
+     * Binds the texture. This will return the location of the bound texture.
+     * It may not be the same as the one you pass in. This is due to optimisation that prevents
+     * needless binding of textures. For example if the texture is already bound it will return the
+     * current location of the texture instead of the one provided. To bypass this use force location
+     *
+     * @param {PIXI.Texture} texture - the new texture
+     * @param {number} location - the suggested texture location
+     * @param {boolean} forceLocation - force the location
+     * @return {number} bound texture location
+     */
+
+
+    WebGLRenderer.prototype.bindTexture = function bindTexture(texture, location, forceLocation) {
+        texture = texture || this.emptyTextures[location];
+        texture = texture.baseTexture || texture;
+        texture.touched = this.textureGC.count;
+
+        if (!forceLocation) {
+            // TODO - maybe look into adding boundIds.. save us the loop?
+            for (var i = 0; i < this.boundTextures.length; i++) {
+                if (this.boundTextures[i] === texture) {
+                    return i;
+                }
+            }
+
+            if (location === undefined) {
+                this._nextTextureLocation++;
+                this._nextTextureLocation %= this.boundTextures.length;
+                location = this.boundTextures.length - this._nextTextureLocation - 1;
+            }
+        } else {
+            location = location || 0;
+        }
+
+        var gl = this.gl;
+        var glTexture = texture._glTextures[this.CONTEXT_UID];
+
+        if (!glTexture) {
+            // this will also bind the texture..
+            this.textureManager.updateTexture(texture, location);
+        } else {
+            // bind the current texture
+            this.boundTextures[location] = texture;
+            gl.activeTexture(gl.TEXTURE0 + location);
+            gl.bindTexture(gl.TEXTURE_2D, glTexture.texture);
+        }
+
+        return location;
+    };
+
+    /**
+    * unbinds the texture ...
+    *
+    * @param {PIXI.Texture} texture - the texture to unbind
+    * @return {PIXI.WebGLRenderer} Returns itself.
+    */
+
+
+    WebGLRenderer.prototype.unbindTexture = function unbindTexture(texture) {
+        var gl = this.gl;
+
+        texture = texture.baseTexture || texture;
+
+        for (var i = 0; i < this.boundTextures.length; i++) {
+            if (this.boundTextures[i] === texture) {
+                this.boundTextures[i] = this.emptyTextures[i];
+
+                gl.activeTexture(gl.TEXTURE0 + i);
+                gl.bindTexture(gl.TEXTURE_2D, this.emptyTextures[i]._glTextures[this.CONTEXT_UID].texture);
+            }
+        }
+
+        return this;
+    };
+
+    /**
+     * Creates a new VAO from this renderer's context and state.
+     *
+     * @return {VertexArrayObject} The new VAO.
+     */
+
+
+    WebGLRenderer.prototype.createVao = function createVao() {
+        return new _pixiGlCore2.default.VertexArrayObject(this.gl, this.state.attribState);
+    };
+
+    /**
+     * Changes the current Vao to the one given in parameter
+     *
+     * @param {PIXI.VertexArrayObject} vao - the new Vao
+     * @return {PIXI.WebGLRenderer} Returns itself.
+     */
+
+
+    WebGLRenderer.prototype.bindVao = function bindVao(vao) {
+        if (this._activeVao === vao) {
+            return this;
+        }
+
+        if (vao) {
+            vao.bind();
+        } else if (this._activeVao) {
+            // TODO this should always be true i think?
+            this._activeVao.unbind();
+        }
+
+        this._activeVao = vao;
+
+        return this;
+    };
+
+    /**
+     * Resets the WebGL state so you can render things however you fancy!
+     *
+     * @return {PIXI.WebGLRenderer} Returns itself.
+     */
+
+
+    WebGLRenderer.prototype.reset = function reset() {
+        this.setObjectRenderer(this.emptyRenderer);
+
+        this._activeShader = null;
+        this._activeRenderTarget = this.rootRenderTarget;
+
+        // bind the main frame buffer (the screen);
+        this.rootRenderTarget.activate();
+
+        this.state.resetToDefault();
+
+        return this;
+    };
+
+    /**
+     * Handles a lost webgl context
+     *
+     * @private
+     * @param {WebGLContextEvent} event - The context lost event.
+     */
+
+
+    WebGLRenderer.prototype.handleContextLost = function handleContextLost(event) {
+        event.preventDefault();
+    };
+
+    /**
+     * Handles a restored webgl context
+     *
+     * @private
+     */
+
+
+    WebGLRenderer.prototype.handleContextRestored = function handleContextRestored() {
+        this.textureManager.removeAll();
+        this.filterManager.destroy(true);
+        this._initContext();
+    };
+
+    /**
+     * Removes everything from the renderer (event listeners, spritebatch, etc...)
+     *
+     * @param {boolean} [removeView=false] - Removes the Canvas element from the DOM.
+     *  See: https://github.com/pixijs/pixi.js/issues/2233
+     */
+
+
+    WebGLRenderer.prototype.destroy = function destroy(removeView) {
+        this.destroyPlugins();
+
+        // remove listeners
+        this.view.removeEventListener('webglcontextlost', this.handleContextLost);
+        this.view.removeEventListener('webglcontextrestored', this.handleContextRestored);
+
+        this.textureManager.destroy();
+
+        // call base destroy
+        _SystemRenderer.prototype.destroy.call(this, removeView);
+
+        this.uid = 0;
+
+        // destroy the managers
+        this.maskManager.destroy();
+        this.stencilManager.destroy();
+        this.filterManager.destroy();
+
+        this.maskManager = null;
+        this.filterManager = null;
+        this.textureManager = null;
+        this.currentRenderer = null;
+
+        this.handleContextLost = null;
+        this.handleContextRestored = null;
+
+        this._contextOptions = null;
+        this.gl.useProgram(null);
+
+        if (this.gl.getExtension('WEBGL_lose_context')) {
+            this.gl.getExtension('WEBGL_lose_context').loseContext();
+        }
+
+        this.gl = null;
+
+        // this = null;
+    };
+
+    return WebGLRenderer;
+}(_SystemRenderer3.default);
+
+/**
+ * Collection of installed plugins. These are included by default in PIXI, but can be excluded
+ * by creating a custom build. Consult the README for more information about creating custom
+ * builds and excluding plugins.
+ * @name PIXI.WebGLRenderer#plugins
+ * @type {object}
+ * @readonly
+ * @property {PIXI.accessibility.AccessibilityManager} accessibility Support tabbing interactive elements.
+ * @property {PIXI.extract.WebGLExtract} extract Extract image data from renderer.
+ * @property {PIXI.interaction.InteractionManager} interaction Handles mouse, touch and pointer events.
+ * @property {PIXI.prepare.WebGLPrepare} prepare Pre-render display objects.
+ */
+
+/**
+ * Adds a plugin to the renderer.
+ *
+ * @method PIXI.WebGLRenderer#registerPlugin
+ * @param {string} pluginName - The name of the plugin.
+ * @param {Function} ctor - The constructor function or class for the plugin.
+ */
+
+exports.default = WebGLRenderer;
+_utils.pluginTarget.mixin(WebGLRenderer);
+//# sourceMappingURL=WebGLRenderer.js.map
+
+/***/ }),
+/* 20 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+exports.__esModule = true;
+
+var _math = __webpack_require__(4);
+
+var _const = __webpack_require__(1);
+
+var _settings = __webpack_require__(3);
+
+var _settings2 = _interopRequireDefault(_settings);
+
+var _pixiGlCore = __webpack_require__(5);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+/**
+ * @class
+ * @memberof PIXI
+ */
+var RenderTarget = function () {
+  /**
+   * @param {WebGLRenderingContext} gl - The current WebGL drawing context
+   * @param {number} [width=0] - the horizontal range of the filter
+   * @param {number} [height=0] - the vertical range of the filter
+   * @param {number} [scaleMode=PIXI.settings.SCALE_MODE] - See {@link PIXI.SCALE_MODES} for possible values
+   * @param {number} [resolution=1] - The current resolution / device pixel ratio
+   * @param {boolean} [root=false] - Whether this object is the root element or not
+   */
+  function RenderTarget(gl, width, height, scaleMode, resolution, root) {
+    _classCallCheck(this, RenderTarget);
+
+    // TODO Resolution could go here ( eg low res blurs )
+
+    /**
+     * The current WebGL drawing context.
+     *
+     * @member {WebGLRenderingContext}
+     */
+    this.gl = gl;
+
+    // next time to create a frame buffer and texture
+
+    /**
+     * A frame buffer
+     *
+     * @member {PIXI.glCore.GLFramebuffer}
+     */
+    this.frameBuffer = null;
+
+    /**
+     * The texture
+     *
+     * @member {PIXI.glCore.GLTexture}
+     */
+    this.texture = null;
+
+    /**
+     * The background colour of this render target, as an array of [r,g,b,a] values
+     *
+     * @member {number[]}
+     */
+    this.clearColor = [0, 0, 0, 0];
+
+    /**
+     * The size of the object as a rectangle
+     *
+     * @member {PIXI.Rectangle}
+     */
+    this.size = new _math.Rectangle(0, 0, 1, 1);
+
+    /**
+     * The current resolution / device pixel ratio
+     *
+     * @member {number}
+     * @default 1
+     */
+    this.resolution = resolution || _settings2.default.RESOLUTION;
+
+    /**
+     * The projection matrix
+     *
+     * @member {PIXI.Matrix}
+     */
+    this.projectionMatrix = new _math.Matrix();
+
+    /**
+     * The object's transform
+     *
+     * @member {PIXI.Matrix}
+     */
+    this.transform = null;
+
+    /**
+     * The frame.
+     *
+     * @member {PIXI.Rectangle}
+     */
+    this.frame = null;
+
+    /**
+     * The stencil buffer stores masking data for the render target
+     *
+     * @member {glCore.GLBuffer}
+     */
+    this.defaultFrame = new _math.Rectangle();
+    this.destinationFrame = null;
+    this.sourceFrame = null;
+
+    /**
+     * The stencil buffer stores masking data for the render target
+     *
+     * @member {glCore.GLBuffer}
+     */
+    this.stencilBuffer = null;
+
+    /**
+     * The data structure for the stencil masks
+     *
+     * @member {PIXI.Graphics[]}
+     */
+    this.stencilMaskStack = [];
+
+    /**
+     * Stores filter data for the render target
+     *
+     * @member {object[]}
+     */
+    this.filterData = null;
+
+    /**
+     * The scale mode.
+     *
+     * @member {number}
+     * @default PIXI.settings.SCALE_MODE
+     * @see PIXI.SCALE_MODES
+     */
+    this.scaleMode = scaleMode !== undefined ? scaleMode : _settings2.default.SCALE_MODE;
+
+    /**
+     * Whether this object is the root element or not
+     *
+     * @member {boolean}
+     */
+    this.root = root;
+
+    if (!this.root) {
+      this.frameBuffer = _pixiGlCore.GLFramebuffer.createRGBA(gl, 100, 100);
+
+      if (this.scaleMode === _const.SCALE_MODES.NEAREST) {
+        this.frameBuffer.texture.enableNearestScaling();
+      } else {
+        this.frameBuffer.texture.enableLinearScaling();
+      }
+      /*
+          A frame buffer needs a target to render to..
+          create a texture and bind it attach it to the framebuffer..
+       */
+
+      // this is used by the base texture
+      this.texture = this.frameBuffer.texture;
+    } else {
+      // make it a null framebuffer..
+      this.frameBuffer = new _pixiGlCore.GLFramebuffer(gl, 100, 100);
+      this.frameBuffer.framebuffer = null;
+    }
+
+    this.setFrame();
+
+    this.resize(width, height);
+  }
+
+  /**
+   * Clears the filter texture.
+   *
+   * @param {number[]} [clearColor=this.clearColor] - Array of [r,g,b,a] to clear the framebuffer
+   */
+
+
+  RenderTarget.prototype.clear = function clear(clearColor) {
+    var cc = clearColor || this.clearColor;
+
+    this.frameBuffer.clear(cc[0], cc[1], cc[2], cc[3]); // r,g,b,a);
+  };
+
+  /**
+   * Binds the stencil buffer.
+   *
+   */
+
+
+  RenderTarget.prototype.attachStencilBuffer = function attachStencilBuffer() {
+    // TODO check if stencil is done?
+    /**
+     * The stencil buffer is used for masking in pixi
+     * lets create one and then add attach it to the framebuffer..
+     */
+    if (!this.root) {
+      this.frameBuffer.enableStencil();
+    }
+  };
+
+  /**
+   * Sets the frame of the render target.
+   *
+   * @param {Rectangle} destinationFrame - The destination frame.
+   * @param {Rectangle} sourceFrame - The source frame.
+   */
+
+
+  RenderTarget.prototype.setFrame = function setFrame(destinationFrame, sourceFrame) {
+    this.destinationFrame = destinationFrame || this.destinationFrame || this.defaultFrame;
+    this.sourceFrame = sourceFrame || this.sourceFrame || this.destinationFrame;
+  };
+
+  /**
+   * Binds the buffers and initialises the viewport.
+   *
+   */
+
+
+  RenderTarget.prototype.activate = function activate() {
+    // TOOD refactor usage of frame..
+    var gl = this.gl;
+
+    // make sure the texture is unbound!
+    this.frameBuffer.bind();
+
+    this.calculateProjection(this.destinationFrame, this.sourceFrame);
+
+    if (this.transform) {
+      this.projectionMatrix.append(this.transform);
+    }
+
+    // TODO add a check as them may be the same!
+    if (this.destinationFrame !== this.sourceFrame) {
+      gl.enable(gl.SCISSOR_TEST);
+      gl.scissor(this.destinationFrame.x | 0, this.destinationFrame.y | 0, this.destinationFrame.width * this.resolution | 0, this.destinationFrame.height * this.resolution | 0);
+    } else {
+      gl.disable(gl.SCISSOR_TEST);
+    }
+
+    // TODO - does not need to be updated all the time??
+    gl.viewport(this.destinationFrame.x | 0, this.destinationFrame.y | 0, this.destinationFrame.width * this.resolution | 0, this.destinationFrame.height * this.resolution | 0);
+  };
+
+  /**
+   * Updates the projection matrix based on a projection frame (which is a rectangle)
+   *
+   * @param {Rectangle} destinationFrame - The destination frame.
+   * @param {Rectangle} sourceFrame - The source frame.
+   */
+
+
+  RenderTarget.prototype.calculateProjection = function calculateProjection(destinationFrame, sourceFrame) {
+    var pm = this.projectionMatrix;
+
+    sourceFrame = sourceFrame || destinationFrame;
+
+    pm.identity();
+
+    // TODO: make dest scale source
+    if (!this.root) {
+      pm.a = 1 / destinationFrame.width * 2;
+      pm.d = 1 / destinationFrame.height * 2;
+
+      pm.tx = -1 - sourceFrame.x * pm.a;
+      pm.ty = -1 - sourceFrame.y * pm.d;
+    } else {
+      pm.a = 1 / destinationFrame.width * 2;
+      pm.d = -1 / destinationFrame.height * 2;
+
+      pm.tx = -1 - sourceFrame.x * pm.a;
+      pm.ty = 1 - sourceFrame.y * pm.d;
+    }
+  };
+
+  /**
+   * Resizes the texture to the specified width and height
+   *
+   * @param {number} width - the new width of the texture
+   * @param {number} height - the new height of the texture
+   */
+
+
+  RenderTarget.prototype.resize = function resize(width, height) {
+    width = width | 0;
+    height = height | 0;
+
+    if (this.size.width === width && this.size.height === height) {
+      return;
+    }
+
+    this.size.width = width;
+    this.size.height = height;
+
+    this.defaultFrame.width = width;
+    this.defaultFrame.height = height;
+
+    this.frameBuffer.resize(width * this.resolution, height * this.resolution);
+
+    var projectionFrame = this.frame || this.size;
+
+    this.calculateProjection(projectionFrame);
+  };
+
+  /**
+   * Destroys the render target.
+   *
+   */
+
+
+  RenderTarget.prototype.destroy = function destroy() {
+    this.frameBuffer.destroy();
+
+    this.frameBuffer = null;
+    this.texture = null;
+  };
+
+  return RenderTarget;
+}();
+
+exports.default = RenderTarget;
+//# sourceMappingURL=RenderTarget.js.map
+
+/***/ }),
+/* 21 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+exports.__esModule = true;
+
+exports.default = function (graphicsData, webGLData, webGLDataNativeLines) {
+    if (graphicsData.nativeLines) {
+        buildNativeLine(graphicsData, webGLDataNativeLines);
+    } else {
+        buildLine(graphicsData, webGLData);
+    }
+};
+
+var _math = __webpack_require__(4);
+
+var _utils = __webpack_require__(2);
+
+/**
+ * Builds a line to draw using the poligon method.
+ *
+ * Ignored from docs since it is not directly exposed.
+ *
+ * @ignore
+ * @private
+ * @param {PIXI.WebGLGraphicsData} graphicsData - The graphics object containing all the necessary properties
+ * @param {object} webGLData - an object containing all the webGL-specific information to create this shape
+ */
+function buildLine(graphicsData, webGLData) {
+    // TODO OPTIMISE!
+    var points = graphicsData.points;
+
+    if (points.length === 0) {
+        return;
+    }
+    // if the line width is an odd number add 0.5 to align to a whole pixel
+    // commenting this out fixes #711 and #1620
+    // if (graphicsData.lineWidth%2)
+    // {
+    //     for (i = 0; i < points.length; i++)
+    //     {
+    //         points[i] += 0.5;
+    //     }
+    // }
+
+    // get first and last point.. figure out the middle!
+    var firstPoint = new _math.Point(points[0], points[1]);
+    var lastPoint = new _math.Point(points[points.length - 2], points[points.length - 1]);
+
+    // if the first point is the last point - gonna have issues :)
+    if (firstPoint.x === lastPoint.x && firstPoint.y === lastPoint.y) {
+        // need to clone as we are going to slightly modify the shape..
+        points = points.slice();
+
+        points.pop();
+        points.pop();
+
+        lastPoint = new _math.Point(points[points.length - 2], points[points.length - 1]);
+
+        var midPointX = lastPoint.x + (firstPoint.x - lastPoint.x) * 0.5;
+        var midPointY = lastPoint.y + (firstPoint.y - lastPoint.y) * 0.5;
+
+        points.unshift(midPointX, midPointY);
+        points.push(midPointX, midPointY);
+    }
+
+    var verts = webGLData.points;
+    var indices = webGLData.indices;
+    var length = points.length / 2;
+    var indexCount = points.length;
+    var indexStart = verts.length / 6;
+
+    // DRAW the Line
+    var width = graphicsData.lineWidth / 2;
+
+    // sort color
+    var color = (0, _utils.hex2rgb)(graphicsData.lineColor);
+    var alpha = graphicsData.lineAlpha;
+    var r = color[0] * alpha;
+    var g = color[1] * alpha;
+    var b = color[2] * alpha;
+
+    var p1x = points[0];
+    var p1y = points[1];
+    var p2x = points[2];
+    var p2y = points[3];
+    var p3x = 0;
+    var p3y = 0;
+
+    var perpx = -(p1y - p2y);
+    var perpy = p1x - p2x;
+    var perp2x = 0;
+    var perp2y = 0;
+    var perp3x = 0;
+    var perp3y = 0;
+
+    var dist = Math.sqrt(perpx * perpx + perpy * perpy);
+
+    perpx /= dist;
+    perpy /= dist;
+    perpx *= width;
+    perpy *= width;
+
+    // start
+    verts.push(p1x - perpx, p1y - perpy, r, g, b, alpha);
+
+    verts.push(p1x + perpx, p1y + perpy, r, g, b, alpha);
+
+    for (var i = 1; i < length - 1; ++i) {
+        p1x = points[(i - 1) * 2];
+        p1y = points[(i - 1) * 2 + 1];
+
+        p2x = points[i * 2];
+        p2y = points[i * 2 + 1];
+
+        p3x = points[(i + 1) * 2];
+        p3y = points[(i + 1) * 2 + 1];
+
+        perpx = -(p1y - p2y);
+        perpy = p1x - p2x;
+
+        dist = Math.sqrt(perpx * perpx + perpy * perpy);
+        perpx /= dist;
+        perpy /= dist;
+        perpx *= width;
+        perpy *= width;
+
+        perp2x = -(p2y - p3y);
+        perp2y = p2x - p3x;
+
+        dist = Math.sqrt(perp2x * perp2x + perp2y * perp2y);
+        perp2x /= dist;
+        perp2y /= dist;
+        perp2x *= width;
+        perp2y *= width;
+
+        var a1 = -perpy + p1y - (-perpy + p2y);
+        var b1 = -perpx + p2x - (-perpx + p1x);
+        var c1 = (-perpx + p1x) * (-perpy + p2y) - (-perpx + p2x) * (-perpy + p1y);
+        var a2 = -perp2y + p3y - (-perp2y + p2y);
+        var b2 = -perp2x + p2x - (-perp2x + p3x);
+        var c2 = (-perp2x + p3x) * (-perp2y + p2y) - (-perp2x + p2x) * (-perp2y + p3y);
+
+        var denom = a1 * b2 - a2 * b1;
+
+        if (Math.abs(denom) < 0.1) {
+            denom += 10.1;
+            verts.push(p2x - perpx, p2y - perpy, r, g, b, alpha);
+
+            verts.push(p2x + perpx, p2y + perpy, r, g, b, alpha);
+
+            continue;
+        }
+
+        var px = (b1 * c2 - b2 * c1) / denom;
+        var py = (a2 * c1 - a1 * c2) / denom;
+        var pdist = (px - p2x) * (px - p2x) + (py - p2y) * (py - p2y);
+
+        if (pdist > 196 * width * width) {
+            perp3x = perpx - perp2x;
+            perp3y = perpy - perp2y;
+
+            dist = Math.sqrt(perp3x * perp3x + perp3y * perp3y);
+            perp3x /= dist;
+            perp3y /= dist;
+            perp3x *= width;
+            perp3y *= width;
+
+            verts.push(p2x - perp3x, p2y - perp3y);
+            verts.push(r, g, b, alpha);
+
+            verts.push(p2x + perp3x, p2y + perp3y);
+            verts.push(r, g, b, alpha);
+
+            verts.push(p2x - perp3x, p2y - perp3y);
+            verts.push(r, g, b, alpha);
+
+            indexCount++;
+        } else {
+            verts.push(px, py);
+            verts.push(r, g, b, alpha);
+
+            verts.push(p2x - (px - p2x), p2y - (py - p2y));
+            verts.push(r, g, b, alpha);
+        }
+    }
+
+    p1x = points[(length - 2) * 2];
+    p1y = points[(length - 2) * 2 + 1];
+
+    p2x = points[(length - 1) * 2];
+    p2y = points[(length - 1) * 2 + 1];
+
+    perpx = -(p1y - p2y);
+    perpy = p1x - p2x;
+
+    dist = Math.sqrt(perpx * perpx + perpy * perpy);
+    perpx /= dist;
+    perpy /= dist;
+    perpx *= width;
+    perpy *= width;
+
+    verts.push(p2x - perpx, p2y - perpy);
+    verts.push(r, g, b, alpha);
+
+    verts.push(p2x + perpx, p2y + perpy);
+    verts.push(r, g, b, alpha);
+
+    indices.push(indexStart);
+
+    for (var _i = 0; _i < indexCount; ++_i) {
+        indices.push(indexStart++);
+    }
+
+    indices.push(indexStart - 1);
+}
+
+/**
+ * Builds a line to draw using the gl.drawArrays(gl.LINES) method
+ *
+ * Ignored from docs since it is not directly exposed.
+ *
+ * @ignore
+ * @private
+ * @param {PIXI.WebGLGraphicsData} graphicsData - The graphics object containing all the necessary properties
+ * @param {object} webGLData - an object containing all the webGL-specific information to create this shape
+ */
+
+
+/**
+ * Builds a line to draw
+ *
+ * Ignored from docs since it is not directly exposed.
+ *
+ * @ignore
+ * @private
+ * @param {PIXI.WebGLGraphicsData} graphicsData - The graphics object containing all the necessary properties
+ * @param {object} webGLData - an object containing all the webGL-specific information to create this shape
+ * @param {object} webGLDataNativeLines - an object containing all the webGL-specific information to create nativeLines
+ */
+function buildNativeLine(graphicsData, webGLData) {
+    var i = 0;
+    var points = graphicsData.points;
+
+    if (points.length === 0) return;
+
+    var verts = webGLData.points;
+    var length = points.length / 2;
+
+    // sort color
+    var color = (0, _utils.hex2rgb)(graphicsData.lineColor);
+    var alpha = graphicsData.lineAlpha;
+    var r = color[0] * alpha;
+    var g = color[1] * alpha;
+    var b = color[2] * alpha;
+
+    for (i = 1; i < length; i++) {
+        var p1x = points[(i - 1) * 2];
+        var p1y = points[(i - 1) * 2 + 1];
+
+        var p2x = points[i * 2];
+        var p2y = points[i * 2 + 1];
+
+        verts.push(p1x, p1y);
+        verts.push(r, g, b, alpha);
+
+        verts.push(p2x, p2y);
+        verts.push(r, g, b, alpha);
+    }
+}
+//# sourceMappingURL=buildLine.js.map
+
+/***/ }),
+/* 22 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function(global, module) {var __WEBPACK_AMD_DEFINE_RESULT__;/**
@@ -22458,1541 +23992,7 @@ Mesh.DRAW_MODES = {
   }
 }.call(this));
 
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(18), __webpack_require__(54)(module)))
-
-/***/ }),
-/* 18 */
-/***/ (function(module, exports) {
-
-var g;
-
-// This works in non-strict mode
-g = (function() {
-	return this;
-})();
-
-try {
-	// This works if eval is allowed (see CSP)
-	g = g || Function("return this")() || (1,eval)("this");
-} catch(e) {
-	// This works if the window reference is available
-	if(typeof window === "object")
-		g = window;
-}
-
-// g can still be undefined, but nothing to do about it...
-// We return undefined, instead of nothing here, so it's
-// easier to handle this case. if(!global) { ...}
-
-module.exports = g;
-
-
-/***/ }),
-/* 19 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-exports.__esModule = true;
-
-var _WebGLManager2 = __webpack_require__(13);
-
-var _WebGLManager3 = _interopRequireDefault(_WebGLManager2);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-/**
- * Base for a common object renderer that can be used as a system renderer plugin.
- *
- * @class
- * @extends PIXI.WebGLManager
- * @memberof PIXI
- */
-var ObjectRenderer = function (_WebGLManager) {
-  _inherits(ObjectRenderer, _WebGLManager);
-
-  function ObjectRenderer() {
-    _classCallCheck(this, ObjectRenderer);
-
-    return _possibleConstructorReturn(this, _WebGLManager.apply(this, arguments));
-  }
-
-  /**
-   * Starts the renderer and sets the shader
-   *
-   */
-  ObjectRenderer.prototype.start = function start() {}
-  // set the shader..
-
-
-  /**
-   * Stops the renderer
-   *
-   */
-  ;
-
-  ObjectRenderer.prototype.stop = function stop() {
-    this.flush();
-  };
-
-  /**
-   * Stub method for rendering content and emptying the current batch.
-   *
-   */
-
-
-  ObjectRenderer.prototype.flush = function flush() {}
-  // flush!
-
-
-  /**
-   * Renders an object
-   *
-   * @param {PIXI.DisplayObject} object - The object to render.
-   */
-  ;
-
-  ObjectRenderer.prototype.render = function render(object) // eslint-disable-line no-unused-vars
-  {
-    // render the object
-  };
-
-  return ObjectRenderer;
-}(_WebGLManager3.default);
-
-exports.default = ObjectRenderer;
-//# sourceMappingURL=ObjectRenderer.js.map
-
-/***/ }),
-/* 20 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-exports.__esModule = true;
-
-var _SystemRenderer2 = __webpack_require__(57);
-
-var _SystemRenderer3 = _interopRequireDefault(_SystemRenderer2);
-
-var _MaskManager = __webpack_require__(128);
-
-var _MaskManager2 = _interopRequireDefault(_MaskManager);
-
-var _StencilManager = __webpack_require__(131);
-
-var _StencilManager2 = _interopRequireDefault(_StencilManager);
-
-var _FilterManager = __webpack_require__(132);
-
-var _FilterManager2 = _interopRequireDefault(_FilterManager);
-
-var _RenderTarget = __webpack_require__(21);
-
-var _RenderTarget2 = _interopRequireDefault(_RenderTarget);
-
-var _ObjectRenderer = __webpack_require__(19);
-
-var _ObjectRenderer2 = _interopRequireDefault(_ObjectRenderer);
-
-var _TextureManager = __webpack_require__(134);
-
-var _TextureManager2 = _interopRequireDefault(_TextureManager);
-
-var _BaseTexture = __webpack_require__(9);
-
-var _BaseTexture2 = _interopRequireDefault(_BaseTexture);
-
-var _TextureGarbageCollector = __webpack_require__(135);
-
-var _TextureGarbageCollector2 = _interopRequireDefault(_TextureGarbageCollector);
-
-var _WebGLState = __webpack_require__(136);
-
-var _WebGLState2 = _interopRequireDefault(_WebGLState);
-
-var _mapWebGLDrawModesToPixi = __webpack_require__(138);
-
-var _mapWebGLDrawModesToPixi2 = _interopRequireDefault(_mapWebGLDrawModesToPixi);
-
-var _validateContext = __webpack_require__(139);
-
-var _validateContext2 = _interopRequireDefault(_validateContext);
-
-var _utils = __webpack_require__(2);
-
-var _pixiGlCore = __webpack_require__(5);
-
-var _pixiGlCore2 = _interopRequireDefault(_pixiGlCore);
-
-var _const = __webpack_require__(1);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-var CONTEXT_UID = 0;
-
-/**
- * The WebGLRenderer draws the scene and all its content onto a webGL enabled canvas. This renderer
- * should be used for browsers that support webGL. This Render works by automatically managing webGLBatchs.
- * So no need for Sprite Batches or Sprite Clouds.
- * Don't forget to add the view to your DOM or you will not see anything :)
- *
- * @class
- * @memberof PIXI
- * @extends PIXI.SystemRenderer
- */
-
-var WebGLRenderer = function (_SystemRenderer) {
-    _inherits(WebGLRenderer, _SystemRenderer);
-
-    // eslint-disable-next-line valid-jsdoc
-    /**
-     *
-     * @param {object} [options] - The optional renderer parameters
-     * @param {number} [options.width=800] - the width of the screen
-     * @param {number} [options.height=600] - the height of the screen
-     * @param {HTMLCanvasElement} [options.view] - the canvas to use as a view, optional
-     * @param {boolean} [options.transparent=false] - If the render view is transparent, default false
-     * @param {boolean} [options.autoResize=false] - If the render view is automatically resized, default false
-     * @param {boolean} [options.antialias=false] - sets antialias. If not available natively then FXAA
-     *  antialiasing is used
-     * @param {boolean} [options.forceFXAA=false] - forces FXAA antialiasing to be used over native.
-     *  FXAA is faster, but may not always look as great
-     * @param {number} [options.resolution=1] - The resolution / device pixel ratio of the renderer.
-     *  The resolution of the renderer retina would be 2.
-     * @param {boolean} [options.clearBeforeRender=true] - This sets if the renderer will clear
-     *  the canvas or not before the new render pass. If you wish to set this to false, you *must* set
-     *  preserveDrawingBuffer to `true`.
-     * @param {boolean} [options.preserveDrawingBuffer=false] - enables drawing buffer preservation,
-     *  enable this if you need to call toDataUrl on the webgl context.
-     * @param {boolean} [options.roundPixels=false] - If true PixiJS will Math.floor() x/y values when
-     *  rendering, stopping pixel interpolation.
-     * @param {number} [options.backgroundColor=0x000000] - The background color of the rendered area
-     *  (shown if not transparent).
-     * @param {boolean} [options.legacy=false] - If true PixiJS will aim to ensure compatibility
-     *  with older / less advanced devices. If you experiance unexplained flickering try setting this to true.
-     * @param {string} [options.powerPreference] - Parameter passed to webgl context, set to "high-performance"
-     *  for devices with dual graphics card
-     */
-    function WebGLRenderer(options, arg2, arg3) {
-        _classCallCheck(this, WebGLRenderer);
-
-        var _this = _possibleConstructorReturn(this, _SystemRenderer.call(this, 'WebGL', options, arg2, arg3));
-
-        _this.legacy = _this.options.legacy;
-
-        if (_this.legacy) {
-            _pixiGlCore2.default.VertexArrayObject.FORCE_NATIVE = true;
-        }
-
-        /**
-         * The type of this renderer as a standardised const
-         *
-         * @member {number}
-         * @see PIXI.RENDERER_TYPE
-         */
-        _this.type = _const.RENDERER_TYPE.WEBGL;
-
-        _this.handleContextLost = _this.handleContextLost.bind(_this);
-        _this.handleContextRestored = _this.handleContextRestored.bind(_this);
-
-        _this.view.addEventListener('webglcontextlost', _this.handleContextLost, false);
-        _this.view.addEventListener('webglcontextrestored', _this.handleContextRestored, false);
-
-        /**
-         * The options passed in to create a new webgl context.
-         *
-         * @member {object}
-         * @private
-         */
-        _this._contextOptions = {
-            alpha: _this.transparent,
-            antialias: _this.options.antialias,
-            premultipliedAlpha: _this.transparent && _this.transparent !== 'notMultiplied',
-            stencil: true,
-            preserveDrawingBuffer: _this.options.preserveDrawingBuffer,
-            powerPreference: _this.options.powerPreference
-        };
-
-        _this._backgroundColorRgba[3] = _this.transparent ? 0 : 1;
-
-        /**
-         * Manages the masks using the stencil buffer.
-         *
-         * @member {PIXI.MaskManager}
-         */
-        _this.maskManager = new _MaskManager2.default(_this);
-
-        /**
-         * Manages the stencil buffer.
-         *
-         * @member {PIXI.StencilManager}
-         */
-        _this.stencilManager = new _StencilManager2.default(_this);
-
-        /**
-         * An empty renderer.
-         *
-         * @member {PIXI.ObjectRenderer}
-         */
-        _this.emptyRenderer = new _ObjectRenderer2.default(_this);
-
-        /**
-         * The currently active ObjectRenderer.
-         *
-         * @member {PIXI.ObjectRenderer}
-         */
-        _this.currentRenderer = _this.emptyRenderer;
-
-        /**
-         * Manages textures
-         * @member {PIXI.TextureManager}
-         */
-        _this.textureManager = null;
-
-        /**
-         * Manages the filters.
-         *
-         * @member {PIXI.FilterManager}
-         */
-        _this.filterManager = null;
-
-        _this.initPlugins();
-
-        /**
-         * The current WebGL rendering context, it is created here
-         *
-         * @member {WebGLRenderingContext}
-         */
-        // initialize the context so it is ready for the managers.
-        if (_this.options.context) {
-            // checks to see if a context is valid..
-            (0, _validateContext2.default)(_this.options.context);
-        }
-
-        _this.gl = _this.options.context || _pixiGlCore2.default.createContext(_this.view, _this._contextOptions);
-
-        _this.CONTEXT_UID = CONTEXT_UID++;
-
-        /**
-         * The currently active ObjectRenderer.
-         *
-         * @member {PIXI.WebGLState}
-         */
-        _this.state = new _WebGLState2.default(_this.gl);
-
-        _this.renderingToScreen = true;
-
-        /**
-         * Holds the current state of textures bound to the GPU.
-         * @type {Array}
-         */
-        _this.boundTextures = null;
-
-        /**
-         * Holds the current shader
-         *
-         * @member {PIXI.Shader}
-         */
-        _this._activeShader = null;
-
-        _this._activeVao = null;
-
-        /**
-         * Holds the current render target
-         *
-         * @member {PIXI.RenderTarget}
-         */
-        _this._activeRenderTarget = null;
-
-        _this._initContext();
-
-        // map some webGL blend and drawmodes..
-        _this.drawModes = (0, _mapWebGLDrawModesToPixi2.default)(_this.gl);
-
-        _this._nextTextureLocation = 0;
-
-        _this.setBlendMode(0);
-
-        /**
-         * Fired after rendering finishes.
-         *
-         * @event PIXI.WebGLRenderer#postrender
-         */
-
-        /**
-         * Fired before rendering starts.
-         *
-         * @event PIXI.WebGLRenderer#prerender
-         */
-
-        /**
-         * Fired when the WebGL context is set.
-         *
-         * @event PIXI.WebGLRenderer#context
-         * @param {WebGLRenderingContext} gl - WebGL context.
-         */
-        return _this;
-    }
-
-    /**
-     * Creates the WebGL context
-     *
-     * @private
-     */
-
-
-    WebGLRenderer.prototype._initContext = function _initContext() {
-        var gl = this.gl;
-
-        // restore a context if it was previously lost
-        if (gl.isContextLost() && gl.getExtension('WEBGL_lose_context')) {
-            gl.getExtension('WEBGL_lose_context').restoreContext();
-        }
-
-        var maxTextures = gl.getParameter(gl.MAX_TEXTURE_IMAGE_UNITS);
-
-        this._activeShader = null;
-        this._activeVao = null;
-
-        this.boundTextures = new Array(maxTextures);
-        this.emptyTextures = new Array(maxTextures);
-
-        // create a texture manager...
-        this.textureManager = new _TextureManager2.default(this);
-        this.filterManager = new _FilterManager2.default(this);
-        this.textureGC = new _TextureGarbageCollector2.default(this);
-
-        this.state.resetToDefault();
-
-        this.rootRenderTarget = new _RenderTarget2.default(gl, this.width, this.height, null, this.resolution, true);
-        this.rootRenderTarget.clearColor = this._backgroundColorRgba;
-
-        this.bindRenderTarget(this.rootRenderTarget);
-
-        // now lets fill up the textures with empty ones!
-        var emptyGLTexture = new _pixiGlCore2.default.GLTexture.fromData(gl, null, 1, 1);
-
-        var tempObj = { _glTextures: {} };
-
-        tempObj._glTextures[this.CONTEXT_UID] = {};
-
-        for (var i = 0; i < maxTextures; i++) {
-            var empty = new _BaseTexture2.default();
-
-            empty._glTextures[this.CONTEXT_UID] = emptyGLTexture;
-
-            this.boundTextures[i] = tempObj;
-            this.emptyTextures[i] = empty;
-            this.bindTexture(null, i);
-        }
-
-        this.emit('context', gl);
-
-        // setup the width/height properties and gl viewport
-        this.resize(this.screen.width, this.screen.height);
-    };
-
-    /**
-     * Renders the object to its webGL view
-     *
-     * @param {PIXI.DisplayObject} displayObject - the object to be rendered
-     * @param {PIXI.RenderTexture} renderTexture - The render texture to render to.
-     * @param {boolean} [clear] - Should the canvas be cleared before the new render
-     * @param {PIXI.Transform} [transform] - A transform to apply to the render texture before rendering.
-     * @param {boolean} [skipUpdateTransform] - Should we skip the update transform pass?
-     */
-
-
-    WebGLRenderer.prototype.render = function render(displayObject, renderTexture, clear, transform, skipUpdateTransform) {
-        // can be handy to know!
-        this.renderingToScreen = !renderTexture;
-
-        this.emit('prerender');
-
-        // no point rendering if our context has been blown up!
-        if (!this.gl || this.gl.isContextLost()) {
-            return;
-        }
-
-        this._nextTextureLocation = 0;
-
-        if (!renderTexture) {
-            this._lastObjectRendered = displayObject;
-        }
-
-        if (!skipUpdateTransform) {
-            // update the scene graph
-            var cacheParent = displayObject.parent;
-
-            displayObject.parent = this._tempDisplayObjectParent;
-            displayObject.updateTransform();
-            displayObject.parent = cacheParent;
-            // displayObject.hitArea = //TODO add a temp hit area
-        }
-
-        this.bindRenderTexture(renderTexture, transform);
-
-        this.currentRenderer.start();
-
-        if (clear !== undefined ? clear : this.clearBeforeRender) {
-            this._activeRenderTarget.clear();
-        }
-
-        displayObject.renderWebGL(this);
-
-        // apply transform..
-        this.currentRenderer.flush();
-
-        // this.setObjectRenderer(this.emptyRenderer);
-
-        this.textureGC.update();
-
-        this.emit('postrender');
-    };
-
-    /**
-     * Changes the current renderer to the one given in parameter
-     *
-     * @param {PIXI.ObjectRenderer} objectRenderer - The object renderer to use.
-     */
-
-
-    WebGLRenderer.prototype.setObjectRenderer = function setObjectRenderer(objectRenderer) {
-        if (this.currentRenderer === objectRenderer) {
-            return;
-        }
-
-        this.currentRenderer.stop();
-        this.currentRenderer = objectRenderer;
-        this.currentRenderer.start();
-    };
-
-    /**
-     * This should be called if you wish to do some custom rendering
-     * It will basically render anything that may be batched up such as sprites
-     *
-     */
-
-
-    WebGLRenderer.prototype.flush = function flush() {
-        this.setObjectRenderer(this.emptyRenderer);
-    };
-
-    /**
-     * Resizes the webGL view to the specified width and height.
-     *
-     * @param {number} screenWidth - the new width of the screen
-     * @param {number} screenHeight - the new height of the screen
-     */
-
-
-    WebGLRenderer.prototype.resize = function resize(screenWidth, screenHeight) {
-        //  if(width * this.resolution === this.width && height * this.resolution === this.height)return;
-
-        _SystemRenderer3.default.prototype.resize.call(this, screenWidth, screenHeight);
-
-        this.rootRenderTarget.resize(screenWidth, screenHeight);
-
-        if (this._activeRenderTarget === this.rootRenderTarget) {
-            this.rootRenderTarget.activate();
-
-            if (this._activeShader) {
-                this._activeShader.uniforms.projectionMatrix = this.rootRenderTarget.projectionMatrix.toArray(true);
-            }
-        }
-    };
-
-    /**
-     * Resizes the webGL view to the specified width and height.
-     *
-     * @param {number} blendMode - the desired blend mode
-     */
-
-
-    WebGLRenderer.prototype.setBlendMode = function setBlendMode(blendMode) {
-        this.state.setBlendMode(blendMode);
-    };
-
-    /**
-     * Erases the active render target and fills the drawing area with a colour
-     *
-     * @param {number} [clearColor] - The colour
-     */
-
-
-    WebGLRenderer.prototype.clear = function clear(clearColor) {
-        this._activeRenderTarget.clear(clearColor);
-    };
-
-    /**
-     * Sets the transform of the active render target to the given matrix
-     *
-     * @param {PIXI.Matrix} matrix - The transformation matrix
-     */
-
-
-    WebGLRenderer.prototype.setTransform = function setTransform(matrix) {
-        this._activeRenderTarget.transform = matrix;
-    };
-
-    /**
-     * Erases the render texture and fills the drawing area with a colour
-     *
-     * @param {PIXI.RenderTexture} renderTexture - The render texture to clear
-     * @param {number} [clearColor] - The colour
-     * @return {PIXI.WebGLRenderer} Returns itself.
-     */
-
-
-    WebGLRenderer.prototype.clearRenderTexture = function clearRenderTexture(renderTexture, clearColor) {
-        var baseTexture = renderTexture.baseTexture;
-        var renderTarget = baseTexture._glRenderTargets[this.CONTEXT_UID];
-
-        if (renderTarget) {
-            renderTarget.clear(clearColor);
-        }
-
-        return this;
-    };
-
-    /**
-     * Binds a render texture for rendering
-     *
-     * @param {PIXI.RenderTexture} renderTexture - The render texture to render
-     * @param {PIXI.Transform} transform - The transform to be applied to the render texture
-     * @return {PIXI.WebGLRenderer} Returns itself.
-     */
-
-
-    WebGLRenderer.prototype.bindRenderTexture = function bindRenderTexture(renderTexture, transform) {
-        var renderTarget = void 0;
-
-        if (renderTexture) {
-            var baseTexture = renderTexture.baseTexture;
-
-            if (!baseTexture._glRenderTargets[this.CONTEXT_UID]) {
-                // bind the current texture
-                this.textureManager.updateTexture(baseTexture, 0);
-            }
-
-            this.unbindTexture(baseTexture);
-
-            renderTarget = baseTexture._glRenderTargets[this.CONTEXT_UID];
-            renderTarget.setFrame(renderTexture.frame);
-        } else {
-            renderTarget = this.rootRenderTarget;
-        }
-
-        renderTarget.transform = transform;
-        this.bindRenderTarget(renderTarget);
-
-        return this;
-    };
-
-    /**
-     * Changes the current render target to the one given in parameter
-     *
-     * @param {PIXI.RenderTarget} renderTarget - the new render target
-     * @return {PIXI.WebGLRenderer} Returns itself.
-     */
-
-
-    WebGLRenderer.prototype.bindRenderTarget = function bindRenderTarget(renderTarget) {
-        if (renderTarget !== this._activeRenderTarget) {
-            this._activeRenderTarget = renderTarget;
-            renderTarget.activate();
-
-            if (this._activeShader) {
-                this._activeShader.uniforms.projectionMatrix = renderTarget.projectionMatrix.toArray(true);
-            }
-
-            this.stencilManager.setMaskStack(renderTarget.stencilMaskStack);
-        }
-
-        return this;
-    };
-
-    /**
-     * Changes the current shader to the one given in parameter
-     *
-     * @param {PIXI.Shader} shader - the new shader
-     * @param {boolean} [autoProject=true] - Whether automatically set the projection matrix
-     * @return {PIXI.WebGLRenderer} Returns itself.
-     */
-
-
-    WebGLRenderer.prototype.bindShader = function bindShader(shader, autoProject) {
-        // TODO cache
-        if (this._activeShader !== shader) {
-            this._activeShader = shader;
-            shader.bind();
-
-            // `autoProject` normally would be a default parameter set to true
-            // but because of how Babel transpiles default parameters
-            // it hinders the performance of this method.
-            if (autoProject !== false) {
-                // automatically set the projection matrix
-                shader.uniforms.projectionMatrix = this._activeRenderTarget.projectionMatrix.toArray(true);
-            }
-        }
-
-        return this;
-    };
-
-    /**
-     * Binds the texture. This will return the location of the bound texture.
-     * It may not be the same as the one you pass in. This is due to optimisation that prevents
-     * needless binding of textures. For example if the texture is already bound it will return the
-     * current location of the texture instead of the one provided. To bypass this use force location
-     *
-     * @param {PIXI.Texture} texture - the new texture
-     * @param {number} location - the suggested texture location
-     * @param {boolean} forceLocation - force the location
-     * @return {number} bound texture location
-     */
-
-
-    WebGLRenderer.prototype.bindTexture = function bindTexture(texture, location, forceLocation) {
-        texture = texture || this.emptyTextures[location];
-        texture = texture.baseTexture || texture;
-        texture.touched = this.textureGC.count;
-
-        if (!forceLocation) {
-            // TODO - maybe look into adding boundIds.. save us the loop?
-            for (var i = 0; i < this.boundTextures.length; i++) {
-                if (this.boundTextures[i] === texture) {
-                    return i;
-                }
-            }
-
-            if (location === undefined) {
-                this._nextTextureLocation++;
-                this._nextTextureLocation %= this.boundTextures.length;
-                location = this.boundTextures.length - this._nextTextureLocation - 1;
-            }
-        } else {
-            location = location || 0;
-        }
-
-        var gl = this.gl;
-        var glTexture = texture._glTextures[this.CONTEXT_UID];
-
-        if (!glTexture) {
-            // this will also bind the texture..
-            this.textureManager.updateTexture(texture, location);
-        } else {
-            // bind the current texture
-            this.boundTextures[location] = texture;
-            gl.activeTexture(gl.TEXTURE0 + location);
-            gl.bindTexture(gl.TEXTURE_2D, glTexture.texture);
-        }
-
-        return location;
-    };
-
-    /**
-    * unbinds the texture ...
-    *
-    * @param {PIXI.Texture} texture - the texture to unbind
-    * @return {PIXI.WebGLRenderer} Returns itself.
-    */
-
-
-    WebGLRenderer.prototype.unbindTexture = function unbindTexture(texture) {
-        var gl = this.gl;
-
-        texture = texture.baseTexture || texture;
-
-        for (var i = 0; i < this.boundTextures.length; i++) {
-            if (this.boundTextures[i] === texture) {
-                this.boundTextures[i] = this.emptyTextures[i];
-
-                gl.activeTexture(gl.TEXTURE0 + i);
-                gl.bindTexture(gl.TEXTURE_2D, this.emptyTextures[i]._glTextures[this.CONTEXT_UID].texture);
-            }
-        }
-
-        return this;
-    };
-
-    /**
-     * Creates a new VAO from this renderer's context and state.
-     *
-     * @return {VertexArrayObject} The new VAO.
-     */
-
-
-    WebGLRenderer.prototype.createVao = function createVao() {
-        return new _pixiGlCore2.default.VertexArrayObject(this.gl, this.state.attribState);
-    };
-
-    /**
-     * Changes the current Vao to the one given in parameter
-     *
-     * @param {PIXI.VertexArrayObject} vao - the new Vao
-     * @return {PIXI.WebGLRenderer} Returns itself.
-     */
-
-
-    WebGLRenderer.prototype.bindVao = function bindVao(vao) {
-        if (this._activeVao === vao) {
-            return this;
-        }
-
-        if (vao) {
-            vao.bind();
-        } else if (this._activeVao) {
-            // TODO this should always be true i think?
-            this._activeVao.unbind();
-        }
-
-        this._activeVao = vao;
-
-        return this;
-    };
-
-    /**
-     * Resets the WebGL state so you can render things however you fancy!
-     *
-     * @return {PIXI.WebGLRenderer} Returns itself.
-     */
-
-
-    WebGLRenderer.prototype.reset = function reset() {
-        this.setObjectRenderer(this.emptyRenderer);
-
-        this._activeShader = null;
-        this._activeRenderTarget = this.rootRenderTarget;
-
-        // bind the main frame buffer (the screen);
-        this.rootRenderTarget.activate();
-
-        this.state.resetToDefault();
-
-        return this;
-    };
-
-    /**
-     * Handles a lost webgl context
-     *
-     * @private
-     * @param {WebGLContextEvent} event - The context lost event.
-     */
-
-
-    WebGLRenderer.prototype.handleContextLost = function handleContextLost(event) {
-        event.preventDefault();
-    };
-
-    /**
-     * Handles a restored webgl context
-     *
-     * @private
-     */
-
-
-    WebGLRenderer.prototype.handleContextRestored = function handleContextRestored() {
-        this.textureManager.removeAll();
-        this.filterManager.destroy(true);
-        this._initContext();
-    };
-
-    /**
-     * Removes everything from the renderer (event listeners, spritebatch, etc...)
-     *
-     * @param {boolean} [removeView=false] - Removes the Canvas element from the DOM.
-     *  See: https://github.com/pixijs/pixi.js/issues/2233
-     */
-
-
-    WebGLRenderer.prototype.destroy = function destroy(removeView) {
-        this.destroyPlugins();
-
-        // remove listeners
-        this.view.removeEventListener('webglcontextlost', this.handleContextLost);
-        this.view.removeEventListener('webglcontextrestored', this.handleContextRestored);
-
-        this.textureManager.destroy();
-
-        // call base destroy
-        _SystemRenderer.prototype.destroy.call(this, removeView);
-
-        this.uid = 0;
-
-        // destroy the managers
-        this.maskManager.destroy();
-        this.stencilManager.destroy();
-        this.filterManager.destroy();
-
-        this.maskManager = null;
-        this.filterManager = null;
-        this.textureManager = null;
-        this.currentRenderer = null;
-
-        this.handleContextLost = null;
-        this.handleContextRestored = null;
-
-        this._contextOptions = null;
-        this.gl.useProgram(null);
-
-        if (this.gl.getExtension('WEBGL_lose_context')) {
-            this.gl.getExtension('WEBGL_lose_context').loseContext();
-        }
-
-        this.gl = null;
-
-        // this = null;
-    };
-
-    return WebGLRenderer;
-}(_SystemRenderer3.default);
-
-/**
- * Collection of installed plugins. These are included by default in PIXI, but can be excluded
- * by creating a custom build. Consult the README for more information about creating custom
- * builds and excluding plugins.
- * @name PIXI.WebGLRenderer#plugins
- * @type {object}
- * @readonly
- * @property {PIXI.accessibility.AccessibilityManager} accessibility Support tabbing interactive elements.
- * @property {PIXI.extract.WebGLExtract} extract Extract image data from renderer.
- * @property {PIXI.interaction.InteractionManager} interaction Handles mouse, touch and pointer events.
- * @property {PIXI.prepare.WebGLPrepare} prepare Pre-render display objects.
- */
-
-/**
- * Adds a plugin to the renderer.
- *
- * @method PIXI.WebGLRenderer#registerPlugin
- * @param {string} pluginName - The name of the plugin.
- * @param {Function} ctor - The constructor function or class for the plugin.
- */
-
-exports.default = WebGLRenderer;
-_utils.pluginTarget.mixin(WebGLRenderer);
-//# sourceMappingURL=WebGLRenderer.js.map
-
-/***/ }),
-/* 21 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-exports.__esModule = true;
-
-var _math = __webpack_require__(4);
-
-var _const = __webpack_require__(1);
-
-var _settings = __webpack_require__(3);
-
-var _settings2 = _interopRequireDefault(_settings);
-
-var _pixiGlCore = __webpack_require__(5);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-/**
- * @class
- * @memberof PIXI
- */
-var RenderTarget = function () {
-  /**
-   * @param {WebGLRenderingContext} gl - The current WebGL drawing context
-   * @param {number} [width=0] - the horizontal range of the filter
-   * @param {number} [height=0] - the vertical range of the filter
-   * @param {number} [scaleMode=PIXI.settings.SCALE_MODE] - See {@link PIXI.SCALE_MODES} for possible values
-   * @param {number} [resolution=1] - The current resolution / device pixel ratio
-   * @param {boolean} [root=false] - Whether this object is the root element or not
-   */
-  function RenderTarget(gl, width, height, scaleMode, resolution, root) {
-    _classCallCheck(this, RenderTarget);
-
-    // TODO Resolution could go here ( eg low res blurs )
-
-    /**
-     * The current WebGL drawing context.
-     *
-     * @member {WebGLRenderingContext}
-     */
-    this.gl = gl;
-
-    // next time to create a frame buffer and texture
-
-    /**
-     * A frame buffer
-     *
-     * @member {PIXI.glCore.GLFramebuffer}
-     */
-    this.frameBuffer = null;
-
-    /**
-     * The texture
-     *
-     * @member {PIXI.glCore.GLTexture}
-     */
-    this.texture = null;
-
-    /**
-     * The background colour of this render target, as an array of [r,g,b,a] values
-     *
-     * @member {number[]}
-     */
-    this.clearColor = [0, 0, 0, 0];
-
-    /**
-     * The size of the object as a rectangle
-     *
-     * @member {PIXI.Rectangle}
-     */
-    this.size = new _math.Rectangle(0, 0, 1, 1);
-
-    /**
-     * The current resolution / device pixel ratio
-     *
-     * @member {number}
-     * @default 1
-     */
-    this.resolution = resolution || _settings2.default.RESOLUTION;
-
-    /**
-     * The projection matrix
-     *
-     * @member {PIXI.Matrix}
-     */
-    this.projectionMatrix = new _math.Matrix();
-
-    /**
-     * The object's transform
-     *
-     * @member {PIXI.Matrix}
-     */
-    this.transform = null;
-
-    /**
-     * The frame.
-     *
-     * @member {PIXI.Rectangle}
-     */
-    this.frame = null;
-
-    /**
-     * The stencil buffer stores masking data for the render target
-     *
-     * @member {glCore.GLBuffer}
-     */
-    this.defaultFrame = new _math.Rectangle();
-    this.destinationFrame = null;
-    this.sourceFrame = null;
-
-    /**
-     * The stencil buffer stores masking data for the render target
-     *
-     * @member {glCore.GLBuffer}
-     */
-    this.stencilBuffer = null;
-
-    /**
-     * The data structure for the stencil masks
-     *
-     * @member {PIXI.Graphics[]}
-     */
-    this.stencilMaskStack = [];
-
-    /**
-     * Stores filter data for the render target
-     *
-     * @member {object[]}
-     */
-    this.filterData = null;
-
-    /**
-     * The scale mode.
-     *
-     * @member {number}
-     * @default PIXI.settings.SCALE_MODE
-     * @see PIXI.SCALE_MODES
-     */
-    this.scaleMode = scaleMode !== undefined ? scaleMode : _settings2.default.SCALE_MODE;
-
-    /**
-     * Whether this object is the root element or not
-     *
-     * @member {boolean}
-     */
-    this.root = root;
-
-    if (!this.root) {
-      this.frameBuffer = _pixiGlCore.GLFramebuffer.createRGBA(gl, 100, 100);
-
-      if (this.scaleMode === _const.SCALE_MODES.NEAREST) {
-        this.frameBuffer.texture.enableNearestScaling();
-      } else {
-        this.frameBuffer.texture.enableLinearScaling();
-      }
-      /*
-          A frame buffer needs a target to render to..
-          create a texture and bind it attach it to the framebuffer..
-       */
-
-      // this is used by the base texture
-      this.texture = this.frameBuffer.texture;
-    } else {
-      // make it a null framebuffer..
-      this.frameBuffer = new _pixiGlCore.GLFramebuffer(gl, 100, 100);
-      this.frameBuffer.framebuffer = null;
-    }
-
-    this.setFrame();
-
-    this.resize(width, height);
-  }
-
-  /**
-   * Clears the filter texture.
-   *
-   * @param {number[]} [clearColor=this.clearColor] - Array of [r,g,b,a] to clear the framebuffer
-   */
-
-
-  RenderTarget.prototype.clear = function clear(clearColor) {
-    var cc = clearColor || this.clearColor;
-
-    this.frameBuffer.clear(cc[0], cc[1], cc[2], cc[3]); // r,g,b,a);
-  };
-
-  /**
-   * Binds the stencil buffer.
-   *
-   */
-
-
-  RenderTarget.prototype.attachStencilBuffer = function attachStencilBuffer() {
-    // TODO check if stencil is done?
-    /**
-     * The stencil buffer is used for masking in pixi
-     * lets create one and then add attach it to the framebuffer..
-     */
-    if (!this.root) {
-      this.frameBuffer.enableStencil();
-    }
-  };
-
-  /**
-   * Sets the frame of the render target.
-   *
-   * @param {Rectangle} destinationFrame - The destination frame.
-   * @param {Rectangle} sourceFrame - The source frame.
-   */
-
-
-  RenderTarget.prototype.setFrame = function setFrame(destinationFrame, sourceFrame) {
-    this.destinationFrame = destinationFrame || this.destinationFrame || this.defaultFrame;
-    this.sourceFrame = sourceFrame || this.sourceFrame || this.destinationFrame;
-  };
-
-  /**
-   * Binds the buffers and initialises the viewport.
-   *
-   */
-
-
-  RenderTarget.prototype.activate = function activate() {
-    // TOOD refactor usage of frame..
-    var gl = this.gl;
-
-    // make sure the texture is unbound!
-    this.frameBuffer.bind();
-
-    this.calculateProjection(this.destinationFrame, this.sourceFrame);
-
-    if (this.transform) {
-      this.projectionMatrix.append(this.transform);
-    }
-
-    // TODO add a check as them may be the same!
-    if (this.destinationFrame !== this.sourceFrame) {
-      gl.enable(gl.SCISSOR_TEST);
-      gl.scissor(this.destinationFrame.x | 0, this.destinationFrame.y | 0, this.destinationFrame.width * this.resolution | 0, this.destinationFrame.height * this.resolution | 0);
-    } else {
-      gl.disable(gl.SCISSOR_TEST);
-    }
-
-    // TODO - does not need to be updated all the time??
-    gl.viewport(this.destinationFrame.x | 0, this.destinationFrame.y | 0, this.destinationFrame.width * this.resolution | 0, this.destinationFrame.height * this.resolution | 0);
-  };
-
-  /**
-   * Updates the projection matrix based on a projection frame (which is a rectangle)
-   *
-   * @param {Rectangle} destinationFrame - The destination frame.
-   * @param {Rectangle} sourceFrame - The source frame.
-   */
-
-
-  RenderTarget.prototype.calculateProjection = function calculateProjection(destinationFrame, sourceFrame) {
-    var pm = this.projectionMatrix;
-
-    sourceFrame = sourceFrame || destinationFrame;
-
-    pm.identity();
-
-    // TODO: make dest scale source
-    if (!this.root) {
-      pm.a = 1 / destinationFrame.width * 2;
-      pm.d = 1 / destinationFrame.height * 2;
-
-      pm.tx = -1 - sourceFrame.x * pm.a;
-      pm.ty = -1 - sourceFrame.y * pm.d;
-    } else {
-      pm.a = 1 / destinationFrame.width * 2;
-      pm.d = -1 / destinationFrame.height * 2;
-
-      pm.tx = -1 - sourceFrame.x * pm.a;
-      pm.ty = 1 - sourceFrame.y * pm.d;
-    }
-  };
-
-  /**
-   * Resizes the texture to the specified width and height
-   *
-   * @param {number} width - the new width of the texture
-   * @param {number} height - the new height of the texture
-   */
-
-
-  RenderTarget.prototype.resize = function resize(width, height) {
-    width = width | 0;
-    height = height | 0;
-
-    if (this.size.width === width && this.size.height === height) {
-      return;
-    }
-
-    this.size.width = width;
-    this.size.height = height;
-
-    this.defaultFrame.width = width;
-    this.defaultFrame.height = height;
-
-    this.frameBuffer.resize(width * this.resolution, height * this.resolution);
-
-    var projectionFrame = this.frame || this.size;
-
-    this.calculateProjection(projectionFrame);
-  };
-
-  /**
-   * Destroys the render target.
-   *
-   */
-
-
-  RenderTarget.prototype.destroy = function destroy() {
-    this.frameBuffer.destroy();
-
-    this.frameBuffer = null;
-    this.texture = null;
-  };
-
-  return RenderTarget;
-}();
-
-exports.default = RenderTarget;
-//# sourceMappingURL=RenderTarget.js.map
-
-/***/ }),
-/* 22 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-exports.__esModule = true;
-
-exports.default = function (graphicsData, webGLData, webGLDataNativeLines) {
-    if (graphicsData.nativeLines) {
-        buildNativeLine(graphicsData, webGLDataNativeLines);
-    } else {
-        buildLine(graphicsData, webGLData);
-    }
-};
-
-var _math = __webpack_require__(4);
-
-var _utils = __webpack_require__(2);
-
-/**
- * Builds a line to draw using the poligon method.
- *
- * Ignored from docs since it is not directly exposed.
- *
- * @ignore
- * @private
- * @param {PIXI.WebGLGraphicsData} graphicsData - The graphics object containing all the necessary properties
- * @param {object} webGLData - an object containing all the webGL-specific information to create this shape
- */
-function buildLine(graphicsData, webGLData) {
-    // TODO OPTIMISE!
-    var points = graphicsData.points;
-
-    if (points.length === 0) {
-        return;
-    }
-    // if the line width is an odd number add 0.5 to align to a whole pixel
-    // commenting this out fixes #711 and #1620
-    // if (graphicsData.lineWidth%2)
-    // {
-    //     for (i = 0; i < points.length; i++)
-    //     {
-    //         points[i] += 0.5;
-    //     }
-    // }
-
-    // get first and last point.. figure out the middle!
-    var firstPoint = new _math.Point(points[0], points[1]);
-    var lastPoint = new _math.Point(points[points.length - 2], points[points.length - 1]);
-
-    // if the first point is the last point - gonna have issues :)
-    if (firstPoint.x === lastPoint.x && firstPoint.y === lastPoint.y) {
-        // need to clone as we are going to slightly modify the shape..
-        points = points.slice();
-
-        points.pop();
-        points.pop();
-
-        lastPoint = new _math.Point(points[points.length - 2], points[points.length - 1]);
-
-        var midPointX = lastPoint.x + (firstPoint.x - lastPoint.x) * 0.5;
-        var midPointY = lastPoint.y + (firstPoint.y - lastPoint.y) * 0.5;
-
-        points.unshift(midPointX, midPointY);
-        points.push(midPointX, midPointY);
-    }
-
-    var verts = webGLData.points;
-    var indices = webGLData.indices;
-    var length = points.length / 2;
-    var indexCount = points.length;
-    var indexStart = verts.length / 6;
-
-    // DRAW the Line
-    var width = graphicsData.lineWidth / 2;
-
-    // sort color
-    var color = (0, _utils.hex2rgb)(graphicsData.lineColor);
-    var alpha = graphicsData.lineAlpha;
-    var r = color[0] * alpha;
-    var g = color[1] * alpha;
-    var b = color[2] * alpha;
-
-    var p1x = points[0];
-    var p1y = points[1];
-    var p2x = points[2];
-    var p2y = points[3];
-    var p3x = 0;
-    var p3y = 0;
-
-    var perpx = -(p1y - p2y);
-    var perpy = p1x - p2x;
-    var perp2x = 0;
-    var perp2y = 0;
-    var perp3x = 0;
-    var perp3y = 0;
-
-    var dist = Math.sqrt(perpx * perpx + perpy * perpy);
-
-    perpx /= dist;
-    perpy /= dist;
-    perpx *= width;
-    perpy *= width;
-
-    // start
-    verts.push(p1x - perpx, p1y - perpy, r, g, b, alpha);
-
-    verts.push(p1x + perpx, p1y + perpy, r, g, b, alpha);
-
-    for (var i = 1; i < length - 1; ++i) {
-        p1x = points[(i - 1) * 2];
-        p1y = points[(i - 1) * 2 + 1];
-
-        p2x = points[i * 2];
-        p2y = points[i * 2 + 1];
-
-        p3x = points[(i + 1) * 2];
-        p3y = points[(i + 1) * 2 + 1];
-
-        perpx = -(p1y - p2y);
-        perpy = p1x - p2x;
-
-        dist = Math.sqrt(perpx * perpx + perpy * perpy);
-        perpx /= dist;
-        perpy /= dist;
-        perpx *= width;
-        perpy *= width;
-
-        perp2x = -(p2y - p3y);
-        perp2y = p2x - p3x;
-
-        dist = Math.sqrt(perp2x * perp2x + perp2y * perp2y);
-        perp2x /= dist;
-        perp2y /= dist;
-        perp2x *= width;
-        perp2y *= width;
-
-        var a1 = -perpy + p1y - (-perpy + p2y);
-        var b1 = -perpx + p2x - (-perpx + p1x);
-        var c1 = (-perpx + p1x) * (-perpy + p2y) - (-perpx + p2x) * (-perpy + p1y);
-        var a2 = -perp2y + p3y - (-perp2y + p2y);
-        var b2 = -perp2x + p2x - (-perp2x + p3x);
-        var c2 = (-perp2x + p3x) * (-perp2y + p2y) - (-perp2x + p2x) * (-perp2y + p3y);
-
-        var denom = a1 * b2 - a2 * b1;
-
-        if (Math.abs(denom) < 0.1) {
-            denom += 10.1;
-            verts.push(p2x - perpx, p2y - perpy, r, g, b, alpha);
-
-            verts.push(p2x + perpx, p2y + perpy, r, g, b, alpha);
-
-            continue;
-        }
-
-        var px = (b1 * c2 - b2 * c1) / denom;
-        var py = (a2 * c1 - a1 * c2) / denom;
-        var pdist = (px - p2x) * (px - p2x) + (py - p2y) * (py - p2y);
-
-        if (pdist > 196 * width * width) {
-            perp3x = perpx - perp2x;
-            perp3y = perpy - perp2y;
-
-            dist = Math.sqrt(perp3x * perp3x + perp3y * perp3y);
-            perp3x /= dist;
-            perp3y /= dist;
-            perp3x *= width;
-            perp3y *= width;
-
-            verts.push(p2x - perp3x, p2y - perp3y);
-            verts.push(r, g, b, alpha);
-
-            verts.push(p2x + perp3x, p2y + perp3y);
-            verts.push(r, g, b, alpha);
-
-            verts.push(p2x - perp3x, p2y - perp3y);
-            verts.push(r, g, b, alpha);
-
-            indexCount++;
-        } else {
-            verts.push(px, py);
-            verts.push(r, g, b, alpha);
-
-            verts.push(p2x - (px - p2x), p2y - (py - p2y));
-            verts.push(r, g, b, alpha);
-        }
-    }
-
-    p1x = points[(length - 2) * 2];
-    p1y = points[(length - 2) * 2 + 1];
-
-    p2x = points[(length - 1) * 2];
-    p2y = points[(length - 1) * 2 + 1];
-
-    perpx = -(p1y - p2y);
-    perpy = p1x - p2x;
-
-    dist = Math.sqrt(perpx * perpx + perpy * perpy);
-    perpx /= dist;
-    perpy /= dist;
-    perpx *= width;
-    perpy *= width;
-
-    verts.push(p2x - perpx, p2y - perpy);
-    verts.push(r, g, b, alpha);
-
-    verts.push(p2x + perpx, p2y + perpy);
-    verts.push(r, g, b, alpha);
-
-    indices.push(indexStart);
-
-    for (var _i = 0; _i < indexCount; ++_i) {
-        indices.push(indexStart++);
-    }
-
-    indices.push(indexStart - 1);
-}
-
-/**
- * Builds a line to draw using the gl.drawArrays(gl.LINES) method
- *
- * Ignored from docs since it is not directly exposed.
- *
- * @ignore
- * @private
- * @param {PIXI.WebGLGraphicsData} graphicsData - The graphics object containing all the necessary properties
- * @param {object} webGLData - an object containing all the webGL-specific information to create this shape
- */
-
-
-/**
- * Builds a line to draw
- *
- * Ignored from docs since it is not directly exposed.
- *
- * @ignore
- * @private
- * @param {PIXI.WebGLGraphicsData} graphicsData - The graphics object containing all the necessary properties
- * @param {object} webGLData - an object containing all the webGL-specific information to create this shape
- * @param {object} webGLDataNativeLines - an object containing all the webGL-specific information to create nativeLines
- */
-function buildNativeLine(graphicsData, webGLData) {
-    var i = 0;
-    var points = graphicsData.points;
-
-    if (points.length === 0) return;
-
-    var verts = webGLData.points;
-    var length = points.length / 2;
-
-    // sort color
-    var color = (0, _utils.hex2rgb)(graphicsData.lineColor);
-    var alpha = graphicsData.lineAlpha;
-    var r = color[0] * alpha;
-    var g = color[1] * alpha;
-    var b = color[2] * alpha;
-
-    for (i = 1; i < length; i++) {
-        var p1x = points[(i - 1) * 2];
-        var p1y = points[(i - 1) * 2 + 1];
-
-        var p2x = points[i * 2];
-        var p2y = points[i * 2 + 1];
-
-        verts.push(p1x, p1y);
-        verts.push(r, g, b, alpha);
-
-        verts.push(p2x, p2y);
-        verts.push(r, g, b, alpha);
-    }
-}
-//# sourceMappingURL=buildLine.js.map
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(17), __webpack_require__(55)(module)))
 
 /***/ }),
 /* 23 */
@@ -26381,7 +26381,7 @@ exports.nextCombination = function(v) {
 exports.__esModule = true;
 exports.Ticker = exports.shared = undefined;
 
-var _Ticker = __webpack_require__(122);
+var _Ticker = __webpack_require__(121);
 
 var _Ticker2 = _interopRequireDefault(_Ticker);
 
@@ -26465,7 +26465,7 @@ exports.Ticker = _Ticker2.default;
 
 exports.__esModule = true;
 
-var _BaseRenderTexture = __webpack_require__(58);
+var _BaseRenderTexture = __webpack_require__(59);
 
 var _BaseRenderTexture2 = _interopRequireDefault(_BaseRenderTexture);
 
@@ -26623,7 +26623,7 @@ exports.__esModule = true;
 
 var _utils = __webpack_require__(2);
 
-var _canUseNewCanvasBlendModes = __webpack_require__(60);
+var _canUseNewCanvasBlendModes = __webpack_require__(61);
 
 var _canUseNewCanvasBlendModes2 = _interopRequireDefault(_canUseNewCanvasBlendModes);
 
@@ -27082,11 +27082,11 @@ exports.__esModule = true;
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-var _parseUri = __webpack_require__(83);
+var _parseUri = __webpack_require__(84);
 
 var _parseUri2 = _interopRequireDefault(_parseUri);
 
-var _miniSignals = __webpack_require__(82);
+var _miniSignals = __webpack_require__(83);
 
 var _miniSignals2 = _interopRequireDefault(_miniSignals);
 
@@ -28245,7 +28245,7 @@ var _core = __webpack_require__(0);
 
 var core = _interopRequireWildcard(_core);
 
-var _CountLimiter = __webpack_require__(89);
+var _CountLimiter = __webpack_require__(90);
 
 var _CountLimiter2 = _interopRequireDefault(_CountLimiter);
 
@@ -28731,6 +28731,72 @@ function findTextStyle(item, queue) {
 
 "use strict";
 
+Object.defineProperty(exports, "__esModule", { value: true });
+/**
+ * ScriptDown
+ */
+exports.ScriptDownDefaultOptions = {
+    width: 800,
+    height: 600,
+    backgroundColor: 0x0
+};
+exports.SceneDefaultOptions = {
+    height: 600,
+    width: 800,
+    backgroundColor: 0x90caf9,
+    characters: {}
+};
+exports.SubtitleDefaultOptions = {
+    height: 180,
+    width: 800,
+    backgroundColor: 0x009688,
+    paddingTop: 30,
+    paddingRight: 30,
+    paddingBottom: 30,
+    paddingLeft: 30,
+    content: {
+        'default': {
+            fontFamily: 'Arial',
+            fontSize: '20px',
+            fontWeight: 100,
+            fill: '#cccccc',
+            align: 'left',
+            wordWrap: true,
+            wordWrapWidth: 740
+        },
+        'b': {
+            fontWeight: 'bold'
+        },
+        'i': {
+            fontStyle: 'italic'
+        }
+    }
+};
+exports.CharacterDefaultOptions = {
+    textures: {
+        default: './img/bunny.png'
+    },
+    x: 200,
+    y: 200,
+    rotation: 0,
+    scale: 1,
+    scaleX: 1,
+    scaleY: 1,
+    anchor: 0.5,
+    anchorX: 0.5,
+    anchorY: 0.5,
+    pivot: 0.5,
+    pivotX: 0.5,
+    pivotY: 0.5
+};
+
+
+/***/ }),
+/* 40 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
 
 exports.__esModule = true;
 
@@ -28848,7 +28914,7 @@ exports.default = ObservablePoint;
 //# sourceMappingURL=ObservablePoint.js.map
 
 /***/ }),
-/* 40 */
+/* 41 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -29045,7 +29111,7 @@ exports.default = GroupD8;
 //# sourceMappingURL=GroupD8.js.map
 
 /***/ }),
-/* 41 */
+/* 42 */
 /***/ (function(module, exports) {
 
 // var GL_MAP = {};
@@ -29106,7 +29172,7 @@ module.exports = setVertexAttribArrays;
 
 
 /***/ }),
-/* 42 */
+/* 43 */
 /***/ (function(module, exports) {
 
 
@@ -29445,7 +29511,7 @@ module.exports = Texture;
 
 
 /***/ }),
-/* 43 */
+/* 44 */
 /***/ (function(module, exports) {
 
 
@@ -29531,12 +29597,12 @@ module.exports = compileProgram;
 
 
 /***/ }),
-/* 44 */
+/* 45 */
 /***/ (function(module, exports, __webpack_require__) {
 
 
 var mapType = __webpack_require__(26);
-var mapSize = __webpack_require__(45);
+var mapSize = __webpack_require__(46);
 
 /**
  * Extracts the attributes
@@ -29578,7 +29644,7 @@ module.exports = extractAttributes;
 
 
 /***/ }),
-/* 45 */
+/* 46 */
 /***/ (function(module, exports) {
 
 /**
@@ -29620,11 +29686,11 @@ module.exports = mapSize;
 
 
 /***/ }),
-/* 46 */
+/* 47 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var mapType = __webpack_require__(26);
-var defaultValue = __webpack_require__(47);
+var defaultValue = __webpack_require__(48);
 
 /**
  * Extracts the uniforms
@@ -29661,7 +29727,7 @@ module.exports = extractUniforms;
 
 
 /***/ }),
-/* 47 */
+/* 48 */
 /***/ (function(module, exports) {
 
 /**
@@ -29745,7 +29811,7 @@ module.exports = defaultValue;
 
 
 /***/ }),
-/* 48 */
+/* 49 */
 /***/ (function(module, exports) {
 
 /**
@@ -29769,7 +29835,7 @@ module.exports = setPrecision;
 
 
 /***/ }),
-/* 49 */
+/* 50 */
 /***/ (function(module, exports) {
 
 /**
@@ -29916,7 +29982,7 @@ module.exports = generateUniformAccessObject;
 
 
 /***/ }),
-/* 50 */
+/* 51 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -29936,11 +30002,11 @@ var _settings = __webpack_require__(3);
 
 var _settings2 = _interopRequireDefault(_settings);
 
-var _TransformStatic = __webpack_require__(51);
+var _TransformStatic = __webpack_require__(52);
 
 var _TransformStatic2 = _interopRequireDefault(_TransformStatic);
 
-var _Transform = __webpack_require__(52);
+var _Transform = __webpack_require__(53);
 
 var _Transform2 = _interopRequireDefault(_Transform);
 
@@ -30613,7 +30679,7 @@ DisplayObject.prototype.displayObjectUpdateTransform = DisplayObject.prototype.u
 //# sourceMappingURL=DisplayObject.js.map
 
 /***/ }),
-/* 51 */
+/* 52 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -30828,7 +30894,7 @@ exports.default = TransformStatic;
 //# sourceMappingURL=TransformStatic.js.map
 
 /***/ }),
-/* 52 */
+/* 53 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -31014,7 +31080,7 @@ exports.default = Transform;
 //# sourceMappingURL=Transform.js.map
 
 /***/ }),
-/* 53 */
+/* 54 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -31041,8 +31107,8 @@ exports.default = Transform;
 
 
 
-var punycode = __webpack_require__(117);
-var util = __webpack_require__(118);
+var punycode = __webpack_require__(116);
+var util = __webpack_require__(117);
 
 exports.parse = urlParse;
 exports.resolve = urlResolve;
@@ -31117,7 +31183,7 @@ var protocolPattern = /^([a-z0-9.+-]+:)/i,
       'gopher:': true,
       'file:': true
     },
-    querystring = __webpack_require__(119);
+    querystring = __webpack_require__(118);
 
 function urlParse(url, parseQueryString, slashesDenoteHost) {
   if (url && util.isObject(url) && url instanceof Url) return url;
@@ -31753,7 +31819,7 @@ Url.prototype.parseHost = function() {
 
 
 /***/ }),
-/* 54 */
+/* 55 */
 /***/ (function(module, exports) {
 
 module.exports = function(module) {
@@ -31781,7 +31847,7 @@ module.exports = function(module) {
 
 
 /***/ }),
-/* 55 */
+/* 56 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -32111,7 +32177,7 @@ function createSource(path, type) {
 //# sourceMappingURL=VideoBaseTexture.js.map
 
 /***/ }),
-/* 56 */
+/* 57 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -32119,7 +32185,7 @@ function createSource(path, type) {
 
 exports.__esModule = true;
 
-var _GroupD = __webpack_require__(40);
+var _GroupD = __webpack_require__(41);
 
 var _GroupD2 = _interopRequireDefault(_GroupD);
 
@@ -32221,7 +32287,7 @@ exports.default = TextureUvs;
 //# sourceMappingURL=TextureUvs.js.map
 
 /***/ }),
-/* 57 */
+/* 58 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -32589,7 +32655,7 @@ exports.default = SystemRenderer;
 //# sourceMappingURL=SystemRenderer.js.map
 
 /***/ }),
-/* 58 */
+/* 59 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -32753,7 +32819,7 @@ exports.default = BaseRenderTexture;
 //# sourceMappingURL=BaseRenderTexture.js.map
 
 /***/ }),
-/* 59 */
+/* 60 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -32882,7 +32948,7 @@ exports.default = CanvasRenderTarget;
 //# sourceMappingURL=CanvasRenderTarget.js.map
 
 /***/ }),
-/* 60 */
+/* 61 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -32948,7 +33014,7 @@ function canUseNewCanvasBlendModes() {
 //# sourceMappingURL=canUseNewCanvasBlendModes.js.map
 
 /***/ }),
-/* 61 */
+/* 62 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -32956,7 +33022,7 @@ function canUseNewCanvasBlendModes() {
 
 exports.__esModule = true;
 
-var _Filter2 = __webpack_require__(62);
+var _Filter2 = __webpack_require__(63);
 
 var _Filter3 = _interopRequireDefault(_Filter2);
 
@@ -33025,7 +33091,7 @@ exports.default = SpriteMaskFilter;
 //# sourceMappingURL=SpriteMaskFilter.js.map
 
 /***/ }),
-/* 62 */
+/* 63 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -33035,7 +33101,7 @@ exports.__esModule = true;
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-var _extractUniformsFromSrc = __webpack_require__(129);
+var _extractUniformsFromSrc = __webpack_require__(128);
 
 var _extractUniformsFromSrc2 = _interopRequireDefault(_extractUniformsFromSrc);
 
@@ -33226,7 +33292,7 @@ exports.default = Filter;
 //# sourceMappingURL=Filter.js.map
 
 /***/ }),
-/* 63 */
+/* 64 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -33412,7 +33478,7 @@ exports.default = Quad;
 //# sourceMappingURL=Quad.js.map
 
 /***/ }),
-/* 64 */
+/* 65 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -34201,7 +34267,7 @@ function areArraysEqual(array1, array2) {
 //# sourceMappingURL=TextStyle.js.map
 
 /***/ }),
-/* 65 */
+/* 66 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -34508,7 +34574,7 @@ TextMetrics._fonts = {};
 //# sourceMappingURL=TextMetrics.js.map
 
 /***/ }),
-/* 66 */
+/* 67 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -34635,7 +34701,7 @@ exports.default = GraphicsData;
 //# sourceMappingURL=GraphicsData.js.map
 
 /***/ }),
-/* 67 */
+/* 68 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -35286,7 +35352,7 @@ earcut.flatten = function (data) {
 
 
 /***/ }),
-/* 68 */
+/* 69 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -35296,7 +35362,7 @@ exports.__esModule = true;
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-var _autoDetectRenderer = __webpack_require__(69);
+var _autoDetectRenderer = __webpack_require__(70);
 
 var _Container = __webpack_require__(11);
 
@@ -35514,7 +35580,7 @@ exports.default = Application;
 //# sourceMappingURL=Application.js.map
 
 /***/ }),
-/* 69 */
+/* 70 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -35531,7 +35597,7 @@ var _CanvasRenderer = __webpack_require__(12);
 
 var _CanvasRenderer2 = _interopRequireDefault(_CanvasRenderer);
 
-var _WebGLRenderer = __webpack_require__(20);
+var _WebGLRenderer = __webpack_require__(19);
 
 var _WebGLRenderer2 = _interopRequireDefault(_WebGLRenderer);
 
@@ -35588,7 +35654,7 @@ function autoDetectRenderer(options, arg1, arg2, arg3) {
 //# sourceMappingURL=autoDetectRenderer.js.map
 
 /***/ }),
-/* 70 */
+/* 71 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -35651,7 +35717,7 @@ exports.default = {
 //# sourceMappingURL=accessibleTarget.js.map
 
 /***/ }),
-/* 71 */
+/* 72 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -35660,7 +35726,7 @@ exports.default = {
 exports.__esModule = true;
 exports.BitmapText = exports.TilingSpriteRenderer = exports.TilingSprite = exports.TextureTransform = exports.AnimatedSprite = undefined;
 
-var _AnimatedSprite = __webpack_require__(162);
+var _AnimatedSprite = __webpack_require__(161);
 
 Object.defineProperty(exports, 'AnimatedSprite', {
   enumerable: true,
@@ -35678,7 +35744,7 @@ Object.defineProperty(exports, 'TextureTransform', {
   }
 });
 
-var _TilingSprite = __webpack_require__(163);
+var _TilingSprite = __webpack_require__(162);
 
 Object.defineProperty(exports, 'TilingSprite', {
   enumerable: true,
@@ -35687,7 +35753,7 @@ Object.defineProperty(exports, 'TilingSprite', {
   }
 });
 
-var _TilingSpriteRenderer = __webpack_require__(164);
+var _TilingSpriteRenderer = __webpack_require__(163);
 
 Object.defineProperty(exports, 'TilingSpriteRenderer', {
   enumerable: true,
@@ -35696,7 +35762,7 @@ Object.defineProperty(exports, 'TilingSpriteRenderer', {
   }
 });
 
-var _BitmapText = __webpack_require__(165);
+var _BitmapText = __webpack_require__(164);
 
 Object.defineProperty(exports, 'BitmapText', {
   enumerable: true,
@@ -35705,11 +35771,11 @@ Object.defineProperty(exports, 'BitmapText', {
   }
 });
 
+__webpack_require__(165);
+
 __webpack_require__(166);
 
 __webpack_require__(167);
-
-__webpack_require__(168);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -35717,7 +35783,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 //# sourceMappingURL=index.js.map
 
 /***/ }),
-/* 72 */
+/* 73 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -35731,15 +35797,15 @@ var _core = __webpack_require__(0);
 
 var core = _interopRequireWildcard(_core);
 
-var _generateBlurVertSource = __webpack_require__(73);
+var _generateBlurVertSource = __webpack_require__(74);
 
 var _generateBlurVertSource2 = _interopRequireDefault(_generateBlurVertSource);
 
-var _generateBlurFragSource = __webpack_require__(74);
+var _generateBlurFragSource = __webpack_require__(75);
 
 var _generateBlurFragSource2 = _interopRequireDefault(_generateBlurFragSource);
 
-var _getMaxBlurKernelSize = __webpack_require__(75);
+var _getMaxBlurKernelSize = __webpack_require__(76);
 
 var _getMaxBlurKernelSize2 = _interopRequireDefault(_getMaxBlurKernelSize);
 
@@ -35888,7 +35954,7 @@ exports.default = BlurXFilter;
 //# sourceMappingURL=BlurXFilter.js.map
 
 /***/ }),
-/* 73 */
+/* 74 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -35937,7 +36003,7 @@ function generateVertBlurSource(kernelSize, x) {
 //# sourceMappingURL=generateBlurVertSource.js.map
 
 /***/ }),
-/* 74 */
+/* 75 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -35989,7 +36055,7 @@ function generateFragBlurSource(kernelSize) {
 //# sourceMappingURL=generateBlurFragSource.js.map
 
 /***/ }),
-/* 75 */
+/* 76 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -36010,7 +36076,7 @@ function getMaxKernelSize(gl) {
 //# sourceMappingURL=getMaxBlurKernelSize.js.map
 
 /***/ }),
-/* 76 */
+/* 77 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -36024,15 +36090,15 @@ var _core = __webpack_require__(0);
 
 var core = _interopRequireWildcard(_core);
 
-var _generateBlurVertSource = __webpack_require__(73);
+var _generateBlurVertSource = __webpack_require__(74);
 
 var _generateBlurVertSource2 = _interopRequireDefault(_generateBlurVertSource);
 
-var _generateBlurFragSource = __webpack_require__(74);
+var _generateBlurFragSource = __webpack_require__(75);
 
 var _generateBlurFragSource2 = _interopRequireDefault(_generateBlurFragSource);
 
-var _getMaxBlurKernelSize = __webpack_require__(75);
+var _getMaxBlurKernelSize = __webpack_require__(76);
 
 var _getMaxBlurKernelSize2 = _interopRequireDefault(_getMaxBlurKernelSize);
 
@@ -36180,7 +36246,7 @@ exports.default = BlurYFilter;
 //# sourceMappingURL=BlurYFilter.js.map
 
 /***/ }),
-/* 77 */
+/* 78 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -36409,7 +36475,7 @@ exports.default = InteractionData;
 //# sourceMappingURL=InteractionData.js.map
 
 /***/ }),
-/* 78 */
+/* 79 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -36499,7 +36565,7 @@ exports.default = InteractionEvent;
 //# sourceMappingURL=InteractionEvent.js.map
 
 /***/ }),
-/* 79 */
+/* 80 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -36680,7 +36746,7 @@ InteractionTrackingData.FLAGS = Object.freeze({
 //# sourceMappingURL=InteractionTrackingData.js.map
 
 /***/ }),
-/* 80 */
+/* 81 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -36802,7 +36868,7 @@ exports.default = {
 //# sourceMappingURL=interactiveTarget.js.map
 
 /***/ }),
-/* 81 */
+/* 82 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -36881,7 +36947,7 @@ var _core = __webpack_require__(0);
 
 var _resourceLoader = __webpack_require__(15);
 
-var _extras = __webpack_require__(71);
+var _extras = __webpack_require__(72);
 
 function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key]; } } newObj.default = obj; return newObj; } }
 
@@ -36899,7 +36965,7 @@ function parse(resource, texture) {
 //# sourceMappingURL=bitmapFontParser.js.map
 
 /***/ }),
-/* 82 */
+/* 83 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -37071,7 +37137,7 @@ module.exports = exports['default'];
 
 
 /***/ }),
-/* 83 */
+/* 84 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -37108,7 +37174,7 @@ module.exports = function parseURI (str, opts) {
 
 
 /***/ }),
-/* 84 */
+/* 85 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -37322,7 +37388,7 @@ function queue(worker, concurrency) {
 //# sourceMappingURL=async.js.map
 
 /***/ }),
-/* 85 */
+/* 86 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -37395,7 +37461,7 @@ function encodeBinary(input) {
 //# sourceMappingURL=b64.js.map
 
 /***/ }),
-/* 86 */
+/* 87 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -37440,7 +37506,7 @@ exports.getResourcePath = getResourcePath;
 
 var _resourceLoader = __webpack_require__(15);
 
-var _url = __webpack_require__(53);
+var _url = __webpack_require__(54);
 
 var _url2 = _interopRequireDefault(_url);
 
@@ -37459,7 +37525,7 @@ function getResourcePath(resource, baseUrl) {
 //# sourceMappingURL=spritesheetParser.js.map
 
 /***/ }),
-/* 87 */
+/* 88 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -37487,7 +37553,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 //# sourceMappingURL=textureParser.js.map
 
 /***/ }),
-/* 88 */
+/* 89 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -37631,7 +37697,7 @@ exports.default = Plane;
 //# sourceMappingURL=Plane.js.map
 
 /***/ }),
-/* 89 */
+/* 90 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -37694,177 +37760,133 @@ exports.default = CountLimiter;
 //# sourceMappingURL=CountLimiter.js.map
 
 /***/ }),
-/* 90 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/* 91 */
+/***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ColorChangeableGraphic; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_pixi_js__ = __webpack_require__(10);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_pixi_js___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_pixi_js__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_pixi_filters__ = __webpack_require__(197);
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-var _get = function get(object, property, receiver) { if (object === null) object = Function.prototype; var desc = Object.getOwnPropertyDescriptor(object, property); if (desc === undefined) { var parent = Object.getPrototypeOf(object); if (parent === null) { return undefined; } else { return get(parent, property, receiver); } } else if ("value" in desc) { return desc.value; } else { var getter = desc.get; if (getter === undefined) { return undefined; } return getter.call(receiver); } };
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-
-
-
+var __extends = (this && this.__extends) || (function () {
+    var extendStatics = Object.setPrototypeOf ||
+        ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+        function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
+    return function (d, b) {
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+})();
+Object.defineProperty(exports, "__esModule", { value: true });
+var PIXI = __webpack_require__(10);
+var pixi_filters_1 = __webpack_require__(196);
 /**
  * Use ColorChangeableGraphic as a normal PIXI.Graphics with
  * a powerful feature that you can change its fillColor by
  *  `colorChangeableGraphic.backgroundColor = 0x00ff00`
  */
-var ColorChangeableGraphic = function (_PIXI$Graphics) {
-  _inherits(ColorChangeableGraphic, _PIXI$Graphics);
-
-  function ColorChangeableGraphic() {
-    _classCallCheck(this, ColorChangeableGraphic);
-
-    /**
-     * You can use `this.background.filters[0].newColor = 0x0` to change the background color
-     * See more: https://pixijs.github.io/pixi-filters/docs/PIXI.filters.ColorReplaceFilter.html
-     */
-    var _this = _possibleConstructorReturn(this, (ColorChangeableGraphic.__proto__ || Object.getPrototypeOf(ColorChangeableGraphic)).call(this));
-
-    _this.filters = [new __WEBPACK_IMPORTED_MODULE_1_pixi_filters__["a" /* ColorReplaceFilter */](0x0, 0x00ff00)];
-
-    Object.defineProperty(_this, 'backgroundColor', {
-      set: function set(val) {
-        this.filters[0].newColor = val;
-      },
-      get: function get(val) {
-        return this.filters[0].newColor;
-      }
-    });
-    return _this;
-  }
-
-  _createClass(ColorChangeableGraphic, [{
-    key: 'destroy',
-    value: function destroy() {
-      this.filters = null;
-      _get(ColorChangeableGraphic.prototype.__proto__ || Object.getPrototypeOf(ColorChangeableGraphic.prototype), 'destroy', this).call(this);
+var ColorChangeableGraphic = /** @class */ (function (_super) {
+    __extends(ColorChangeableGraphic, _super);
+    function ColorChangeableGraphic() {
+        var _this = _super.call(this) || this;
+        /**
+         * You can use `this.background.filters[0].newColor = 0x0` to change the background color
+         * See more: https://pixijs.github.io/pixi-filters/docs/PIXI.filters.ColorReplaceFilter.html
+         */
+        _this.filters = [new pixi_filters_1.ColorReplaceFilter(0x0, 0x00ff00)];
+        return _this;
     }
-  }]);
+    Object.defineProperty(ColorChangeableGraphic.prototype, "backgroundColor", {
+        get: function () {
+            return (this.filters[0]).newColor;
+        },
+        set: function (val) {
+            (this.filters[0]).newColor = val;
+        },
+        enumerable: true,
+        configurable: true
+    });
+    return ColorChangeableGraphic;
+}(PIXI.Graphics));
+exports.ColorChangeableGraphic = ColorChangeableGraphic;
 
-  return ColorChangeableGraphic;
-}(__WEBPACK_IMPORTED_MODULE_0_pixi_js__["Graphics"]);
-'filehash D9G/kSrnafe4u3wpduSUGfXZUhs=';
 
 /***/ }),
-/* 91 */,
-/* 92 */,
+/* 92 */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__(93);
+
+
+/***/ }),
 /* 93 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(94);
+"use strict";
+
+var __extends = (this && this.__extends) || (function () {
+    var extendStatics = Object.setPrototypeOf ||
+        ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+        function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
+    return function (d, b) {
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+})();
+Object.defineProperty(exports, "__esModule", { value: true });
+var PIXI = __webpack_require__(10);
+var _ = __webpack_require__(22);
+var scene_1 = __webpack_require__(195);
+var subtitle_1 = __webpack_require__(197);
+var view_manager_1 = __webpack_require__(199);
+var parser_1 = __webpack_require__(201);
+var constant_1 = __webpack_require__(39);
+var ScriptDown = /** @class */ (function (_super) {
+    __extends(ScriptDown, _super);
+    function ScriptDown(script, options) {
+        var _this = _super.call(this, _.defaultsDeep(options || {}, constant_1.ScriptDownDefaultOptions)) || this;
+        _this.options = _.defaultsDeep(options || {}, constant_1.ScriptDownDefaultOptions);
+        _this.script = script;
+        // Scene
+        _this.Scene = new scene_1.default(_this, {
+            height: _this.renderer.height,
+            width: _this.renderer.width
+        });
+        _this.stage.addChild(_this.Scene);
+        // Subtitle
+        new PIXI.Text();
+        _this.Subtitle = new subtitle_1.default(_this, {
+            height: 180,
+            width: _this.renderer.width
+        });
+        _this.stage.addChild(_this.Subtitle);
+        _this.Subtitle.x = 0;
+        _this.Subtitle.y = _this.renderer.height - 180;
+        // ViewManager
+        _this.ViewManager = new view_manager_1.default(script, _this);
+        _this.Subtitle.on('pointerdown', function (event) {
+            _this.ViewManager.next(event);
+        });
+        return _this;
+    }
+    return ScriptDown;
+}(PIXI.Application));
+exports.default = ScriptDown;
+window.ScriptDown = ScriptDown;
+window.Parser = parser_1.default;
 
 
 /***/ }),
 /* 94 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_pixi_js__ = __webpack_require__(10);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_pixi_js___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_pixi_js__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__stage__ = __webpack_require__(196);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__subtitle__ = __webpack_require__(198);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__view_manager__ = __webpack_require__(200);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__parser__ = __webpack_require__(204);
-var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-
-
-
-
-
-
-var ScriptDown = function (_PIXI$Container) {
-  _inherits(ScriptDown, _PIXI$Container);
-
-  function ScriptDown(script, gamebase) {
-    _classCallCheck(this, ScriptDown);
-
-    var _this = _possibleConstructorReturn(this, (ScriptDown.__proto__ || Object.getPrototypeOf(ScriptDown)).call(this));
-
-    if (typeof script === 'string') {
-      _this.script = __WEBPACK_IMPORTED_MODULE_4__parser__["a" /* default */].parse(script);
-    } else if ((typeof script === 'undefined' ? 'undefined' : _typeof(script)) === 'object') {
-      _this.script = script;
-    } else {
-      throw new Error('ScriptDown: Invalid type of script');
-    }
-
-    _this.gamebase = gamebase;
-    _this.app = _this.gamebase.app;
-
-    _this.app.stage.addChild(_this);
-
-    // Stage
-    _this.stage = new __WEBPACK_IMPORTED_MODULE_1__stage__["a" /* default */]({
-      height: _this.app.renderer.height,
-      width: _this.app.renderer.width
-    }, _this.gamebase);
-    _this.addChild(_this.stage);
-
-    // Subtitle
-    _this.subtitle = new __WEBPACK_IMPORTED_MODULE_2__subtitle__["a" /* default */]({
-      content: {
-        height: 180,
-        width: _this.app.renderer.width
-      }
-    }, _this.gamebase);
-    _this.addChild(_this.subtitle);
-    _this.subtitle.x = 0;
-    _this.subtitle.y = _this.app.renderer.height - 180;
-
-    /**
-     * Add this after the declaration of this.stage and this.subtitle
-     */
-    _this.ViewManager = new __WEBPACK_IMPORTED_MODULE_3__view_manager__["a" /* default */](script, _this);
-
-    _this.subtitle.on('pointerdown', function (event) {
-      this.ViewManager.next(event);
-    }.bind(_this));
-    return _this;
-  }
-
-  return ScriptDown;
-}(__WEBPACK_IMPORTED_MODULE_0_pixi_js__["Container"]);
-
-// Bad
-
-
-/* harmony default export */ __webpack_exports__["default"] = (ScriptDown);
-window.ScriptDown = ScriptDown;
-window.parser = __WEBPACK_IMPORTED_MODULE_4__parser__["a" /* default */];
-'filehash JTytCQHRWPvZB5D2rwUqdpPGXLE=';
-
-/***/ }),
-/* 95 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-__webpack_require__(96);
+__webpack_require__(95);
+
+__webpack_require__(97);
 
 __webpack_require__(98);
-
-__webpack_require__(99);
 
 if (!window.ArrayBuffer) {
     window.ArrayBuffer = Array;
@@ -37884,13 +37906,13 @@ if (!window.Uint16Array) {
 //# sourceMappingURL=index.js.map
 
 /***/ }),
-/* 96 */
+/* 95 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-var _objectAssign = __webpack_require__(97);
+var _objectAssign = __webpack_require__(96);
 
 var _objectAssign2 = _interopRequireDefault(_objectAssign);
 
@@ -37904,7 +37926,7 @@ if (!Object.assign) {
 //# sourceMappingURL=Object.assign.js.map
 
 /***/ }),
-/* 97 */
+/* 96 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -38001,7 +38023,7 @@ module.exports = shouldUseNative() ? Object.assign : function (target, source) {
 
 
 /***/ }),
-/* 98 */
+/* 97 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -38079,10 +38101,10 @@ if (!global.cancelAnimationFrame) {
     };
 }
 //# sourceMappingURL=requestAnimationFrame.js.map
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(18)))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(17)))
 
 /***/ }),
-/* 99 */
+/* 98 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -38105,7 +38127,7 @@ if (!Math.sign) {
 //# sourceMappingURL=Math.sign.js.map
 
 /***/ }),
-/* 100 */
+/* 99 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -38224,7 +38246,7 @@ exports.default = Circle;
 //# sourceMappingURL=Circle.js.map
 
 /***/ }),
-/* 101 */
+/* 100 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -38351,7 +38373,7 @@ exports.default = Ellipse;
 //# sourceMappingURL=Ellipse.js.map
 
 /***/ }),
-/* 102 */
+/* 101 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -38487,7 +38509,7 @@ exports.default = Polygon;
 //# sourceMappingURL=Polygon.js.map
 
 /***/ }),
-/* 103 */
+/* 102 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -38625,7 +38647,7 @@ exports.default = RoundedRectangle;
 //# sourceMappingURL=RoundedRectangle.js.map
 
 /***/ }),
-/* 104 */
+/* 103 */
 /***/ (function(module, exports) {
 
 
@@ -38657,7 +38679,7 @@ module.exports = createContext;
 
 
 /***/ }),
-/* 105 */
+/* 104 */
 /***/ (function(module, exports) {
 
 var EMPTY_ARRAY_BUFFER = new ArrayBuffer(0);
@@ -38782,11 +38804,11 @@ module.exports = Buffer;
 
 
 /***/ }),
-/* 106 */
+/* 105 */
 /***/ (function(module, exports, __webpack_require__) {
 
 
-var Texture = __webpack_require__(42);
+var Texture = __webpack_require__(43);
 
 /**
  * Helper class to create a webGL Framebuffer
@@ -39013,15 +39035,15 @@ module.exports = Framebuffer;
 
 
 /***/ }),
-/* 107 */
+/* 106 */
 /***/ (function(module, exports, __webpack_require__) {
 
 
-var compileProgram = __webpack_require__(43),
-	extractAttributes = __webpack_require__(44),
-	extractUniforms = __webpack_require__(46),
-	setPrecision = __webpack_require__(48),
-	generateUniformAccessObject = __webpack_require__(49);
+var compileProgram = __webpack_require__(44),
+	extractAttributes = __webpack_require__(45),
+	extractUniforms = __webpack_require__(47),
+	setPrecision = __webpack_require__(49),
+	generateUniformAccessObject = __webpack_require__(50);
 
 /**
  * Helper class to create a webGL Shader
@@ -39110,12 +39132,12 @@ module.exports = Shader;
 
 
 /***/ }),
-/* 108 */
+/* 107 */
 /***/ (function(module, exports, __webpack_require__) {
 
 
 // state object//
-var setVertexAttribArrays = __webpack_require__( 41 );
+var setVertexAttribArrays = __webpack_require__( 42 );
 
 /**
  * Helper class to work with WebGL VertexArrayObjects (vaos)
@@ -39378,22 +39400,22 @@ VertexArrayObject.prototype.getSize = function()
 
 
 /***/ }),
-/* 109 */
+/* 108 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = {
-    compileProgram: __webpack_require__(43),
-    defaultValue: __webpack_require__(47),
-    extractAttributes: __webpack_require__(44),
-    extractUniforms: __webpack_require__(46),
-    generateUniformAccessObject: __webpack_require__(49),
-    setPrecision: __webpack_require__(48),
-    mapSize: __webpack_require__(45),
+    compileProgram: __webpack_require__(44),
+    defaultValue: __webpack_require__(48),
+    extractAttributes: __webpack_require__(45),
+    extractUniforms: __webpack_require__(47),
+    generateUniformAccessObject: __webpack_require__(50),
+    setPrecision: __webpack_require__(49),
+    mapSize: __webpack_require__(46),
     mapType: __webpack_require__(26)
 };
 
 /***/ }),
-/* 110 */
+/* 109 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -39420,7 +39442,7 @@ function maxRecommendedTextures(max) {
 //# sourceMappingURL=maxRecommendedTextures.js.map
 
 /***/ }),
-/* 111 */
+/* 110 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -39439,7 +39461,7 @@ function canUploadSameBuffer() {
 //# sourceMappingURL=canUploadSameBuffer.js.map
 
 /***/ }),
-/* 112 */
+/* 111 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -39510,7 +39532,7 @@ exports.default = {
 //# sourceMappingURL=pluginTarget.js.map
 
 /***/ }),
-/* 113 */
+/* 112 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -39577,7 +39599,7 @@ function performMixins() {
 //# sourceMappingURL=mixin.js.map
 
 /***/ }),
-/* 114 */
+/* 113 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -39612,7 +39634,7 @@ module.exports = function removeItems(arr, startIdx, removeCount)
 
 
 /***/ }),
-/* 115 */
+/* 114 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -39660,7 +39682,7 @@ function mapPremultipliedBlendModes() {
 //# sourceMappingURL=mapPremultipliedBlendModes.js.map
 
 /***/ }),
-/* 116 */
+/* 115 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -39669,7 +39691,7 @@ function mapPremultipliedBlendModes() {
 exports.__esModule = true;
 exports.default = determineCrossOrigin;
 
-var _url2 = __webpack_require__(53);
+var _url2 = __webpack_require__(54);
 
 var _url3 = _interopRequireDefault(_url2);
 
@@ -39721,7 +39743,7 @@ function determineCrossOrigin(url) {
 //# sourceMappingURL=determineCrossOrigin.js.map
 
 /***/ }),
-/* 117 */
+/* 116 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function(module, global) {var __WEBPACK_AMD_DEFINE_RESULT__;/*! https://mths.be/punycode v1.4.1 by @mathias */
@@ -40257,10 +40279,10 @@ function determineCrossOrigin(url) {
 
 }(this));
 
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(54)(module), __webpack_require__(18)))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(55)(module), __webpack_require__(17)))
 
 /***/ }),
-/* 118 */
+/* 117 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -40283,18 +40305,18 @@ module.exports = {
 
 
 /***/ }),
-/* 119 */
+/* 118 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-exports.decode = exports.parse = __webpack_require__(120);
-exports.encode = exports.stringify = __webpack_require__(121);
+exports.decode = exports.parse = __webpack_require__(119);
+exports.encode = exports.stringify = __webpack_require__(120);
 
 
 /***/ }),
-/* 120 */
+/* 119 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -40385,7 +40407,7 @@ var isArray = Array.isArray || function (xs) {
 
 
 /***/ }),
-/* 121 */
+/* 120 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -40477,7 +40499,7 @@ var objectKeys = Object.keys || function (obj) {
 
 
 /***/ }),
-/* 122 */
+/* 121 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -40493,7 +40515,7 @@ var _settings2 = _interopRequireDefault(_settings);
 
 var _const = __webpack_require__(1);
 
-var _TickerListener = __webpack_require__(123);
+var _TickerListener = __webpack_require__(122);
 
 var _TickerListener2 = _interopRequireDefault(_TickerListener);
 
@@ -40955,7 +40977,7 @@ exports.default = Ticker;
 //# sourceMappingURL=Ticker.js.map
 
 /***/ }),
-/* 123 */
+/* 122 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -41134,7 +41156,7 @@ exports.default = TickerListener;
 //# sourceMappingURL=TickerListener.js.map
 
 /***/ }),
-/* 124 */
+/* 123 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -41292,7 +41314,7 @@ _CanvasRenderer2.default.registerPlugin('sprite', CanvasSpriteRenderer);
 //# sourceMappingURL=CanvasSpriteRenderer.js.map
 
 /***/ }),
-/* 125 */
+/* 124 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -41466,7 +41488,7 @@ exports.default = CanvasMaskManager;
 //# sourceMappingURL=CanvasMaskManager.js.map
 
 /***/ }),
-/* 126 */
+/* 125 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -41477,7 +41499,7 @@ exports.default = mapCanvasBlendModesToPixi;
 
 var _const = __webpack_require__(1);
 
-var _canUseNewCanvasBlendModes = __webpack_require__(60);
+var _canUseNewCanvasBlendModes = __webpack_require__(61);
 
 var _canUseNewCanvasBlendModes2 = _interopRequireDefault(_canUseNewCanvasBlendModes);
 
@@ -41543,7 +41565,7 @@ function mapCanvasBlendModesToPixi() {
 //# sourceMappingURL=mapCanvasBlendModesToPixi.js.map
 
 /***/ }),
-/* 127 */
+/* 126 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -41551,11 +41573,11 @@ function mapCanvasBlendModesToPixi() {
 
 exports.__esModule = true;
 
-var _ObjectRenderer2 = __webpack_require__(19);
+var _ObjectRenderer2 = __webpack_require__(18);
 
 var _ObjectRenderer3 = _interopRequireDefault(_ObjectRenderer2);
 
-var _WebGLRenderer = __webpack_require__(20);
+var _WebGLRenderer = __webpack_require__(19);
 
 var _WebGLRenderer2 = _interopRequireDefault(_WebGLRenderer);
 
@@ -41563,15 +41585,15 @@ var _createIndicesForQuads = __webpack_require__(35);
 
 var _createIndicesForQuads2 = _interopRequireDefault(_createIndicesForQuads);
 
-var _generateMultiTextureShader = __webpack_require__(140);
+var _generateMultiTextureShader = __webpack_require__(139);
 
 var _generateMultiTextureShader2 = _interopRequireDefault(_generateMultiTextureShader);
 
-var _checkMaxIfStatmentsInShader = __webpack_require__(141);
+var _checkMaxIfStatmentsInShader = __webpack_require__(140);
 
 var _checkMaxIfStatmentsInShader2 = _interopRequireDefault(_checkMaxIfStatmentsInShader);
 
-var _BatchBuffer = __webpack_require__(142);
+var _BatchBuffer = __webpack_require__(141);
 
 var _BatchBuffer2 = _interopRequireDefault(_BatchBuffer);
 
@@ -42090,7 +42112,7 @@ _WebGLRenderer2.default.registerPlugin('sprite', SpriteRenderer);
 //# sourceMappingURL=SpriteRenderer.js.map
 
 /***/ }),
-/* 128 */
+/* 127 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -42102,7 +42124,7 @@ var _WebGLManager2 = __webpack_require__(13);
 
 var _WebGLManager3 = _interopRequireDefault(_WebGLManager2);
 
-var _SpriteMaskFilter = __webpack_require__(61);
+var _SpriteMaskFilter = __webpack_require__(62);
 
 var _SpriteMaskFilter2 = _interopRequireDefault(_SpriteMaskFilter);
 
@@ -42305,7 +42327,7 @@ exports.default = MaskManager;
 //# sourceMappingURL=MaskManager.js.map
 
 /***/ }),
-/* 129 */
+/* 128 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -42372,7 +42394,7 @@ function extractUniformsFromString(string) {
 //# sourceMappingURL=extractUniformsFromSrc.js.map
 
 /***/ }),
-/* 130 */
+/* 129 */
 /***/ (function(module, exports) {
 
 // shim for using process in browser
@@ -42562,7 +42584,7 @@ process.umask = function() { return 0; };
 
 
 /***/ }),
-/* 131 */
+/* 130 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -42720,7 +42742,7 @@ exports.default = StencilManager;
 //# sourceMappingURL=StencilManager.js.map
 
 /***/ }),
-/* 132 */
+/* 131 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -42732,11 +42754,11 @@ var _WebGLManager2 = __webpack_require__(13);
 
 var _WebGLManager3 = _interopRequireDefault(_WebGLManager2);
 
-var _RenderTarget = __webpack_require__(21);
+var _RenderTarget = __webpack_require__(20);
 
 var _RenderTarget2 = _interopRequireDefault(_RenderTarget);
 
-var _Quad = __webpack_require__(63);
+var _Quad = __webpack_require__(64);
 
 var _Quad2 = _interopRequireDefault(_Quad);
 
@@ -42746,7 +42768,7 @@ var _Shader = __webpack_require__(14);
 
 var _Shader2 = _interopRequireDefault(_Shader);
 
-var _filterTransforms = __webpack_require__(133);
+var _filterTransforms = __webpack_require__(132);
 
 var filterTransforms = _interopRequireWildcard(_filterTransforms);
 
@@ -43319,7 +43341,7 @@ exports.default = FilterManager;
 //# sourceMappingURL=FilterManager.js.map
 
 /***/ }),
-/* 133 */
+/* 132 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -43383,7 +43405,7 @@ function calculateSpriteMatrix(outputMatrix, filterArea, textureSize, sprite) {
 //# sourceMappingURL=filterTransforms.js.map
 
 /***/ }),
-/* 134 */
+/* 133 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -43395,7 +43417,7 @@ var _pixiGlCore = __webpack_require__(5);
 
 var _const = __webpack_require__(1);
 
-var _RenderTarget = __webpack_require__(21);
+var _RenderTarget = __webpack_require__(20);
 
 var _RenderTarget2 = _interopRequireDefault(_RenderTarget);
 
@@ -43644,7 +43666,7 @@ exports.default = TextureManager;
 //# sourceMappingURL=TextureManager.js.map
 
 /***/ }),
-/* 135 */
+/* 134 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -43769,7 +43791,7 @@ exports.default = TextureGarbageCollector;
 //# sourceMappingURL=TextureGarbageCollector.js.map
 
 /***/ }),
-/* 136 */
+/* 135 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -43777,7 +43799,7 @@ exports.default = TextureGarbageCollector;
 
 exports.__esModule = true;
 
-var _mapWebGLBlendModesToPixi = __webpack_require__(137);
+var _mapWebGLBlendModesToPixi = __webpack_require__(136);
 
 var _mapWebGLBlendModesToPixi2 = _interopRequireDefault(_mapWebGLBlendModesToPixi);
 
@@ -44054,7 +44076,7 @@ exports.default = WebGLState;
 //# sourceMappingURL=WebGLState.js.map
 
 /***/ }),
-/* 137 */
+/* 136 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -44108,7 +44130,7 @@ function mapWebGLBlendModesToPixi(gl) {
 //# sourceMappingURL=mapWebGLBlendModesToPixi.js.map
 
 /***/ }),
-/* 138 */
+/* 137 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -44145,7 +44167,7 @@ function mapWebGLDrawModesToPixi(gl) {
 //# sourceMappingURL=mapWebGLDrawModesToPixi.js.map
 
 /***/ }),
-/* 139 */
+/* 138 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -44166,7 +44188,7 @@ function validateContext(gl) {
 //# sourceMappingURL=validateContext.js.map
 
 /***/ }),
-/* 140 */
+/* 139 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -44234,7 +44256,7 @@ function generateSampleSrc(maxTextures) {
 //# sourceMappingURL=generateMultiTextureShader.js.map
 
 /***/ }),
-/* 141 */
+/* 140 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -44314,7 +44336,7 @@ function generateIfTestSrc(maxIfs) {
 //# sourceMappingURL=checkMaxIfStatmentsInShader.js.map
 
 /***/ }),
-/* 142 */
+/* 141 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -44372,7 +44394,7 @@ exports.default = Buffer;
 //# sourceMappingURL=BatchBuffer.js.map
 
 /***/ }),
-/* 143 */
+/* 142 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -44400,15 +44422,15 @@ var _settings = __webpack_require__(3);
 
 var _settings2 = _interopRequireDefault(_settings);
 
-var _TextStyle = __webpack_require__(64);
+var _TextStyle = __webpack_require__(65);
 
 var _TextStyle2 = _interopRequireDefault(_TextStyle);
 
-var _TextMetrics = __webpack_require__(65);
+var _TextMetrics = __webpack_require__(66);
 
 var _TextMetrics2 = _interopRequireDefault(_TextMetrics);
 
-var _trimCanvas = __webpack_require__(144);
+var _trimCanvas = __webpack_require__(143);
 
 var _trimCanvas2 = _interopRequireDefault(_trimCanvas);
 
@@ -45032,7 +45054,7 @@ exports.default = Text;
 //# sourceMappingURL=Text.js.map
 
 /***/ }),
-/* 144 */
+/* 143 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -45113,7 +45135,7 @@ function trimCanvas(canvas) {
 //# sourceMappingURL=trimCanvas.js.map
 
 /***/ }),
-/* 145 */
+/* 144 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -45133,7 +45155,7 @@ var _Texture = __webpack_require__(8);
 
 var _Texture2 = _interopRequireDefault(_Texture);
 
-var _GraphicsData = __webpack_require__(66);
+var _GraphicsData = __webpack_require__(67);
 
 var _GraphicsData2 = _interopRequireDefault(_GraphicsData);
 
@@ -45151,7 +45173,7 @@ var _Bounds = __webpack_require__(27);
 
 var _Bounds2 = _interopRequireDefault(_Bounds);
 
-var _bezierCurveTo2 = __webpack_require__(146);
+var _bezierCurveTo2 = __webpack_require__(145);
 
 var _bezierCurveTo3 = _interopRequireDefault(_bezierCurveTo2);
 
@@ -46290,7 +46312,7 @@ Graphics._SPRITE_TEXTURE = null;
 //# sourceMappingURL=Graphics.js.map
 
 /***/ }),
-/* 146 */
+/* 145 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -46345,7 +46367,7 @@ function bezierCurveTo(fromX, fromY, cpX, cpY, cpX2, cpY2, toX, toY) {
 //# sourceMappingURL=bezierCurveTo.js.map
 
 /***/ }),
-/* 147 */
+/* 146 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -46357,35 +46379,35 @@ var _utils = __webpack_require__(2);
 
 var _const = __webpack_require__(1);
 
-var _ObjectRenderer2 = __webpack_require__(19);
+var _ObjectRenderer2 = __webpack_require__(18);
 
 var _ObjectRenderer3 = _interopRequireDefault(_ObjectRenderer2);
 
-var _WebGLRenderer = __webpack_require__(20);
+var _WebGLRenderer = __webpack_require__(19);
 
 var _WebGLRenderer2 = _interopRequireDefault(_WebGLRenderer);
 
-var _WebGLGraphicsData = __webpack_require__(148);
+var _WebGLGraphicsData = __webpack_require__(147);
 
 var _WebGLGraphicsData2 = _interopRequireDefault(_WebGLGraphicsData);
 
-var _PrimitiveShader = __webpack_require__(149);
+var _PrimitiveShader = __webpack_require__(148);
 
 var _PrimitiveShader2 = _interopRequireDefault(_PrimitiveShader);
 
-var _buildPoly = __webpack_require__(150);
+var _buildPoly = __webpack_require__(149);
 
 var _buildPoly2 = _interopRequireDefault(_buildPoly);
 
-var _buildRectangle = __webpack_require__(151);
+var _buildRectangle = __webpack_require__(150);
 
 var _buildRectangle2 = _interopRequireDefault(_buildRectangle);
 
-var _buildRoundedRectangle = __webpack_require__(152);
+var _buildRoundedRectangle = __webpack_require__(151);
 
 var _buildRoundedRectangle2 = _interopRequireDefault(_buildRoundedRectangle);
 
-var _buildCircle = __webpack_require__(153);
+var _buildCircle = __webpack_require__(152);
 
 var _buildCircle2 = _interopRequireDefault(_buildCircle);
 
@@ -46615,7 +46637,7 @@ _WebGLRenderer2.default.registerPlugin('graphics', GraphicsRenderer);
 //# sourceMappingURL=GraphicsRenderer.js.map
 
 /***/ }),
-/* 148 */
+/* 147 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -46763,7 +46785,7 @@ exports.default = WebGLGraphicsData;
 //# sourceMappingURL=WebGLGraphicsData.js.map
 
 /***/ }),
-/* 149 */
+/* 148 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -46813,7 +46835,7 @@ exports.default = PrimitiveShader;
 //# sourceMappingURL=PrimitiveShader.js.map
 
 /***/ }),
-/* 150 */
+/* 149 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -46822,13 +46844,13 @@ exports.default = PrimitiveShader;
 exports.__esModule = true;
 exports.default = buildPoly;
 
-var _buildLine = __webpack_require__(22);
+var _buildLine = __webpack_require__(21);
 
 var _buildLine2 = _interopRequireDefault(_buildLine);
 
 var _utils = __webpack_require__(2);
 
-var _earcut = __webpack_require__(67);
+var _earcut = __webpack_require__(68);
 
 var _earcut2 = _interopRequireDefault(_earcut);
 
@@ -46904,7 +46926,7 @@ function buildPoly(graphicsData, webGLData, webGLDataNativeLines) {
 //# sourceMappingURL=buildPoly.js.map
 
 /***/ }),
-/* 151 */
+/* 150 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -46913,7 +46935,7 @@ function buildPoly(graphicsData, webGLData, webGLDataNativeLines) {
 exports.__esModule = true;
 exports.default = buildRectangle;
 
-var _buildLine = __webpack_require__(22);
+var _buildLine = __webpack_require__(21);
 
 var _buildLine2 = _interopRequireDefault(_buildLine);
 
@@ -46985,7 +47007,7 @@ function buildRectangle(graphicsData, webGLData, webGLDataNativeLines) {
 //# sourceMappingURL=buildRectangle.js.map
 
 /***/ }),
-/* 152 */
+/* 151 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -46994,11 +47016,11 @@ function buildRectangle(graphicsData, webGLData, webGLDataNativeLines) {
 exports.__esModule = true;
 exports.default = buildRoundedRectangle;
 
-var _earcut = __webpack_require__(67);
+var _earcut = __webpack_require__(68);
 
 var _earcut2 = _interopRequireDefault(_earcut);
 
-var _buildLine = __webpack_require__(22);
+var _buildLine = __webpack_require__(21);
 
 var _buildLine2 = _interopRequireDefault(_buildLine);
 
@@ -47146,7 +47168,7 @@ function quadraticBezierCurve(fromX, fromY, cpX, cpY, toX, toY) {
 //# sourceMappingURL=buildRoundedRectangle.js.map
 
 /***/ }),
-/* 153 */
+/* 152 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -47155,7 +47177,7 @@ function quadraticBezierCurve(fromX, fromY, cpX, cpY, toX, toY) {
 exports.__esModule = true;
 exports.default = buildCircle;
 
-var _buildLine = __webpack_require__(22);
+var _buildLine = __webpack_require__(21);
 
 var _buildLine2 = _interopRequireDefault(_buildLine);
 
@@ -47244,7 +47266,7 @@ function buildCircle(graphicsData, webGLData, webGLDataNativeLines) {
 //# sourceMappingURL=buildCircle.js.map
 
 /***/ }),
-/* 154 */
+/* 153 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -47518,7 +47540,7 @@ _CanvasRenderer2.default.registerPlugin('graphics', CanvasGraphicsRenderer);
 //# sourceMappingURL=CanvasGraphicsRenderer.js.map
 
 /***/ }),
-/* 155 */
+/* 154 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -47785,7 +47807,7 @@ exports.default = Spritesheet;
 //# sourceMappingURL=Spritesheet.js.map
 
 /***/ }),
-/* 156 */
+/* 155 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -48886,7 +48908,7 @@ function deprecation(core) {
 //# sourceMappingURL=deprecation.js.map
 
 /***/ }),
-/* 157 */
+/* 156 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -48894,7 +48916,7 @@ function deprecation(core) {
 
 exports.__esModule = true;
 
-var _accessibleTarget = __webpack_require__(70);
+var _accessibleTarget = __webpack_require__(71);
 
 Object.defineProperty(exports, 'accessibleTarget', {
   enumerable: true,
@@ -48903,7 +48925,7 @@ Object.defineProperty(exports, 'accessibleTarget', {
   }
 });
 
-var _AccessibilityManager = __webpack_require__(158);
+var _AccessibilityManager = __webpack_require__(157);
 
 Object.defineProperty(exports, 'AccessibilityManager', {
   enumerable: true,
@@ -48916,7 +48938,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 //# sourceMappingURL=index.js.map
 
 /***/ }),
-/* 158 */
+/* 157 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -48932,7 +48954,7 @@ var _ismobilejs = __webpack_require__(28);
 
 var _ismobilejs2 = _interopRequireDefault(_ismobilejs);
 
-var _accessibleTarget = __webpack_require__(70);
+var _accessibleTarget = __webpack_require__(71);
 
 var _accessibleTarget2 = _interopRequireDefault(_accessibleTarget);
 
@@ -49415,7 +49437,7 @@ core.CanvasRenderer.registerPlugin('accessibility', AccessibilityManager);
 //# sourceMappingURL=AccessibilityManager.js.map
 
 /***/ }),
-/* 159 */
+/* 158 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -49423,7 +49445,7 @@ core.CanvasRenderer.registerPlugin('accessibility', AccessibilityManager);
 
 exports.__esModule = true;
 
-var _WebGLExtract = __webpack_require__(160);
+var _WebGLExtract = __webpack_require__(159);
 
 Object.defineProperty(exports, 'webgl', {
   enumerable: true,
@@ -49432,7 +49454,7 @@ Object.defineProperty(exports, 'webgl', {
   }
 });
 
-var _CanvasExtract = __webpack_require__(161);
+var _CanvasExtract = __webpack_require__(160);
 
 Object.defineProperty(exports, 'canvas', {
   enumerable: true,
@@ -49445,7 +49467,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 //# sourceMappingURL=index.js.map
 
 /***/ }),
-/* 160 */
+/* 159 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -49673,7 +49695,7 @@ core.WebGLRenderer.registerPlugin('extract', WebGLExtract);
 //# sourceMappingURL=WebGLExtract.js.map
 
 /***/ }),
-/* 161 */
+/* 160 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -49858,7 +49880,7 @@ core.CanvasRenderer.registerPlugin('extract', CanvasExtract);
 //# sourceMappingURL=CanvasExtract.js.map
 
 /***/ }),
-/* 162 */
+/* 161 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -50272,7 +50294,7 @@ exports.default = AnimatedSprite;
 //# sourceMappingURL=AnimatedSprite.js.map
 
 /***/ }),
-/* 163 */
+/* 162 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -50727,7 +50749,7 @@ exports.default = TilingSprite;
 //# sourceMappingURL=TilingSprite.js.map
 
 /***/ }),
-/* 164 */
+/* 163 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -50894,7 +50916,7 @@ core.WebGLRenderer.registerPlugin('tilingSprite', TilingSpriteRenderer);
 //# sourceMappingURL=TilingSpriteRenderer.js.map
 
 /***/ }),
-/* 165 */
+/* 164 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -50908,7 +50930,7 @@ var _core = __webpack_require__(0);
 
 var core = _interopRequireWildcard(_core);
 
-var _ObservablePoint = __webpack_require__(39);
+var _ObservablePoint = __webpack_require__(40);
 
 var _ObservablePoint2 = _interopRequireDefault(_ObservablePoint);
 
@@ -51487,7 +51509,7 @@ BitmapText.fonts = {};
 //# sourceMappingURL=BitmapText.js.map
 
 /***/ }),
-/* 166 */
+/* 165 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -51896,7 +51918,7 @@ DisplayObject.prototype._cacheAsBitmapDestroy = function _cacheAsBitmapDestroy(o
 //# sourceMappingURL=cacheAsBitmap.js.map
 
 /***/ }),
-/* 167 */
+/* 166 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -51935,7 +51957,7 @@ core.Container.prototype.getChildByName = function getChildByName(name) {
 //# sourceMappingURL=getChildByName.js.map
 
 /***/ }),
-/* 168 */
+/* 167 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -51973,7 +51995,7 @@ core.DisplayObject.prototype.getGlobalPosition = function getGlobalPosition() {
 //# sourceMappingURL=getGlobalPosition.js.map
 
 /***/ }),
-/* 169 */
+/* 168 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -51981,7 +52003,7 @@ core.DisplayObject.prototype.getGlobalPosition = function getGlobalPosition() {
 
 exports.__esModule = true;
 
-var _FXAAFilter = __webpack_require__(170);
+var _FXAAFilter = __webpack_require__(169);
 
 Object.defineProperty(exports, 'FXAAFilter', {
   enumerable: true,
@@ -51990,7 +52012,7 @@ Object.defineProperty(exports, 'FXAAFilter', {
   }
 });
 
-var _NoiseFilter = __webpack_require__(171);
+var _NoiseFilter = __webpack_require__(170);
 
 Object.defineProperty(exports, 'NoiseFilter', {
   enumerable: true,
@@ -51999,7 +52021,7 @@ Object.defineProperty(exports, 'NoiseFilter', {
   }
 });
 
-var _DisplacementFilter = __webpack_require__(172);
+var _DisplacementFilter = __webpack_require__(171);
 
 Object.defineProperty(exports, 'DisplacementFilter', {
   enumerable: true,
@@ -52008,7 +52030,7 @@ Object.defineProperty(exports, 'DisplacementFilter', {
   }
 });
 
-var _BlurFilter = __webpack_require__(173);
+var _BlurFilter = __webpack_require__(172);
 
 Object.defineProperty(exports, 'BlurFilter', {
   enumerable: true,
@@ -52017,7 +52039,7 @@ Object.defineProperty(exports, 'BlurFilter', {
   }
 });
 
-var _BlurXFilter = __webpack_require__(72);
+var _BlurXFilter = __webpack_require__(73);
 
 Object.defineProperty(exports, 'BlurXFilter', {
   enumerable: true,
@@ -52026,7 +52048,7 @@ Object.defineProperty(exports, 'BlurXFilter', {
   }
 });
 
-var _BlurYFilter = __webpack_require__(76);
+var _BlurYFilter = __webpack_require__(77);
 
 Object.defineProperty(exports, 'BlurYFilter', {
   enumerable: true,
@@ -52035,7 +52057,7 @@ Object.defineProperty(exports, 'BlurYFilter', {
   }
 });
 
-var _ColorMatrixFilter = __webpack_require__(174);
+var _ColorMatrixFilter = __webpack_require__(173);
 
 Object.defineProperty(exports, 'ColorMatrixFilter', {
   enumerable: true,
@@ -52044,7 +52066,7 @@ Object.defineProperty(exports, 'ColorMatrixFilter', {
   }
 });
 
-var _VoidFilter = __webpack_require__(175);
+var _VoidFilter = __webpack_require__(174);
 
 Object.defineProperty(exports, 'VoidFilter', {
   enumerable: true,
@@ -52057,7 +52079,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 //# sourceMappingURL=index.js.map
 
 /***/ }),
-/* 170 */
+/* 169 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -52116,7 +52138,7 @@ exports.default = FXAAFilter;
 //# sourceMappingURL=FXAAFilter.js.map
 
 /***/ }),
-/* 171 */
+/* 170 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -52218,7 +52240,7 @@ exports.default = NoiseFilter;
 //# sourceMappingURL=NoiseFilter.js.map
 
 /***/ }),
-/* 172 */
+/* 171 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -52333,7 +52355,7 @@ exports.default = DisplacementFilter;
 //# sourceMappingURL=DisplacementFilter.js.map
 
 /***/ }),
-/* 173 */
+/* 172 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -52347,11 +52369,11 @@ var _core = __webpack_require__(0);
 
 var core = _interopRequireWildcard(_core);
 
-var _BlurXFilter = __webpack_require__(72);
+var _BlurXFilter = __webpack_require__(73);
 
 var _BlurXFilter2 = _interopRequireDefault(_BlurXFilter);
 
-var _BlurYFilter = __webpack_require__(76);
+var _BlurYFilter = __webpack_require__(77);
 
 var _BlurYFilter2 = _interopRequireDefault(_BlurYFilter);
 
@@ -52512,7 +52534,7 @@ exports.default = BlurFilter;
 //# sourceMappingURL=BlurFilter.js.map
 
 /***/ }),
-/* 174 */
+/* 173 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -53068,7 +53090,7 @@ ColorMatrixFilter.prototype.grayscale = ColorMatrixFilter.prototype.greyscale;
 //# sourceMappingURL=ColorMatrixFilter.js.map
 
 /***/ }),
-/* 175 */
+/* 174 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -53123,7 +53145,7 @@ exports.default = VoidFilter;
 //# sourceMappingURL=VoidFilter.js.map
 
 /***/ }),
-/* 176 */
+/* 175 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -53131,7 +53153,7 @@ exports.default = VoidFilter;
 
 exports.__esModule = true;
 
-var _InteractionData = __webpack_require__(77);
+var _InteractionData = __webpack_require__(78);
 
 Object.defineProperty(exports, 'InteractionData', {
   enumerable: true,
@@ -53140,7 +53162,7 @@ Object.defineProperty(exports, 'InteractionData', {
   }
 });
 
-var _InteractionManager = __webpack_require__(177);
+var _InteractionManager = __webpack_require__(176);
 
 Object.defineProperty(exports, 'InteractionManager', {
   enumerable: true,
@@ -53149,7 +53171,7 @@ Object.defineProperty(exports, 'InteractionManager', {
   }
 });
 
-var _interactiveTarget = __webpack_require__(80);
+var _interactiveTarget = __webpack_require__(81);
 
 Object.defineProperty(exports, 'interactiveTarget', {
   enumerable: true,
@@ -53158,7 +53180,7 @@ Object.defineProperty(exports, 'interactiveTarget', {
   }
 });
 
-var _InteractionTrackingData = __webpack_require__(79);
+var _InteractionTrackingData = __webpack_require__(80);
 
 Object.defineProperty(exports, 'InteractionTrackingData', {
   enumerable: true,
@@ -53167,7 +53189,7 @@ Object.defineProperty(exports, 'InteractionTrackingData', {
   }
 });
 
-var _InteractionEvent = __webpack_require__(78);
+var _InteractionEvent = __webpack_require__(79);
 
 Object.defineProperty(exports, 'InteractionEvent', {
   enumerable: true,
@@ -53180,7 +53202,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 //# sourceMappingURL=index.js.map
 
 /***/ }),
-/* 177 */
+/* 176 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -53194,15 +53216,15 @@ var _core = __webpack_require__(0);
 
 var core = _interopRequireWildcard(_core);
 
-var _InteractionData = __webpack_require__(77);
+var _InteractionData = __webpack_require__(78);
 
 var _InteractionData2 = _interopRequireDefault(_InteractionData);
 
-var _InteractionEvent = __webpack_require__(78);
+var _InteractionEvent = __webpack_require__(79);
 
 var _InteractionEvent2 = _interopRequireDefault(_InteractionEvent);
 
-var _InteractionTrackingData = __webpack_require__(79);
+var _InteractionTrackingData = __webpack_require__(80);
 
 var _InteractionTrackingData2 = _interopRequireDefault(_InteractionTrackingData);
 
@@ -53210,7 +53232,7 @@ var _eventemitter = __webpack_require__(7);
 
 var _eventemitter2 = _interopRequireDefault(_eventemitter);
 
-var _interactiveTarget = __webpack_require__(80);
+var _interactiveTarget = __webpack_require__(81);
 
 var _interactiveTarget2 = _interopRequireDefault(_interactiveTarget);
 
@@ -54945,7 +54967,7 @@ core.CanvasRenderer.registerPlugin('interaction', InteractionManager);
 //# sourceMappingURL=InteractionManager.js.map
 
 /***/ }),
-/* 178 */
+/* 177 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -54954,7 +54976,7 @@ core.CanvasRenderer.registerPlugin('interaction', InteractionManager);
 exports.__esModule = true;
 exports.shared = exports.Resource = exports.textureParser = exports.getResourcePath = exports.spritesheetParser = exports.parseBitmapFontData = exports.bitmapFontParser = exports.Loader = undefined;
 
-var _bitmapFontParser = __webpack_require__(81);
+var _bitmapFontParser = __webpack_require__(82);
 
 Object.defineProperty(exports, 'bitmapFontParser', {
     enumerable: true,
@@ -54969,7 +54991,7 @@ Object.defineProperty(exports, 'parseBitmapFontData', {
     }
 });
 
-var _spritesheetParser = __webpack_require__(86);
+var _spritesheetParser = __webpack_require__(87);
 
 Object.defineProperty(exports, 'spritesheetParser', {
     enumerable: true,
@@ -54984,7 +55006,7 @@ Object.defineProperty(exports, 'getResourcePath', {
     }
 });
 
-var _textureParser = __webpack_require__(87);
+var _textureParser = __webpack_require__(88);
 
 Object.defineProperty(exports, 'textureParser', {
     enumerable: true,
@@ -55002,11 +55024,11 @@ Object.defineProperty(exports, 'Resource', {
     }
 });
 
-var _Application = __webpack_require__(68);
+var _Application = __webpack_require__(69);
 
 var _Application2 = _interopRequireDefault(_Application);
 
-var _loader = __webpack_require__(180);
+var _loader = __webpack_require__(179);
 
 var _loader2 = _interopRequireDefault(_loader);
 
@@ -55078,7 +55100,7 @@ AppPrototype.destroy = function destroy(removeView) {
 //# sourceMappingURL=index.js.map
 
 /***/ }),
-/* 179 */
+/* 178 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -55088,15 +55110,15 @@ exports.__esModule = true;
 
 var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
 
-var _miniSignals = __webpack_require__(82);
+var _miniSignals = __webpack_require__(83);
 
 var _miniSignals2 = _interopRequireDefault(_miniSignals);
 
-var _parseUri = __webpack_require__(83);
+var _parseUri = __webpack_require__(84);
 
 var _parseUri2 = _interopRequireDefault(_parseUri);
 
-var _async = __webpack_require__(84);
+var _async = __webpack_require__(85);
 
 var async = _interopRequireWildcard(_async);
 
@@ -55701,7 +55723,7 @@ exports.default = Loader;
 //# sourceMappingURL=Loader.js.map
 
 /***/ }),
-/* 180 */
+/* 179 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -55713,21 +55735,21 @@ var _resourceLoader = __webpack_require__(15);
 
 var _resourceLoader2 = _interopRequireDefault(_resourceLoader);
 
-var _blob = __webpack_require__(181);
+var _blob = __webpack_require__(180);
 
 var _eventemitter = __webpack_require__(7);
 
 var _eventemitter2 = _interopRequireDefault(_eventemitter);
 
-var _textureParser = __webpack_require__(87);
+var _textureParser = __webpack_require__(88);
 
 var _textureParser2 = _interopRequireDefault(_textureParser);
 
-var _spritesheetParser = __webpack_require__(86);
+var _spritesheetParser = __webpack_require__(87);
 
 var _spritesheetParser2 = _interopRequireDefault(_spritesheetParser);
 
-var _bitmapFontParser = __webpack_require__(81);
+var _bitmapFontParser = __webpack_require__(82);
 
 var _bitmapFontParser2 = _interopRequireDefault(_bitmapFontParser);
 
@@ -55877,7 +55899,7 @@ Resource.setExtensionXhrType('fnt', Resource.XHR_RESPONSE_TYPE.DOCUMENT);
 //# sourceMappingURL=loader.js.map
 
 /***/ }),
-/* 181 */
+/* 180 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -55893,7 +55915,7 @@ var _Resource = __webpack_require__(37);
 
 var _Resource2 = _interopRequireDefault(_Resource);
 
-var _b = __webpack_require__(85);
+var _b = __webpack_require__(86);
 
 var _b2 = _interopRequireDefault(_b);
 
@@ -55970,7 +55992,7 @@ function blobMiddlewareFactory() {
 //# sourceMappingURL=blob.js.map
 
 /***/ }),
-/* 182 */
+/* 181 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -55987,7 +56009,7 @@ Object.defineProperty(exports, 'Mesh', {
   }
 });
 
-var _MeshRenderer = __webpack_require__(183);
+var _MeshRenderer = __webpack_require__(182);
 
 Object.defineProperty(exports, 'MeshRenderer', {
   enumerable: true,
@@ -55996,7 +56018,7 @@ Object.defineProperty(exports, 'MeshRenderer', {
   }
 });
 
-var _CanvasMeshRenderer = __webpack_require__(184);
+var _CanvasMeshRenderer = __webpack_require__(183);
 
 Object.defineProperty(exports, 'CanvasMeshRenderer', {
   enumerable: true,
@@ -56005,7 +56027,7 @@ Object.defineProperty(exports, 'CanvasMeshRenderer', {
   }
 });
 
-var _Plane = __webpack_require__(88);
+var _Plane = __webpack_require__(89);
 
 Object.defineProperty(exports, 'Plane', {
   enumerable: true,
@@ -56014,7 +56036,7 @@ Object.defineProperty(exports, 'Plane', {
   }
 });
 
-var _NineSlicePlane = __webpack_require__(185);
+var _NineSlicePlane = __webpack_require__(184);
 
 Object.defineProperty(exports, 'NineSlicePlane', {
   enumerable: true,
@@ -56023,7 +56045,7 @@ Object.defineProperty(exports, 'NineSlicePlane', {
   }
 });
 
-var _Rope = __webpack_require__(186);
+var _Rope = __webpack_require__(185);
 
 Object.defineProperty(exports, 'Rope', {
   enumerable: true,
@@ -56036,7 +56058,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 //# sourceMappingURL=index.js.map
 
 /***/ }),
-/* 183 */
+/* 182 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -56192,7 +56214,7 @@ core.WebGLRenderer.registerPlugin('mesh', MeshRenderer);
 //# sourceMappingURL=MeshRenderer.js.map
 
 /***/ }),
-/* 184 */
+/* 183 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -56480,7 +56502,7 @@ core.CanvasRenderer.registerPlugin('mesh', MeshSpriteRenderer);
 //# sourceMappingURL=CanvasMeshRenderer.js.map
 
 /***/ }),
-/* 185 */
+/* 184 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -56490,7 +56512,7 @@ exports.__esModule = true;
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-var _Plane2 = __webpack_require__(88);
+var _Plane2 = __webpack_require__(89);
 
 var _Plane3 = _interopRequireDefault(_Plane2);
 
@@ -56871,7 +56893,7 @@ exports.default = NineSlicePlane;
 //# sourceMappingURL=NineSlicePlane.js.map
 
 /***/ }),
-/* 186 */
+/* 185 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -57112,7 +57134,7 @@ exports.default = Rope;
 //# sourceMappingURL=Rope.js.map
 
 /***/ }),
-/* 187 */
+/* 186 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -57120,7 +57142,7 @@ exports.default = Rope;
 
 exports.__esModule = true;
 
-var _ParticleContainer = __webpack_require__(188);
+var _ParticleContainer = __webpack_require__(187);
 
 Object.defineProperty(exports, 'ParticleContainer', {
   enumerable: true,
@@ -57129,7 +57151,7 @@ Object.defineProperty(exports, 'ParticleContainer', {
   }
 });
 
-var _ParticleRenderer = __webpack_require__(189);
+var _ParticleRenderer = __webpack_require__(188);
 
 Object.defineProperty(exports, 'ParticleRenderer', {
   enumerable: true,
@@ -57142,7 +57164,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 //# sourceMappingURL=index.js.map
 
 /***/ }),
-/* 188 */
+/* 187 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -57525,7 +57547,7 @@ exports.default = ParticleContainer;
 //# sourceMappingURL=ParticleContainer.js.map
 
 /***/ }),
-/* 189 */
+/* 188 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -57537,11 +57559,11 @@ var _core = __webpack_require__(0);
 
 var core = _interopRequireWildcard(_core);
 
-var _ParticleShader = __webpack_require__(190);
+var _ParticleShader = __webpack_require__(189);
 
 var _ParticleShader2 = _interopRequireDefault(_ParticleShader);
 
-var _ParticleBuffer = __webpack_require__(191);
+var _ParticleBuffer = __webpack_require__(190);
 
 var _ParticleBuffer2 = _interopRequireDefault(_ParticleBuffer);
 
@@ -58006,7 +58028,7 @@ core.WebGLRenderer.registerPlugin('particle', ParticleRenderer);
 //# sourceMappingURL=ParticleRenderer.js.map
 
 /***/ }),
-/* 190 */
+/* 189 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -58054,7 +58076,7 @@ exports.default = ParticleShader;
 //# sourceMappingURL=ParticleShader.js.map
 
 /***/ }),
-/* 191 */
+/* 190 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -58302,7 +58324,7 @@ exports.default = ParticleBuffer;
 //# sourceMappingURL=ParticleBuffer.js.map
 
 /***/ }),
-/* 192 */
+/* 191 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -58310,7 +58332,7 @@ exports.default = ParticleBuffer;
 
 exports.__esModule = true;
 
-var _WebGLPrepare = __webpack_require__(193);
+var _WebGLPrepare = __webpack_require__(192);
 
 Object.defineProperty(exports, 'webgl', {
   enumerable: true,
@@ -58319,7 +58341,7 @@ Object.defineProperty(exports, 'webgl', {
   }
 });
 
-var _CanvasPrepare = __webpack_require__(194);
+var _CanvasPrepare = __webpack_require__(193);
 
 Object.defineProperty(exports, 'canvas', {
   enumerable: true,
@@ -58337,7 +58359,7 @@ Object.defineProperty(exports, 'BasePrepare', {
   }
 });
 
-var _CountLimiter = __webpack_require__(89);
+var _CountLimiter = __webpack_require__(90);
 
 Object.defineProperty(exports, 'CountLimiter', {
   enumerable: true,
@@ -58346,7 +58368,7 @@ Object.defineProperty(exports, 'CountLimiter', {
   }
 });
 
-var _TimeLimiter = __webpack_require__(195);
+var _TimeLimiter = __webpack_require__(194);
 
 Object.defineProperty(exports, 'TimeLimiter', {
   enumerable: true,
@@ -58359,7 +58381,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 //# sourceMappingURL=index.js.map
 
 /***/ }),
-/* 193 */
+/* 192 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -58486,7 +58508,7 @@ core.WebGLRenderer.registerPlugin('prepare', WebGLPrepare);
 //# sourceMappingURL=WebGLPrepare.js.map
 
 /***/ }),
-/* 194 */
+/* 193 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -58611,7 +58633,7 @@ core.CanvasRenderer.registerPlugin('prepare', CanvasPrepare);
 //# sourceMappingURL=CanvasPrepare.js.map
 
 /***/ }),
-/* 195 */
+/* 194 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -58674,132 +58696,96 @@ exports.default = TimeLimiter;
 //# sourceMappingURL=TimeLimiter.js.map
 
 /***/ }),
-/* 196 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/* 195 */
+/***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_pixi_js__ = __webpack_require__(10);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_pixi_js___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_pixi_js__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_lodash__ = __webpack_require__(17);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_lodash___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_lodash__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__utils__ = __webpack_require__(90);
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-
-
-
-
-var Stage = function (_PIXI$Container) {
-  _inherits(Stage, _PIXI$Container);
-
-  function Stage(options, gamebase) {
-    _classCallCheck(this, Stage);
-
-    var _this = _possibleConstructorReturn(this, (Stage.__proto__ || Object.getPrototypeOf(Stage)).call(this));
-
-    _this.gamebase = gamebase;
-    _this.app = _this.gamebase.app;
-
-    _this.options = __WEBPACK_IMPORTED_MODULE_1_lodash___default.a.merge({
-      height: 600,
-      width: 800,
-      backgroundColor: 0x90caf9,
-      characters: {}
-    }, options);
-
-    // shortcut
-    _this.characters = _this.options.characters;
-
-    // Make container being interactive
-    _this.interactive = true;
-
-    // Draw the background rectangle
-    _this.background = new __WEBPACK_IMPORTED_MODULE_2__utils__["a" /* ColorChangeableGraphic */]();
-    _this.addChild(_this.background);
-    _this.background.beginFill(0x0);
-    _this.background.drawRect(0, 0, _this.options.width, _this.options.height);
-    _this.background.endFill();
-    _this.background.backgroundColor = _this.options.backgroundColor;
-    return _this;
-  }
-
-  /**
-   * @param {String} name should be unique to others
-   * @param {Character} character
-   */
-
-
-  _createClass(Stage, [{
-    key: 'addCharacter',
-    value: function addCharacter(name, character) {
-      this.addChild(character);
-      if (this.options.characters[name]) {
-        console.log('The name of character', name, 'has already exist.');
-      }
-      this.options.characters[name] = character;
+var __extends = (this && this.__extends) || (function () {
+    var extendStatics = Object.setPrototypeOf ||
+        ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+        function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
+    return function (d, b) {
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+})();
+Object.defineProperty(exports, "__esModule", { value: true });
+var PIXI = __webpack_require__(10);
+var _ = __webpack_require__(22);
+var utils_1 = __webpack_require__(91);
+var constant_1 = __webpack_require__(39);
+var ImplementedScene = /** @class */ (function (_super) {
+    __extends(ImplementedScene, _super);
+    function ImplementedScene(app, options) {
+        var _this = _super.call(this) || this;
+        _this.app = app;
+        _this.options = _.defaultsDeep(options, constant_1.SceneDefaultOptions);
+        // shortcut
+        _this.characters = _this.options.characters;
+        // Make container being interactive
+        _this.interactive = true;
+        // Draw the background rectangle
+        _this.background = new utils_1.ColorChangeableGraphic();
+        _this.addChild(_this.background);
+        _this.background.beginFill(0x0);
+        _this.background.drawRect(0, 0, _this.options.width, _this.options.height);
+        _this.background.endFill();
+        _this.background.backgroundColor = _this.options.backgroundColor;
+        return _this;
     }
-  }, {
-    key: 'selectCharacter',
-    value: function selectCharacter(name) {
-      if (!this.options.characters[name]) {
-        console.log('The name of character', name, 'is not exist.');
-      } else {
-        return this.options.characters[name];
-      }
-    }
-  }, {
-    key: 'addProp',
-    value: function addProp(name, prop) {}
-
+    /**
+     * @param {String} name should be unique to others
+     * @param {Character} character
+     */
+    ImplementedScene.prototype.addCharacter = function (name, character) {
+        this.addChild(character);
+        if (this.options.characters[name]) {
+            console.log('The name of character', name, 'has already exist.');
+        }
+        this.options.characters[name] = character;
+        return character;
+    };
     /**
      * @param {String} name
      * @param {any} value
      */
+    ImplementedScene.prototype.set = function (name, value) {
+        this[name] = value;
+        return this;
+    };
+    return ImplementedScene;
+}(PIXI.Container));
+exports.default = ImplementedScene;
 
-  }, {
-    key: 'set',
-    value: function set(name, value) {
-      this[name] = value;
-    }
-  }]);
-
-  return Stage;
-}(__WEBPACK_IMPORTED_MODULE_0_pixi_js__["Container"]);
-
-/* harmony default export */ __webpack_exports__["a"] = (Stage);
-'filehash mYzxPkEMrZZ9d0CJjlzZjRsNx9Y=';
 
 /***/ }),
-/* 197 */
+/* 196 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* unused harmony export AsciiFilter */
-/* unused harmony export BloomFilter */
-/* unused harmony export BulgePinchFilter */
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ColorReplaceFilter; });
-/* unused harmony export ConvolutionFilter */
-/* unused harmony export CrossHatchFilter */
-/* unused harmony export DotFilter */
-/* unused harmony export DropShadowFilter */
-/* unused harmony export EmbossFilter */
-/* unused harmony export GlowFilter */
-/* unused harmony export OutlineFilter */
-/* unused harmony export PixelateFilter */
-/* unused harmony export RGBSplitFilter */
-/* unused harmony export ShockwaveFilter */
-/* unused harmony export SimpleLightmapFilter */
-/* unused harmony export TiltShiftFilter */
-/* unused harmony export TiltShiftAxisFilter */
-/* unused harmony export TiltShiftXFilter */
-/* unused harmony export TiltShiftYFilter */
-/* unused harmony export TwistFilter */
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AsciiFilter", function() { return AsciiFilter; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "BloomFilter", function() { return BloomFilter; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "BulgePinchFilter", function() { return BulgePinchFilter; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ColorReplaceFilter", function() { return ColorReplaceFilter; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ConvolutionFilter", function() { return ConvolutionFilter; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CrossHatchFilter", function() { return CrossHatchFilter; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "DotFilter", function() { return DotFilter; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "DropShadowFilter", function() { return DropShadowFilter; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "EmbossFilter", function() { return EmbossFilter; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "GlowFilter", function() { return GlowFilter; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "OutlineFilter", function() { return OutlineFilter; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "PixelateFilter", function() { return PixelateFilter; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "RGBSplitFilter", function() { return RGBSplitFilter; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ShockwaveFilter", function() { return ShockwaveFilter; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SimpleLightmapFilter", function() { return SimpleLightmapFilter; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "TiltShiftFilter", function() { return TiltShiftFilter; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "TiltShiftAxisFilter", function() { return TiltShiftAxisFilter; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "TiltShiftXFilter", function() { return TiltShiftXFilter; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "TiltShiftYFilter", function() { return TiltShiftYFilter; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "TwistFilter", function() { return TwistFilter; });
 /*!
  * pixi-filters - v2.0.1
  * Compiled Tue, 12 Sep 2017 17:14:10 UTC
@@ -59004,119 +58990,73 @@ var TwistFilter=function(o){function n(n,r,t){void 0===n&&(n=200),void 0===r&&(r
 
 
 /***/ }),
-/* 198 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/* 197 */
+/***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_pixi_js__ = __webpack_require__(10);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_pixi_js___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_pixi_js__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_pixi_multistyle_text__ = __webpack_require__(199);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_pixi_multistyle_text___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_pixi_multistyle_text__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_lodash__ = __webpack_require__(17);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_lodash___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_lodash__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__utils__ = __webpack_require__(90);
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-
-
-
-
-
-var Subtitle = function (_PIXI$Container) {
-  _inherits(Subtitle, _PIXI$Container);
-
-  function Subtitle(options, gamebase) {
-    _classCallCheck(this, Subtitle);
-
-    var _this = _possibleConstructorReturn(this, (Subtitle.__proto__ || Object.getPrototypeOf(Subtitle)).call(this));
-
-    _this.gamebase = gamebase;
-    _this.app = _this.gamebase.app;
-
-    _this.options = __WEBPACK_IMPORTED_MODULE_2_lodash___default.a.merge({
-      height: 180,
-      width: 800,
-      backgroundColor: 0x009688,
-      paddingTop: 30,
-      paddingRight: 30,
-      paddingBottom: 30,
-      paddingLeft: 30,
-      content: {
-        'default': {
-          fontFamily: 'Arial',
-          fontSize: '20px',
-          fontWeight: 100,
-          fill: '#cccccc',
-          align: 'left',
-          wordWrap: true,
-          wordWrapWidth: 740
-        },
-        'b': {
-          fontWeight: 'bold'
-        },
-        'i': {
-          fontStyle: 'italic'
-        }
-      }
-    }, options);
-
-    // Make container being interactive
-    _this.interactive = true;
-
-    // Draw the background rectangle
-    _this.background = new __WEBPACK_IMPORTED_MODULE_3__utils__["a" /* ColorChangeableGraphic */]();
-    _this.addChild(_this.background);
-    _this.background.beginFill(0x0);
-    _this.background.drawRect(0, 0, _this.options.width, _this.options.height);
-    _this.background.endFill();
-    _this.background.backgroundColor = _this.options.backgroundColor;
-
-    /**
-     * Draw the content
-     * Seems that the `fill` should be string, cannot be 0x00ff00
-     * See more: https://www.npmjs.com/package/pixi-multistyle-text
-     */
-    _this.content = new __WEBPACK_IMPORTED_MODULE_1_pixi_multistyle_text___default.a('哈哈哈！你中計了吧！有種點我啊\n<b>這是粗體</b>但這不是\n<i>這是斜體</i>但這不是\nABCabc', _this.options.content);
-    _this.addChild(_this.content);
-    _this.content.x = _this.options.paddingLeft;
-    _this.content.y = _this.options.paddingTop;
-    return _this;
-  }
-
-  _createClass(Subtitle, [{
-    key: 'push',
-    value: function push(msg) {
-      if (this.content) {
-        this.content.text = msg;
-      }
+var __extends = (this && this.__extends) || (function () {
+    var extendStatics = Object.setPrototypeOf ||
+        ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+        function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
+    return function (d, b) {
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+})();
+Object.defineProperty(exports, "__esModule", { value: true });
+var PIXI = __webpack_require__(10);
+var pixi_multistyle_text_1 = __webpack_require__(198);
+var _ = __webpack_require__(22);
+var utils_1 = __webpack_require__(91);
+var constant_1 = __webpack_require__(39);
+var ImplementedSubtitle = /** @class */ (function (_super) {
+    __extends(ImplementedSubtitle, _super);
+    function ImplementedSubtitle(app, options) {
+        var _this = _super.call(this) || this;
+        _this.app = app;
+        _this.options = _.defaultsDeep(options, constant_1.SubtitleDefaultOptions);
+        // Make container being interactive
+        _this.interactive = true;
+        // Draw the background rectangle
+        _this.background = new utils_1.ColorChangeableGraphic();
+        _this.addChild(_this.background);
+        _this.background.beginFill(0x0);
+        _this.background.drawRect(0, 0, _this.options.width, _this.options.height);
+        _this.background.endFill();
+        _this.background.backgroundColor = _this.options.backgroundColor;
+        /**
+         * Draw the content
+         * Seems that the `fill` should be string, cannot be 0x00ff00
+         * See more: https://www.npmjs.com/package/pixi-multistyle-text
+         */
+        _this.content = new pixi_multistyle_text_1.default('哈哈哈！你中計了吧！有種點我啊\n<b>這是粗體</b>但這不是\n<i>這是斜體</i>但這不是\nABCabc', _this.options.content);
+        _this.addChild(_this.content);
+        _this.content.x = _this.options.paddingLeft;
+        _this.content.y = _this.options.paddingTop;
+        return _this;
     }
-
+    ImplementedSubtitle.prototype.push = function (msg) {
+        if (this.content) {
+            this.content.text = msg;
+        }
+    };
     /**
      * @param {String} name
      * @param {any} value
      */
+    ImplementedSubtitle.prototype.set = function (name, value) {
+        this[name] = value;
+        return this;
+    };
+    return ImplementedSubtitle;
+}(PIXI.Container));
+exports.default = ImplementedSubtitle;
 
-  }, {
-    key: 'set',
-    value: function set(name, value) {
-      this[name] = value;
-    }
-  }]);
-
-  return Subtitle;
-}(__WEBPACK_IMPORTED_MODULE_0_pixi_js__["Container"]);
-
-/* harmony default export */ __webpack_exports__["a"] = (Subtitle);
-'filehash mnRwdeevS216xly/KUb/EL8PKe8=';
 
 /***/ }),
-/* 199 */
+/* 198 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var require;var require;(function(f){if(true){module.exports=f()}else if(typeof define==="function"&&define.amd){define([],f)}else{var g;if(typeof window!=="undefined"){g=window}else if(typeof global!=="undefined"){g=global}else if(typeof self!=="undefined"){g=self}else{g=this}g.MultiStyleText = f()}})(function(){var define,module,exports;return (function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return require(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({1:[function(require,module,exports){
@@ -59671,82 +59611,63 @@ var __extends = (this && this.__extends) || (function () {
 
 
 /***/ }),
-/* 200 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/* 199 */
+/***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__character__ = __webpack_require__(201);
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-function _toConsumableArray(arr) { if (Array.isArray(arr)) { for (var i = 0, arr2 = Array(arr.length); i < arr.length; i++) { arr2[i] = arr[i]; } return arr2; } else { return Array.from(arr); } }
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-/* eslint-disable no-extra-bind */
-
-
-var ViewManager = function () {
-  /**
-   *
-   * @param {Array} script The ScriptDown Array parsed by parser
-   * @param {ScriptDown} provider The instance of a ScriptDown
-   */
-  function ViewManager(script, provider) {
-    _classCallCheck(this, ViewManager);
-
-    this.script = script;
-    this.provider = provider;
-
-    // Just shortcuts
-    this.stage = this.provider.stage;
-    this.subtitle = this.provider.subtitle;
-
-    // The cursor point to the script which is ready to load
-    this.cursor = 0;
-
-    // Waiting for next step, this will lock this.next()
-    this.waiting = true;
-
-    // init
-    this.next();
-  }
-
-  /**
-   * Syntax in ScriptDown: $commandName(argus) {options}
-   * @param {String} commandName
-   * @param {Array} argus?
-   * @param {Object} options?
-   */
-
-
-  _createClass(ViewManager, [{
-    key: 'command',
-    value: function command(commandName, argus, options) {
-      return new Promise(function (resolve, reject) {
-        if (commandName === 'character') {
-          var characterName = argus[0];
-          var characterOptions = argus[1] || {};
-
-          this.stage.addCharacter(characterName, new __WEBPACK_IMPORTED_MODULE_0__character__["a" /* default */](characterOptions, this.provider.gamebase));
-        } else if (commandName === 'setStage') {
-          var name = argus[0];
-          var value = argus[1];
-
-          this.stage.set(name, value);
-        } else if (commandName === 'setSubtitle') {
-          var _name = argus[0];
-          var _value = argus[1];
-
-          this.subtitle.set(_name, _value);
-        } else {
-          throw new Error('ViewManager: Undefined command');
-        }
-
-        // resolve???
-        resolve();
-      }.bind(this));
+Object.defineProperty(exports, "__esModule", { value: true });
+var character_1 = __webpack_require__(200);
+var ViewManager = /** @class */ (function () {
+    /**
+     *
+     * @param {Array} script The ScriptDown Array parsed by parser
+     * @param {ScriptDown} provider The instance of a ScriptDown
+     */
+    function ViewManager(script, provider) {
+        this.script = script;
+        this.provider = provider;
+        // Just shortcuts
+        this.stage = this.provider.stage;
+        this.subtitle = this.provider.subtitle;
+        // The cursor point to the script which is ready to load
+        this.cursor = 0;
+        // Waiting for next step, this will lock this.next()
+        this.waiting = true;
+        // init
+        this.next();
     }
-
+    /**
+     * Syntax in ScriptDown: $commandName(argus) {options}
+     * @param {String} commandName
+     * @param {Array} argus?
+     * @param {Object} options?
+     */
+    ViewManager.prototype.command = function (commandName, argus, options) {
+        var _this = this;
+        return new Promise(function (resolve, reject) {
+            if (commandName === 'character') {
+                var characterName = argus[0];
+                var characterOptions = argus[1] || {};
+                _this.stage.addCharacter(characterName, new character_1.default(characterOptions, _this.provider.gamebase));
+            }
+            else if (commandName === 'setStage') {
+                var name_1 = argus[0];
+                var value = argus[1];
+                _this.stage.set(name_1, value);
+            }
+            else if (commandName === 'setSubtitle') {
+                var name_2 = argus[0];
+                var value = argus[1];
+                _this.subtitle.set(name_2, value);
+            }
+            else {
+                throw new Error('ViewManager: Undefined command');
+            }
+            // resolve???
+            resolve();
+        });
+    };
     /**
      * action is an object-oriented method.
      * Syntax in ScriptDown: @objName $actionName(argus) {options}
@@ -59755,444 +59676,242 @@ var ViewManager = function () {
      * @param {Array} argus?
      * @param {Object} options?
      */
-
-  }, {
-    key: 'action',
-    value: function action(objName, actionName, argus, options) {
-      var _stage$characters$obj;
-
-      if (!this.stage.characters[objName]) {
-        throw new Error('ViewManager: Object "' + objName + '" is not defined');
-      }
-
-      if (!this.stage.characters[objName][actionName]) {
-        throw new Error('ViewManager: Action "' + objName + '.' + actionName + '" is not defined');
-      }
-
-      argus.push(options);
-      return (_stage$characters$obj = this.stage.characters[objName])[actionName].apply(_stage$characters$obj, _toConsumableArray(argus));
-    }
-  }, {
-    key: 'next',
-    value: function next(event) {
-      var _this = this;
-
-      if (!this.waiting) {
-        // still waiting
-        console.log('still waiting');
-        return;
-      }
-
-      var tasks = [];
-      var pause = false;
-
-      var delay = 0;
-      var proceed = false;
-
-      var postpone = 0;
-      var autostep = false;
-
-      var _loop = function _loop() {
-        var statement = _this.script[_this.cursor];
-        var options = void 0;
-
-        if (statement.$type === 'ACT') {
-          if (statement.movement) {
-            options = statement.movement && statement.movement.options;
-          } else if (statement.subjectMovementList.length === 1) {
-            var head = statement.subjectMovementList[0].movement.options;
-            if (head) {
-              options = {};
-              options.pause = head.pause;
-              options.proceed = head.proceed;
-              options.autostep = head.autostep;
-            }
-          }
-          var singleTasksList = [];
-          var charactersNameList = [];
-          var message = statement.message;
-
-          // subjectMovement
-          var _iteratorNormalCompletion2 = true;
-          var _didIteratorError2 = false;
-          var _iteratorError2 = undefined;
-
-          try {
-            var _loop4 = function _loop4() {
-              var subjectMovement = _step2.value;
-
-              var singleOptions = subjectMovement.movement && subjectMovement.movement.options || {};
-              // single movement
-              var singleTasks = [];
-
-              // speakers
-              charactersNameList.push(subjectMovement.subject.name);
-
-              // variety
-              if (subjectMovement.subject.variety) {
-                singleTasks.push(function () {
-                  return this.action(subjectMovement.subject.name, 'changeTexture', [subjectMovement.subject.variety], singleOptions);
-                }.bind(_this));
-              }
-
-              var _iteratorNormalCompletion7 = true;
-              var _didIteratorError7 = false;
-              var _iteratorError7 = undefined;
-
-              try {
-                var _loop5 = function _loop5() {
-                  var method = _step7.value;
-
-                  switch (method.$type) {
-                    case 'ACTION':
-                      singleTasks.push(function () {
-                        return this.action(subjectMovement.subject.name, method.name, method.argus, singleOptions);
-                      }.bind(_this));
-                      break;
-
-                    case 'COMMAND':
-                      singleTasks.push(function () {
-                        return this.command(method.name, method.argus, singleOptions);
-                      }.bind(_this));
-                      break;
-
-                    default:
-                      throw new Error('ViewManager: Unknown method');
-                  }
+    ViewManager.prototype.action = function (objName, actionName, argus, options) {
+        if (!this.stage.characters[objName]) {
+            throw new Error("ViewManager: Object \"" + objName + "\" is not defined");
+        }
+        if (!this.stage.characters[objName][actionName]) {
+            throw new Error("ViewManager: Action \"" + objName + "." + actionName + "\" is not defined");
+        }
+        argus.push(options);
+        return (_a = this.stage.characters[objName])[actionName].apply(_a, argus);
+        var _a;
+    };
+    ViewManager.prototype.next = function (event) {
+        var _this = this;
+        if (!this.waiting) {
+            // still waiting
+            console.log('still waiting');
+            return;
+        }
+        var tasks = [];
+        var pause = false;
+        var delay = 0;
+        var proceed = false;
+        var postpone = 0;
+        var autostep = false;
+        var _loop_1 = function () {
+            var statement = this_1.script[this_1.cursor];
+            var options;
+            if (statement.$type === 'ACT') {
+                if (statement.movement) {
+                    options = statement.movement && statement.movement.options;
+                }
+                else if (statement.subjectMovementList.length === 1) {
+                    var head = statement.subjectMovementList[0].movement.options;
+                    if (head) {
+                        options = {};
+                        options.pause = head.pause;
+                        options.proceed = head.proceed;
+                        options.autostep = head.autostep;
+                    }
+                }
+                var singleTasksList_1 = [];
+                var charactersNameList_1 = [];
+                var message_1 = statement.message;
+                var _loop_2 = function (subjectMovement) {
+                    var singleOptions = (subjectMovement.movement && subjectMovement.movement.options) || {};
+                    // single movement
+                    var singleTasks = [];
+                    // speakers
+                    charactersNameList_1.push(subjectMovement.subject.name);
+                    // variety
+                    if (subjectMovement.subject.variety) {
+                        singleTasks.push(function () {
+                            return _this.action(subjectMovement.subject.name, 'changeTexture', [subjectMovement.subject.variety], singleOptions);
+                        });
+                    }
+                    var _loop_3 = function (method) {
+                        switch (method.$type) {
+                            case 'ACTION':
+                                singleTasks.push(function () {
+                                    return _this.action(subjectMovement.subject.name, method.name, method.argus, singleOptions);
+                                });
+                                break;
+                            case 'COMMAND':
+                                singleTasks.push(function () {
+                                    return _this.command(method.name, method.argus, singleOptions);
+                                });
+                                break;
+                            default:
+                                throw new Error('ViewManager: Unknown method');
+                        }
+                    };
+                    for (var _i = 0, _a = subjectMovement.movement.methods; _i < _a.length; _i++) {
+                        var method = _a[_i];
+                        _loop_3(method);
+                    }
+                    singleTasksList_1.push(function () {
+                        return new Promise(function (resolve, reject) {
+                            // delay
+                            setTimeout(function () {
+                                var startingTasks = [Promise.resolve];
+                                for (var _i = 0, singleTasks_1 = singleTasks; _i < singleTasks_1.length; _i++) {
+                                    var task = singleTasks_1[_i];
+                                    startingTasks.push(task());
+                                }
+                                // proceed
+                                if (singleOptions.proceed) {
+                                    resolve();
+                                }
+                                else {
+                                    Promise.all(startingTasks)
+                                        .then(function () {
+                                        // postpone
+                                        setTimeout(function () {
+                                            resolve();
+                                        }, singleOptions.postpone || 0);
+                                    });
+                                }
+                            }, singleOptions.delay || 0);
+                        });
+                    });
                 };
-
-                for (var _iterator7 = subjectMovement.movement.methods[Symbol.iterator](), _step7; !(_iteratorNormalCompletion7 = (_step7 = _iterator7.next()).done); _iteratorNormalCompletion7 = true) {
-                  _loop5();
+                // subjectMovement
+                for (var _i = 0, _a = statement.subjectMovementList; _i < _a.length; _i++) {
+                    var subjectMovement = _a[_i];
+                    _loop_2(subjectMovement);
                 }
-              } catch (err) {
-                _didIteratorError7 = true;
-                _iteratorError7 = err;
-              } finally {
-                try {
-                  if (!_iteratorNormalCompletion7 && _iterator7.return) {
-                    _iterator7.return();
-                  }
-                } finally {
-                  if (_didIteratorError7) {
-                    throw _iteratorError7;
-                  }
-                }
-              }
-
-              singleTasksList.push(function () {
-                return new Promise(function (resolve, reject) {
-                  // delay
-                  setTimeout(function () {
-                    var startingTasks = [Promise.resolve];
-
-                    var _iteratorNormalCompletion8 = true;
-                    var _didIteratorError8 = false;
-                    var _iteratorError8 = undefined;
-
-                    try {
-                      for (var _iterator8 = singleTasks[Symbol.iterator](), _step8; !(_iteratorNormalCompletion8 = (_step8 = _iterator8.next()).done); _iteratorNormalCompletion8 = true) {
-                        var task = _step8.value;
-
-                        startingTasks.push(task());
-                      }
-
-                      // proceed
-                    } catch (err) {
-                      _didIteratorError8 = true;
-                      _iteratorError8 = err;
-                    } finally {
-                      try {
-                        if (!_iteratorNormalCompletion8 && _iterator8.return) {
-                          _iterator8.return();
+                // multi tasks
+                var multiTasksList_1 = [];
+                // multi movement
+                var multiMovement = statement.movement;
+                // multi methods
+                if (multiMovement && multiMovement.methods) {
+                    var _loop_4 = function (method) {
+                        switch (method.$type) {
+                            case 'ACTION':
+                                var _loop_5 = function (name_3) {
+                                    multiTasksList_1.push(function () {
+                                        return _this.action(name_3, method.name, method.argus, options);
+                                    });
+                                };
+                                for (var _i = 0, charactersNameList_2 = charactersNameList_1; _i < charactersNameList_2.length; _i++) {
+                                    var name_3 = charactersNameList_2[_i];
+                                    _loop_5(name_3);
+                                }
+                                break;
+                            case 'COMMAND':
+                                multiTasksList_1.push(function () {
+                                    return _this.command(method.name, method.argus, options);
+                                });
+                                break;
+                            default:
+                                throw new Error('ViewManager: Unknown method');
                         }
-                      } finally {
-                        if (_didIteratorError8) {
-                          throw _iteratorError8;
-                        }
-                      }
+                    };
+                    for (var _b = 0, _c = multiMovement.methods; _b < _c.length; _b++) {
+                        var method = _c[_b];
+                        _loop_4(method);
                     }
-
-                    if (singleOptions.proceed) {
-                      resolve();
-                    } else {
-                      Promise.all(startingTasks).then(function () {
-                        // postpone
-                        setTimeout(function () {
-                          resolve();
-                        }.bind(this), singleOptions.postpone || 0);
-                      }.bind(this));
-                    }
-                  }, singleOptions.delay || 0);
-                }.bind(this));
-              }.bind(_this));
-            };
-
-            for (var _iterator2 = statement.subjectMovementList[Symbol.iterator](), _step2; !(_iteratorNormalCompletion2 = (_step2 = _iterator2.next()).done); _iteratorNormalCompletion2 = true) {
-              _loop4();
-            }
-
-            // multi tasks
-          } catch (err) {
-            _didIteratorError2 = true;
-            _iteratorError2 = err;
-          } finally {
-            try {
-              if (!_iteratorNormalCompletion2 && _iterator2.return) {
-                _iterator2.return();
-              }
-            } finally {
-              if (_didIteratorError2) {
-                throw _iteratorError2;
-              }
-            }
-          }
-
-          var multiTasksList = [];
-
-          // multi movement
-          var multiMovement = statement.movement;
-
-          // multi methods
-          if (multiMovement && multiMovement.methods) {
-            var _iteratorNormalCompletion3 = true;
-            var _didIteratorError3 = false;
-            var _iteratorError3 = undefined;
-
-            try {
-              var _loop2 = function _loop2() {
-                var method = _step3.value;
-
-                switch (method.$type) {
-                  case 'ACTION':
-                    var _iteratorNormalCompletion4 = true;
-                    var _didIteratorError4 = false;
-                    var _iteratorError4 = undefined;
-
-                    try {
-                      var _loop3 = function _loop3() {
-                        var name = _step4.value;
-
-                        multiTasksList.push(function () {
-                          return this.action(name, method.name, method.argus, options);
-                        }.bind(_this));
-                      };
-
-                      for (var _iterator4 = charactersNameList[Symbol.iterator](), _step4; !(_iteratorNormalCompletion4 = (_step4 = _iterator4.next()).done); _iteratorNormalCompletion4 = true) {
-                        _loop3();
-                      }
-                    } catch (err) {
-                      _didIteratorError4 = true;
-                      _iteratorError4 = err;
-                    } finally {
-                      try {
-                        if (!_iteratorNormalCompletion4 && _iterator4.return) {
-                          _iterator4.return();
-                        }
-                      } finally {
-                        if (_didIteratorError4) {
-                          throw _iteratorError4;
-                        }
-                      }
-                    }
-
-                    break;
-
-                  case 'COMMAND':
-                    multiTasksList.push(function () {
-                      return this.command(method.name, method.argus, options);
-                    }.bind(_this));
-                    break;
-
-                  default:
-                    throw new Error('ViewManager: Unknown method');
                 }
-              };
-
-              for (var _iterator3 = multiMovement.methods[Symbol.iterator](), _step3; !(_iteratorNormalCompletion3 = (_step3 = _iterator3.next()).done); _iteratorNormalCompletion3 = true) {
-                _loop2();
-              }
-            } catch (err) {
-              _didIteratorError3 = true;
-              _iteratorError3 = err;
-            } finally {
-              try {
-                if (!_iteratorNormalCompletion3 && _iterator3.return) {
-                  _iterator3.return();
-                }
-              } finally {
-                if (_didIteratorError3) {
-                  throw _iteratorError3;
-                }
-              }
-            }
-          }
-
-          multiTasksList.push(function () {
-            return this.subtitle.push('<b>' + charactersNameList.join('、') + '：</b>\n' + message);
-          }.bind(_this));
-
-          tasks.push(function () {
-            return new Promise(function (resolve, reject) {
-              var startingTasks = [Promise.resolve];
-
-              var _iteratorNormalCompletion5 = true;
-              var _didIteratorError5 = false;
-              var _iteratorError5 = undefined;
-
-              try {
-                for (var _iterator5 = singleTasksList[Symbol.iterator](), _step5; !(_iteratorNormalCompletion5 = (_step5 = _iterator5.next()).done); _iteratorNormalCompletion5 = true) {
-                  var task = _step5.value;
-
-                  startingTasks.push(task());
-                }
-              } catch (err) {
-                _didIteratorError5 = true;
-                _iteratorError5 = err;
-              } finally {
-                try {
-                  if (!_iteratorNormalCompletion5 && _iterator5.return) {
-                    _iterator5.return();
-                  }
-                } finally {
-                  if (_didIteratorError5) {
-                    throw _iteratorError5;
-                  }
-                }
-              }
-
-              Promise.all(startingTasks).then(function () {
-                var startingTasks = [];
-
-                var _iteratorNormalCompletion6 = true;
-                var _didIteratorError6 = false;
-                var _iteratorError6 = undefined;
-
-                try {
-                  for (var _iterator6 = multiTasksList[Symbol.iterator](), _step6; !(_iteratorNormalCompletion6 = (_step6 = _iterator6.next()).done); _iteratorNormalCompletion6 = true) {
-                    var task = _step6.value;
-
-                    startingTasks.push(task());
-                  }
-                } catch (err) {
-                  _didIteratorError6 = true;
-                  _iteratorError6 = err;
-                } finally {
-                  try {
-                    if (!_iteratorNormalCompletion6 && _iterator6.return) {
-                      _iterator6.return();
-                    }
-                  } finally {
-                    if (_didIteratorError6) {
-                      throw _iteratorError6;
-                    }
-                  }
-                }
-
-                Promise.all(startingTasks).then(function () {
-                  resolve();
+                multiTasksList_1.push(function () {
+                    return _this.subtitle.push('<b>' + charactersNameList_1.join('、') + '：</b>\n' + message_1);
                 });
-              }.bind(this));
-            }.bind(this));
-          }.bind(_this));
-
-          pause = true;
-        } else if (statement.$type === 'COMMAND') {
-          options = statement.options;
-
-          _this.command(statement.name, statement.argus, statement.options);
-        } else if (statement.$type === 'HEADER') {
-          options = statement.options;
-          pause = true;
-        } else {
-          throw new Error('ViewManager: Unknown statement type.');
-        }
-
-        // analyze options
-        if (options) {
-          pause = options.pause || pause;
-          delay = options.delay || delay;
-          proceed = options.proceed || proceed;
-          postpone = options.postpone || postpone;
-          autostep = options.autostep || autostep;
-        }
-      };
-
-      for (; this.cursor < this.script.length && !pause; this.cursor++) {
-        _loop();
-      }
-
-      // proceed
-      this.waiting = proceed;
-
-      // delay
-      setTimeout(function () {
-        var startingTasks = [];
-
-        var _iteratorNormalCompletion = true;
-        var _didIteratorError = false;
-        var _iteratorError = undefined;
-
-        try {
-          for (var _iterator = tasks[Symbol.iterator](), _step; !(_iteratorNormalCompletion = (_step = _iterator.next()).done); _iteratorNormalCompletion = true) {
-            var task = _step.value;
-
-            startingTasks.push(task());
-          }
-
-          // proceed
-        } catch (err) {
-          _didIteratorError = true;
-          _iteratorError = err;
-        } finally {
-          try {
-            if (!_iteratorNormalCompletion && _iterator.return) {
-              _iterator.return();
+                tasks.push(function () {
+                    return new Promise(function (resolve, reject) {
+                        var startingTasks = [Promise.resolve];
+                        for (var _i = 0, singleTasksList_2 = singleTasksList_1; _i < singleTasksList_2.length; _i++) {
+                            var task = singleTasksList_2[_i];
+                            startingTasks.push(task());
+                        }
+                        Promise.all(startingTasks)
+                            .then(function () {
+                            var startingTasks = [];
+                            for (var _i = 0, multiTasksList_2 = multiTasksList_1; _i < multiTasksList_2.length; _i++) {
+                                var task = multiTasksList_2[_i];
+                                startingTasks.push(task());
+                            }
+                            Promise.all(startingTasks)
+                                .then(function () {
+                                resolve();
+                            });
+                        });
+                    });
+                });
+                pause = true;
             }
-          } finally {
-            if (_didIteratorError) {
-              throw _iteratorError;
+            else if (statement.$type === 'COMMAND') {
+                options = statement.options;
+                this_1.command(statement.name, statement.argus, statement.options);
             }
-          }
+            else if (statement.$type === 'HEADER') {
+                options = statement.options;
+                pause = true;
+            }
+            else {
+                throw new Error('ViewManager: Unknown statement type.');
+            }
+            // analyze options
+            if (options) {
+                pause = options.pause || pause;
+                delay = options.delay || delay;
+                proceed = options.proceed || proceed;
+                postpone = options.postpone || postpone;
+                autostep = options.autostep || autostep;
+            }
+        };
+        var this_1 = this;
+        for (; this.cursor < this.script.length && !pause; this.cursor++) {
+            _loop_1();
         }
+        // proceed
+        this.waiting = proceed;
+        // delay
+        setTimeout(function () {
+            var startingTasks = [];
+            for (var _i = 0, tasks_1 = tasks; _i < tasks_1.length; _i++) {
+                var task = tasks_1[_i];
+                startingTasks.push(task());
+            }
+            // proceed
+            if (proceed) {
+                // autostep
+                if (autostep) {
+                    _this.next();
+                }
+            }
+            else {
+                Promise.all(startingTasks)
+                    .then(function () {
+                    // postpone
+                    setTimeout(function () {
+                        _this.waiting = true;
+                        // autostep
+                        if (autostep) {
+                            _this.next();
+                        }
+                    }, postpone);
+                });
+            }
+        }, delay);
+    };
+    return ViewManager;
+}());
+exports.default = ViewManager;
 
-        if (proceed) {
-          // autostep
-          if (autostep) {
-            this.next();
-          }
-        } else {
-          Promise.all(startingTasks).then(function () {
-            // postpone
-            setTimeout(function () {
-              this.waiting = true;
-
-              // autostep
-              if (autostep) {
-                this.next();
-              }
-            }.bind(this), postpone);
-          }.bind(this));
-        }
-      }.bind(this), delay);
-    }
-  }]);
-
-  return ViewManager;
-}();
-
-/* harmony default export */ __webpack_exports__["a"] = (ViewManager);
-'filehash 8QqU8th2dhBlbOo9wLyehA/EU3M=';
 
 /***/ }),
-/* 201 */
+/* 200 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_pixi_js__ = __webpack_require__(10);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_pixi_js___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_pixi_js__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_lodash__ = __webpack_require__(17);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_lodash__ = __webpack_require__(22);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_lodash___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_lodash__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__utils_transition__ = __webpack_require__(202);
+throw new Error("Cannot find module \"../../utils/transition\"");
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -60325,7 +60044,7 @@ var Character = function (_PIXI$Sprite) {
         this.rotation = originalRadius + radius;
       }.bind(this);
 
-      return Object(__WEBPACK_IMPORTED_MODULE_2__utils_transition__["a" /* default */])(this.app, options, movement, finalMovement);
+      return __WEBPACK_IMPORTED_MODULE_2__utils_transition___default()(this.app, options, movement, finalMovement);
     }
   }, {
     key: 'rotateByDegree',
@@ -60380,7 +60099,7 @@ var Character = function (_PIXI$Sprite) {
         this.y = originalY + y;
       }.bind(this);
 
-      return Object(__WEBPACK_IMPORTED_MODULE_2__utils_transition__["a" /* default */])(this.app, options, movement, finalMovement);
+      return __WEBPACK_IMPORTED_MODULE_2__utils_transition___default()(this.app, options, movement, finalMovement);
     }
 
     /**
@@ -60441,1380 +60160,14 @@ var Character = function (_PIXI$Sprite) {
   return Character;
 }(__WEBPACK_IMPORTED_MODULE_0_pixi_js__["Sprite"]);
 
-/* harmony default export */ __webpack_exports__["a"] = (Character);
+/* harmony default export */ __webpack_exports__["default"] = (Character);
 'filehash GTj6cehi6gzTMwG4q6kOptHFkUE=';
 
 /***/ }),
-/* 202 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (immutable) */ __webpack_exports__["a"] = transition;
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_cubic_bezier__ = __webpack_require__(203);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_cubic_bezier___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_cubic_bezier__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_lodash__ = __webpack_require__(17);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_lodash___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_lodash__);
-function _toConsumableArray(arr) { if (Array.isArray(arr)) { for (var i = 0, arr2 = Array(arr.length); i < arr.length; i++) { arr2[i] = arr[i]; } return arr2; } else { return Array.from(arr); } }
-
-
-
-
-var TIMING_FUNCTION = {
-  'linear': [0, 0, 1, 1],
-  'ease': [0.25, 0.1, 0.25, 1],
-  'ease-in': [0.42, 0, 1, 1],
-  'ease-out': [0.0, 0, 1, 1],
-  'ease-out-in': [0.42, 0, 0.58, 1],
-  'ease-in-sine': [0.47, 0, 0.745, 0.715],
-  'ease-out-sine': [0.39, 0.575, 0.565, 1],
-  'ease-in-out-sine': [0.445, 0.05, 0.55, 0.95],
-  'ease-in-quad': [0.55, 0.085, 0.68, 0.53],
-  'ease-out-quad': [0.55, 0.085, 0.68, 0.53],
-  'ease-in-out-quad': [0.455, 0.03, 0.515, 0.955],
-  'ease-in-cubic': [0.55, 0.055, 0.675, 0.19],
-  'ease-out-cubic': [0.215, 0.61, 0.355, 1],
-  'ease-in-out-cubic': [0.645, 0.045, 0.355, 1],
-  'ease-in-quart': [0.895, 0.03, 0.685, 0.22],
-  'ease-out-quart': [0.165, 0.84, 0.44, 1],
-  'ease-in-out-quart': [0.77, 0, 0.175, 1],
-  'ease-in-quint': [0.755, 0.05, 0.855, 0.06],
-  'ease-out-quint': [0.23, 1, 0.32, 1],
-  'ease-in-out-quint': [0.86, 0, 0.07, 1],
-  'ease-in-expo': [0.95, 0.05, 0.795, 0.035],
-  'ease-out-expo': [0.19, 1, 0.22, 1],
-  'ease-in-out-expo': [1, 0, 0, 1],
-  'ease-in-circ': [0.6, 0.04, 0.98, 0.335],
-  'ease-out-circ': [0.075, 0.82, 0.165, 1],
-  'ease-in-out-circ': [0.785, 0.135, 0.15, 0.86],
-  'ease-in-back': [0.6, -0.28, 0.735, 0.045],
-  'ease-out-back': [0.175, 0.885, 0.32, 1.275],
-  'ease-in-out-back': [0.68, -0.55, 0.265, 1.55]
-};
-
-function transition(app, options, movement, finalMovement) {
-  if (!options || !options.duration) {
-    movement(1);
-    return Promise.resolve();
-  }
-
-  var duration = options.duration || 1000;
-  var timingFunction = options.transition || 'linear';
-
-  var bezierPara = [];
-  if (TIMING_FUNCTION[timingFunction]) {
-    bezierPara = __WEBPACK_IMPORTED_MODULE_1_lodash___default.a.clone(TIMING_FUNCTION[timingFunction]);
-  } else if (timingFunction.startsWith('cubic-bezier')) {
-    var re = /^cubic-bezier\s*\(\s*([\d.]*)\s*,\s*([\d.]*)\s*,\s*([\d.]*)\s*,\s*([\d.]*)\s*\)\s*$/.exec(timingFunction);
-    for (var i = 1; i < 5; i++) {
-      bezierPara.push(parseFloat(re[i]));
-    }
-  } else {
-    throw new SyntaxError('Transition: Invalid formet');
-  }
-
-  // Recommanded by https://www.npmjs.com/package/cubic-bezier
-  var epsilon = duration * 2;
-  bezierPara.push(epsilon);
-
-  var bezierFunction = __WEBPACK_IMPORTED_MODULE_0_cubic_bezier___default.a.apply(undefined, _toConsumableArray(bezierPara));
-  var now = Date.now();
-  var f = function f() {
-    movement(bezierFunction((Date.now() - now) / duration));
-  };
-
-  return new Promise(function (resolve, reject) {
-    app.ticker.add(f);
-    setTimeout(function () {
-      app.ticker.remove(f);
-      if (finalMovement) {
-        finalMovement();
-      }
-      resolve();
-    }, duration);
-  });
-}
-'filehash 3xvFOLBQuXLSjN11HmaOO+y1I2A=';
-
-/***/ }),
-/* 203 */
+/* 201 */
 /***/ (function(module, exports) {
 
-
-module.exports = function(x1, y1, x2, y2, epsilon){
-
-	var curveX = function(t){
-		var v = 1 - t;
-		return 3 * v * v * t * x1 + 3 * v * t * t * x2 + t * t * t;
-	};
-
-	var curveY = function(t){
-		var v = 1 - t;
-		return 3 * v * v * t * y1 + 3 * v * t * t * y2 + t * t * t;
-	};
-
-	var derivativeCurveX = function(t){
-		var v = 1 - t;
-		return 3 * (2 * (t - 1) * t + v * v) * x1 + 3 * (- t * t * t + 2 * v * t) * x2;
-	};
-
-	return function(t){
-
-		var x = t, t0, t1, t2, x2, d2, i;
-
-		// First try a few iterations of Newton's method -- normally very fast.
-		for (t2 = x, i = 0; i < 8; i++){
-			x2 = curveX(t2) - x;
-			if (Math.abs(x2) < epsilon) return curveY(t2);
-			d2 = derivativeCurveX(t2);
-			if (Math.abs(d2) < 1e-6) break;
-			t2 = t2 - x2 / d2;
-		}
-
-		t0 = 0, t1 = 1, t2 = x;
-
-		if (t2 < t0) return curveY(t0);
-		if (t2 > t1) return curveY(t1);
-
-		// Fallback to the bisection method for reliability.
-		while (t0 < t1){
-			x2 = curveX(t2);
-			if (Math.abs(x2 - x) < epsilon) return curveY(t2);
-			if (x > x2) t0 = t2;
-			else t1 = t2;
-			t2 = (t1 - t0) * .5 + t0;
-		}
-
-		// Failure
-		return curveY(t2);
-
-	};
-
-};
-
-
-/***/ }),
-/* 204 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* unused harmony export parse */
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__literal__ = __webpack_require__(205);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__structure__ = __webpack_require__(206);
-
-
-
-/* harmony default export */ __webpack_exports__["a"] = ({
-  parse: parse
-});
-
-function parse(text) {
-  console.log('parse', 'text length:', text.length);
-
-  // literal parsing
-  var lite = Object(__WEBPACK_IMPORTED_MODULE_0__literal__["a" /* default */])(text, 0);
-
-  // structure parsing
-  var struct = Object(__WEBPACK_IMPORTED_MODULE_1__structure__["a" /* default */])(lite);
-
-  console.log(struct);
-
-  return struct;
-}
-'filehash 4ZS2plJlcmU9TQJ6C5w01lMctS4=';
-
-/***/ }),
-/* 205 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (immutable) */ __webpack_exports__["a"] = literal;
-/**
- * KEYWORD: !, @, #, {}, (), [], <>
- * Prepare for Chinese
- */
-var REGEXP_SPACE = /[ ]/;
-var REGEXP_NEWLINE = /\n/;
-var REGEXP_NEWLINE_G = /\n/g;
-var REGEXP_NAME = /[^\\\s\n\t()[\]{}`'+\-*/~!@#$%^&?,.:<>]/;
-var REGEXP_TITLE = /[^\n{}[\]]/;
-var REGEXP_MESSAGE = /[^{}[\]]/;
-var REGEXP_DIGIT = /[\d]/;
-var REGEXP_ZERO = /[0]/;
-var REGEXP_COLON = /[:]/;
-var REGEXP_LEFT_ROUND = /[(]/;
-var REGEXP_RIGHT_ROUND = /[)]/;
-var REGEXP_LEFT_SQUARE = /[[]/;
-var REGEXP_RIGHT_SQUARE = /[\]]/;
-var REGEXP_LEFT_CURLY = /[{]/;
-var REGEXP_RIGHT_CURLY = /[}]/;
-var REGEXP_SLASH = /[/]/;
-var REGEXP_STAR = /[*]/;
-var REGEXP_DOLLAR = /[$]/;
-var REGEXP_HASH = /[#]/;
-var REGEXP_AT = /[@]/;
-var REGEXP_EXCLAMATION = /[!]/;
-var REGEXP_LESSTHAN = /[<]/;
-var REGEXP_GREATERTHAN = /[>]/;
-var REGEXP_COMMA = /[,]/;
-var REGEXP_SINGLE_QUOTES = /[']/;
-var REGEXP_DOUBLE_QUOTES = /["]/;
-
-/**
- * @param {String} text
- * @param {Number} start
- * @returns {Array}
- */
-function literal(text) {
-  var start = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 0;
-
-  return FILE(text, start);
-}
-
-/**
- * FILE = REDUNDENT + STATEMENT*
- */
-function FILE(text, i) {
-  console.log('FILE', i, text.slice(i, i + 15).replace(REGEXP_NEWLINE_G, '↵'));
-  var c = i;
-  var tmp = c;
-
-  var literal = [];
-
-  // REDUNDENT
-  c = REDUNDENT(text, c);
-
-  // STATEMENT*
-  while (c < text.length) {
-    var statement = {};
-    c = STATEMENT(text, c, statement);
-    if (c === tmp) {
-      // No more statements
-      break;
-    }
-    literal.push(statement);
-    tmp = c;
-  }
-
-  if (c < text.length) {
-    throw new SyntaxError('FILE: Not ending properly.');
-  }
-
-  return literal;
-}
-
-/**
- * STATEMENT = ACT | COMMAND | HEADER + OPTIONS? + REDUNDENT
- */
-function STATEMENT(text, i, statement) {
-  console.log('STATEMENT', i, text.slice(i, i + 15).replace(REGEXP_NEWLINE_G, '↵'));
-  var c = i;
-  var tmp = c;
-
-  // ACT
-  c = ACT(text, c, statement);
-  if (c !== tmp) {
-    // REDUNDENT
-    c = REDUNDENT(text, c);
-    return c;
-  }
-
-  // COMMAND
-  c = COMMAND(text, c, statement);
-  if (c !== tmp) {
-    // OPTIONS?
-    var opt = {};
-    c = OPTIONS(text, c, opt);
-    statement.options = opt;
-
-    // REDUNDENT
-    c = REDUNDENT(text, c);
-    return c;
-  }
-
-  // HEADER
-  c = HEADER(text, c, statement);
-  if (c !== tmp) {
-    // OPTIONS?
-    var _opt = {};
-    c = OPTIONS(text, c, _opt);
-    statement.options = _opt;
-
-    // REDUNDENT
-    c = REDUNDENT(text, c);
-    return c;
-  }
-
-  throw new SyntaxError('STATEMENT: No such statement.');
-}
-
-/**
- * COMMAND = ('$' + NAME + INLINE_REDUNDENT + ARGUMENTS?)?
- */
-function COMMAND(text, i, command) {
-  console.log('COMMAND', i, text.slice(i, i + 15).replace(REGEXP_NEWLINE_G, '↵'));
-  var c = i;
-
-  if (REGEXP_DOLLAR.test(text[c])) {
-    // '$'
-    c++;
-
-    // NAME
-    var name = {};
-    c = NAME(text, c, name);
-
-    // INLINE_REDUNDENT
-    var breaking = {};
-    c = INLINE_REDUNDENT(text, c, breaking);
-
-    command.$type = 'COMMAND';
-    command.name = name.$string;
-
-    if (!breaking.$boolean) {
-      // ARGUMENTS?
-      var argus = [];
-      c = ARGUMENTS(text, c, argus);
-      command.argus = argus;
-    }
-  }
-
-  return c;
-}
-
-/**
- * HEADER = ('#'+ + INLINE_REDUNDENT + TITLE?)?
- * @param {Object} header
- */
-function HEADER(text, i, header) {
-  console.log('HEADER', i, text.slice(i, i + 15).replace(REGEXP_NEWLINE_G, '↵'));
-  var c = i;
-
-  if (REGEXP_HASH.test(text[c])) {
-    // '#'*
-    c++;
-    var level = 1;
-    for (; c < text.length && REGEXP_HASH.test(text[c]); c++) {
-      level++;
-    }
-
-    // INLINE_REDUNDENT
-    var breaking = {};
-    c = INLINE_REDUNDENT(text, c, breaking);
-
-    header.$type = 'HEADER';
-    header.level = level;
-
-    if (!breaking.$boolean) {
-      // TITLE
-      var title = {};
-      c = TITLE(text, c, title);
-      header.title = title.$string;
-    }
-  }
-
-  return c;
-}
-
-/**
- * ACT = (((CURLY_GROUP<SUBJECT_MOVEMENT> + MOVEMENT?) | SUBJECT_MOVEMENT) + MESSAGE:TITLE?)?
- * @param {Object} act
- */
-function ACT(text, i, act) {
-  console.log('ACT', i, text.slice(i, i + 15).replace(REGEXP_NEWLINE_G, '↵'));
-  var c = i;
-  var tmp = c;
-
-  var subjectMovementList = {};
-  subjectMovementList.$type = 'CURLY_GROUP';
-  subjectMovementList.$array = [];
-
-  // (CURLY_GROUP<SUBJECT_MOVEMENT> + MOVEMENT?)
-  c = CURLY_GROUP(text, c, SUBJECT_MOVEMENT, subjectMovementList);
-  if (c !== tmp) {
-    // MOVEMENT?
-    var movement = {};
-    c = MOVEMENT(text, c, movement);
-    act.movement = movement;
-  } else {
-    // SUBJECT_MOVEMENT
-    var subjectMovement = {};
-    c = SUBJECT_MOVEMENT(text, c, subjectMovement);
-    subjectMovementList.$array.push(subjectMovement);
-
-    if (c === tmp) {
-      // Not a SUBJECT_MOVEMENT; therefore, not an ACT
-      return c;
-    }
-  }
-
-  // MESSAGE:TITLE?
-  var message = {};
-  c = TITLE(text, c, message);
-
-  act.$type = 'ACT';
-  act.subjectMovementList = subjectMovementList;
-  act.message = message.$string;
-
-  return c;
-}
-
-/**
- * SUBJECT_MOVEMENT = (SUBJECT + MOVEMENT?)?
- * @param {Object} subjectMovement
- */
-function SUBJECT_MOVEMENT(text, i, subjectMovement) {
-  console.log('SUBJECT_MOVEMENT', i, text.slice(i, i + 15).replace(REGEXP_NEWLINE_G, '↵'));
-  var c = i;
-  var tmp = c;
-
-  // SUBJECT
-  var subject = {};
-  c = SUBJECT(text, c, subject);
-
-  if (tmp !== c) {
-    // MOVEMENT?
-    var movement = [];
-    c = MOVEMENT(text, c, movement);
-
-    subjectMovement.$type = 'SUBJECT_MOVEMENT';
-    subjectMovement.subject = subject;
-    subjectMovement.movement = movement;
-  }
-
-  return c;
-}
-
-/**
- * SUBJECT = ('@' + NAME + INLINE_REDUNDENT + VARIETY?)?
- * @param {Object} subject
- */
-function SUBJECT(text, i, subject) {
-  console.log('SUBJECT', i, text.slice(i, i + 15).replace(REGEXP_NEWLINE_G, '↵'));
-  var c = i;
-
-  if (REGEXP_AT.test(text[c])) {
-    // '@'
-    c++;
-
-    // NAME
-    var name = {};
-    c = NAME(text, c, name);
-
-    // INLINE_REDUNDENT
-    var breaking = {};
-    c = INLINE_REDUNDENT(text, c, breaking);
-
-    subject.$type = 'SUBJECT';
-    subject.name = name.$string;
-
-    if (!breaking.$boolean) {
-      // VARIETY?
-      var variety = {};
-      c = VARIETY(text, c, variety);
-      subject.variety = variety.$string;
-    }
-  }
-
-  return c;
-}
-
-/**
- * VARIETY = ('[' + INLINE_REDUNDENT + NAME + INLINE_REDUNDENT + ']' + INLINE_REDUNDENT)?
- * @param {Object} variety
- */
-function VARIETY(text, i, variety) {
-  console.log('VARIETY', i, text.slice(i, i + 15).replace(REGEXP_NEWLINE_G, '↵'));
-  var c = i;
-
-  if (REGEXP_LEFT_SQUARE.test(text[c])) {
-    // '['
-    c++;
-
-    // INLINE_REDUNDENT
-    var breaking = {};
-    c = INLINE_REDUNDENT(text, c, breaking);
-
-    if (!breaking.$boolean) {
-      // NAME
-      c = NAME(text, c, variety);
-
-      // INLINE_REDUNDENT
-      c = INLINE_REDUNDENT(text, c, breaking);
-
-      if (!breaking.$boolean) {
-        // ']'
-        if (!REGEXP_RIGHT_SQUARE.test(text[c])) {
-          throw new SyntaxError('VARIETY: Missing ">"');
-        }
-        c++;
-
-        // INLINE_REDUNDENT
-        c = INLINE_REDUNDENT(text, c, breaking);
-      }
-    }
-  }
-
-  return c;
-}
-
-/**
- * MOVEMENT = (METHOD* + OPTIONS?)?
- * @param {Object} movement
- */
-function MOVEMENT(text, i, movement) {
-  console.log('MOVEMENT', i, text.slice(i, i + 15).replace(REGEXP_NEWLINE_G, '↵'));
-  var c = i;
-  var tmp = c;
-
-  // METHOD*
-  var methods = [];
-  while (c < text.length) {
-    var method = {};
-    c = METHOD(text, c, method);
-    if (c === tmp) {
-      // No more METHODs
-      break;
-    }
-    methods.push(method);
-    tmp = c;
-  }
-
-  // OPTION?
-  var opt = {};
-  c = OPTIONS(text, c, opt);
-
-  movement.$type = 'MOVEMENT';
-  movement.methods = methods;
-  movement.options = opt;
-
-  return c;
-}
-
-/**
- * METHOD = (ACTION | COMMAND)?
- */
-function METHOD(text, i, method) {
-  console.log('METHOD', i, text.slice(i, i + 15).replace(REGEXP_NEWLINE_G, '↵'));
-  var c = i;
-  var tmp = c;
-
-  // ACTION
-  c = ACTION(text, c, method);
-  if (c !== tmp) {
-    return c;
-  }
-
-  // COMMAND
-  c = COMMAND(text, c, method);
-  if (c !== tmp) {
-    return c;
-  }
-
-  return c;
-}
-
-/**
- * ACTION = ('!' + NAME + INLINE_REDUNDENT + ARGUMENTS?)?
- * @param {Object} action
- */
-function ACTION(text, i, action) {
-  console.log('ACTION', i, text.slice(i, i + 15).replace(REGEXP_NEWLINE_G, '↵'));
-  var c = i;
-
-  if (REGEXP_EXCLAMATION.test(text[c])) {
-    // '!'
-    c++;
-
-    // NAME
-    var name = {};
-    c = NAME(text, c, name);
-
-    // INLINE_REDUNDENT
-    var breaking = {};
-    c = INLINE_REDUNDENT(text, c, breaking);
-
-    action.$type = 'ACTION';
-    action.name = name.$string;
-
-    if (!breaking.$boolean) {
-      // ARGUMENTS?
-      var argus = [];
-      c = ARGUMENTS(text, c, argus);
-      action.argus = argus;
-    }
-  }
-
-  return c;
-}
-
-/**
- * ARGUMENTS = ('(' + PARAMETERS<VALUE> + ')' + INLINE_REDUNDENT)?
- */
-function ARGUMENTS(text, i, arr) {
-  console.log('ARGUMENTS', i, text.slice(i, i + 15).replace(REGEXP_NEWLINE_G, '↵'));
-  var c = i;
-  if (REGEXP_LEFT_ROUND.test(text[c])) {
-    // '('
-    c++;
-
-    // PARAMETERS<VALUE>
-    c = PARAMETERS(text, c, VALUE, arr);
-
-    // ')'
-    if (!REGEXP_RIGHT_ROUND.test(text[c])) {
-      throw new SyntaxError('ARGUMENTS: Missing ")"');
-    }
-    c++;
-
-    // INLINE_REDUNDENT
-    c = INLINE_REDUNDENT(text, c);
-
-    return c;
-  }
-
-  return c;
-}
-
-/**
- * PARAMETERS<T> = RUNDUNDENT + T + RUNDUNDENT + (',' + PARAMETERS<T>)?
- * @param {Object | Array} obj
- */
-function PARAMETERS(text, i, type, arr) {
-  console.log('PARAMETERS<' + type.name + '>', i, text.slice(i, i + 15).replace(REGEXP_NEWLINE_G, '↵'));
-  var c = i;
-
-  // RUNDUNDENT
-  c = REDUNDENT(text, c);
-
-  // VALUE
-  var value = {};
-  c = type(text, c, value);
-  arr.push(value);
-
-  // RUNDUNDENT
-  c = REDUNDENT(text, c);
-
-  // (',' + PARAMETERS)?
-  if (REGEXP_COMMA.test(text[c])) {
-    // PARAMETERS
-    c++;
-    c = PARAMETERS(text, c, type, arr);
-  }
-  return c;
-}
-
-/**
- * VALUE = NUMBER | BOOLEAN  | STRING | NAME| ARRAY:SQUARE_GROUP<VALUE> | OBJECT:CURLY_GROUP<PAIR>
- * @param {Object} value
- */
-function VALUE(text, i, value) {
-  console.log('VALUE', i, text.slice(i, i + 15).replace(REGEXP_NEWLINE_G, '↵'));
-  var c = i;
-  var tmp = c;
-
-  // NUMBER
-  c = NUMBER(text, c, value);
-  if (c !== tmp) {
-    value.$type = 'number';
-    return c;
-  }
-
-  // BOOLEAN
-  c = BOOLEAN(text, c, value);
-  if (c !== tmp) {
-    value.$type = 'boolean';
-    return c;
-  }
-
-  // STRING
-  c = STRING(text, c, value);
-  if (c !== tmp) {
-    value.$type = 'string';
-    return c;
-  }
-
-  // ARRAY:SQUARE_GROUP<VALUE>
-  c = SQUARE_GROUP(text, c, VALUE, value);
-  if (c !== tmp) {
-    value.$type = 'array';
-    return c;
-  }
-
-  // OBJECT:CURLY_GROUP<PAIR>
-  c = CURLY_GROUP(text, c, PAIR, value);
-  if (c !== tmp) {
-    value.$type = 'object';
-    return c;
-  }
-
-  // NAME
-  c = NAME(text, c, value);
-  if (c !== tmp) {
-    value.$type = 'string';
-    return c;
-  }
-
-  return c;
-}
-
-/**
- * STRING = ("'" + ... + "'" | '"' + ... + '"')
- */
-function STRING(text, i, value) {
-  console.log('STRING', i, text.slice(i, i + 15).replace(REGEXP_NEWLINE_G, '↵'));
-  var c = i;
-  if (REGEXP_SINGLE_QUOTES.test(text[c]) || REGEXP_DOUBLE_QUOTES.test(text[c])) {
-    // ("'" + ... + "'" | '"' + ... + '"')
-    var str = '';
-    var target = text[c];
-    c++;
-    for (; c < text.length && text[c] !== target; c++) {
-      str += text[c];
-    }
-    c++;
-    value.$string = str;
-  }
-  return c;
-}
-
-/**
- * NUMBER = \d* + ('.' + \d*)?
- */
-function NUMBER(text, i, value) {
-  console.log('NUMBER', i, text.slice(i, i + 15).replace(REGEXP_NEWLINE_G, '↵'));
-  var c = i;
-  var number = 0;
-
-  if (REGEXP_ZERO.test(text[c])) {
-    // 0 | 0.x
-    number = 0;
-    c++;
-  } else if (REGEXP_DIGIT.test(text[c])) {
-    // 1-9
-    for (; c < text.length && REGEXP_DIGIT.test(text[c]); c++) {
-      number = number * 10 + parseInt(text[c]);
-    }
-  } else {
-    // Not a number
-    return c;
-  }
-
-  // Floating
-  if (text[c] === '.') {
-    c++;
-    var float = 0;
-    var expo = 0;
-    for (; c < text.length && REGEXP_DIGIT.test(text[c]); c++) {
-      float = float * 10 + parseInt(text[c]);
-      expo++;
-    }
-    number += float / Math.pow(10, expo);
-  }
-  value.$number = number;
-
-  return c;
-}
-
-/**
- * BOOLEAN = ('true' | 'false')?
- */
-function BOOLEAN(text, i, value) {
-  console.log('BOOLEAN', i, text.slice(i, i + 15).replace(REGEXP_NEWLINE_G, '↵'));
-  var c = i;
-
-  if (text.slice(c, c + 4) === 'true') {
-    value.$boolean = true;
-    c += 4;
-  } else if (text.slice(c, c + 5) === 'false') {
-    value.$boolean = false;
-    c += 5;
-  }
-
-  return c;
-}
-
-/**
- * OPTIONS = CURLY_GROUP<PAIR>
- */
-function OPTIONS(text, i, opt) {
-  console.log('OPTIONS', i, text.slice(i, i + 15).replace(REGEXP_NEWLINE_G, '↵'));
-  var c = i;
-
-  // CURLY_GROUP<PAIR>
-  c = CURLY_GROUP(text, c, PAIR, opt);
-
-  return c;
-}
-
-/**
- * PAIR = NAME + REDUNDENT + ':' + REDUNDENT + VALUE
- */
-function PAIR(text, i, pair) {
-  console.log('PAIR', i, text.slice(i, i + 15).replace(REGEXP_NEWLINE_G, '↵'));
-  var c = i;
-
-  // NAME
-  var name = {};
-  c = NAME(text, c, name);
-
-  // REDUNDENT
-  c = REDUNDENT(text, c);
-
-  if (REGEXP_COLON.test(text[c])) {
-    // ':'
-    c++;
-  } else {
-    throw new SyntaxError('PAIR: Missing ":" should behind the name');
-  }
-
-  // REDUNDENT
-  c = REDUNDENT(text, c);
-
-  // VALUE
-  var value = {};
-  c = VALUE(text, c, value);
-
-  pair.$type = 'PAIR';
-  pair.name = name.$string;
-  pair.value = value;
-
-  return c;
-}
-
-/**
- * NAME = REGEXP_NAME*
- * @param {Object} name, add on name.$string
- */
-function NAME(text, i, name) {
-  console.log('NAME', i, text.slice(i, i + 15).replace(REGEXP_NEWLINE_G, '↵'));
-  var c = i;
-  var str = '';
-
-  // REGEXP_NAME*
-  for (; c < text.length && REGEXP_NAME.test(text[c]); c++) {
-    str += text[c];
-  }
-  name.$string = str;
-
-  return c;
-}
-
-/**
- * TITLE = REGEXP_TITLE* + INLINE_REDUNDENT
- */
-function TITLE(text, i, title) {
-  console.log('TITLE', i, text.slice(i, i + 15).replace(REGEXP_NEWLINE_G, '↵'));
-  var c = i;
-  var str = '';
-
-  // REGEXP_TITLE*
-  for (; c < text.length && REGEXP_TITLE.test(text[c]); c++) {
-    str += text[c];
-  }
-  title.$string = str;
-
-  // INLINE_REDUNDENT
-  c = INLINE_REDUNDENT(text, c);
-
-  return c;
-}
-
-/**
- * GROUP<T> = SQUARE_GROUP<T> | CURLY_GROUP<T>
- */
-function GROUP(text, i, type, group) {
-  console.log('GROUP<' + type.name + '>', i, text.slice(i, i + 15).replace(REGEXP_NEWLINE_G, '↵'));
-  var c = i;
-  var tmp = c;
-
-  // SQUARE_GROUP
-  c = SQUARE_GROUP(text, c, type, group);
-  if (c !== tmp) {
-    return c;
-  }
-
-  // CURLY_GROUP
-  c = CURLY_GROUP(text, c, type, group);
-  if (c !== tmp) {
-    return c;
-  }
-
-  throw new SyntaxError('GROUP: Not a valid group');
-}
-
-/**
- * SQUARE_GROUP<T> = ('[' + PARAMETERS<T> + ']' + INLINE_REDUNDENT)?
- */
-function SQUARE_GROUP(text, i, type, obj) {
-  console.log('SQUARE_GROUP<' + type.name + '>', i, text.slice(i, i + 15).replace(REGEXP_NEWLINE_G, '↵'));
-  var c = i;
-
-  if (REGEXP_LEFT_SQUARE.test(text[c])) {
-    // '['
-    c++;
-    obj.$type = 'SQUARE_GROUP';
-
-    // PARAMETERS<T>
-    obj.array = [];
-    c = PARAMETERS(text, c, type, obj.array);
-
-    // '}'
-    if (REGEXP_RIGHT_SQUARE.test(text[c])) {
-      c++;
-
-      // INLINE_REDUNDENT
-      c = INLINE_REDUNDENT(text, c);
-
-      return c;
-    }
-
-    throw new SyntaxError('SQUARE_GROUP: Missing "]"');
-  }
-
-  return c;
-}
-
-/**
- * CURLY_GROUP<T> = ('{' + PARAMETERS<T> + '}' + INLINE_REDUNDENT)?
- */
-function CURLY_GROUP(text, i, type, obj) {
-  console.log('CURLY_GROUP<' + type.name + '>', i, text.slice(i, i + 15).replace(REGEXP_NEWLINE_G, '↵'));
-  var c = i;
-
-  if (REGEXP_LEFT_CURLY.test(text[c])) {
-    // '{'
-    c++;
-    obj.$type = 'CURLY_GROUP';
-
-    // PARAMETERS<T>
-    obj.$array = [];
-    c = PARAMETERS(text, c, type, obj.$array);
-
-    // '}'
-    if (REGEXP_RIGHT_CURLY.test(text[c])) {
-      c++;
-
-      // INLINE_REDUNDENT
-      c = INLINE_REDUNDENT(text, c);
-
-      return c;
-    }
-
-    throw new SyntaxError('CURLY_GROUP: Missing "}"');
-  }
-
-  return c;
-}
-
-/**
- * INLINE_REDUNDENT = SPACES + COMMENT_WITHOUT_NEWLINE + INLINE_REDUNDENT?
- * @param {Object} breaking breaking.$boolean = true 代表有換行
- */
-function INLINE_REDUNDENT(text, i, breaking) {
-  console.log('INLINE_REDUNDENT', i, text.slice(i, i + 15).replace(REGEXP_NEWLINE_G, '↵'));
-  var c = i;
-  if (!breaking) {
-    breaking = {};
-  }
-  breaking.$boolean = false;
-
-  // SPACES
-  while (c < text.length && REGEXP_SPACE.test(text[c])) {
-    c++;
-  }
-
-  // COMMENT_WITHOUT_NEWLINE
-  if (REGEXP_SLASH.test(text[c])) {
-    // '/'
-    c++;
-    if (REGEXP_SLASH.test(text[c])) {
-      // '/', double '/', INLINE_COMMENT
-      c++;
-      while (c < text.length && !REGEXP_NEWLINE.test(text[c])) {
-        c++;
-      }
-
-      breaking.$boolean = true;
-    } else if (REGEXP_STAR.test(text[c])) {
-      // '*', '/*', BLOCK_COMMENTS
-      c++;
-
-      for (; c < text.length && !REGEXP_STAR.test(text[c]) && !REGEXP_SLASH.test(text[c + 1]); c++) {
-        if (REGEXP_NEWLINE.test(text[c])) {
-          breaking.$boolean = true;
-        }
-      }
-
-      c += 2;
-
-      if (breaking.$boolean === false) {
-        c = INLINE_REDUNDENT(text, c, breaking);
-      }
-    } else {
-      // wrong
-      throw new SyntaxError('INLINE_REDUNDENT: Expected "*" or "/"');
-    }
-  }
-
-  return c;
-}
-
-/**
- * REDUNDENT = SPACES_OR_NEWLINE (+ COMMENT + REDUNDENT)?
- * COMMENT = INLINE_COMMENT | BLOCK_COMMENTS
- */
-function REDUNDENT(text, i) {
-  console.log('REDUNDENT', i, text.slice(i, i + 15).replace(REGEXP_NEWLINE_G, '↵'));
-  var c = i;
-  // SPACES_OR_NEWLINE
-  while (c < text.length && (REGEXP_SPACE.test(text[c]) || REGEXP_NEWLINE.test(text[c]))) {
-    c++;
-  }
-
-  // (+ COMMENT + REDUNDENT)?
-  if (REGEXP_SLASH.test(text[c])) {
-    c++;
-    // COMMENT
-    if (REGEXP_SLASH.test(text[c])) {
-      // INLINE_COMMENT
-      while (c < text.length && !REGEXP_NEWLINE.test(text[c])) {
-        c++;
-      }
-    } else if (REGEXP_STAR.test(text[c])) {
-      // BLOCK_COMMENTS
-      c++;
-      while (c < text.length && !REGEXP_STAR.test(text[c]) && !REGEXP_SLASH.test(text[c + 1])) {
-        c++;
-      }
-      c += 2;
-    } else {
-      // wrong
-      c--;
-      return c;
-    }
-
-    // REDUNDENT
-    return REDUNDENT(text, c);
-  } else {
-    return c;
-  }
-}
-'filehash FyCB9Ojmzt9lW9cLIww1jta3oxg=';
-
-/***/ }),
-/* 206 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (immutable) */ __webpack_exports__["a"] = structure;
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_lodash__ = __webpack_require__(17);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_lodash___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_lodash__);
-
-
-/**
- * @param {Array} literal
- * @returns {Array}
- */
-function structure(literal) {
-  return FILE(literal);
-}
-
-function FILE(literal) {
-  var struct = [];
-
-  var _iteratorNormalCompletion = true;
-  var _didIteratorError = false;
-  var _iteratorError = undefined;
-
-  try {
-    for (var _iterator = literal[Symbol.iterator](), _step; !(_iteratorNormalCompletion = (_step = _iterator.next()).done); _iteratorNormalCompletion = true) {
-      var item = _step.value;
-
-      // STATEMENT
-      if (item.$type === 'ACT') {
-        struct.push(ACT(item));
-      } else if (item.$type === 'COMMAND') {
-        struct.push(COMMAND(item));
-      } else if (item.$type === 'HEADER') {
-        struct.push(HEADER(item));
-      } else {
-        throw new SyntaxError('STRUCTURE: Unknown statement');
-      }
-    }
-  } catch (err) {
-    _didIteratorError = true;
-    _iteratorError = err;
-  } finally {
-    try {
-      if (!_iteratorNormalCompletion && _iterator.return) {
-        _iterator.return();
-      }
-    } finally {
-      if (_didIteratorError) {
-        throw _iteratorError;
-      }
-    }
-  }
-
-  return struct;
-}
-
-function HEADER(item) {
-  var r = {};
-
-  r.$type = 'HEADER';
-  r.level = item.level;
-  r.title = item.title;
-  r.options = item.options && OPTIONS(item.options);
-
-  return r;
-}
-
-function COMMAND(item) {
-  var r = {};
-
-  r.$type = 'COMMAND';
-  r.name = item.name;
-  r.argus = ARGUMENTS(item.argus);
-  r.options = item.options && OPTIONS(item.options);
-
-  return r;
-}
-
-function ACT(item) {
-  var r = {};
-
-  r.$type = 'ACT';
-  r.message = item.message;
-  r.subjectMovementList = SUBJECT_MOVEMENT_LIST(item.subjectMovementList);
-  r.movement = item.movement && MOVEMENT(item.movement);
-
-  return r;
-}
-
-function SUBJECT_MOVEMENT_LIST(subjectMovementList) {
-  var r = [];
-  var _iteratorNormalCompletion2 = true;
-  var _didIteratorError2 = false;
-  var _iteratorError2 = undefined;
-
-  try {
-    for (var _iterator2 = subjectMovementList.$array[Symbol.iterator](), _step2; !(_iteratorNormalCompletion2 = (_step2 = _iterator2.next()).done); _iteratorNormalCompletion2 = true) {
-      var subjectMovement = _step2.value;
-
-      r.push(SUBJECT_MOVEMENT(subjectMovement));
-    }
-  } catch (err) {
-    _didIteratorError2 = true;
-    _iteratorError2 = err;
-  } finally {
-    try {
-      if (!_iteratorNormalCompletion2 && _iterator2.return) {
-        _iterator2.return();
-      }
-    } finally {
-      if (_didIteratorError2) {
-        throw _iteratorError2;
-      }
-    }
-  }
-
-  return r;
-}
-
-function SUBJECT_MOVEMENT(subjectMovement) {
-  var r = {};
-  r.movement = MOVEMENT(subjectMovement.movement);
-  r.subject = subjectMovement.subject;
-  return r;
-}
-
-function MOVEMENT(movement) {
-  var r = {};
-  r.methods = METHODS(movement.methods);
-  r.options = movement.options && OPTIONS(movement.options);
-  return r;
-}
-
-function METHODS(methods) {
-  var r = [];
-
-  var _iteratorNormalCompletion3 = true;
-  var _didIteratorError3 = false;
-  var _iteratorError3 = undefined;
-
-  try {
-    for (var _iterator3 = methods[Symbol.iterator](), _step3; !(_iteratorNormalCompletion3 = (_step3 = _iterator3.next()).done); _iteratorNormalCompletion3 = true) {
-      var method = _step3.value;
-
-      if (method.$type === 'ACTION') {
-        r.push(ACTION(method));
-      } else if (method.$type === 'COMMAND') {
-        r.push(COMMAND(method));
-      } else {
-        throw new Error('STURCTURE: Unknown method');
-      }
-    }
-  } catch (err) {
-    _didIteratorError3 = true;
-    _iteratorError3 = err;
-  } finally {
-    try {
-      if (!_iteratorNormalCompletion3 && _iterator3.return) {
-        _iterator3.return();
-      }
-    } finally {
-      if (_didIteratorError3) {
-        throw _iteratorError3;
-      }
-    }
-  }
-
-  return r;
-}
-
-function ACTION(action) {
-  var r = {};
-
-  r.$type = 'ACTION';
-  r.name = action.name;
-  r.argus = ARGUMENTS(action.argus);
-
-  return r;
-}
-
-function ARGUMENTS(argus) {
-  var r = [];
-  var _iteratorNormalCompletion4 = true;
-  var _didIteratorError4 = false;
-  var _iteratorError4 = undefined;
-
-  try {
-    for (var _iterator4 = argus[Symbol.iterator](), _step4; !(_iteratorNormalCompletion4 = (_step4 = _iterator4.next()).done); _iteratorNormalCompletion4 = true) {
-      var val = _step4.value;
-
-      r.push(VALUE(val));
-    }
-  } catch (err) {
-    _didIteratorError4 = true;
-    _iteratorError4 = err;
-  } finally {
-    try {
-      if (!_iteratorNormalCompletion4 && _iterator4.return) {
-        _iterator4.return();
-      }
-    } finally {
-      if (_didIteratorError4) {
-        throw _iteratorError4;
-      }
-    }
-  }
-
-  return r;
-}
-
-function VALUE(value) {
-  if (value.$type === 'array') {
-    var arr = [];
-    var _iteratorNormalCompletion5 = true;
-    var _didIteratorError5 = false;
-    var _iteratorError5 = undefined;
-
-    try {
-      for (var _iterator5 = value.$array[Symbol.iterator](), _step5; !(_iteratorNormalCompletion5 = (_step5 = _iterator5.next()).done); _iteratorNormalCompletion5 = true) {
-        var val = _step5.value;
-
-        arr.push(VALUE(val));
-      }
-    } catch (err) {
-      _didIteratorError5 = true;
-      _iteratorError5 = err;
-    } finally {
-      try {
-        if (!_iteratorNormalCompletion5 && _iterator5.return) {
-          _iterator5.return();
-        }
-      } finally {
-        if (_didIteratorError5) {
-          throw _iteratorError5;
-        }
-      }
-    }
-
-    return arr;
-  } else if (value.$type === 'object') {
-    var _arr = [];
-    var _iteratorNormalCompletion6 = true;
-    var _didIteratorError6 = false;
-    var _iteratorError6 = undefined;
-
-    try {
-      for (var _iterator6 = value.$array[Symbol.iterator](), _step6; !(_iteratorNormalCompletion6 = (_step6 = _iterator6.next()).done); _iteratorNormalCompletion6 = true) {
-        var pair = _step6.value;
-
-        _arr.push(PAIR(pair, VALUE));
-      }
-    } catch (err) {
-      _didIteratorError6 = true;
-      _iteratorError6 = err;
-    } finally {
-      try {
-        if (!_iteratorNormalCompletion6 && _iterator6.return) {
-          _iterator6.return();
-        }
-      } finally {
-        if (_didIteratorError6) {
-          throw _iteratorError6;
-        }
-      }
-    }
-
-    var obj = __WEBPACK_IMPORTED_MODULE_0_lodash___default.a.fromPairs(_arr);
-    return obj;
-  } else {
-    return value['$' + value.$type];
-  }
-}
-
-function PAIR(pair, type) {
-  var r = [pair.name, type(pair.value)];
-  return r;
-}
-
-function OPTIONS(opt) {
-  if (!opt.$array) {
-    return;
-  }
-
-  var arr = [];
-  var _iteratorNormalCompletion7 = true;
-  var _didIteratorError7 = false;
-  var _iteratorError7 = undefined;
-
-  try {
-    for (var _iterator7 = opt.$array[Symbol.iterator](), _step7; !(_iteratorNormalCompletion7 = (_step7 = _iterator7.next()).done); _iteratorNormalCompletion7 = true) {
-      var pair = _step7.value;
-
-      arr.push(PAIR(pair, VALUE));
-    }
-  } catch (err) {
-    _didIteratorError7 = true;
-    _iteratorError7 = err;
-  } finally {
-    try {
-      if (!_iteratorNormalCompletion7 && _iterator7.return) {
-        _iterator7.return();
-      }
-    } finally {
-      if (_didIteratorError7) {
-        throw _iteratorError7;
-      }
-    }
-  }
-
-  var obj = __WEBPACK_IMPORTED_MODULE_0_lodash___default.a.fromPairs(arr);
-  return obj;
-}
-'filehash /4mK48hKj0Imr5yG7lAZh6QDY0Q=';
+throw new Error("Module build failed: SyntaxError: D:/Coding/script-down/src/parser/index.js: Unexpected token (4:15)\n\n\u001b[0m \u001b[90m 2 | \u001b[39m\u001b[36mimport\u001b[39m structure from \u001b[32m'./structure'\u001b[39m\n \u001b[90m 3 | \u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 4 | \u001b[39m\u001b[36mexport\u001b[39m \u001b[36mdefault\u001b[39m \u001b[36mconst\u001b[39m \u001b[33mParser\u001b[39m \u001b[33m=\u001b[39m {\n \u001b[90m   | \u001b[39m               \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 5 | \u001b[39m  parse\u001b[33m:\u001b[39m parse\n \u001b[90m 6 | \u001b[39m}\n \u001b[90m 7 | \u001b[39m\u001b[0m\n");
 
 /***/ })
 /******/ ]);

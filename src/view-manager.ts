@@ -1,24 +1,39 @@
+import * as _ from 'lodash'
+import ScriptDown from './index'
+import Scene from './Scene'
+import Subtitle from './subtitle'
 import Character from './character'
+import {
+  Options
+} from './constant'
+import {
+  Script,
+  Act,
+  STRUCTURE_TYPE
+} from './parser/constant'
 
-export default class ViewManager {
+export default class ImplementedViewManager {
+  private script: Script
+  private Provider: ScriptDown
+  private Scene: Scene
+  private Subtitle: Subtitle
+
+  // Waiting for next step, this will lock this.next()
+  private waiting: boolean = true
+
+  // The cursor point to the script which is ready to load
+  private cursor: number = 0
+
   /**
    *
    * @param {Array} script The ScriptDown Array parsed by parser
    * @param {ScriptDown} provider The instance of a ScriptDown
    */
-  constructor (script, provider) {
+  constructor (provider: ScriptDown, script: Script) {
     this.script = script
-    this.provider = provider
-
-    // Just shortcuts
-    this.stage = this.provider.stage
-    this.subtitle = this.provider.subtitle
-
-    // The cursor point to the script which is ready to load
-    this.cursor = 0
-
-    // Waiting for next step, this will lock this.next()
-    this.waiting = true
+    this.Provider = provider
+    this.Scene = this.Provider.Scene
+    this.Subtitle = this.Provider.Subtitle
 
     // init
     this.next()
@@ -30,23 +45,24 @@ export default class ViewManager {
    * @param {Array} argus?
    * @param {Object} options?
    */
-  command (commandName, argus, options) {
+  command (commandName, argus, options): Promise<any> {
     return new Promise((resolve, reject) => {
       if (commandName === 'character') {
         let characterName = argus[0]
         let characterOptions = argus[1] || {}
 
-        this.stage.addCharacter(characterName, new Character(characterOptions, this.provider.gamebase))
+        this.Scene.addCharacter(characterName, new Character(characterOptions, this.provider.gamebase))
       } else if (commandName === 'setStage') {
+        // FIX
         let name = argus[0]
         let value = argus[1]
 
-        this.stage.set(name, value)
+        this.Scene.set(name, value)
       } else if (commandName === 'setSubtitle') {
         let name = argus[0]
         let value = argus[1]
 
-        this.subtitle.set(name, value)
+        this.Subtitle.set(name, value)
       } else {
         throw new Error('ViewManager: Undefined command')
       }
@@ -64,40 +80,41 @@ export default class ViewManager {
    * @param {Array} argus?
    * @param {Object} options?
    */
-  action (objName, actionName, argus, options) {
-    if (!this.stage.characters[objName]) {
+  action (objName: string, actionName: string, argus: Array<any>, options: Options) {
+    if (!this.Scene.characters[objName]) {
       throw new Error(`ViewManager: Object "${objName}" is not defined`)
     }
 
-    if (!this.stage.characters[objName][actionName]) {
+    if (!this.Scene.characters[objName][actionName]) {
       throw new Error(`ViewManager: Action "${objName}.${actionName}" is not defined`)
     }
 
     argus.push(options)
-    return this.stage.characters[objName][actionName](...argus)
+    return this.Scene.characters[objName][actionName](...argus)
   }
 
-  next (event) {
+  next (event?: PIXI.interaction.InteractionEvent) {
     if (!this.waiting) {
       // still waiting
       console.log('still waiting')
       return
     }
 
-    let tasks = []
-    let pause = false
+    let tasks: Array<() => Promise<any>> = []
+    let pause: boolean = false
 
-    let delay = 0
-    let proceed = false
+    let delay: number = 0
+    let proceed: boolean = false
 
-    let postpone = 0
-    let autostep = false
+    let postpone: number = 0
+    let autostep: boolean = false
 
     for (; this.cursor < this.script.length && !pause; this.cursor++) {
       let statement = this.script[this.cursor]
       let options
 
-      if (statement.$type === 'ACT') {
+      if (statement.$type === STRUCTURE_TYPE.ACT) {
+        let act: Act = <Act>statement
         if (statement.movement) {
           options = statement.movement && statement.movement.options
         } else if (statement.subjectMovementList.length === 1) {

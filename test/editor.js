@@ -1,5 +1,5 @@
 /* eslint-disable */
-/* global GameBase, Router, ScriptDown, parser */
+/* global ScriptDown, parser */
 
 let gamebase = null
 

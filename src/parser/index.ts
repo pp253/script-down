@@ -5,7 +5,7 @@ export default {
   parse: parse
 }
 
-export function parse (text) {
+export function parse (text: string) {
   console.log('parse', 'text length:', text.length)
 
   // literal parsing

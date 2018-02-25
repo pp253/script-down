@@ -1,5 +1,23 @@
+import * as PIXI from 'pixi.js'
+import GameBase from './base'
 
-export default class {
+interface Component {
+  new ()
+}
+
+interface RoutePath {
+  component: Component
+}
+
+interface Routes {
+  [propName: string]: 
+}
+
+export default class Router {
+  public gamebase: GameBase
+  public app: PIXI.Application
+  public routes: 
+
   constructor (gamebase, routes) {
     this.gamebase = gamebase
 
