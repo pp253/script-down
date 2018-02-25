@@ -1,0 +1,23 @@
+
+$character(黛西, {
+  textures: {
+    default: './img/bunny.png',
+    bunny: './img/bunny.png'
+  },
+  scale: 4
+})
+$character(湯姆, {
+  textures: {
+    default: './img/bunny.png',
+    bunny: './img/bunny.png'
+  },
+  scale: 3
+})
+
+// 功能展示
+@黛西 !appear !moveTo(200, 350) 黛西出現了！
+@湯姆 !appear !moveTo(300, 350) 湯姆出現了！
+@黛西 !move(100, 0) {duration: 1000, transition: 'ease-in-quint'} 衝啊!
+{@黛西, @湯姆} !move(100, 0) {duration: 1000} 一起衝啊!
+{@黛西 !move(200, 0) {duration: 1000}, @湯姆 !move(100, 0) {duration: 1000}} 我要超越你！
+@ <i>～結束～</i>

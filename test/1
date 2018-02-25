@@ -1,0 +1,48 @@
+
+$character(我)
+$character(黛西, {
+  textures: {
+    default: './img/bunny.png',
+    bunny: './img/bunny.png'
+  },
+  scale: 8
+})
+$character(湯姆, {
+  textures: {
+    default: './img/bunny.png',
+    bunny: './img/bunny.png'
+  },
+  scale: 8
+})
+
+// 大亨小傳 張思婷譯 P.25
+@黛西 !appear !moveTo(200, 350)
+@黛西 !changeScale(10) !shake 「大家真的那麼想念我？」她欣喜若狂地說。
+@黛西 !changeScale(8) {autostep: true}
+@我 「少了你，芝加哥好冷清阿。」
+@我 「滿街的車子都把左後輪漆成黑色，以示默哀，夜裡城北的湖邊更是哭聲不斷。」
+@黛西 !changeScale(10) 「太動人了。」
+@黛西 「我們回芝加哥吧，湯姆。明天就走。」
+@ 說著她又跳了個話題，
+@黛西 「你一定要見見寶寶。」
+@黛西 !changeScale(8) {autostep: true}
+@我 「好啊。」
+@黛西 !changeScale(10) 「她睡了。今年兩歲了。你還沒見過？」
+@黛西 !changeScale(8) {autostep: true}
+@我 「沒有。」
+@黛西 !changeScale(10) 「那你一定要見見，她真的好－－」
+@黛西 !changeScale(8) {autostep: true}
+@湯姆 !appear !moveTo(600, 350) {autostep: true}
+@湯姆 !shake(1000, 1, 40) {delay: 400} 湯姆．勃肯南浮躁地在客廳裡轉來轉去，此時突然停下腳步，手搭著我的肩頭。
+@湯姆 !changeScale(10) 「在哪裡高就阿，尼可？」
+@湯姆 !changeScale(8) {autostep: true}
+@我 「我在做股票生意。」
+@湯姆 !changeScale(10) 「哪家？」
+@ 我告訴他。
+@湯姆 「沒聽過。」
+@ 他斷然地說。
+@湯姆 !changeScale(8) {autostep: true}
+@ 我很不高興。
+@我 「等著瞧。」我的回答很簡慢。
+@我 「你在東部住久了就知道了。」
+@ <i>～結束～</i>
