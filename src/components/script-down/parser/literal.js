@@ -545,12 +545,13 @@ function STRING (text, i, value) {
 }
 
 /**
- * NUMBER = \d* + ('.' + \d*)?
+ * NUMBER = ('-')? + \d* + ('.' + \d*)?
  */
 function NUMBER (text, i, value) {
   console.log('NUMBER', i, text.slice(i, i + 15).replace(REGEXP_NEWLINE_G, '↵'))
   let c = i
   let number = 0
+  let neg = false
 
   if (REGEXP_ZERO.test(text[c])) {
     // 0 | 0.x
@@ -576,6 +577,10 @@ function NUMBER (text, i, value) {
       expo++
     }
     number += float / Math.pow(10, expo)
+  }
+
+  if (neg) {
+    number = -number
   }
   value.$number = number
 
